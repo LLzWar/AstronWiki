@@ -1,0 +1,327 @@
+:root {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+  --border-color: #30363d;
+  --text-primary: #c9d1d9;
+  --text-secondary: #8b949e;
+  --accent-primary: #238636;
+  --accent-hover: #2ea043;
+  --accent-blue: #58a6ff;
+  --danger: #da3633;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-btn:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.nav-btn.active {
+  background-color: var(--bg-tertiary);
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 4rem;
+  max-width: 1200px;
+}
+
+/* Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.wiki-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.wiki-card:hover {
+  border-color: var(--text-secondary);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+.card-mod {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.card-content ul {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.craft-link {
+  color: var(--accent-blue);
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--accent-blue);
+  transition: color 0.2s;
+}
+
+.craft-link:hover {
+  color: #79c0ff;
+  border-bottom-style: solid;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1, 4, 9, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 2rem;
+  width: 400px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.close-btn:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.modal-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.crafting-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 48px);
+  grid-template-rows: repeat(3, 48px);
+  gap: 2px;
+  background-color: #8b8b8b;
+  padding: 8px;
+  border: 2px solid #373737;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.crafting-slot {
+  background-color: #8b8b8b;
+  width: 48px;
+  height: 48px;
+  border: 2px inset #fff;
+  border-top-color: #373737;
+  border-left-color: #373737;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.crafting-slot img {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+  object-fit: contain;
+}
+
+/* Utils */
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.text-bold { font-weight: 600; }
+
+.sidebar-subtitle { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 0.75rem; }
+/* Document Layout */
+.doc-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.doc-section {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.doc-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.doc-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.doc-list {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.doc-list li {
+  line-height: 1.6;
+}
+
+.craft-btn {
+  background-color: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 4px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.craft-btn:hover {
+  background-color: rgba(212, 175, 55, 0.2);
+  border-color: #d4af37;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.warlord-section {
+  border: 1px solid #d4af37 !important;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.warlord-title {
+  color: #d4af37 !important;
+  border-bottom-color: rgba(212, 175, 55, 0.3) !important;
+}
