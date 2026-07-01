@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sword, BatteryCharging, BookOpen, ShieldAlert, Compass, Settings, Database, Sparkles, Book } from 'lucide-react';
+import { Sword, BatteryCharging, BookOpen, ShieldAlert, Compass, Settings, Database, Sparkles, Book, Crown, Library, Skull, Search } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import WikiCard from './components/WikiCard';
 import CraftingModal from './components/CraftingModal';
