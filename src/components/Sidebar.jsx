@@ -37,7 +37,10 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
   return (
     <aside className="sidebar">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-        <h1 style={{ paddingBottom: 0, borderBottom: 'none' }}>Astron City</h1>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <img src="/assets/logo.png" alt="Astron City Logo" style={{ width: '32px', height: '32px', borderRadius: '8px' }} />
+          <h1 style={{ paddingBottom: 0, borderBottom: 'none' }}>Astron City</h1>
+        </div>
         <button onClick={toggleTheme} className="nav-btn" style={{ padding: '0.5rem' }} title="Alternar Tema (Dark / Warlord)">
           {theme === 'dark' ? <Moon size={20} /> : <Crown size={20} color="var(--accent-primary)" />}
         </button>
