@@ -73,24 +73,50 @@ export default function App() {
 
           {/* HOME */}
           {activeTab === 'home' && searchQuery.length === 0 && (
-            <div style={{display: 'flex', flexDirection: 'column', gap: '2rem'}}>
-              {/* HERO */}
-              <div style={{
-                backgroundColor: 'var(--bg-secondary)', 
-                borderRadius: '8px', 
-                padding: '3rem 2rem', 
-                border: '1px solid var(--border-color)',
-                textAlign: 'center'
+            <div style={{gridColumn: '1 / -1'}} className="doc-layout">
+              <div style={{ 
+                borderBottom: '1px solid var(--border-color)', 
+                paddingBottom: '2rem',
+                textAlign: 'center',
+                marginTop: '1rem'
               }}>
-                <h3 style={{marginBottom: '1rem', color: 'var(--accent-blue)'}}>A Enciclopédia do Astron City</h3>
-                <p>Nesta plataforma você encontrará dados reais, receitas e guias extraídos dos arquivos do modpack.</p>
-                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '2rem' }}>
-                  <button onClick={() => setActiveTab('modindex')} className="nav-btn" style={{backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)'}}>
-                    Explorar Mod Index
+                <h1 style={{ fontSize: '3rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>
+                  A Enciclopédia do <span style={{ color: 'var(--accent-blue)' }}>Astron City</span>
+                </h1>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto' }}>
+                  Sua central definitiva de conhecimento. Guias de sobrevivência, táticas avançadas, estatísticas exatas de deuses e um roteiro claro de ascensão para dominar os mais de 250 mods instalados.
+                </p>
+                
+                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '2.5rem' }}>
+                  <button onClick={() => setActiveTab('early')} className="craft-btn" style={{ fontSize: '1.1rem', padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <Crown size={20} /> Iniciar a Jornada (Warlord's Path)
                   </button>
-                  <button onClick={() => setActiveTab('early')} className="nav-btn" style={{backgroundColor: 'var(--accent-primary)', color: '#111'}}>
-                    Iniciar Warlord's Path
+                  <button onClick={() => setActiveTab('modindex')} className="nav-btn" style={{ fontSize: '1.1rem', padding: '0.75rem 1.5rem', border: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <Library size={20} /> Explorar a Biblioteca de Mods
                   </button>
+                </div>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
+                <div className="doc-section" style={{ margin: 0, padding: '1.5rem', backgroundColor: 'var(--bg-tertiary)', borderRadius: '8px', border: '1px solid var(--border-color)', cursor: 'pointer' }} onClick={() => setActiveTab('bestiary')}>
+                  <h3 style={{ color: 'var(--danger)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                    <Skull size={24} /> O Bestiário
+                  </h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Conheça o HP, os ataques e as fraquezas dos chefes do Cataclysm e do Mowzie's Mobs antes de enfrentá-los.</p>
+                </div>
+                
+                <div className="doc-section" style={{ margin: 0, padding: '1.5rem', backgroundColor: 'var(--bg-tertiary)', borderRadius: '8px', border: '1px solid var(--border-color)', cursor: 'pointer' }} onClick={() => setActiveTab('dimensions')}>
+                  <h3 style={{ color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                    <Compass size={24} /> Guias de Dimensões
+                  </h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Aprenda a sobreviver nas fortalezas do Nether alterado e como invadir as ruínas massivas do Vazio (The End).</p>
+                </div>
+                
+                <div className="doc-section" style={{ margin: 0, padding: '1.5rem', backgroundColor: 'var(--bg-tertiary)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                  <h3 style={{ color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                    <Search size={24} /> Motor de Busca Global
+                  </h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Use a barra de pesquisa no menu lateral a qualquer momento para varrer todas as receitas e informações num piscar de olhos.</p>
                 </div>
               </div>
             </div>
