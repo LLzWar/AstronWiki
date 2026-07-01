@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { Home, Lightbulb, Backpack, Factory, Sparkles, Crown, Library, BookOpen, ChevronDown, ChevronRight, Folder } from 'lucide-react';
+import { Home, Lightbulb, Backpack, Factory, Sparkles, Crown, Library, BookOpen, ChevronDown, ChevronRight, Folder, Search, Moon, Sun, Skull } from 'lucide-react';
 
-export default function Sidebar({ activeTab, setActiveTab }) {
+export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery }) {
   const [modsOpen, setModsOpen] = useState(true);
   const [warlordOpen, setWarlordOpen] = useState(true);
 
   const wikiTabs = [
     { id: 'home', icon: Home, label: 'Página Inicial' },
     { id: 'modindex', icon: Library, label: 'Mod Index' },
-    { id: 'tips', icon: Lightbulb, label: 'Dicas de Progressão' }
+    { id: 'bestiary', icon: Skull, label: 'Bestiário (Bosses)' },
+    { id: 'dimensions', icon: Sparkles, label: 'Guia de Dimensões' }
   ];
 
   const modGuides = [
@@ -29,9 +30,31 @@ export default function Sidebar({ activeTab, setActiveTab }) {
     { id: 'late', icon: Crown, label: 'Fase 4: Late Game' }
   ];
 
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'warlord' : 'dark');
+  };
+
   return (
     <aside className="sidebar">
-      <h1>Astron City</h1>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+        <h1 style={{ paddingBottom: 0, borderBottom: 'none' }}>Astron City</h1>
+        <button onClick={toggleTheme} className="nav-btn" style={{ padding: '0.5rem' }} title="Alternar Tema (Dark / Warlord)">
+          {theme === 'dark' ? <Moon size={20} /> : <Crown size={20} color="var(--accent-primary)" />}
+        </button>
+      </div>
+      
+      {/* SEARCH BAR */}
+      <div style={{ position: 'relative', marginBottom: '1.5rem' }}>
+        <Search size={16} style={{ position: 'absolute', left: '0.75rem', top: '0.85rem', color: 'var(--text-secondary)' }} />
+        <input 
+          type="text" 
+          placeholder="Buscar mods ou itens..." 
+          className="search-input"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          style={{ paddingLeft: '2.5rem' }}
+        />
+      </div>
       
       {/* GERAL */}
       <div className="sidebar-group">
@@ -42,8 +65,8 @@ export default function Sidebar({ activeTab, setActiveTab }) {
             return (
               <button
                 key={tab.id}
-                className={`nav-btn ${activeTab === tab.id ? 'active' : ''}`}
-                onClick={() => setActiveTab(tab.id)}
+                className={`nav-btn ${activeTab === tab.id && !searchQuery ? 'active' : ''}`}
+                onClick={() => { setActiveTab(tab.id); setSearchQuery(''); }}
               >
                 <Icon size={18} />
                 {tab.label}
@@ -74,8 +97,8 @@ export default function Sidebar({ activeTab, setActiveTab }) {
               return (
                 <button
                   key={tab.id}
-                  className={`nav-btn ${activeTab === tab.id ? 'active' : ''}`}
-                  onClick={() => setActiveTab(tab.id)}
+                  className={`nav-btn ${activeTab === tab.id && !searchQuery ? 'active' : ''}`}
+                  onClick={() => { setActiveTab(tab.id); setSearchQuery(''); }}
                   style={{ padding: '0.35rem 0.5rem', fontSize: '0.9rem' }}
                 >
                   <Icon size={16} />
@@ -108,8 +131,8 @@ export default function Sidebar({ activeTab, setActiveTab }) {
               return (
                 <button
                   key={tab.id}
-                  className={`nav-btn ${activeTab === tab.id ? 'active' : ''}`}
-                  onClick={() => setActiveTab(tab.id)}
+                  className={`nav-btn ${activeTab === tab.id && !searchQuery ? 'active' : ''}`}
+                  onClick={() => { setActiveTab(tab.id); setSearchQuery(''); }}
                   style={{ padding: '0.35rem 0.5rem', fontSize: '0.9rem' }}
                 >
                   <Icon size={16} />

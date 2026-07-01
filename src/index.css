@@ -325,3 +325,36 @@ body {
   color: #d4af37 !important;
   border-bottom-color: rgba(212, 175, 55, 0.3) !important;
 }
+/* Warlord Theme */
+[data-theme="warlord"] {
+  --bg-primary: #170b0b;
+  --bg-secondary: #241111;
+  --bg-tertiary: #3a1a1a;
+  --border-color: #592525;
+  --text-primary: #f4ebd8;
+  --text-secondary: #d1b69d;
+  --accent-primary: #d4af37;
+  --accent-hover: #ebc64f;
+  --accent-blue: #d4af37;
+  --danger: #ff3333;
+}
+
+/* Search Results Layout */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+}
+.search-input:focus {
+  border-color: var(--accent-blue);
+}
