@@ -50,6 +50,24 @@ export const itemImages = {
   'Silver Ingot': '/assets/iron_ingot.png', 
   'Block of Lapis': '/assets/lapis_block.png',
   'Glowstone Dust': '/assets/glowstone_dust.png',
+  'Eye of Ender': '/assets/ender_pearl.png',
+  'Netherite Scrap': '/assets/netherite_scrap.png',
+  'Blaze Powder': '/assets/blaze_powder.png',
+  'Soul Sand': '/assets/soul_sand.png',
+  'Wither Skeleton Skull': '/assets/wither_skeleton_skull.png',
+  'Nether Brick': '/assets/nether_bricks.png',
+  'Magma Cream': '/assets/magma_cream.png',
+  'Chorus Fruit': '/assets/chorus_fruit.png',
+  'Purpur Block': '/assets/purpur_block.png',
+  'Obsidian': '/assets/obsidian.png',
+  'Prismarine Shard': '/assets/prismarine_shard.png',
+  'Nautilus Shell': '/assets/nautilus_shell.png',
+  'Heart of the Sea': '/assets/heart_of_the_sea.png',
+  'Sandstone': '/assets/sandstone.png',
+  'Emerald': '/assets/emerald.png',
+  'Gold Ingot': '/assets/gold_ingot.png',
+  'Copper Ingot': '/assets/copper_ingot.png',
+  'Iron Ingot': '/assets/iron_ingot.png',
 };
 
 
@@ -161,5 +179,41 @@ export const recipes = {
     description: 'Avalia materiais brutos com pó de glowstone para conceder Status "MAX" (+40% atributos).',
     mod: 'Silent Gear',
     grid: [['Ferro', 'Glowstone Dust', 'Ferro'], ['Papel', 'Madeira', 'Papel'], ['Madeira', 'Madeira', 'Madeira']]
+  },
+  'eye_of_flame': {
+    title: 'Eye of Flame',
+    description: 'Olho usado para localizar a estrutura Burning Arena no Nether.',
+    mod: 'L\'Ender\'s Cataclysm',
+    grid: [['Netherite Scrap', 'Blaze Powder', 'Netherite Scrap'], ['Soul Sand', 'Eye of Ender', 'Soul Sand'], ['Netherite Scrap', 'Blaze Powder', 'Netherite Scrap']]
+  },
+  'eye_of_monstrous': {
+    title: 'Eye of Monstrous',
+    description: 'Olho usado para localizar a estrutura Soul Blacksmith no Nether.',
+    mod: 'L\'Ender\'s Cataclysm',
+    grid: [['Wither Skeleton Skull', 'Nether Brick', 'Wither Skeleton Skull'], ['Magma Cream', 'Eye of Ender', 'Magma Cream'], ['Wither Skeleton Skull', 'Nether Brick', 'Wither Skeleton Skull']]
+  },
+  'eye_of_mech': {
+    title: 'Eye of Mech',
+    description: 'Olho usado para localizar a Ancient Factory no Overworld.',
+    mod: 'L\'Ender\'s Cataclysm',
+    grid: [['Redstone', 'Copper Ingot', 'Redstone'], ['Iron Ingot', 'Eye of Ender', 'Iron Ingot'], ['Redstone', 'Copper Ingot', 'Redstone']]
+  },
+  'eye_of_void': {
+    title: 'Eye of Void',
+    description: 'Olho usado para localizar a Ruined Citadel na dimensão The End.',
+    mod: 'L\'Ender\'s Cataclysm',
+    grid: [['Chorus Fruit', 'Purpur Block', 'Chorus Fruit'], ['Obsidian', 'Eye of Ender', 'Obsidian'], ['Chorus Fruit', 'Purpur Block', 'Chorus Fruit']]
+  },
+  'eye_of_abyss': {
+    title: 'Eye of Abyss',
+    description: 'Olho usado para localizar a Sunken City no fundo dos oceanos.',
+    mod: 'L\'Ender\'s Cataclysm',
+    grid: [['Prismarine Shard', 'Nautilus Shell', 'Prismarine Shard'], ['Heart of the Sea', 'Eye of Ender', 'Heart of the Sea'], ['Prismarine Shard', 'Nautilus Shell', 'Prismarine Shard']]
+  },
+  'eye_of_desert': {
+    title: 'Eye of Desert',
+    description: 'Olho usado para localizar a Cursed Pyramid nos desertos.',
+    mod: 'L\'Ender\'s Cataclysm',
+    grid: [['Sandstone', 'Emerald', 'Sandstone'], ['Gold Ingot', 'Eye of Ender', 'Gold Ingot'], ['Sandstone', 'Emerald', 'Sandstone']]
   }
 };

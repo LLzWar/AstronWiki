@@ -16,6 +16,7 @@ import WarlordPath from './components/WarlordPath';
 import WikiBestiary from './components/WikiBestiary';
 import WikiDimensions from './components/WikiDimensions';
 import WikiSearch from './components/WikiSearch';
+import MarkdownViewer from './components/MarkdownViewer';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -50,6 +51,7 @@ export default function App() {
             {activeTab === 'modindex' && 'Biblioteca de Mods'}
             {activeTab === 'tips' && 'Dicas e Progressão Geral'}
             {activeTab.startsWith('wiki-') && 'Guia Profundo de Mod'}
+            {activeTab.startsWith('guide-') && 'Guia Completo (Markdown Oficial)'}
             {['early', 'tech', 'magic', 'late'].includes(activeTab) && "Warlord's Path"}
           </h2>
           <p style={{color: 'var(--text-secondary)'}}>
@@ -59,6 +61,7 @@ export default function App() {
             {activeTab === 'bestiary' && 'Conheça os perigos e as fraquezas das criaturas de Astron City.'}
             {activeTab === 'dimensions' && 'Exploração entre mundos e o que esperar de cada um.'}
             {activeTab.startsWith('wiki-') && 'Informações extraídas diretamente dos arquivos para domínio completo do mod.'}
+            {activeTab.startsWith('guide-') && 'Documentação nativa do Astron City transcrita diretamente do servidor oficial.'}
             {['early', 'tech', 'magic', 'late'].includes(activeTab) && "A rota otimizada para o preparo letal contra os maiores chefes."}
           </p>
         </header>
@@ -196,6 +199,28 @@ export default function App() {
           {activeTab === 'wiki-backpacks' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <WikiBackpacks onOpenRecipe={openRecipe} />
+            </div>
+          )}
+
+          {/* FULL GUIDES (MARKDOWN) */}
+          {activeTab === 'guide-ae2' && searchQuery.length === 0 && (
+            <div style={{gridColumn: '1 / -1'}}>
+              <MarkdownViewer fileUrl="/docs/ae2.md" />
+            </div>
+          )}
+          {activeTab === 'guide-cataclysm' && searchQuery.length === 0 && (
+            <div style={{gridColumn: '1 / -1'}}>
+              <MarkdownViewer fileUrl="/docs/cataclysm.md" />
+            </div>
+          )}
+          {activeTab === 'guide-mi' && searchQuery.length === 0 && (
+            <div style={{gridColumn: '1 / -1'}}>
+              <MarkdownViewer fileUrl="/docs/mi.md" />
+            </div>
+          )}
+          {activeTab === 'guide-oritech' && searchQuery.length === 0 && (
+            <div style={{gridColumn: '1 / -1'}}>
+              <MarkdownViewer fileUrl="/docs/oritech.md" />
             </div>
           )}
 

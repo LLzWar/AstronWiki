@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Home, Lightbulb, Backpack, Factory, Sparkles, Crown, Library, BookOpen, ChevronDown, ChevronRight, Folder, Search, Moon, Sun, Skull } from 'lucide-react';
+import { Home, Lightbulb, Backpack, Factory, Sparkles, Crown, Library, BookOpen, Book, ChevronDown, ChevronRight, Folder, Search, Moon, Sun, Skull } from 'lucide-react';
 
 export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery }) {
   const [modsOpen, setModsOpen] = useState(true);
   const [warlordOpen, setWarlordOpen] = useState(true);
+  const [guidesOpen, setGuidesOpen] = useState(true);
 
   const wikiTabs = [
     { id: 'home', icon: Home, label: 'Página Inicial' },
@@ -21,6 +22,13 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
     { id: 'wiki-powah', icon: BookOpen, label: 'Powah! (Energia)' },
     { id: 'wiki-silentgear', icon: BookOpen, label: 'Silent Gear & Gems' },
     { id: 'wiki-backpacks', icon: BookOpen, label: 'Sophisticated Backpacks' },
+  ];
+
+  const fullGuides = [
+    { id: 'guide-ae2', icon: Book, label: 'AE2 Completo' },
+    { id: 'guide-cataclysm', icon: Book, label: 'Cataclysm Completo' },
+    { id: 'guide-mi', icon: Book, label: 'Modern Industrialization' },
+    { id: 'guide-oritech', icon: Book, label: 'Oritech Completo' },
   ];
 
   const warlordTabs = [
@@ -103,6 +111,40 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
                   className={`nav-btn ${activeTab === tab.id && !searchQuery ? 'active' : ''}`}
                   onClick={() => { setActiveTab(tab.id); setSearchQuery(''); }}
                   style={{ padding: '0.35rem 0.5rem', fontSize: '0.9rem' }}
+                >
+                  <Icon size={16} />
+                  {tab.label}
+                </button>
+              );
+            })}
+          </nav>
+        )}
+      </div>
+
+      {/* FULL GUIDES (MARKDOWN) (COLLAPSIBLE) */}
+      <div className="sidebar-group" style={{marginTop: '1.5rem'}}>
+        <button 
+          className="nav-btn" 
+          style={{width: '100%', display: 'flex', justifyContent: 'space-between', fontWeight: 600, color: 'var(--text-primary)'}}
+          onClick={() => setGuidesOpen(!guidesOpen)}
+        >
+          <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+            <Book size={18} color="var(--accent-secondary)" />
+            Manuais Oficiais
+          </div>
+          {guidesOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
+        </button>
+        
+        {guidesOpen && (
+          <nav className="nav-links" style={{ paddingLeft: '1.5rem', marginTop: '0.25rem' }}>
+            {fullGuides.map(tab => {
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  className={`nav-btn ${activeTab === tab.id && !searchQuery ? 'active' : ''}`}
+                  onClick={() => { setActiveTab(tab.id); setSearchQuery(''); }}
+                  style={{ padding: '0.35rem 0.5rem', fontSize: '0.9rem', color: '#60a5fa' }}
                 >
                   <Icon size={16} />
                   {tab.label}
