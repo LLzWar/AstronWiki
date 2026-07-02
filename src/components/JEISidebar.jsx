@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useDeferredValue } from 'react';
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
 import { recipes } from '../data/recipes';
 import { BESTIARY_DATA } from '../data/bestiaryData';
@@ -50,6 +50,7 @@ const JeiItemCell = ({ item, onClick }) => {
 export default function JEISidebar({ setSearchQuery }) {
   const [isOpen, setIsOpen] = useState(false);
   const [jeiQuery, setJeiQuery] = useState('');
+  const deferredQuery = useDeferredValue(jeiQuery);
   const [currentPage, setCurrentPage] = useState(1);
   const [allItemsDB, setAllItemsDB] = useState([]);
 
@@ -108,10 +109,10 @@ export default function JEISidebar({ setSearchQuery }) {
 
   // 2. Filter based on local JEI Query
   const filteredItems = useMemo(() => {
-    if (!jeiQuery) return jeiRegistry;
-    const lowerQuery = jeiQuery.toLowerCase();
+    if (!deferredQuery) return jeiRegistry;
+    const lowerQuery = deferredQuery.toLowerCase();
     return jeiRegistry.filter(item => item.name.toLowerCase().includes(lowerQuery));
-  }, [jeiRegistry, jeiQuery]);
+  }, [jeiRegistry, deferredQuery]);
 
   // Reset page to 1 when query changes
   useEffect(() => {
