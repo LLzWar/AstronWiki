@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, Lightbulb, Backpack, Factory, Sparkles, Crown, Library, BookOpen, Book, ChevronDown, ChevronRight, Folder, Search, Moon, Sun, Skull, List } from 'lucide-react';
+import { Home, Lightbulb, Backpack, Factory, Sparkles, Crown, Library, BookOpen, Book, ChevronDown, ChevronRight, Folder, Search, Moon, Sun, Skull, List, Target } from 'lucide-react';
 
 export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery }) {
   const [modsOpen, setModsOpen] = useState(true);
