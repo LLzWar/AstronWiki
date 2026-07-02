@@ -345,7 +345,8 @@ body {
   width: 32px;
   height: 32px;
   image-rendering: pixelated;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: top;
 }
 
 /* Utils */

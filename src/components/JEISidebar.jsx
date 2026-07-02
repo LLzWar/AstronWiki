@@ -35,11 +35,11 @@ const JeiItemCell = ({ item, onClick }) => {
     >
       {!imageError ? (
         <img 
-          src={imgSrc} 
-          alt={item.name} 
-          onError={() => setImageError(true)} 
-          style={{ width: '28px', height: '28px', objectFit: 'contain', imageRendering: 'pixelated' }}
-        />
+            src={imgSrc} 
+            alt={item.name} 
+            onError={() => setImageError(true)} 
+            style={{ width: '28px', height: '28px', objectFit: 'cover', objectPosition: 'top', imageRendering: 'pixelated' }}
+          />
       ) : (
         initials
       )}
