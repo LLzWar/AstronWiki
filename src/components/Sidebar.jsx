@@ -11,6 +11,7 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
     { id: 'home', icon: Home, label: 'Página Inicial' },
     { id: 'modindex', icon: Library, label: 'Mod Index' },
     { id: 'bestiary', icon: Skull, label: 'Bestiário (Bosses)' },
+    { id: 'mobs', icon: Target, label: 'Bestiário (Mobs)' },
     { id: 'dimensions', icon: Sparkles, label: 'Guia de Dimensões' }
   ];
 

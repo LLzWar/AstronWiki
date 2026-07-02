@@ -3,6 +3,7 @@ import { Search, Box, BookOpen, Skull, ChevronRight } from 'lucide-react';
 import { modsList } from '../data/modsList';
 import { recipes } from '../data/recipes';
 import { BESTIARY_DATA } from '../data/bestiaryData';
+import { MOBS_DATA } from '../data/mobsData';
 
 export default function WikiSearch({ query, onOpenRecipe, setActiveTab }) {
   const results = useMemo(() => {
@@ -24,7 +25,12 @@ export default function WikiSearch({ query, onOpenRecipe, setActiveTab }) {
 
     // 3. Search in Bestiary (Loot & Mobs)
     const matchedLoot = [];
-    BESTIARY_DATA.forEach(mob => {
+    const allEntities = [
+      ...BESTIARY_DATA.map(mob => ({ ...mob, sourceTab: 'bestiary' })),
+      ...MOBS_DATA.map(mob => ({ ...mob, sourceTab: 'mobs' }))
+    ];
+    
+    allEntities.forEach(mob => {
       // Se o nome do mob bate com a busca, ou algum drop dele bate
       const matchedDrops = mob.drops.filter(drop => drop.name.toLowerCase().includes(lowerQuery));
       
@@ -32,6 +38,7 @@ export default function WikiSearch({ query, onOpenRecipe, setActiveTab }) {
         matchedLoot.push({
           mobName: mob.name,
           modName: mob.modName,
+          sourceTab: mob.sourceTab,
           matchedDrops: matchedDrops.length > 0 ? matchedDrops : mob.drops // Mostra os drops exatos se achou, senão mostra todos
         });
       }
@@ -110,9 +117,9 @@ export default function WikiSearch({ query, onOpenRecipe, setActiveTab }) {
                 <button 
                   className="nav-btn" 
                   style={{ marginTop: '1rem', backgroundColor: 'var(--bg-tertiary)', justifyContent: 'center' }}
-                  onClick={() => setActiveTab('bestiary')}
+                  onClick={() => setActiveTab(lootItem.sourceTab)}
                 >
-                  Estudar no Bestiário <ChevronRight size={16}/>
+                  Estudar na Enciclopédia <ChevronRight size={16}/>
                 </button>
               </div>
             ))}

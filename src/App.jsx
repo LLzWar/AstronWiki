@@ -12,6 +12,7 @@ import WikiSilentGear from './components/WikiSilentGear';
 import WikiBackpacks from './components/WikiBackpacks';
 import WarlordPath from './components/WarlordPath';
 import WikiBestiary from './components/WikiBestiary';
+import WikiMobs from './components/WikiMobs';
 import WikiDimensions from './components/WikiDimensions';
 import WikiSearch from './components/WikiSearch';
 import MarkdownViewer from './components/MarkdownViewer';
@@ -85,7 +86,8 @@ export default function App() {
             {activeTab === 'home' && 'Bem-vindo ao banco de dados definitivo do modpack. Navegue pelo menu lateral para explorar as estratégias.'}
             {activeTab === 'modindex' && 'O índice completo de modificações instaladas na sua instância.'}
             {activeTab === 'tips' && 'Informações valiosas para sobrevivência e otimização no dia a dia do modpack.'}
-            {activeTab === 'bestiary' && 'Conheça os perigos e as fraquezas das criaturas de Astron City.'}
+            {activeTab === 'bestiary' && 'Conheça os perigos e as fraquezas dos titãs e chefes de Astron City.'}
+            {activeTab === 'mobs' && 'Enciclopédia de criaturas comuns, inimigos de biomas e suas tabelas de loot.'}
             {activeTab === 'dimensions' && 'Exploração entre mundos e o que esperar de cada um.'}
             {activeTab.startsWith('wiki-') || ['apotheosis', 'powah', 'silentgear', 'backpacks'].includes(activeTab) ? 'Informações extraídas diretamente dos arquivos para domínio completo do mod.' : ''}
             {['ae2', 'cataclysm', 'gear', 'mi', 'oritech', 'create', 'irons_spells', 'ice_and_fire'].includes(activeTab) && 'Documentação nativa do Astron City transcrita diretamente do servidor oficial.'}
@@ -187,6 +189,13 @@ export default function App() {
           {activeTab === 'bestiary' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <WikiBestiary onOpenRecipe={openRecipe} />
+            </div>
+          )}
+
+          {/* MOBS */}
+          {activeTab === 'mobs' && searchQuery.length === 0 && (
+            <div style={{gridColumn: '1 / -1'}}>
+              <WikiMobs />
             </div>
           )}
 
