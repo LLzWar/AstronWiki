@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Backpack, Sparkles, Factory, Crown, Shield, Zap, Skull, Gem, CheckCircle, Circle, BookOpen } from 'lucide-react';
+import { 
+  Backpack, Sparkles, Factory, Crown, Shield, Zap, Skull, Gem, 
+  CheckCircle, Circle, BookOpen, Map, Hammer, Flame, Droplet, 
+  Box, Star, Database, Settings, Crosshair, Tent, Sword
+} from 'lucide-react';
 
 const WARLORD_DATA = {
   early: {
@@ -12,44 +16,86 @@ const WARLORD_DATA = {
     icon: Backpack,
     subphases: [
       {
-        id: "early_survival",
-        title: "Ferramentas & Sobrevivência",
+        id: "early_dayone",
+        title: "1. O Primeiro Dia",
         quests: [
           {
-            id: "early_gear",
-            icon: Shield,
-            title: "As Primeiras Ferramentas (Silent Gear)",
-            desc: "Não desperdice minérios fazendo ferramentas Vanilla. Desde o dia 1, adote o Silent Gear.",
+            id: "e_dayone_1",
+            icon: Tent,
+            title: "Abrigo e Madeira",
+            desc: "A primeira noite é mortal. Colete madeira e busque abrigo.",
             tasks: [
-              "Faça Blueprints de Picareta e Espada com Papel.",
-              "Forje armas de Ferro no Silent Gear para usar Repair Kits.",
-              "Crie sua base próxima a minérios para evoluir ao tier de Crimson Steel."
+              "Colete no mínimo 1 pack de madeira bruta.",
+              "Encontre uma vila ou escave um abrigo subterrâneo.",
+              "Crie uma cama e durma para pular os perigos da noite."
             ]
           }
         ]
       },
       {
-        id: "early_utility",
-        title: "Logística & Magia Inicial",
+        id: "early_tools",
+        title: "2. Forjaria Rústica",
         quests: [
           {
-            id: "early_backpack",
-            icon: Backpack,
-            title: "A Revolução do Inventário (Sophisticated Backpacks)",
-            desc: "O ASTRON CITY tem centenas de itens por chunk minerado. Seu inventário vanilla não durará 5 minutos.",
+            id: "e_tools_1",
+            icon: Hammer,
+            title: "Silent Gear Básico",
+            desc: "Esqueça as picaretas vanilla. Ferramentas modded são essenciais.",
             tasks: [
-              { text: "Crie uma Magnet Upgrade básica e equipe na mochila de Ferro.", recipe: "magnet_upgrade" },
-              "Use Stack Upgrades para carregar packs de Cobblestone ou Terra durante suas explorações."
+              "Crie Blueprints de Picareta, Machado e Espada usando papel.",
+              "Use os Blueprints com pedra ou ferro para forjar seu kit inicial no Silent Gear.",
+              "Faça Repair Kits (Kits de Reparo) de pedra/ferro para consertar suas ferramentas na mão."
             ]
-          },
+          }
+        ]
+      },
+      {
+        id: "early_inventory",
+        title: "3. Logística Viva",
+        quests: [
           {
-            id: "early_magic",
-            icon: Sparkles,
-            title: "Cura Primordial (Iron's Spells)",
-            desc: "Para economizar comida (que será escassa), inicie seu treinamento em feitiços de luz divina ou sangue.",
+            id: "e_inv_1",
+            icon: Backpack,
+            title: "Sophisticated Backpacks",
+            desc: "A exploração rende dezenas de itens únicos. Você precisará de espaço.",
             tasks: [
-              "Crie o grimório de madeira e uma Inscription Table.",
-              "Encontre pergaminhos básicos de Heal (Magia Sagrada) ou Blood Needles. A magia regenera de graça!"
+              "Crie a Mochila Básica (Couro e Linha).",
+              "Faça Upgrade para a Mochila de Ferro.",
+              { text: "Instale um Magnet Upgrade (Imã) para sugar minérios para dentro da mochila automaticamente.", recipe: "magnet_upgrade" }
+            ]
+          }
+        ]
+      },
+      {
+        id: "early_food",
+        title: "4. Alimentação",
+        quests: [
+          {
+            id: "e_food_1",
+            icon: Droplet,
+            title: "Farmer's Delight & Spice of Life",
+            desc: "Comer apenas carne assada não te deixará forte. Diversifique.",
+            tasks: [
+              "Colete sementes, repolhos e tomates selvagens.",
+              "Construa uma Panela (Cooking Pot) e um Fogão.",
+              "Cozinhe ensopados para ganhar Vida Extra (Corações Max) pelo mod Spice of Life."
+            ]
+          }
+        ]
+      },
+      {
+        id: "early_exploration",
+        title: "5. Exploração Superficial",
+        quests: [
+          {
+            id: "e_exp_1",
+            icon: Map,
+            title: "Primeiros Combates",
+            desc: "Obtenha recursos raros de pequenas estruturas e mobs isolados.",
+            tasks: [
+              "Saqueie acampamentos de Illagers e ruínas terrestres.",
+              "Derrote mobs especiais que brilham (Apothic Bosses) para conseguir sua primeira armadura encantada grátis.",
+              "Encontre Waystones (Pedras de Teleporte) nas vilas e ative-as."
             ]
           }
         ]
@@ -67,33 +113,85 @@ const WARLORD_DATA = {
     subphases: [
       {
         id: "tech_create",
-        title: "A Era do Vapor",
+        title: "1. Era da Engrenagem",
         quests: [
           {
-            id: "tech_create_quest",
-            icon: Factory,
-            title: "Produção em Massa (Create Ecosystem)",
-            desc: "Sua prioridade máxima é multiplicar recursos. Cada minério puro vale o dobro se você esmagá-lo no Create.",
+            id: "t_create_1",
+            icon: Settings,
+            title: "Cinética Inicial (Create)",
+            desc: "O movimento de engrenagens será sua primeira força motriz.",
             tasks: [
-              "Crie uma roda d'água (Water Wheel) e ligue a Mechanical Belts.",
-              "Instale Crushing Wheels para moer minérios brutos de Ferro e Ouro, triplicando o seu rendimento diário.",
-              "Automatize o Latão (Brass) usando um Mechanical Mixer e um Blaze Burner."
+              "Crie sua primeira Roda D'Água (Water Wheel).",
+              "Faça os Andesite Alloys misturando Ferro e Andesito.",
+              "Instale um Mechanical Press (Prensa) para fabricar placas de metal."
             ]
           }
         ]
       },
       {
         id: "tech_power",
-        title: "Eletrificação",
+        title: "2. Eletrificação",
         quests: [
           {
-            id: "tech_powah_quest",
+            id: "t_powah_1",
             icon: Zap,
-            title: "A Primeira Energia (Powah!)",
-            desc: "Enquanto o Create funciona com força cinética, o restante dos mods exigirá FE (Forge Energy).",
+            title: "Energia Infinita (Powah!)",
+            desc: "Sua transição para energia Forge Energy (FE).",
             tasks: [
-              { text: "Crie o seu Thermo Generator (Tier Starter) e injete água na lateral com magma em baixo.", recipe: "thermo_generator" },
-              "Inicie a produção de Dielectric Paste misturando carvão e argila, pois você precisará de toneladas dela para os cabos."
+              "Faça Di-Electric Paste em massa.",
+              { text: "Crie o Thermo Generator inicial. Coloque-o sobre Magma e injete água.", recipe: "thermo_generator" },
+              "Faça Baterias de armazenamento (Energy Cell) para sua base."
+            ]
+          }
+        ]
+      },
+      {
+        id: "tech_industry",
+        title: "3. Máquinas Industriais",
+        quests: [
+          {
+            id: "t_ind_1",
+            icon: Factory,
+            title: "Modern Industrialization",
+            desc: "Máquinas complexas para processar centenas de itens por segundo.",
+            tasks: [
+              "Construa os tijolos do forno a vapor (Steam Boiler).",
+              "Crie sua primeira Maceradora (Macerator) para pulverizar minérios duplos.",
+              "Faça uma Forja de Ligas (Alloy Smelter) para latão e bronze."
+            ]
+          }
+        ]
+      },
+      {
+        id: "tech_auto",
+        title: "4. Automação",
+        quests: [
+          {
+            id: "t_auto_1",
+            icon: Box,
+            title: "O Fim da Mineração Manual",
+            desc: "Coloque as máquinas para extrair recursos da terra para você.",
+            tasks: [
+              "Instale uma Quarry ou Digital Miner.",
+              "Ligue cabos de energia consistentes à sua zona de mineração.",
+              "Configure tubulações (Item Pipes) para enviar o minério direto à Maceradora."
+            ]
+          }
+        ]
+      },
+      {
+        id: "tech_farm",
+        title: "5. Fazendas Auto",
+        quests: [
+          {
+            id: "t_farm_1",
+            icon: Droplet,
+            title: "Sustento Botânico",
+            desc: "A indústria precisa de madeira e bio-combustível.",
+            tasks: [
+              "Crie Mechanical Harvesters ou fazendas do Phytogenic Insulator.",
+              "Automatize o plantio e corte de árvores (Tree Farm).",
+              "Transforme os excessos orgânicos em energia ou compostagem."
             ]
           }
         ]
@@ -110,45 +208,86 @@ const WARLORD_DATA = {
     icon: Sparkles,
     subphases: [
       {
-        id: "magic_apothic",
-        title: "Arcanismo Avançado",
+        id: "magic_enchants",
+        title: "1. Limites Quebrados",
         quests: [
           {
-            id: "magic_apothic_quest",
+            id: "m_ench_1",
             icon: Gem,
-            title: "Quebrando os Limites (Apothic Ecosystem)",
-            desc: "As armaduras vanilla já não suportam mais o dano absurdo dos monstros modificados do servidor.",
+            title: "Apothic Enchanting",
+            desc: "Eleve seus encantamentos para Nível 50 ou 100.",
             tasks: [
-              "Substitua as estantes de livros normais por estantes do The End e Seahelves.",
-              "Eleve sua Eterna para atingir encantamentos Nível 50+. Forje espadas com Sharpness X.",
+              "Substitua estantes vanilla por Melonshelves ou End Shelves.",
+              "Atinga Eterna alta e Quanta controlada para encantos perfeitos.",
               { text: "Construa a Library of Alexandria para unificar centenas de livros mágicos.", recipe: "library_of_alexandria" }
-            ]
-          },
-          {
-            id: "magic_spells_quest",
-            icon: Skull,
-            title: "Feitiços Pesados (Iron's Spells)",
-            desc: "Com recursos massivos fluindo, chegou a hora de dominar o verdadeiro dano arcano.",
-            tasks: [
-              "Crie Pergaminhos de feitiços nível Épico ou Lendário (Raio Cósmico, Explosão Estelar).",
-              "Adote uma Armadura de Mago avançada focada num tipo elementar."
             ]
           }
         ]
       },
       {
-        id: "magic_network",
-        title: "A Consciência Digital",
+        id: "magic_digital",
+        title: "2. Cofre Digital",
         quests: [
           {
-            id: "magic_ae2_quest",
-            icon: Crown,
-            title: "Centralização (AE2)",
-            desc: "Com as automações gerando milhares de itens por hora, baús de diamante viram um problema grave.",
+            id: "m_dig_1",
+            icon: Database,
+            title: "Applied Energistics 2",
+            desc: "Armazene os milhões de itens minerados na rede cibernética-mágica.",
             tasks: [
-              "Forje Storage Cells de 64k ou superiores.",
-              "Destrua todos os seus baús e centralize-os em um único Crafting Terminal do AE2.",
-              { text: "Use ME P2P Tunnels para levar a capacidade extrema da rede para todos os cômodos.", recipe: "p2p_tunnel" }
+              "Crie ME Drives e preencha-os com Storage Cells de 64k+.",
+              "Configure Inscribers automatizados para processar placas de quartzo.",
+              { text: "Conecte seus painéis via ME P2P Tunnels.", recipe: "p2p_tunnel" }
+            ]
+          }
+        ]
+      },
+      {
+        id: "magic_spells",
+        title: "3. Artes Arcanas",
+        quests: [
+          {
+            id: "m_spell_1",
+            icon: Star,
+            title: "Iron's Spells",
+            desc: "Canalize energia bruta do universo.",
+            tasks: [
+              "Produza pergaminhos Épicos e Lendários na Inscription Table.",
+              "Vista as Armaduras de Mago avançadas (Fogo/Gelo/Sangue).",
+              "Vá a campo testar magias como Black Hole ou Starfall."
+            ]
+          }
+        ]
+      },
+      {
+        id: "magic_dimensions",
+        title: "4. Dimensões Obscuras",
+        quests: [
+          {
+            id: "m_dim_1",
+            icon: Flame,
+            title: "O Nether e Além",
+            desc: "Acesse planos de existência alterados.",
+            tasks: [
+              "Explore as Fortalezas do Nether e capture Spawners.",
+              "Faça rituais para estabilizar os portões para o Twilight Forest (se ativado).",
+              "Colete minérios interdimensionais como Allthemodium (ou equivalente no pack)."
+            ]
+          }
+        ]
+      },
+      {
+        id: "magic_blood",
+        title: "5. Sinergia Arcana",
+        quests: [
+          {
+            id: "m_blood_1",
+            icon: Crosshair,
+            title: "Combos Mortais",
+            desc: "Junte tecnologia com os feitiços mais cruéis.",
+            tasks: [
+              "Use armas tech de longo alcance envenenadas com poções mágicas.",
+              "Estabeleça um altar de encantos focado em Lifesteal para se manter imortal nas dungeons.",
+              "Complete sets de gemas lendárias (Apothic Gems) em suas espadas e armaduras."
             ]
           }
         ]
@@ -165,35 +304,86 @@ const WARLORD_DATA = {
     icon: Crown,
     subphases: [
       {
-        id: "late_draconic",
-        title: "O Despertar Dracônico",
+        id: "late_draconic_base",
+        title: "1. O Dragão Adormecido",
         quests: [
           {
-            id: "late_draconic_quest",
+            id: "l_drac_1",
             icon: Shield,
-            title: "O Despertar do Dragão (Draconic Evolution)",
-            desc: "O ápice tecnológico absoluto. Para matar os deuses do servidor, as armaduras mundanas falham.",
+            title: "Draconic Evolution Básica",
+            desc: "O começo do ápice tecnológico do servidor.",
             tasks: [
-              "Minere Draconium e inicie o ritual de Fusion Crafting usando Injectors massivos.",
-              "Forje a armadura Draconic: Ela absorve 100% de TODO o dano recebido contanto que tenha milhões de RF.",
-              "Construa o Cajado do Poder (Staff of Power), capaz de minerar 9x9 blocos instantaneamente."
+              "Minere enormes quantidades de Draconium no The End.",
+              "Crie e carregue os primeiros Draconic Cores.",
+              "Construa o altar básico de Fusion Crafting com Injectors Básicos."
+            ]
+          }
+        ]
+      },
+      {
+        id: "late_armor",
+        title: "2. Escudos Infinitos",
+        quests: [
+          {
+            id: "l_arm_1",
+            icon: Gem,
+            title: "A Forja Imortal",
+            desc: "Sem essa armadura, os chefes do servidor irão obliterá-lo.",
+            tasks: [
+              "Crie a Wyvern Armor para se estabilizar contra dano letal.",
+              "Realize rituais massivos e forje a lendária Draconic Armor.",
+              "Ligue as armaduras a baterias wireless de milhões de RF."
             ]
           }
         ]
       },
       {
         id: "late_cataclysm",
-        title: "Caça aos Deuses",
+        title: "3. Fúria do Vulcão",
         quests: [
           {
-            id: "late_cataclysm_quest",
-            icon: Skull,
-            title: "Cataclysm",
-            desc: "É hora de testar sua armadura milionária nas maiores masmorras que o jogo pode gerar.",
+            id: "l_cat_1",
+            icon: Flame,
+            title: "Ignis (Cataclysm)",
+            desc: "A masmorra mais perigosa do Nether.",
             tasks: [
-              { text: "Derrote Ignis absorvendo as erupções vulcânicas com Cristais Nitro do Powah no inventário.", recipe: "nitro_crystal" },
-              { text: "Invada a ruína do The End, derrote o Ender Golem e forje o mítico Void Core.", recipe: "void_core" },
-              "Enfrente The Harbinger. Sobreviva aos ataques a laser aniquiladores usando vôo infinito."
+              "Encontre a Fortaleza Vulcânica.",
+              { text: "Leve Cristais Nitro para aguentar o calor e enfrente Ignis.", recipe: "nitro_crystal" },
+              "Roube a arma 'The Incinerator' de suas cinzas."
+            ]
+          }
+        ]
+      },
+      {
+        id: "late_end",
+        title: "4. Domínio do Vazio",
+        quests: [
+          {
+            id: "l_end_1",
+            icon: Sword,
+            title: "Ruínas Esquecidas",
+            desc: "Os horrores estelares aguardam no Fim.",
+            tasks: [
+              "Invada a Ruined Citadel (Cidadela Arruinada).",
+              "Assassine o Ender Golem usando dano maciço.",
+              { text: "Forje o mítico Void Core para ganhar o Voo Criativo e Antigravidade eterna.", recipe: "void_core" }
+            ]
+          }
+        ]
+      },
+      {
+        id: "late_god",
+        title: "5. Senhor Absoluto",
+        quests: [
+          {
+            id: "l_god_1",
+            icon: Crown,
+            title: "Autocrafting de Titãs",
+            desc: "Nada no servidor consegue lhe causar arranhões. Você transcendeu.",
+            tasks: [
+              "Instale padrões de Autocrafting no AE2 para Forjar itens Dracônicos automaticamente.",
+              "Crie o lendário Staff of Power para minerar áreas de 9x9 instantaneamente.",
+              "Construa a Sala de Troféus com cabeças de dragões, armaduras relíquias e itens lendários do L'Ender's Cataclysm."
             ]
           }
         ]
