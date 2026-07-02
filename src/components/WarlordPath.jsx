@@ -1,214 +1,342 @@
-import React from 'react';
-import { Backpack, Sparkles, Factory, Crown, Shield, Zap, Skull, Gem } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Backpack, Sparkles, Factory, Crown, Shield, Zap, Skull, Gem, CheckCircle, Circle, ArrowRight } from 'lucide-react';
 
-export default function WarlordPath({ phase, onOpenRecipe }) {
-  if (phase === 'early') {
-    return (
-      <div className="doc-layout" style={{ maxWidth: '100%' }}>
-        <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
-          <h2 style={{ color: 'var(--accent-blue)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Backpack size={28} /> Fase 1: Early Game (Sobrevivência & Saque)
+const WARLORD_DATA = {
+  early: {
+    id: 'early',
+    title: "Fase 1: Early Game",
+    subtitle: "Sobrevivência & Saque",
+    desc: "Estabeleça a sua presença no mundo. Foque em mobilidade, estocagem básica e armas rústicas.",
+    gradient: "linear-gradient(135deg, rgba(35, 134, 54, 0.15) 0%, rgba(30, 30, 30, 0.6) 100%)",
+    accent: "#2ea043",
+    icon: Backpack,
+    quests: [
+      {
+        id: "early_gear",
+        icon: Shield,
+        title: "As Primeiras Ferramentas (Silent Gear)",
+        desc: "Não desperdice minérios fazendo ferramentas Vanilla. Desde o dia 1, adote o Silent Gear.",
+        tasks: [
+          "Faça Blueprints de Picareta e Espada com Papel.",
+          "Forje armas de Ferro no Silent Gear para usar Repair Kits.",
+          "Crie sua base próxima a minérios para evoluir ao tier de Crimson Steel."
+        ]
+      },
+      {
+        id: "early_backpack",
+        icon: Backpack,
+        title: "A Revolução do Inventário (Sophisticated Backpacks)",
+        desc: "O ASTRON CITY tem centenas de itens por chunk minerado. Seu inventário vanilla não durará 5 minutos.",
+        tasks: [
+          { text: "Crie uma Magnet Upgrade básica e equipe na mochila de Ferro.", recipe: "magnet_upgrade" },
+          "Use Stack Upgrades para carregar packs de Cobblestone ou Terra durante suas explorações."
+        ]
+      },
+      {
+        id: "early_magic",
+        icon: Sparkles,
+        title: "Cura Primordial (Iron's Spells)",
+        desc: "Para economizar comida (que será escassa), inicie seu treinamento em feitiços de luz divina ou sangue.",
+        tasks: [
+          "Crie o grimório de madeira e uma Inscription Table.",
+          "Encontre pergaminhos básicos de Heal (Magia Sagrada) ou Blood Needles. A magia regenera de graça!"
+        ]
+      }
+    ]
+  },
+  tech: {
+    id: 'tech',
+    title: "Fase 2: Tech",
+    subtitle: "Revolução Industrial",
+    desc: "A fase em que você deixa de minerar com as mãos e passa a esmagar rochas com motores industriais.",
+    gradient: "linear-gradient(135deg, rgba(230, 119, 0, 0.15) 0%, rgba(30, 30, 30, 0.6) 100%)",
+    accent: "#e67700",
+    icon: Factory,
+    quests: [
+      {
+        id: "tech_create",
+        icon: Factory,
+        title: "Produção em Massa (Create Ecosystem)",
+        desc: "Sua prioridade máxima é multiplicar recursos. Cada minério puro vale o dobro se você esmagá-lo no Create.",
+        tasks: [
+          "Crie uma roda d'água (Water Wheel) e ligue a Mechanical Belts.",
+          "Instale Crushing Wheels para moer minérios brutos de Ferro e Ouro, triplicando o seu rendimento diário.",
+          "Automatize o Latão (Brass) usando um Mechanical Mixer e um Blaze Burner."
+        ]
+      },
+      {
+        id: "tech_powah",
+        icon: Zap,
+        title: "A Primeira Energia (Powah!)",
+        desc: "Enquanto o Create funciona com força cinética, o restante dos mods exigirá FE (Forge Energy).",
+        tasks: [
+          { text: "Crie o seu Thermo Generator (Tier Starter) e injete água na lateral com magma em baixo.", recipe: "thermo_generator" },
+          "Inicie a produção de Dielectric Paste misturando carvão e argila, pois você precisará de toneladas dela para os cabos."
+        ]
+      }
+    ]
+  },
+  magic: {
+    id: 'magic',
+    title: "Fase 3: Magic",
+    subtitle: "Domínio Interdimensional",
+    desc: "Quando as fábricas não são suficientes, a magia corrompe a realidade e centraliza seu poder.",
+    gradient: "linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(0, 191, 255, 0.1) 50%, rgba(30, 30, 30, 0.6) 100%)",
+    accent: "#8a2be2",
+    icon: Sparkles,
+    quests: [
+      {
+        id: "magic_apothic",
+        icon: Gem,
+        title: "Quebrando os Limites (Apothic Ecosystem)",
+        desc: "As armaduras vanilla já não suportam mais o dano absurdo dos monstros modificados do servidor.",
+        tasks: [
+          "Substitua as estantes de livros normais por estantes do The End e Seahelves.",
+          "Eleve sua Eterna para atingir encantamentos Nível 50+. Forje espadas com Sharpness X.",
+          { text: "Construa a Library of Alexandria para unificar centenas de livros mágicos.", recipe: "library_of_alexandria" }
+        ]
+      },
+      {
+        id: "magic_ae2",
+        icon: Crown,
+        title: "A Consciência Digital (AE2)",
+        desc: "Com as automações gerando milhares de itens por hora, baús de diamante viram um problema grave.",
+        tasks: [
+          "Forje Storage Cells de 64k ou superiores.",
+          "Destrua todos os seus baús e centralize-os em um único Crafting Terminal do AE2.",
+          { text: "Use ME P2P Tunnels para levar a capacidade extrema da rede para todos os cômodos.", recipe: "p2p_tunnel" }
+        ]
+      },
+      {
+        id: "magic_spells",
+        icon: Skull,
+        title: "Feitiços Pesados (Iron's Spells)",
+        desc: "Com recursos massivos fluindo, chegou a hora de dominar o verdadeiro dano arcano.",
+        tasks: [
+          "Crie Pergaminhos de feitiços nível Épico ou Lendário (Raio Cósmico, Explosão Estelar).",
+          "Adote uma Armadura de Mago avançada focada num tipo elementar."
+        ]
+      }
+    ]
+  },
+  late: {
+    id: 'late',
+    title: "Fase 4: Late Game",
+    subtitle: "A Ascensão aos Deuses",
+    desc: "Você não é mais um sobrevivente. Você é uma entidade capaz de aniquilar montanhas e deuses.",
+    gradient: "linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(220, 20, 60, 0.1) 50%, rgba(30, 30, 30, 0.6) 100%)",
+    accent: "#d4af37",
+    icon: Crown,
+    quests: [
+      {
+        id: "late_draconic",
+        icon: Shield,
+        title: "O Despertar do Dragão (Draconic Evolution)",
+        desc: "O ápice tecnológico absoluto. Para matar os deuses do servidor, as armaduras mundanas falham.",
+        tasks: [
+          "Minere Draconium e inicie o ritual de Fusion Crafting usando Injectors massivos.",
+          "Forje a armadura Draconic: Ela absorve 100% de TODO o dano recebido contanto que tenha milhões de RF.",
+          "Construa o Cajado do Poder (Staff of Power), capaz de minerar 9x9 blocos instantaneamente."
+        ]
+      },
+      {
+        id: "late_cataclysm",
+        icon: Skull,
+        title: "Caçando Deuses (Cataclysm)",
+        desc: "É hora de testar sua armadura milionária nas maiores masmorras que o jogo pode gerar.",
+        tasks: [
+          { text: "Derrote Ignis absorvendo as erupções vulcânicas com Cristais Nitro do Powah no inventário.", recipe: "nitro_crystal" },
+          { text: "Invada a ruína do The End, derrote o Ender Golem e forje o mítico Void Core.", recipe: "void_core" },
+          "Enfrente The Harbinger. Sobreviva aos ataques a laser aniquiladores usando vôo infinito."
+        ]
+      }
+    ]
+  }
+};
+
+const PHASE_ORDER = ['early', 'tech', 'magic', 'late'];
+
+export default function WarlordPath({ phase, onOpenRecipe, setActiveTab }) {
+  const currentData = WARLORD_DATA[phase];
+  
+  // Progress Tracking State
+  const [completedQuests, setCompletedQuests] = useState(() => {
+    try {
+      const saved = localStorage.getItem('warlordProgress');
+      return saved ? JSON.parse(saved) : {};
+    } catch {
+      return {};
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem('warlordProgress', JSON.stringify(completedQuests));
+  }, [completedQuests]);
+
+  const toggleTask = (taskId) => {
+    setCompletedQuests(prev => ({
+      ...prev,
+      [taskId]: !prev[taskId]
+    }));
+  };
+
+  if (!currentData) return null;
+
+  return (
+    <div className="warlord-container" style={{ animation: 'fadeIn 0.4s ease-out' }}>
+      
+      {/* TIMELINE HEADER */}
+      <div className="warlord-timeline" style={{ 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center', 
+        marginBottom: '2rem',
+        padding: '1rem 2rem',
+        backgroundColor: 'var(--bg-secondary)',
+        borderRadius: '8px',
+        border: '1px solid var(--border-color)'
+      }}>
+        {PHASE_ORDER.map((step, index) => {
+          const stepData = WARLORD_DATA[step];
+          const StepIcon = stepData.icon;
+          const isActive = step === phase;
+          const isPast = PHASE_ORDER.indexOf(phase) > index;
+          const color = isActive ? stepData.accent : (isPast ? 'var(--text-primary)' : 'var(--text-secondary)');
+          
+          return (
+            <React.Fragment key={step}>
+              <div 
+                className="timeline-step"
+                style={{ 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  alignItems: 'center', 
+                  gap: '0.5rem',
+                  cursor: 'pointer',
+                  opacity: isActive ? 1 : (isPast ? 0.8 : 0.4),
+                  transition: 'all 0.2s',
+                  transform: isActive ? 'scale(1.05)' : 'none'
+                }}
+                onClick={() => setActiveTab(step)}
+              >
+                <div style={{
+                  width: 48, height: 48, borderRadius: '50%',
+                  backgroundColor: isActive ? `${stepData.accent}20` : 'var(--bg-tertiary)',
+                  border: `2px solid ${color}`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  color: color,
+                  boxShadow: isActive ? `0 0 15px ${stepData.accent}40` : 'none'
+                }}>
+                  <StepIcon size={24} />
+                </div>
+                <span style={{ fontSize: '0.85rem', fontWeight: isActive ? 600 : 400, color }}>
+                  Fase {index + 1}
+                </span>
+              </div>
+              
+              {index < PHASE_ORDER.length - 1 && (
+                <div style={{ flex: 1, height: '2px', backgroundColor: isPast ? 'var(--text-primary)' : 'var(--border-color)', margin: '0 1rem', opacity: 0.5 }} />
+              )}
+            </React.Fragment>
+          );
+        })}
+      </div>
+
+      {/* HERO BANNER */}
+      <div className="astron-hero-bg" style={{ 
+        background: currentData.gradient, 
+        borderLeft: `4px solid ${currentData.accent}`,
+        textAlign: 'left',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '2rem'
+      }}>
+        <div style={{ flex: 1 }}>
+          <h1 style={{ fontSize: '2.5rem', color: 'var(--text-primary)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            {currentData.title}
+          </h1>
+          <h2 style={{ fontSize: '1.25rem', color: currentData.accent, marginBottom: '1rem', fontWeight: 600 }}>
+            {currentData.subtitle}
           </h2>
-          <p style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
-            Estabeleça a sua presença no mundo. Foque em mobilidade, estocagem básica e armas rústicas.
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '800px' }}>
+            {currentData.desc}
           </p>
         </div>
-
-        <section className="doc-section">
-          <h3 className="doc-section-title"><Shield size={24}/> As Primeiras Ferramentas (Silent Gear)</h3>
-          <p className="doc-text">
-            Não desperdice minérios fazendo ferramentas Vanilla. Desde o dia 1, adote o Silent Gear.
-          </p>
-          <ul className="doc-list">
-            <li>Faça Blueprints de Picareta e Espada com Papel.</li>
-            <li>Forje suas primeiras armas de Ferro no Silent Gear. Elas terão mais durabilidade e poderão ser consertadas com um <em>Repair Kit</em> na própria mão, sem usar Bigornas.</li>
-            <li>Crie sua base próxima a minérios para evoluir logo para o tier de <em>Crimson Steel</em> (se tiver acesso fácil ao Nether).</li>
-          </ul>
-        </section>
-
-        <section className="doc-section">
-          <h3 className="doc-section-title"><Backpack size={24}/> A Revolução do Inventário (Sophisticated Backpacks)</h3>
-          <p className="doc-text">
-            O ASTRON CITY tem centenas de itens por chunk minerado. Seu inventário não durará 5 minutos.
-          </p>
-          <ul className="doc-list">
-            <li>
-              Crie uma 
-              <button className="craft-btn" onClick={() => onOpenRecipe('magnet_upgrade')}>Magnet Upgrade</button> básica 
-              e equipe na mochila de Ferro. Ela sugará minérios diretamente para a bolsa.
-            </li>
-            <li>Use <em>Stack Upgrades</em> para carregar packs de Cobblestone ou Terra durante suas explorações.</li>
-          </ul>
-        </section>
-
-        <section className="doc-section">
-          <h3 className="doc-section-title"><Sparkles size={24}/> Cura Primordial (Iron's Spells)</h3>
-          <p className="doc-text">
-            Para economizar comida (que será escassa), inicie seu treinamento em feitiços de luz divina ou sangue.
-          </p>
-          <ul className="doc-list">
-            <li>Crie o grimório de madeira e uma <em>Inscription Table</em>.</li>
-            <li>Encontre pergaminhos (Scrolls) básicos de <em>Heal</em> (Magia Sagrada) ou <em>Blood Needles</em> (Magia de Sangue). Lançar feitiços de cura gasta Mana (que regenera de graça), poupando suas maçãs e bifes para emergências reais.</li>
-          </ul>
-        </section>
-      </div>
-    );
-  }
-
-  if (phase === 'tech') {
-    return (
-      <div className="doc-layout" style={{ maxWidth: '100%' }}>
-        <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
-          <h2 style={{ color: 'var(--accent-blue)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Factory size={28} /> Fase 2: Tech (Revolução Industrial)
-          </h2>
-          <p style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
-            A fase em que você deixa de minerar com as mãos e passa a esmagar rochas com motores.
-          </p>
+        <div style={{ color: currentData.accent, opacity: 0.8 }}>
+          <currentData.icon size={100} />
         </div>
-
-        <section className="doc-section">
-          <h3 className="doc-section-title"><Factory size={24}/> Produção em Massa (Create Ecosystem)</h3>
-          <p className="doc-text">
-            Sua prioridade máxima é multiplicar recursos. Cada minério puro vale o dobro se você esmagá-lo no Create.
-          </p>
-          <ul className="doc-list">
-            <li>Crie uma roda d'água (Water Wheel) e ligue a <em>Mechanical Belts</em>.</li>
-            <li>Instale <em>Crushing Wheels</em> para moer minérios brutos de Ferro e Ouro, triplicando o seu rendimento diário.</li>
-            <li>Automatize o Latão (Brass) usando um <em>Mechanical Mixer</em> e um <em>Blaze Burner</em>, pavimentando o caminho para os Braços Robóticos e engrenagens inteligentes.</li>
-          </ul>
-        </section>
-
-        <section className="doc-section">
-          <h3 className="doc-section-title"><Zap size={24}/> A Primeira Energia (Powah!)</h3>
-          <p className="doc-text">
-            Enquanto o Create funciona com força cinética, o restante dos mods exigirá FE (Forge Energy).
-          </p>
-          <ul className="doc-list">
-            <li>
-              Crie o seu 
-              <button className="craft-btn" onClick={() => onOpenRecipe('thermo_generator')}>Thermo Generator</button> (Tier Starter). 
-              Coloque magma embaixo dele e injete água na lateral. Ele gerará energia limpa para sempre, 24 horas por dia.
-            </li>
-            <li>Inicie a produção de <em>Dielectric Paste</em> misturando carvão e argila, pois você precisará de toneladas dela para os cabos.</li>
-          </ul>
-        </section>
       </div>
-    );
-  }
 
-  if (phase === 'magic') {
-    return (
-      <div className="doc-layout" style={{ maxWidth: '100%' }}>
-        <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
-          <h2 style={{ color: 'var(--accent-blue)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Sparkles size={28} /> Fase 3: Magic (Domínio Interdimensional)
-          </h2>
-          <p style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
-            Quando as fábricas não são suficientes, a magia corrompe a realidade e centraliza seu poder.
-          </p>
-        </div>
+      {/* QUEST CARDS */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+        {currentData.quests.map((quest) => {
+          // Check if all tasks in this quest are completed
+          const allTasksCompleted = quest.tasks.every((_, idx) => completedQuests[`${quest.id}_task_${idx}`]);
+          
+          return (
+            <div key={quest.id} className="doc-section quest-card" style={{ 
+              position: 'relative', 
+              overflow: 'hidden',
+              transition: 'all 0.3s ease',
+              borderLeft: `4px solid ${allTasksCompleted ? currentData.accent : 'var(--bg-tertiary)'}`,
+              opacity: allTasksCompleted ? 0.7 : 1
+            }}>
+              <h3 className="doc-section-title" style={{ 
+                color: allTasksCompleted ? 'var(--text-secondary)' : 'var(--text-primary)', 
+                borderBottom: 'none', paddingBottom: 0, marginBottom: '0.5rem',
+                textDecoration: allTasksCompleted ? 'line-through' : 'none'
+              }}>
+                <quest.icon size={24} color={allTasksCompleted ? 'var(--text-secondary)' : currentData.accent} /> {quest.title}
+              </h3>
+              <p className="doc-text" style={{ fontSize: '0.95rem', marginBottom: '1rem', opacity: 0.8 }}>
+                {quest.desc}
+              </p>
+              
+              <div className="quest-tasks" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', backgroundColor: 'var(--bg-primary)', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                {quest.tasks.map((task, idx) => {
+                  const taskId = `${quest.id}_task_${idx}`;
+                  const isCompleted = completedQuests[taskId];
+                  const text = typeof task === 'string' ? task : task.text;
+                  const recipeId = typeof task === 'string' ? null : task.recipe;
 
-        <section className="doc-section">
-          <h3 className="doc-section-title"><Gem size={24}/> Encantamentos que quebram limites (Apothic Ecosystem)</h3>
-          <p className="doc-text">
-            As armaduras vanilla já não suportam mais o dano dos mobs do servidor.
-          </p>
-          <ul className="doc-list">
-            <li>Substitua as estantes de livros normais por estantes do The End e Seahelves.</li>
-            <li>Eleve sua Eterna para atingir encantamentos Nível 50+. Forje espadas com Sharpness X e armaduras com Protection VIII.</li>
-            <li>
-              Construa a 
-              <button className="craft-btn" onClick={() => onOpenRecipe('library_of_alexandria')}>Library of Alexandria</button> 
-              para unificar centenas de livros mágicos que você obteve pescando ou explorando, gerando a "Espada Perfeita".
-            </li>
-          </ul>
-        </section>
-
-        <section className="doc-section">
-          <h3 className="doc-section-title"><Crown size={24}/> A Consciência Digital (AE2 & Add-ons)</h3>
-          <p className="doc-text">
-            Com as automações gerando milhares de itens por hora, baús de diamante viram um problema.
-          </p>
-          <ul className="doc-list">
-            <li>Forje <em>Storage Cells</em> de 64k ou superiores.</li>
-            <li>Destrua todos os seus baús e centralize-os em um único <em>Crafting Terminal</em> do AE2.</li>
-            <li>
-              Use 
-              <button className="craft-btn" onClick={() => onOpenRecipe('p2p_tunnel')}>ME P2P Tunnels</button> para 
-              levar a capacidade extrema do seu Controller de rede para todos os cômodos da base através de um único cabo.
-            </li>
-          </ul>
-        </section>
-
-        <section className="doc-section">
-          <h3 className="doc-section-title"><Skull size={24}/> Armas Místicas e Feitiços Pesados</h3>
-          <p className="doc-text">
-            Com recursos massivos fluindo, chegou a hora de dominar o verdadeiro dano do Iron's Spells.
-          </p>
-          <ul className="doc-list">
-            <li>Crie Pergaminhos de feitiços nível Épico ou Lendário na <em>Inscription Table</em> (Raio Cósmico, Explosão Estelar).</li>
-            <li>Adote uma Armadura de Mago avançada focada num tipo elementar e refine sua mana regen.</li>
-          </ul>
-        </section>
+                  return (
+                    <div key={taskId} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                      <button 
+                        onClick={() => toggleTask(taskId)}
+                        style={{ 
+                          background: 'none', border: 'none', cursor: 'pointer',
+                          color: isCompleted ? currentData.accent : 'var(--text-secondary)',
+                          marginTop: '0.15rem',
+                          transition: 'color 0.2s',
+                          padding: 0
+                        }}
+                      >
+                        {isCompleted ? <CheckCircle size={20} /> : <Circle size={20} />}
+                      </button>
+                      
+                      <span style={{ 
+                        color: isCompleted ? 'var(--text-secondary)' : 'var(--text-primary)',
+                        textDecoration: isCompleted ? 'line-through' : 'none',
+                        lineHeight: '1.6',
+                        transition: 'all 0.2s',
+                        flex: 1
+                      }}>
+                        {text}{' '}
+                        {recipeId && (
+                          <button className="craft-btn" onClick={() => onOpenRecipe(recipeId)} style={{ marginLeft: '0.5rem', verticalAlign: 'baseline', padding: '0.1rem 0.4rem', fontSize: '0.8rem' }}>
+                            Ver Receita
+                          </button>
+                        )}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
       </div>
-    );
-  }
 
-  if (phase === 'late') {
-    return (
-      <div className="doc-layout" style={{ maxWidth: '100%' }}>
-        <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
-          <h2 style={{ color: 'var(--accent-blue)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Crown size={28} /> Fase 4: Late Game (A Ascensão aos Deuses)
-          </h2>
-          <p style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
-            Você não é mais um sobrevivente. Você é uma entidade capaz de aniquilar montanhas e deuses.
-          </p>
-        </div>
-
-        <section className="doc-section">
-          <h3 className="doc-section-title"><Shield size={24}/> O Despertar do Dragão (Draconic Evolution)</h3>
-          <p className="doc-text">
-            O ápice tecnológico absoluto. Para matar os deuses do servidor, armaduras mundanas falham.
-          </p>
-          <ul className="doc-list">
-            <li>Minere <em>Draconium</em> e inicie o ritual de <em>Fusion Crafting</em> usando Injectors massivos.</li>
-            <li>
-              Forje a armadura Draconic: ela não possui defesa comum. Ela usa uma barra de Escudo que absorve 100% de TODO o dano recebido contanto que você tenha milhões de RF (Energia Powah) fluindo nela.
-            </li>
-            <li>Construa o Cajado do Poder (Staff of Power), capaz de minerar 9x9 blocos instantaneamente e oblitera chefes com ataques de plasma.</li>
-          </ul>
-        </section>
-
-        <section className="doc-section">
-          <h3 className="doc-section-title"><Skull size={24}/> Caçando Deuses (L'Ender's Cataclysm)</h3>
-          <p className="doc-text">
-            É hora de testar sua armadura milionária nas maiores masmorras que o jogo pode gerar.
-          </p>
-          <ul className="doc-list">
-            <li>
-              Adentre a masmorra de fogo infernal para enfrentar o <em>Ignis</em>. Usando sua armadura Draconic alimentada por 
-              <button className="craft-btn" onClick={() => onOpenRecipe('nitro_crystal')}>Cristais Nitro do Powah!</button> no inventário, 
-              absorva as erupções vulcânicas do chefe e saqueie *The Incinerator*.
-            </li>
-            <li>
-              Suba ao The End, invada a ruína esquecida e derrote o <em>Ender Golem</em> para forjar o mítico 
-              <button className="craft-btn" onClick={() => onOpenRecipe('void_core')}>Void Core</button>, garantindo o controle antigravitacional permanente.
-            </li>
-            <li>Enfrente The Harbinger. Sobreviva aos ataques a laser (Death Rays) que aniquilam montanhas desviando deles com vôo infinito (gravidade zero).</li>
-          </ul>
-        </section>
-        
-        <section className="doc-section warlord-section">
-          <h3 className="doc-section-title warlord-title"><Crown size={24}/> A Imortalidade do Warlord</h3>
-          <p className="doc-text">
-            Com as almas de Deuses em sua parede, uma rede AE2 que conecta todo o multiverso e uma armadura que suga energia infinita de reatores gigantes do Powah... Você zerou a infraestrutura do Astron City.
-          </p>
-        </section>
-      </div>
-    );
-  }
-
-  return null;
+    </div>
+  );
 }

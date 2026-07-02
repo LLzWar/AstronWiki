@@ -252,7 +252,7 @@ export default function App() {
           {/* WARLORD'S PATH (FASES 1 a 4) */}
           {['early', 'tech', 'magic', 'late'].includes(activeTab) && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
-              <WarlordPath phase={activeTab} onOpenRecipe={openRecipe} />
+              <WarlordPath phase={activeTab} onOpenRecipe={openRecipe} setActiveTab={setActiveTab} />
             </div>
           )}
         </div>
