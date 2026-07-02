@@ -28,3 +28,7 @@ dist-ssr
 
 # Downloaded JARs/ZIPs
 jars_temp/
+ 
+# Auto-generated JEI assets
+public/assets/items/
+src/data/allItems.json

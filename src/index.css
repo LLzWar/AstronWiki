@@ -513,3 +513,115 @@ body {
 
 /* Astron City Hero Background */
 
+
+/* JEI Sidebar Styles */
+.jei-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  background-color: rgba(13, 17, 23, 0.85); /* Semi-transparent dark bg */
+  backdrop-filter: blur(8px);
+  border-left: 2px solid var(--border-color);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.jei-sidebar.open {
+  transform: translateX(0);
+}
+
+.jei-toggle-btn {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 60px;
+  background-color: rgba(13, 17, 23, 0.85);
+  border: 2px solid var(--border-color);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.2s, background-color 0.2s;
+  backdrop-filter: blur(8px);
+}
+
+.jei-toggle-btn:hover {
+  color: var(--accent-primary);
+  background-color: rgba(20, 25, 35, 0.95);
+}
+
+.jei-grid-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.jei-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 4px;
+}
+
+.jei-item {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.1s;
+}
+
+.jei-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.jei-search-wrapper {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid var(--border-color);
+}
+
+.jei-search-input {
+  width: 100%;
+  background-color: #000;
+  border: 2px solid #555;
+  color: #ffff55; /* Minecraft JEI yellow text */
+  padding: 0.5rem;
+  font-family: monospace;
+  font-size: 1rem;
+  outline: none;
+}
+
+.jei-search-input:focus {
+  border-color: #fff;
+}
+
+/* Custom scrollbar for JEI */
+.jei-grid-container::-webkit-scrollbar {
+  width: 6px;
+}
+.jei-grid-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
