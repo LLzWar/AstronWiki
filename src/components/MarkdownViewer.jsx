@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
 import { Download, ArrowUp } from 'lucide-react';
 import './MarkdownViewer.css';
 
@@ -96,7 +97,7 @@ const MarkdownViewer = ({ fileUrl, pdfUrl }) => {
           </a>
         </div>
       )}
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>
         {content}
       </ReactMarkdown>
 
