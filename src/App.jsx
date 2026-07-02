@@ -223,6 +223,11 @@ export default function App() {
               <MarkdownViewer fileUrl="/docs/oritech.md" />
             </div>
           )}
+          {activeTab === 'guide-gear' && searchQuery.length === 0 && (
+            <div style={{gridColumn: '1 / -1'}}>
+              <MarkdownViewer fileUrl="/docs/gear.md" pdfUrl="/docs/gear.pdf" />
+            </div>
+          )}
 
           {/* TIPS */}
           {activeTab === 'tips' && searchQuery.length === 0 && (

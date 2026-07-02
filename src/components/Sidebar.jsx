@@ -27,6 +27,7 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
   const fullGuides = [
     { id: 'guide-ae2', icon: Book, label: 'AE2 Completo' },
     { id: 'guide-cataclysm', icon: Book, label: 'Cataclysm Completo' },
+    { id: 'guide-gear', icon: Book, label: 'Guia de Gear' },
     { id: 'guide-mi', icon: Book, label: 'Modern Industrialization' },
     { id: 'guide-oritech', icon: Book, label: 'Oritech Completo' },
   ];
