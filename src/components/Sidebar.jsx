@@ -30,10 +30,10 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
   ];
 
   const warlordTabs = [
-    { id: 'early', icon: Backpack, label: 'Fase 1: Early Game' },
-    { id: 'tech', icon: Factory, label: 'Fase 2: Tech' },
-    { id: 'magic', icon: Sparkles, label: 'Fase 3: Magic' },
-    { id: 'late', icon: Crown, label: 'Fase 4: Late Game' }
+    { id: 'early', icon: Backpack, label: 'Fase 1: Sobrevivência & Sangue' },
+    { id: 'tech', icon: Factory, label: 'Fase 2: Despertar de Poder' },
+    { id: 'magic', icon: Sparkles, label: 'Fase 3: A Singularidade' },
+    { id: 'late', icon: Crown, label: 'Fase 4: Imortalidade' }
   ];
 
   useEffect(() => {
