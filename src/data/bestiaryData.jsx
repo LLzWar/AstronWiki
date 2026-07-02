@@ -15,7 +15,7 @@ export const BESTIARY_DATA = [
     image: '/assets/bosses/ignis.png',
     lore: 'Localizado nas fornalhas gigantes (Burning Arena) no fundo do Nether.',
     stats: { hp: '450 HP', type: 'Chefe / Fogo Primordial' },
-    mechanics: 'Ele absorve ataques de fogo e retalha com plasma. Cuidado com o ataque em que ele gira puxando você para o ar, se você não tiver mobilidade (elytra/jetpack), o dano de queda será fatal.',
+    mechanics: 'Ele absorve ataques de fogo e retalha com plasma. Cuidado com o ataque em que ele gira puxando você para o ar, se você não tiver mobilidade (elytra/jetpack), o dano de queda será fatal. O servidor impõe um "Damage Cap" de 20.0, o que significa que ele não pode tomar mais de 20 de dano por hit, inutilizando armas de hit-kill (One-Shot).',
     itemsNeeded: [{ id: 'eye_of_flame', name: 'Eye of Flame' }],
     drops: [
       { name: 'Ignitium Ingots (3x)', rarity: 'guaranteed', desc: 'Essenciais para forjar sua armadura inquebrável.' },
