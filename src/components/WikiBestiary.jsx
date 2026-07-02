@@ -45,7 +45,7 @@ export default function WikiBestiary({ onOpenRecipe }) {
             <li><strong>Drops Lendários:</strong> Monstrous Horn (Usado na Infernal Forge para criar a armadura de Ignitium inquebrável) e Infernal Forge.</li>
           </ul>
         </div>
-        <img src="/assets/bosses/netherite_monstrosity.png" alt="Netherite Monstrosity" style={{ width: '280px', height: 'auto', objectFit: 'contain', borderRadius: '8px', filter: 'drop-shadow(0 0 10px rgba(100, 100, 100, 0.8))' }} />
+        <img src="/assets/bosses/Netherite_Monstrosity.webp" alt="Netherite Monstrosity" style={{ width: '280px', height: 'auto', objectFit: 'contain', borderRadius: '8px', filter: 'drop-shadow(0 0 10px rgba(100, 100, 100, 0.8))' }} />
       </section>
 
       <section className="doc-section warlord-section" style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start' }}>
@@ -60,7 +60,7 @@ export default function WikiBestiary({ onOpenRecipe }) {
             <li><strong>Drops Lendários:</strong> Wither Assault Shoulder Weapon (Lança-Mísseis Wither acoplável ao jogador).</li>
           </ul>
         </div>
-        <img src="/assets/bosses/harbinger.png" alt="The Harbinger" style={{ width: '280px', height: 'auto', objectFit: 'contain', borderRadius: '8px', filter: 'drop-shadow(0 0 10px rgba(200, 0, 50, 0.6))' }} />
+        <img src="/assets/bosses/Harbinger.webp" alt="The Harbinger" style={{ width: '280px', height: 'auto', objectFit: 'contain', borderRadius: '8px', filter: 'drop-shadow(0 0 10px rgba(200, 0, 50, 0.6))' }} />
       </section>
 
       <section className="doc-section warlord-section" style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start' }}>

@@ -5,10 +5,8 @@ import WikiCard from './components/WikiCard';
 import CraftingModal from './components/CraftingModal';
 import WikiModIndex from './components/WikiModIndex';
 import WikiCreate from './components/WikiCreate';
-import WikiAE2 from './components/WikiAE2';
 import WikiApotheosis from './components/WikiApotheosis';
 import WikiIrons from './components/WikiIrons';
-import WikiCataclysm from './components/WikiCataclysm';
 import WikiPowah from './components/WikiPowah';
 import WikiSilentGear from './components/WikiSilentGear';
 import WikiBackpacks from './components/WikiBackpacks';
@@ -50,8 +48,8 @@ export default function App() {
             {activeTab === 'home' && 'Astron City Wiki'}
             {activeTab === 'modindex' && 'Biblioteca de Mods'}
             {activeTab === 'tips' && 'Dicas e Progressão Geral'}
-            {activeTab.startsWith('wiki-') && 'Guia Profundo de Mod'}
-            {activeTab.startsWith('guide-') && 'Guia Completo (Markdown Oficial)'}
+            {activeTab.startsWith('wiki-') || ['create', 'apotheosis', 'irons', 'powah', 'silentgear', 'backpacks'].includes(activeTab) ? 'Guia Profundo de Mod' : ''}
+            {['ae2', 'cataclysm', 'gear', 'mi', 'oritech'].includes(activeTab) && 'Guia Completo (Markdown Oficial)'}
             {['early', 'tech', 'magic', 'late'].includes(activeTab) && "Warlord's Path"}
           </h2>
           <p style={{color: 'var(--text-secondary)'}}>
@@ -60,8 +58,8 @@ export default function App() {
             {activeTab === 'tips' && 'Informações valiosas para sobrevivência e otimização no dia a dia do modpack.'}
             {activeTab === 'bestiary' && 'Conheça os perigos e as fraquezas das criaturas de Astron City.'}
             {activeTab === 'dimensions' && 'Exploração entre mundos e o que esperar de cada um.'}
-            {activeTab.startsWith('wiki-') && 'Informações extraídas diretamente dos arquivos para domínio completo do mod.'}
-            {activeTab.startsWith('guide-') && 'Documentação nativa do Astron City transcrita diretamente do servidor oficial.'}
+            {activeTab.startsWith('wiki-') || ['create', 'apotheosis', 'irons', 'powah', 'silentgear', 'backpacks'].includes(activeTab) ? 'Informações extraídas diretamente dos arquivos para domínio completo do mod.' : ''}
+            {['ae2', 'cataclysm', 'gear', 'mi', 'oritech'].includes(activeTab) && 'Documentação nativa do Astron City transcrita diretamente do servidor oficial.'}
             {['early', 'tech', 'magic', 'late'].includes(activeTab) && "A rota otimizada para o preparo letal contra os maiores chefes."}
           </p>
         </header>
@@ -147,83 +145,69 @@ export default function App() {
           )}
 
           {/* WIKI - CREATE */}
-          {activeTab === 'wiki-create' && searchQuery.length === 0 && (
+          {activeTab === 'create' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <WikiCreate onOpenRecipe={openRecipe} />
             </div>
           )}
 
-          {/* WIKI - AE2 */}
-          {activeTab === 'wiki-ae2' && searchQuery.length === 0 && (
-            <div style={{gridColumn: '1 / -1'}}>
-              <WikiAE2 onOpenRecipe={openRecipe} />
-            </div>
-          )}
-
           {/* WIKI - APOTHEOSIS */}
-          {activeTab === 'wiki-apotheosis' && searchQuery.length === 0 && (
+          {activeTab === 'apotheosis' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <WikiApotheosis onOpenRecipe={openRecipe} />
             </div>
           )}
 
           {/* WIKI - IRONS SPELLS */}
-          {activeTab === 'wiki-irons' && searchQuery.length === 0 && (
+          {activeTab === 'irons' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <WikiIrons onOpenRecipe={openRecipe} />
             </div>
           )}
 
-          {/* WIKI - CATACLYSM */}
-          {activeTab === 'wiki-cataclysm' && searchQuery.length === 0 && (
-            <div style={{gridColumn: '1 / -1'}}>
-              <WikiCataclysm onOpenRecipe={openRecipe} />
-            </div>
-          )}
-
           {/* WIKI - POWAH */}
-          {activeTab === 'wiki-powah' && searchQuery.length === 0 && (
+          {activeTab === 'powah' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <WikiPowah onOpenRecipe={openRecipe} />
             </div>
           )}
 
           {/* WIKI - SILENT GEAR */}
-          {activeTab === 'wiki-silentgear' && searchQuery.length === 0 && (
+          {activeTab === 'silentgear' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <WikiSilentGear onOpenRecipe={openRecipe} />
             </div>
           )}
 
           {/* WIKI - BACKPACKS */}
-          {activeTab === 'wiki-backpacks' && searchQuery.length === 0 && (
+          {activeTab === 'backpacks' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <WikiBackpacks onOpenRecipe={openRecipe} />
             </div>
           )}
 
           {/* FULL GUIDES (MARKDOWN) */}
-          {activeTab === 'guide-ae2' && searchQuery.length === 0 && (
+          {activeTab === 'ae2' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <MarkdownViewer fileUrl="/docs/ae2.md" />
             </div>
           )}
-          {activeTab === 'guide-cataclysm' && searchQuery.length === 0 && (
+          {activeTab === 'cataclysm' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <MarkdownViewer fileUrl="/docs/cataclysm.md" />
             </div>
           )}
-          {activeTab === 'guide-mi' && searchQuery.length === 0 && (
+          {activeTab === 'mi' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <MarkdownViewer fileUrl="/docs/mi.md" />
             </div>
           )}
-          {activeTab === 'guide-oritech' && searchQuery.length === 0 && (
+          {activeTab === 'oritech' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <MarkdownViewer fileUrl="/docs/oritech.md" />
             </div>
           )}
-          {activeTab === 'guide-gear' && searchQuery.length === 0 && (
+          {activeTab === 'gear' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <MarkdownViewer fileUrl="/docs/gear.md" pdfUrl="/docs/gear.pdf" />
             </div>

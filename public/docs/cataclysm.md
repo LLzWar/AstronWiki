@@ -209,7 +209,9 @@ O Cataclysm usa itens do tipo **Eye** para localizar estruturas. Eles funcionam 
 
 ## 7. Estruturas e bosses — guia step by step
 
-## 7.1. Soul Forge — Netherite Monstrosity
+## 7.1. Soul Forge - Netherite Monstrosity
+
+![Netherite Monstrosity](/assets/bosses/Netherite_Monstrosity.webp)
 
 ### Papel na progressão
 
@@ -279,9 +281,13 @@ Leve:
 
 ### Miniboss: Ender Golem
 
+![Ender Golem](/assets/bosses/ender_golem.png)
+
 O **Ender Golem** é um inimigo forte da estrutura. Ele é uma prévia do ritmo do Ender Guardian: ataques pesados, controle de área e punição de jogadores que ficam parados.
 
 ### Boss: Ender Guardian
+
+![Ender Guardian](/assets/bosses/ender_guardian.png)
 
 O **Ender Guardian** é o boss central da Ruined Citadel. Ele tem muita vida, alta defesa e ataques capazes de punir aproximações ruins. Na metade da vida, a luta pode ficar mais agressiva.
 
@@ -338,6 +344,8 @@ Leve:
 O **Prowler** é um inimigo mecânico perigoso. Ele prepara o jogador para o estilo da Ancient Factory: burst, projéteis, movimento e punição de descuido.
 
 ### Boss: The Harbinger
+
+![The Harbinger](/assets/bosses/Harbinger.webp)
 
 O **Harbinger** é um dos bosses mais marcantes do Cataclysm. Ele pode alternar ataques, usar lasers, mísseis e mecânicas de máquina. Em algumas fases, pode exigir adaptação de ranged/melee e cuidado com ataques de área.
 
@@ -397,6 +405,8 @@ Inimigos associados podem incluir:
 Eles não devem ser ignorados, porque podem acumular dano antes do boss.
 
 ### Boss: Ancient Remnant
+
+![Ancient Remnant](/assets/bosses/ancient_remnant.png)
 
 O **Ancient Remnant** é o boss principal da estrutura. A luta exige atenção a ataques pesados, posicionamento e janelas de dano.
 
@@ -458,6 +468,8 @@ O **Amethyst Crab** está ligado à progressão da Sunken City. Ele pode fornece
 
 ### Boss: The Leviathan
 
+![The Leviathan](/assets/bosses/leviathan.png)
+
 O **Leviathan** é um boss aquático de grande escala. A luta deve ser tratada como uma expedição própria, não como uma parada rápida.
 
 ### Estratégia
@@ -510,6 +522,8 @@ Leve:
 - Blocos para reposicionar.
 
 ### Boss: Scylla
+
+![Scylla](/assets/bosses/Scylla.webp)
 
 **Scylla** é um boss avançado ligado à Acropolis. Trate a luta como mid/late game: aprenda padrões, respeite fases e mantenha o grupo espalhado.
 
@@ -564,6 +578,8 @@ Leve:
 O **Aptrgangr** é um encontro importante da Frosted Prison. Ele está ligado a **Black Steel** e à progressão interna da dungeon.
 
 ### Boss: Maledictus
+
+![Maledictus](/assets/bosses/Maledictus.webp)
 
 O **Maledictus** é um boss de late game. Ele deve ser enfrentado com grupo preparado e gear sólido. Não subestime a luta só porque a estrutura foi localizada cedo.
 
@@ -627,6 +643,8 @@ O **Ignited Revenant** é um inimigo protegido por escudo. Ataques que quebram d
 Use os drops de Ignited Revenants e itens relacionados para preparar a ativação de Ignis. O **Altar of Fire** é um ponto-chave da progressão.
 
 ### Boss: Ignis
+
+![Ignis](/assets/bosses/ignis.png)
 
 **Ignis** é um dos bosses mais difíceis e recompensadores do Cataclysm. Ele tem ataques de fogo, golpes pesados, pressão constante e pode punir armadura/defesa do jogador.
 

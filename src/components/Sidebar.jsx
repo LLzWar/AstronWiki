@@ -14,22 +14,17 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
   ];
 
   const modGuides = [
-    { id: 'wiki-ae2', icon: BookOpen, label: 'AE2 & Add-ons' },
-    { id: 'wiki-create', icon: BookOpen, label: 'Create Ecosystem' },
-    { id: 'wiki-apotheosis', icon: BookOpen, label: 'Apothic Ecosystem' },
-    { id: 'wiki-irons', icon: BookOpen, label: 'Iron\'s Spells & Sinergias' },
-    { id: 'wiki-cataclysm', icon: BookOpen, label: 'Cataclysm & Integrations' },
-    { id: 'wiki-powah', icon: BookOpen, label: 'Powah! (Energia)' },
-    { id: 'wiki-silentgear', icon: BookOpen, label: 'Silent Gear & Gems' },
-    { id: 'wiki-backpacks', icon: BookOpen, label: 'Sophisticated Backpacks' },
-  ];
-
-  const fullGuides = [
-    { id: 'guide-ae2', icon: Book, label: 'AE2 Completo' },
-    { id: 'guide-cataclysm', icon: Book, label: 'Cataclysm Completo' },
-    { id: 'guide-gear', icon: Book, label: 'Guia de Gear' },
-    { id: 'guide-mi', icon: Book, label: 'Modern Industrialization' },
-    { id: 'guide-oritech', icon: Book, label: 'Oritech Completo' },
+    { id: 'ae2', icon: Book, label: 'AE2 Completo', type: 'md' },
+    { id: 'cataclysm', icon: Book, label: 'Cataclysm Completo', type: 'md' },
+    { id: 'gear', icon: Book, label: 'Guia de Gear', type: 'md' },
+    { id: 'mi', icon: Book, label: 'Modern Industrialization', type: 'md' },
+    { id: 'oritech', icon: Book, label: 'Oritech Completo', type: 'md' },
+    { id: 'create', icon: BookOpen, label: 'Create Ecosystem', type: 'react' },
+    { id: 'apotheosis', icon: BookOpen, label: 'Apothic Ecosystem', type: 'react' },
+    { id: 'irons', icon: BookOpen, label: 'Iron\'s Spells & Sinergias', type: 'react' },
+    { id: 'powah', icon: BookOpen, label: 'Powah! (Energia)', type: 'react' },
+    { id: 'silentgear', icon: BookOpen, label: 'Silent Gear & Gems', type: 'react' },
+    { id: 'backpacks', icon: BookOpen, label: 'Sophisticated Backpacks', type: 'react' },
   ];
 
   const warlordTabs = [
@@ -122,39 +117,6 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
         )}
       </div>
 
-      {/* FULL GUIDES (MARKDOWN) (COLLAPSIBLE) */}
-      <div className="sidebar-group" style={{marginTop: '1.5rem'}}>
-        <button 
-          className="nav-btn" 
-          style={{width: '100%', display: 'flex', justifyContent: 'space-between', fontWeight: 600, color: 'var(--text-primary)'}}
-          onClick={() => setGuidesOpen(!guidesOpen)}
-        >
-          <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-            <Book size={18} color="var(--accent-secondary)" />
-            Manuais Oficiais
-          </div>
-          {guidesOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
-        </button>
-        
-        {guidesOpen && (
-          <nav className="nav-links" style={{ paddingLeft: '1.5rem', marginTop: '0.25rem' }}>
-            {fullGuides.map(tab => {
-              const Icon = tab.icon;
-              return (
-                <button
-                  key={tab.id}
-                  className={`nav-btn ${activeTab === tab.id && !searchQuery ? 'active' : ''}`}
-                  onClick={() => { setActiveTab(tab.id); setSearchQuery(''); }}
-                  style={{ padding: '0.35rem 0.5rem', fontSize: '0.9rem', color: '#60a5fa' }}
-                >
-                  <Icon size={16} />
-                  {tab.label}
-                </button>
-              );
-            })}
-          </nav>
-        )}
-      </div>
 
       {/* WARLORD'S PATH (COLLAPSIBLE) */}
       <div className="sidebar-group" style={{marginTop: '1.5rem'}}>
