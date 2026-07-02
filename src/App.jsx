@@ -104,44 +104,73 @@ export default function App() {
           {/* HOME */}
           {activeTab === 'home' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}} className="doc-layout">
-              <div className="astron-hero-bg" style={{ marginBottom: '2rem' }}>
-                <h1 style={{ fontSize: '3rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>
-                  A Enciclopédia do <span style={{ color: 'var(--accent-blue)' }}>Astron City</span>
+              {/* HERO BANNER */}
+              <div className="astron-hero-bg" style={{ marginBottom: '1rem', padding: '5rem 2rem' }}>
+                <h1 style={{ fontSize: '3.5rem', color: 'var(--text-primary)', marginBottom: '1rem', fontWeight: 800, letterSpacing: '-1px' }}>
+                  A Enciclopédia <span style={{ color: 'var(--accent-blue)' }}>Astron City</span>
                 </h1>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto' }}>
-                  Sua central definitiva de conhecimento. Guias de sobrevivência, táticas avançadas, estatísticas exatas de deuses e um roteiro claro de ascensão para dominar os mais de 250 mods instalados.
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto', lineHeight: 1.6 }}>
+                  Sua central definitiva de conhecimento. Domine a sobrevivência letal, táticas avançadas de automação industrial e estatísticas exatas dos deuses que habitam os mundos.
                 </p>
                 
-                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '2.5rem' }}>
-                  <button onClick={() => setActiveTab('early')} className="craft-btn" style={{ fontSize: '1.1rem', padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <Crown size={20} /> Iniciar a Jornada (Warlord's Path)
+                <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', marginTop: '3rem' }}>
+                  <button onClick={() => setActiveTab('modindex')} className="craft-btn" style={{ fontSize: '1.1rem', padding: '0.8rem 2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '30px' }}>
+                    <Library size={20} /> Explorar Biblioteca de Mods
                   </button>
-                  <button onClick={() => setActiveTab('modindex')} className="nav-btn" style={{ fontSize: '1.1rem', padding: '0.75rem 1.5rem', border: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <Library size={20} /> Explorar a Biblioteca de Mods
+                  <button onClick={() => setActiveTab('bestiary')} className="nav-btn" style={{ fontSize: '1.1rem', padding: '0.8rem 2rem', border: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '30px', backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
+                    <Skull size={20} /> Consultar o Bestiário
                   </button>
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
-                <div className="doc-section" style={{ margin: 0, padding: '1.5rem', backgroundColor: 'var(--bg-tertiary)', borderRadius: '8px', border: '1px solid var(--border-color)', cursor: 'pointer' }} onClick={() => setActiveTab('bestiary')}>
-                  <h3 style={{ color: 'var(--danger)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+              {/* FEATURED MODS */}
+              <div style={{ marginBottom: '1rem' }}>
+                <h2 style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '1rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '2px' }}>Destaques do Modpack</h2>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+                  <div className="home-card" style={{ '--accent-blue': '#e67e22' }} onClick={() => setActiveTab('create')}>
+                    <Settings size={32} color="#e67e22" style={{ marginBottom: '1rem' }} />
+                    <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Create</h3>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Automação e Indústria Cinética</p>
+                  </div>
+                  <div className="home-card" style={{ '--accent-blue': '#9b59b6' }} onClick={() => setActiveTab('ae2')}>
+                    <Database size={32} color="#9b59b6" style={{ marginBottom: '1rem' }} />
+                    <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Applied Energistics</h3>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Armazenamento Digital e Autocraft</p>
+                  </div>
+                  <div className="home-card" style={{ '--accent-blue': '#f1c40f' }} onClick={() => setActiveTab('powah')}>
+                    <BatteryCharging size={32} color="#f1c40f" style={{ marginBottom: '1rem' }} />
+                    <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Powah!</h3>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Matrizes de Energia Extrema</p>
+                  </div>
+                  <div className="home-card" style={{ '--accent-blue': '#3498db' }} onClick={() => setActiveTab('apotheosis')}>
+                    <Sparkles size={32} color="#3498db" style={{ marginBottom: '1rem' }} />
+                    <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Apotheosis</h3>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Magia e Atributos Míticos</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* QUICK ACCESS */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
+                <div className="home-card" style={{ '--accent-blue': 'var(--danger)' }} onClick={() => setActiveTab('bestiary')}>
+                  <h3 style={{ color: 'var(--danger)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
                     <Skull size={24} /> O Bestiário
                   </h3>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Conheça o HP, os ataques e as fraquezas dos chefes do Cataclysm e do Mowzie's Mobs antes de enfrentá-los.</p>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.5 }}>Descubra os pontos fracos dos titãs do Cataclysm e os drop rates de chefes épicos antes de entrar na arena.</p>
                 </div>
                 
-                <div className="doc-section" style={{ margin: 0, padding: '1.5rem', backgroundColor: 'var(--bg-tertiary)', borderRadius: '8px', border: '1px solid var(--border-color)', cursor: 'pointer' }} onClick={() => setActiveTab('dimensions')}>
-                  <h3 style={{ color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                    <Compass size={24} /> Guias de Dimensões
+                <div className="home-card" style={{ '--accent-blue': 'var(--accent-primary)' }} onClick={() => setActiveTab('dimensions')}>
+                  <h3 style={{ color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
+                    <Compass size={24} /> Guia de Dimensões
                   </h3>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Aprenda a sobreviver nas fortalezas do Nether alterado e como invadir as ruínas massivas do Vazio (The End).</p>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.5 }}>Sobreviva aos terrores do Nether e entenda como navegar pelas ruínas massivas do Vazio Infinito.</p>
                 </div>
                 
-                <div className="doc-section" style={{ margin: 0, padding: '1.5rem', backgroundColor: 'var(--bg-tertiary)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                  <h3 style={{ color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                    <Search size={24} /> Motor de Busca Global
+                <div className="home-card" style={{ '--accent-blue': 'var(--text-primary)' }} onClick={() => document.querySelector('.search-input').focus()}>
+                  <h3 style={{ color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
+                    <Search size={24} /> Busca Rápida
                   </h3>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Use a barra de pesquisa no menu lateral a qualquer momento para varrer todas as receitas e informações num piscar de olhos.</p>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.5 }}>Use o motor de busca lateral ou clique aqui para encontrar itens e receitas ignorando os menus.</p>
                 </div>
               </div>
             </div>
