@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sword, BatteryCharging, BookOpen, ShieldAlert, Compass, Settings, Database, Sparkles, Book, Crown, Library, Skull, Search } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import WikiCard from './components/WikiCard';
@@ -19,8 +19,24 @@ import MarkdownViewer from './components/MarkdownViewer';
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [activeRecipe, setActiveRecipe] = useState(null);
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() => localStorage.getItem('astronTheme') || 'dark');
   const [searchQuery, setSearchQuery] = useState('');
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    localStorage.setItem('astronTheme', theme);
+  }, [theme]);
+
+  const handleScroll = (e) => {
+    const { scrollTop, scrollHeight, clientHeight } = e.target;
+    if (scrollHeight > clientHeight) {
+      const progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
+      setScrollProgress(progress);
+    } else {
+      setScrollProgress(0);
+    }
+  };
+
 
   const openRecipe = (id) => setActiveRecipe(id);
   const closeRecipe = () => setActiveRecipe(null);
@@ -33,6 +49,13 @@ export default function App() {
 
   return (
     <div data-theme={theme} className="app-container">
+      {/* Scroll Tracker Bar */}
+      <div style={{
+        position: 'fixed', top: 0, left: 0, height: '3px', width: `${scrollProgress}%`,
+        backgroundColor: 'var(--accent-primary)', zIndex: 9999, transition: 'width 0.1s ease-out',
+        boxShadow: '0 0 10px var(--accent-primary)'
+      }} />
+
       <Sidebar 
         activeTab={activeTab} 
         setActiveTab={setActiveTab} 
@@ -42,14 +65,14 @@ export default function App() {
         setSearchQuery={setSearchQuery}
       />
       
-      <main className="main-content">
+      <main className="main-content" onScroll={handleScroll}>
         <header className="mb-4">
           <h2 style={{fontSize: '2rem', marginBottom: '0.5rem', color: 'var(--text-primary)'}}>
             {activeTab === 'home' && 'Astron City Wiki'}
             {activeTab === 'modindex' && 'Biblioteca de Mods'}
             {activeTab === 'tips' && 'Dicas e Progressão Geral'}
             {activeTab.startsWith('wiki-') || ['apotheosis', 'powah', 'silentgear', 'backpacks'].includes(activeTab) ? 'Guia Profundo de Mod' : ''}
-            {['ae2', 'cataclysm', 'gear', 'mi', 'oritech', 'create', 'irons_spells'].includes(activeTab) && 'Guia Completo (Markdown Oficial)'}
+            {['ae2', 'cataclysm', 'gear', 'mi', 'oritech', 'create', 'irons_spells', 'ice_and_fire'].includes(activeTab) && 'Guia Completo (Markdown Oficial)'}
             {['early', 'tech', 'magic', 'late'].includes(activeTab) && "Warlord's Path"}
           </h2>
           <p style={{color: 'var(--text-secondary)'}}>
@@ -59,7 +82,7 @@ export default function App() {
             {activeTab === 'bestiary' && 'Conheça os perigos e as fraquezas das criaturas de Astron City.'}
             {activeTab === 'dimensions' && 'Exploração entre mundos e o que esperar de cada um.'}
             {activeTab.startsWith('wiki-') || ['apotheosis', 'powah', 'silentgear', 'backpacks'].includes(activeTab) ? 'Informações extraídas diretamente dos arquivos para domínio completo do mod.' : ''}
-            {['ae2', 'cataclysm', 'gear', 'mi', 'oritech', 'create', 'irons_spells'].includes(activeTab) && 'Documentação nativa do Astron City transcrita diretamente do servidor oficial.'}
+            {['ae2', 'cataclysm', 'gear', 'mi', 'oritech', 'create', 'irons_spells', 'ice_and_fire'].includes(activeTab) && 'Documentação nativa do Astron City transcrita diretamente do servidor oficial.'}
             {['early', 'tech', 'magic', 'late'].includes(activeTab) && "A rota otimizada para o preparo letal contra os maiores chefes."}
           </p>
         </header>
@@ -205,6 +228,11 @@ export default function App() {
           {activeTab === 'gear' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <MarkdownViewer fileUrl="/docs/gear.md" pdfUrl="/docs/gear.pdf" />
+            </div>
+          )}
+          {activeTab === 'ice_and_fire' && searchQuery.length === 0 && (
+            <div style={{gridColumn: '1 / -1'}}>
+              <MarkdownViewer fileUrl="/docs/ice_and_fire.md" />
             </div>
           )}
 

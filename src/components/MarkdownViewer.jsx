@@ -48,6 +48,12 @@ const bannerConfigs = {
     logo: "/assets/logos/silent-gear.png",
     gradient: "linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(30, 30, 30, 0.5) 100%)",
     accent: "#ffd700"
+  },
+  ice_and_fire: {
+    title: "Ice and Fire: Dragons",
+    logo: "/assets/logos/ice-and-fire.png",
+    gradient: "linear-gradient(135deg, rgba(255, 69, 0, 0.15) 0%, rgba(0, 191, 255, 0.15) 50%, rgba(30, 30, 30, 0.5) 100%)",
+    accent: "#ff4500"
   }
 };
 

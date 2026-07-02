@@ -17,6 +17,7 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
   const modGuides = [
     { id: 'ae2', logoUrl: '/assets/logos/ae2.png', label: 'AE2 Completo', type: 'md' },
     { id: 'cataclysm', logoUrl: '/assets/logos/cataclysm.png', label: 'Cataclysm Completo', type: 'md' },
+    { id: 'ice_and_fire', logoUrl: '/assets/logos/ice-and-fire.png', label: 'Ice and Fire: Dragons', type: 'md' },
     { id: 'gear', logoUrl: '/assets/logos/silent-gear.png', label: 'Silent Gear (Completo)', type: 'md' },
     { id: 'mi', logoUrl: '/assets/logos/modern-industrialization.png', label: 'Modern Industrialization', type: 'md' },
     { id: 'oritech', logoUrl: '/assets/logos/oritech.png', label: 'Oritech Completo', type: 'md' },
