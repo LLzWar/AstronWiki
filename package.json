@@ -27,5 +27,18 @@
     "@vitejs/plugin-react": "^6.0.3",
     "oxlint": "^1.71.0",
     "vite": "^8.1.1"
-  }
+  },
+  "description": "<div align=\"center\">   <p><strong>A fonte de conhecimento definitiva para o modpack Astron City.</strong></p>   <p>     <a href=\"https://github.com/LLzWar/AstronWiki/issues\"><img alt=\"Issues\" src=\"https://img.shields.io/github/issues/LLzWar/AstronWiki?color=58a6ff&style=for-the-badge\" /></a>     <a href=\"https://github.com/LLzWar/AstronWiki/pulls\"><img alt=\"Pull Requests\" src=\"https://img.shields.io/github/issues-pr/LLzWar/AstronWiki?color=238636&style=for-the-badge\" /></a>     <a href=\"https://github.com/LLzWar/AstronWiki/blob/main/LICENSE\"><img alt=\"License\" src=\"https://img.shields.io/github/license/LLzWar/AstronWiki?color=d4af37&style=for-the-badge\" /></a>   </p> </div>",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LLzWar/AstronWiki.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LLzWar/AstronWiki/issues"
+  },
+  "homepage": "https://github.com/LLzWar/AstronWiki#readme"
 }

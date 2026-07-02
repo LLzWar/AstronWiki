@@ -32,3 +32,4 @@ jars_temp/
 # Auto-generated JEI assets
 
 src/data/allItems.json
+translationMap.json
