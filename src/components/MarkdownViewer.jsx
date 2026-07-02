@@ -18,7 +18,9 @@ const MarkdownViewer = ({ fileUrl, pdfUrl }) => {
         return response.text();
       })
       .then(text => {
-        setContent(text);
+        // Remove blocos de metadados YAML (frontmatter) que o react-markdown não suporta nativamente
+        const cleanText = text.replace(/^\s*---[\s\S]*?---\s*/, '');
+        setContent(cleanText);
         setLoading(false);
       })
       .catch(error => {
