@@ -307,7 +307,7 @@ export default function App() {
 
       <JEISidebar setSearchQuery={setSearchQuery} onOpenItem={setActiveItem} />
       <CraftingModal recipeId={activeRecipe} onClose={closeRecipe} />
-      <ItemModal item={activeItem} onClose={() => setActiveItem(null)} />
+      {activeItem && <ItemModal item={activeItem} onClose={() => setActiveItem(null)} />}
     </div>
   );
 }

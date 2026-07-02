@@ -1,35 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { X, ArrowRight, Info, Hammer } from 'lucide-react';
+import { useRecipes } from '../hooks/useRecipes';
 
 export default function ItemModal({ item, onClose }) {
-  const [recipes, setRecipes] = useState([]);
-  const [idMap, setIdMap] = useState({});
-  const [reverseMap, setReverseMap] = useState({});
-  const [loading, setLoading] = useState(true);
-
-  // Load recipes and idMap on mount
-  useEffect(() => {
-    setLoading(true);
-    Promise.all([
-      fetch('/data/allRecipes.json').then(res => res.json()),
-      fetch('/data/idMap.json').then(res => res.json())
-    ])
-    .then(([recipesData, mapData]) => {
-      setRecipes(recipesData);
-      setIdMap(mapData);
-      
-      const rev = {};
-      Object.entries(mapData).forEach(([k, v]) => {
-        rev[v] = k;
-      });
-      setReverseMap(rev);
-      setLoading(false);
-    })
-    .catch(err => {
-      console.error(err);
-      setLoading(false);
-    });
-  }, []);
+  const { recipesByResult, recipesByUsage, idMap, reverseMap, loading } = useRecipes();
 
   if (!item) return null;
 
@@ -61,29 +35,9 @@ export default function ItemModal({ item, onClose }) {
   const modId = internalId ? internalId.split(':')[0] : 'Desconhecido';
   const modName = modId.charAt(0).toUpperCase() + modId.slice(1);
 
-  // Find recipes that create this item
-  const myRecipes = recipes.filter(r => r.result === internalId);
-  
-  // Also find recipes that USE this item
-  const usageRecipes = recipes.filter(r => {
-    if (r.ingredients) {
-      return r.ingredients.some(ing => {
-        if (Array.isArray(ing)) return ing.some(i => i.item === internalId);
-        return ing.item === internalId;
-      });
-    }
-    if (r.key) {
-      return Object.values(r.key).some(ing => {
-        if (Array.isArray(ing)) return ing.some(i => i.item === internalId);
-        return ing.item === internalId;
-      });
-    }
-    if (r.ingredient) {
-      if (Array.isArray(r.ingredient)) return r.ingredient.some(i => i.item === internalId);
-      return r.ingredient.item === internalId;
-    }
-    return false;
-  });
+  // O(1) Instant lookups using pre-computed indexes
+  const myRecipes = internalId ? (recipesByResult[internalId] || []) : [];
+  const usageRecipes = internalId ? (recipesByUsage[internalId] || []) : [];
 
   const renderIngredient = (ing) => {
     if (!ing) return null;
