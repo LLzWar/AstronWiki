@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const itemsDir = path.join(__dirname, '../public/assets/items');
-const outFile = path.join(__dirname, '../src/data/allItems.json');
+const outFile = path.join(__dirname, '../public/data/allItems.json');
 
 function capitalizeWord(word) {
   if (!word) return '';

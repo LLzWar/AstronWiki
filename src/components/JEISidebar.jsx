@@ -57,7 +57,7 @@ export default function JEISidebar({ setSearchQuery }) {
 
   // Load the massive extracted database asynchronously
   useEffect(() => {
-    fetch('/src/data/allItems.json')
+    fetch('/data/allItems.json')
       .then(res => res.json())
       .then(data => setAllItemsDB(data))
       .catch(err => console.error("Failed to load massive JEI DB", err));
