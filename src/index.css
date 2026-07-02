@@ -31,7 +31,7 @@ body {
 }
 
 .sidebar {
-  width: 250px;
+  width: 280px;
   background-color: var(--bg-secondary);
   border-right: 1px solid var(--border-color);
   padding: 1rem;
@@ -102,6 +102,7 @@ body {
   flex: 1;
   padding: 2rem 4rem;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Cards */
