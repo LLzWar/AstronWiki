@@ -357,7 +357,6 @@ body {
   color: #d4af37 !important;
   border-bottom-color: rgba(212, 175, 55, 0.3) !important;
 }
-/* Warlord Theme */
 [data-theme="warlord"] {
   --bg-primary: #170b0b;
   --bg-secondary: #241111;
@@ -369,6 +368,20 @@ body {
   --accent-hover: #ebc64f;
   --accent-blue: #d4af37;
   --danger: #ff3333;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f8fa;
+  --bg-tertiary: #eaeef2;
+  --border-color: #d0d7de;
+  --text-primary: #24292f;
+  --text-secondary: #57606a;
+  --accent-primary: #2da44e;
+  --accent-hover: #2c974b;
+  --accent-blue: #0969da;
+  --danger: #cf222e;
 }
 
 /* Search Results Layout */

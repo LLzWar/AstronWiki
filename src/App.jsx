@@ -24,8 +24,14 @@ export default function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('astronTheme', theme);
-  }, [theme]);
+    
+    // Auto-redirect to home if Warlord mode is deactivated while in a Warlord tab
+    if (theme !== 'warlord' && ['early', 'tech', 'magic', 'late'].includes(activeTab)) {
+      setActiveTab('home');
+    }
+  }, [theme, activeTab]);
 
   const handleScroll = (e) => {
     const { scrollTop, scrollHeight, clientHeight } = e.target;
@@ -250,7 +256,7 @@ export default function App() {
           )}
 
           {/* WARLORD'S PATH (FASES 1 a 4) */}
-          {['early', 'tech', 'magic', 'late'].includes(activeTab) && searchQuery.length === 0 && (
+          {theme === 'warlord' && ['early', 'tech', 'magic', 'late'].includes(activeTab) && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
               <WarlordPath phase={activeTab} onOpenRecipe={openRecipe} setActiveTab={setActiveTab} />
             </div>

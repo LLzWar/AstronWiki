@@ -70,8 +70,22 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
     fetchTocs();
   }, []);
 
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'warlord' : 'dark');
+  const themeTimerRef = React.useRef(null);
+
+  const handleThemePress = () => {
+    themeTimerRef.current = setTimeout(() => {
+      setTheme('warlord');
+      themeTimerRef.current = null;
+    }, 3000); // 3 seconds to unlock
+  };
+
+  const handleThemeRelease = () => {
+    if (themeTimerRef.current) {
+      clearTimeout(themeTimerRef.current);
+      themeTimerRef.current = null;
+      // Short click: toggle between dark and light
+      setTheme(theme === 'dark' ? 'light' : 'dark');
+    }
   };
 
   return (
@@ -81,8 +95,17 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
           <img src="/assets/logo.png" alt="Astron City Logo" style={{ width: '32px', height: '32px', borderRadius: '8px' }} />
           <h1 style={{ paddingBottom: 0, borderBottom: 'none' }}>Astron City</h1>
         </div>
-        <button onClick={toggleTheme} className="nav-btn" style={{ padding: '0.5rem' }} title="Alternar Tema (Dark / Warlord)">
-          {theme === 'dark' ? <Moon size={20} /> : <Crown size={20} color="var(--accent-primary)" />}
+        <button 
+          onMouseDown={handleThemePress}
+          onMouseUp={handleThemeRelease}
+          onMouseLeave={handleThemeRelease}
+          onTouchStart={handleThemePress}
+          onTouchEnd={handleThemeRelease}
+          className="nav-btn" 
+          style={{ padding: '0.5rem', transition: 'all 0.3s' }} 
+          title="Alternar Tema"
+        >
+          {theme === 'light' ? <Sun size={20} /> : theme === 'dark' ? <Moon size={20} /> : <Crown size={20} color="var(--accent-primary)" />}
         </button>
       </div>
       
@@ -234,7 +257,8 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
 
 
       {/* WARLORD'S PATH (COLLAPSIBLE) */}
-      <div className="sidebar-group" style={{marginTop: '1.5rem'}}>
+      {theme === 'warlord' && (
+        <div className="sidebar-group" style={{marginTop: '1.5rem', animation: 'fadeIn 0.5s ease-out'}}>
         <button 
           className="nav-btn" 
           style={{width: '100%', display: 'flex', justifyContent: 'space-between', fontWeight: 600, color: 'var(--text-primary)'}}
@@ -266,6 +290,7 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
           </nav>
         )}
       </div>
+      )}
     </aside>
   );
 }
