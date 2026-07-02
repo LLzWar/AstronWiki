@@ -439,7 +439,10 @@ Objetivo: aumentar Eterna e Arcana sem depender de endgame.
 | Rectification/Stability | O mais alto possivel, ideal 100% em setup com Quanta |
 | Clues | 3-5 se possivel |
 
-**Filosofia:** para servidor survival, prefira consistencia. Quanta alta pode gerar resultados absurdos, mas tambem desperdicara XP em itens caros.
+<div class="callout info">
+  <div class="callout-title">💡 FILOSOFIA</div>
+  Para o servidor survival, prefira consistência. Quantia alta de stats pode gerar resultados absurdos, mas também desperdiçará XP em itens muito caros se você rolar errado.
+</div>
 
 #### Setup 4 - Endgame gamble
 
@@ -655,7 +658,8 @@ Opcoes boas no Astron City:
 | Dungeon loop | XP + loot + gems + affix items. |
 | Boss loop | Loot raro e progressao social. |
 
-**Notas de servidor:**
+<div class="callout danger">
+  <div class="callout-title">🚨 NOTAS DE SERVIDOR</div>
 
 - Desligue spawners/farms quando nao estiver usando.
 - Evite farms de entidade sem limite.
@@ -682,7 +686,10 @@ Ajustes comuns a procurar no EMI/Chronicle:
 - No AI, se permitido e balanceado.
 - Silk Touch/spawner pickup, se configurado.
 
-**Importante:** esses modifiers variam por config. O Wiki deve orientar o jogador a abrir o Chronicle of Shadows/EMI e ver a lista exata do servidor.
+<div class="callout warning">
+  <div class="callout-title">⚠️ IMPORTANTE</div>
+  Esses modifiers variam por configuração do servidor. O jogador deve abrir o Chronicle of Shadows ou o EMI e ver a lista exata do servidor.
+</div>
 
 ---
 
@@ -760,7 +767,10 @@ Mowzie's traz itens com identidade forte. Mesmo quando nao sao os maiores numero
 | Armas especiais | Habilidades exclusivas e estilo. |
 | Itens de mobilidade/controle | Bons para exploracao e boss fights. |
 
-**Recomendacao:** transformar drops importantes em objetivos de quests e trofeus da cidade.
+<div class="callout info">
+  <div class="callout-title">💡 RECOMENDAÇÃO</div>
+  Transformar drops importantes em objetivos de quests e troféus da cidade.
+</div>
 
 ---
 
@@ -794,7 +804,10 @@ Draconic Evolution e **endgame pesado**. Nao deve ser tratado como progressao co
 | Staff of Power | Ferramenta/arma multiuso. |
 | Modules | Customizacao e scaling. |
 
-**Regra Astron:** Draconic deve exigir energia, fusion crafting, bosses e infraestrutura. Uma pessoa com Draconic cedo pode trivializar Cataclysm, Ice and Fire e dungeons.
+<div class="callout danger">
+  <div class="callout-title">🚨 REGRA ASTRON CITY</div>
+  O sistema Draconic deve exigir altíssima energia, fusion crafting, bosses e infraestrutura. Uma pessoa com Draconic muito cedo pode trivializar o Cataclysm, Ice and Fire e as Dungeons.
+</div>
 
 ---
 
@@ -920,7 +933,10 @@ Backpack e parte do loadout.
 | Tank | Fluidos, se configurado. |
 | Crafting | Reparos e craft em campo. |
 
-**Nota de balanceamento:** backpacks muito fortes cedo podem trivializar exploracao. Para o Wiki, tratar como progressao de qualidade de vida, nao como substituto de base.
+<div class="callout warning">
+  <div class="callout-title">⚠️ NOTA DE BALANCEAMENTO</div>
+  Backpacks muito fortes no início podem trivializar a exploração. Para a Wiki, trate isso como progressão de qualidade de vida, não como um substituto absoluto da sua base (AE2).
+</div>
 
 ---
 
@@ -999,7 +1015,10 @@ Backpack e parte do loadout.
 
 # PARTE VI - TIER LIST EXCLUSIVA DO GUIA
 
-> **Leitura importante:** esta tier list e feita para o Astron City como servidor survival longo. Ela considera poder bruto, utilidade, escalabilidade com Apotheosis, custo, risco, timing e impacto no multiplayer. Em outra config, a ordem pode mudar.
+<div class="callout warning">
+  <div class="callout-title">⚠️ LEITURA IMPORTANTE</div>
+  Esta tier list é feita para o Astron City como um servidor survival longo. Ela considera poder bruto, utilidade, escalabilidade com Apotheosis, custo, risco, timing e impacto no multiplayer. Em outra configuração, a ordem pode mudar.
+</div>
 
 ## 34. Tier List geral - weapons/gears/tools
 

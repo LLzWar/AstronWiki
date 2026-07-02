@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary Scripts
+*.cjs
+
+# Downloaded JARs/ZIPs
+jars_temp/

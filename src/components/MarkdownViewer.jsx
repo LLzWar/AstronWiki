@@ -2,10 +2,59 @@ import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
+import rehypeRaw from 'rehype-raw';
 import { Download, ArrowUp } from 'lucide-react';
 import './MarkdownViewer.css';
 
+const bannerConfigs = {
+  create: {
+    title: "Create Ecosystem",
+    logo: "/assets/logos/create.png",
+    gradient: "linear-gradient(135deg, rgba(230, 161, 92, 0.15) 0%, rgba(30, 30, 30, 0.5) 100%)",
+    accent: "#e6a15c"
+  },
+  irons_spells: {
+    title: "Iron's Spells 'n Spellbooks",
+    logo: "/assets/logos/irons-spells-n-spellbooks.png",
+    gradient: "linear-gradient(135deg, rgba(148, 64, 219, 0.15) 0%, rgba(30, 30, 30, 0.5) 100%)",
+    accent: "#9440db"
+  },
+  cataclysm: {
+    title: "L_Ender's Cataclysm",
+    logo: "/assets/logos/cataclysm.png",
+    gradient: "linear-gradient(135deg, rgba(255, 69, 0, 0.15) 0%, rgba(30, 30, 30, 0.5) 100%)",
+    accent: "#ff4500"
+  },
+  ae2: {
+    title: "Applied Energistics 2",
+    logo: "/assets/logos/ae2.png",
+    gradient: "linear-gradient(135deg, rgba(64, 224, 208, 0.15) 0%, rgba(30, 30, 30, 0.5) 100%)",
+    accent: "#40e0d0"
+  },
+  mi: {
+    title: "Modern Industrialization",
+    logo: "/assets/logos/modern-industrialization.png",
+    gradient: "linear-gradient(135deg, rgba(169, 169, 169, 0.15) 0%, rgba(30, 30, 30, 0.5) 100%)",
+    accent: "#a9a9a9"
+  },
+  oritech: {
+    title: "Oritech",
+    logo: "/assets/logos/oritech.png",
+    gradient: "linear-gradient(135deg, rgba(50, 205, 50, 0.15) 0%, rgba(30, 30, 30, 0.5) 100%)",
+    accent: "#32cd32"
+  },
+  gear: {
+    title: "Silent Gear (Completo)",
+    logo: "/assets/logos/silent-gear.png",
+    gradient: "linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(30, 30, 30, 0.5) 100%)",
+    accent: "#ffd700"
+  }
+};
+
 const MarkdownViewer = ({ fileUrl, pdfUrl }) => {
+  const modId = fileUrl ? fileUrl.split('/').pop().replace('.md', '') : null;
+  const bannerConfig = bannerConfigs[modId];
+
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
   const [showTopBtn, setShowTopBtn] = useState(false);
@@ -44,12 +93,43 @@ const MarkdownViewer = ({ fileUrl, pdfUrl }) => {
       }
     };
 
-    // Usando true para a fase de captura (captura o scroll de qualquer container)
     window.addEventListener('scroll', handleScroll, true);
     return () => {
       window.removeEventListener('scroll', handleScroll, true);
     };
   }, []);
+
+  // Intercepta cliques em âncoras internas no Markdown (ex: [Link](#id))
+  // para garantir scroll suave e suporte a containers internos
+  useEffect(() => {
+    const handleAnchorClick = (e) => {
+      const target = e.target.closest('a');
+      if (target && target.getAttribute('href') && target.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+        const id = target.getAttribute('href').substring(1);
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    };
+
+    // Usando setTimeout para garantir que a renderização do ReactMarkdown já terminou
+    const timer = setTimeout(() => {
+      const container = document.querySelector('.markdown-body');
+      if (container) {
+        container.addEventListener('click', handleAnchorClick);
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      const container = document.querySelector('.markdown-body');
+      if (container) {
+        container.removeEventListener('click', handleAnchorClick);
+      }
+    };
+  }, [content]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -97,7 +177,39 @@ const MarkdownViewer = ({ fileUrl, pdfUrl }) => {
           </a>
         </div>
       )}
-      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>
+      {bannerConfig && (
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: '1.5rem',
+          padding: '2.5rem 2rem', borderRadius: '12px', marginBottom: '2rem',
+          background: bannerConfig.gradient,
+          backgroundColor: 'var(--bg-secondary)',
+          border: `1px solid ${bannerConfig.accent}40`,
+          boxShadow: `0 10px 30px rgba(0,0,0,0.3), inset 0 0 20px ${bannerConfig.accent}10`,
+          position: 'relative', overflow: 'hidden'
+        }}>
+          {/* Subtle background pattern */}
+          <div style={{
+            position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.05,
+            backgroundImage: 'linear-gradient(45deg, #ffffff 25%, transparent 25%, transparent 75%, #ffffff 75%, #ffffff), linear-gradient(45deg, #ffffff 25%, transparent 25%, transparent 75%, #ffffff 75%, #ffffff)',
+            backgroundSize: '20px 20px', backgroundPosition: '0 0, 10px 10px', zIndex: 0
+          }} />
+          
+          <img src={bannerConfig.logo} alt={bannerConfig.title} style={{ 
+            width: '90px', height: '90px', objectFit: 'contain', 
+            filter: `drop-shadow(0 0 15px ${bannerConfig.accent})`, zIndex: 1 
+          }} />
+          <div style={{ zIndex: 1 }}>
+            <h1 style={{ margin: 0, fontSize: '2.8rem', color: 'var(--text-primary)', textShadow: '0 2px 4px rgba(0,0,0,0.5)', letterSpacing: '-0.02em' }}>
+              {bannerConfig.title}
+            </h1>
+            <p style={{ margin: '0.5rem 0 0 0', color: 'var(--text-secondary)', fontSize: '1.2rem', fontWeight: '500' }}>
+              Documentação Oficial Transcrita
+            </p>
+          </div>
+        </div>
+      )}
+
+      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeSlug]}>
         {content}
       </ReactMarkdown>
 

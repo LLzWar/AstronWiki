@@ -53,6 +53,22 @@ ultima_revisao: "2026-07-01"
 
 ---
 
+<div class="mc-recipe" style="margin: 2rem auto;">
+  <div class="mc-grid">
+    <div class="mc-slot" title="Biosteel Ingot"><img src="/assets/sprites/biosteel.png" alt="Biosteel" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot"></div>
+    <div class="mc-slot" title="Biosteel Ingot"><img src="/assets/sprites/biosteel.png" alt="Biosteel" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Silicon"><img src="/assets/sprites/silicon.png" alt="Silicon" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Electrum"><img src="/assets/sprites/electrum.png" alt="Electrum" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Silicon"><img src="/assets/sprites/silicon.png" alt="Silicon" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Biosteel Ingot"><img src="/assets/sprites/biosteel.png" alt="Biosteel" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot"></div>
+    <div class="mc-slot" title="Biosteel Ingot"><img src="/assets/sprites/biosteel.png" alt="Biosteel" onError="this.src='/assets/sprites/barrier.png'" /></div>
+  </div>
+  <div class="mc-arrow"></div>
+  <div class="mc-result" title="Machine Core"><img src="/assets/sprites/machine_core.png" alt="Machine Core" onError="this.src='/assets/sprites/barrier.png'" /></div>
+</div>
+
 # 1. O que é Oritech no Astron City
 
 **Oritech** é uma rota de tecnologia avançada com máquinas animadas, processamento de minério, geração de energia, pipes, drones, lasers, quarries, agricultura automatizada, equipamentos elétricos, augments cibernéticos, reatores nucleares e acelerador de partículas.
@@ -91,30 +107,10 @@ A recomendação do wiki é: **não vender Oritech como substituto de MI ou Crea
 | Oritech | 1.2.8 | Core: máquinas, recursos, energia, pipes, drones, lasers, reactors, augments, tools, armor, quarries, particle accelerator. |
 | Oracle Index | 1.3.0 | Guia/documentação in-game usado pelo Oritech para abrir páginas de ajuda diretamente no jogo. |
 
-## 2.1. Aviso importante sobre receitas
-
-O Astron City usa muitos mods que podem adicionar compatibilidade ou mudar receitas: **AlmostUnified**, **JAOPCA**, **KubeJS**, **EMI**, **JEI**, Create, AE2, MI, Ender IO, Immersive Engineering, Powah, Productive Metalworks e outros.
-
-Por isso, este guia ensina:
-
-- ordem de progressão;
-- uso das máquinas;
-- prioridades de recursos;
-- fábricas e arquiteturas;
-- itens fortes;
-- integração entre mods;
-- boas práticas de servidor.
-
-Para receita exata no servidor, sempre confirme no jogo usando:
-
-- **EMI/JEI** com busca por `@oritech`;
-- **Jade** para diagnosticar máquinas, energia, fluidos e estados;
-- **Oracle Index** para documentação in-game;
-- filtros de receitas por máquina: Pulverizer, Foundry, Fragment Forge, Centrifuge, Assembler, Atomic Forge, Reactor, Particle Accelerator.
-
----
-
-# 3. Como usar este guia
+<div class="callout warning">
+  <div class="callout-title">?? AVISO SOBRE RECEITAS</div>
+  <p>O Astron City usa muitos mods que podem adicionar compatibilidade ou mudar receitas: **AlmostUnified**, **JAOPCA**, **KubeJS**, **EMI**, **JEI**, Create, AE2, MI, Ender IO, Immersive Engineering, Powah, Productive Metalworks e outros.<br><br>Por isso, este guia ensina:<br><br>- ordem de progressão;<br>- uso das máquinas;<br>- prioridades de recursos;<br>- fábricas e arquiteturas;<br>- itens fortes;<br>- integração entre mods;<br>- boas práticas de servidor.<br><br>Para receita exata no servidor, sempre confirme no jogo usando:<br><br>- **EMI/JEI** com busca por `@oritech`;<br>- **Jade** para diagnosticar máquinas, energia, fluidos e estados;<br>- **Oracle Index** para documentação in-game;<br>- filtros de receitas por máquina: Pulverizer, Foundry, Fragment Forge, Centrifuge, Assembler, Atomic Forge, Reactor, Particle Accelerator.<br><br>---<br><br># 3. Como usar este guia</p>
+</div>
 
 ## Modo jogador iniciante
 

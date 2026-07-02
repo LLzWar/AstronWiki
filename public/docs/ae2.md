@@ -633,6 +633,29 @@ Dispositivos comuns que usam channel:
 
 ## 10.2. Quando fazer ME Controller
 
+<div class="callout info">
+  <div class="callout-title">💡 DICA</div>
+  O ME Controller exige blocos de Sky Stone e Cristais Puros. Prepare suas máquinas com antecedência!
+</div>
+
+<div class="mc-recipe">
+  <div class="mc-grid">
+    <div class="mc-slot" title="Sky Stone Block"><img src="/assets/sprites/sky_stone_block.png" alt="Sky Stone Block" /></div>
+    <div class="mc-slot" title="Pure Fluix Crystal"><img src="/assets/sprites/fluix_crystal.png" alt="Fluix" /></div>
+    <div class="mc-slot" title="Sky Stone Block"><img src="/assets/sprites/sky_stone_block.png" alt="Sky Stone Block" /></div>
+    <div class="mc-slot" title="Pure Fluix Crystal"><img src="/assets/sprites/fluix_crystal.png" alt="Fluix" /></div>
+    <div class="mc-slot" title="Engineering Processor"><img src="/assets/sprites/engineering_processor.png" alt="Engineering Processor" /></div>
+    <div class="mc-slot" title="Pure Fluix Crystal"><img src="/assets/sprites/fluix_crystal.png" alt="Fluix" /></div>
+    <div class="mc-slot" title="Sky Stone Block"><img src="/assets/sprites/sky_stone_block.png" alt="Sky Stone Block" /></div>
+    <div class="mc-slot" title="Pure Fluix Crystal"><img src="/assets/sprites/fluix_crystal.png" alt="Fluix" /></div>
+    <div class="mc-slot" title="Sky Stone Block"><img src="/assets/sprites/sky_stone_block.png" alt="Sky Stone Block" /></div>
+  </div>
+  <div class="mc-arrow"></div>
+  <div class="mc-result" title="ME Controller">
+    <img src="/assets/sprites/me_controller.png" alt="ME Controller" />
+  </div>
+</div>
+
 Faca ME Controller quando:
 
 - Sua rede esta chegando a 8 dispositivos.
@@ -1514,7 +1537,7 @@ Este catalogo cobre os itens principais do AE2 core que o jogador deve reconhece
 | Certus Quartz Dust | Processamento, crafting e etapas de cristal. |
 | Certus Quartz Block | Bloco decorativo/recurso; pode interagir com Charged Certus em mecanicas de budding. |
 | Budding Certus Quartz | Fonte renovavel de Certus via crescimento de buds. |
-| Fluix Crystal | Recurso central para cabos, maquinas e rede ME. |
+| ![Fluix](/assets/sprites/fluix_crystal.png) Fluix Crystal | Recurso central para cabos, maquinas e rede ME. |
 | Fluix Dust | Processamento de componentes/cabos. |
 | Fluix Pearl | Componentes avancados e wireless, conforme receita. |
 | Fluix Block | Bloco de armazenamento/decoracao. |
@@ -1600,7 +1623,7 @@ Este catalogo cobre os itens principais do AE2 core que o jogador deve reconhece
 
 | Bloco | Funcao |
 |---|---|
-| ME Controller | Expande a rede alem de 8 channels e serve como centro de channels. |
+| ![Controller](/assets/sprites/me_controller.png) ME Controller | Coração da rede. Fornece 32 channels por face (total de 192 por bloco, menos as conexões internas). Limite de 7x7x7, sem "buracos" internos complexos, regras estritas de formato. |
 | ME Drive | Armazena cells. |
 | ME Chest | Acesso direto a uma cell. Util, mas limitado. |
 | Energy Acceptor | Entrada de energia FE para AE. |

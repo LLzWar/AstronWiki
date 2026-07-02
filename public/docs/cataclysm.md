@@ -642,6 +642,24 @@ O **Ignited Revenant** é um inimigo protegido por escudo. Ataques que quebram d
 
 Use os drops de Ignited Revenants e itens relacionados para preparar a ativação de Ignis. O **Altar of Fire** é um ponto-chave da progressão.
 
+<div class="mc-recipe">
+  <div class="mc-grid">
+    <div class="mc-slot" title="Nether Bricks"><img src="/assets/sprites/nether_brick.png" alt="Nether Bricks" /></div>
+    <div class="mc-slot" title="Burning Ashes"><img src="/assets/sprites/burning_ashes.png" alt="Burning Ashes" /></div>
+    <div class="mc-slot" title="Nether Bricks"><img src="/assets/sprites/nether_brick.png" alt="Nether Bricks" /></div>
+    <div class="mc-slot" title="Burning Ashes"><img src="/assets/sprites/burning_ashes.png" alt="Burning Ashes" /></div>
+    <div class="mc-slot" title="Ignitium Ingot"><img src="/assets/sprites/ignitium_ingot.png" alt="Ignitium Ingot" /></div>
+    <div class="mc-slot" title="Burning Ashes"><img src="/assets/sprites/burning_ashes.png" alt="Burning Ashes" /></div>
+    <div class="mc-slot" title="Nether Bricks"><img src="/assets/sprites/nether_brick.png" alt="Nether Bricks" /></div>
+    <div class="mc-slot" title="Burning Ashes"><img src="/assets/sprites/burning_ashes.png" alt="Burning Ashes" /></div>
+    <div class="mc-slot" title="Nether Bricks"><img src="/assets/sprites/nether_brick.png" alt="Nether Bricks" /></div>
+  </div>
+  <div class="mc-arrow"></div>
+  <div class="mc-result" title="Altar of Fire">
+    <img src="/assets/sprites/altar_of_fire.png" alt="Altar of Fire" />
+  </div>
+</div>
+
 ### Boss: Ignis
 
 ![Ignis](/assets/bosses/ignis.png)
@@ -857,7 +875,10 @@ Esta seção deve aparecer em destaque no Wiki. São os itens, sistemas e estrat
 - Fugir de mobs fortes.
 - Builds de DPS ágil.
 
-**Cuidado:** não substitui preparação defensiva. Mobilidade sem armadura ainda morre para boss.
+<div class="callout warning">
+  <div class="callout-title">⚠️ CUIDADO</div>
+  A mobilidade do Elytra não substitui preparação defensiva! Movimentar-se rápido sem armadura de combate ainda resulta em morte instantânea para os ataques massivos dos Bosses de fim de jogo.
+</div>
 
 ## 12.2. Ignitium Armor
 
@@ -883,7 +904,10 @@ Esta seção deve aparecer em destaque no Wiki. São os itens, sistemas e estrat
 - Boss arenas grandes.
 - Viagens entre bases.
 
-**Regra sugerida:** craft/uso só após derrotar Ignis e pelo menos outro boss avançado.
+<div class="callout info">
+  <div class="callout-title">💡 REGRA SUGERIDA</div>
+  Craft e uso do Ignitium Elytra Chestplate devem ser permitidos apenas após derrotar Ignis e pelo menos outro boss avançado.
+</div>
 
 ## 12.4. The Incinerator e Immolator
 
@@ -895,7 +919,10 @@ Esta seção deve aparecer em destaque no Wiki. São os itens, sistemas e estrat
 - Elite mobs.
 - Dungeons difíceis.
 
-**Cuidado:** com Better Combat, teste alcance/velocidade para não quebrar balanceamento.
+<div class="callout warning">
+  <div class="callout-title">⚠️ ATENÇÃO AO BETTER COMBAT</div>
+  Se você estiver usando Better Combat, teste o alcance e a velocidade das armas finais do Cataclysm em uma arena isolada para garantir que elas não quebrem o balanceamento do PvP ou trivializem o PvE.
+</div>
 
 ## 12.5. Cursium Armor
 
@@ -1407,7 +1434,10 @@ Fontes públicas e internas usadas para montar este guia:
 - Página pública do Mowzie's Cataclysm no CurseForge.
 - Modpack Index de Mowzie's Cataclysm.
 
-**Nota importante:** Cataclysm muda com updates. A versão do Astron City deve ser validada em servidor, principalmente:
+<div class="callout danger">
+  <div class="callout-title">🚨 NOTA IMPORTANTE DE ATUALIZAÇÃO</div>
+  O mod Mowzie's Cataclysm sofre rebalanceamentos drásticos com atualizações. A versão oficial rodando no servidor Astron City deve ser constantemente validada in-game, principalmente:
+</div>
 
 - Receitas de Eyes.
 - Drops de bosses.

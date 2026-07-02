@@ -138,3 +138,198 @@
   transform: scale(1.02);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
 }
+
+/* Exceo para Sprites Inline (Miniaturas de itens) */
+.markdown-body img[src*="/sprites/"] {
+  display: inline-block;
+  margin: 0 0.3rem 0 0;
+  max-width: 24px;
+  max-height: 24px;
+  vertical-align: sub;
+  border-radius: 2px;
+  box-shadow: none;
+  border: none;
+  transform: none;
+}
+
+.markdown-body img[src*="/sprites/"]:hover {
+  transform: scale(1.2);
+  box-shadow: none;
+}
+
+/* === UX IMPROVEMENTS === */
+
+/* KBD keys */
+kbd {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+  color: #e2e8f0;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1;
+  padding: 4px 6px;
+  margin: 0 2px;
+  white-space: nowrap;
+}
+
+/* Callouts */
+.callout {
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+  border-left: 4px solid;
+  color: #e2e8f0;
+}
+
+.callout.info {
+  border-color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.callout.warning {
+  border-color: #eab308;
+  background-color: rgba(234, 179, 8, 0.1);
+}
+
+.callout.danger {
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.callout-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Details / Spoilers */
+details {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #f8fafc;
+  outline: none;
+}
+
+details[open] summary {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.5rem;
+}
+
+/* === CRAFTING RECIPE VISUALS === */
+.mc-recipe {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #c6c6c6;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 2px solid #373737;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  width: fit-content;
+  margin: 1.5rem auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  user-select: none;
+}
+
+.mc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 36px);
+  grid-template-rows: repeat(3, 36px);
+  gap: 2px;
+}
+
+.mc-slot {
+  width: 36px;
+  height: 36px;
+  background-color: #8b8b8b;
+  border: 2px solid #373737;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.mc-slot img {
+  width: 32px !important;
+  height: 32px !important;
+  image-rendering: pixelated;
+  margin: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  display: block !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
+.mc-arrow {
+  width: 36px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23373737'%3E%3Cpath d='M4 11h12V8l6 4-6 4v-3H4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mc-result {
+  width: 56px;
+  height: 56px;
+  background-color: #8b8b8b;
+  border: 2px solid #373737;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mc-result img {
+  width: 48px !important;
+  height: 48px !important;
+  image-rendering: pixelated;
+  margin: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
+/* Tooltip nativo improvisado */
+.mc-slot:hover::after, .mc-result:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #110111;
+  color: #fff;
+  padding: 4px 8px;
+  border: 2px solid #371493;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+  text-shadow: 1px 1px 0 #000;
+}

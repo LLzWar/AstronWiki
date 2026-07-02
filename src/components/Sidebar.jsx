@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { Home, Lightbulb, Backpack, Factory, Sparkles, Crown, Library, BookOpen, Book, ChevronDown, ChevronRight, Folder, Search, Moon, Sun, Skull } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Home, Lightbulb, Backpack, Factory, Sparkles, Crown, Library, BookOpen, Book, ChevronDown, ChevronRight, Folder, Search, Moon, Sun, Skull, List } from 'lucide-react';
 
 export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery }) {
   const [modsOpen, setModsOpen] = useState(true);
   const [warlordOpen, setWarlordOpen] = useState(true);
-  const [guidesOpen, setGuidesOpen] = useState(true);
+  const [tocData, setTocData] = useState({});
+  const [collapsedTocs, setCollapsedTocs] = useState({});
 
   const wikiTabs = [
     { id: 'home', icon: Home, label: 'Página Inicial' },
@@ -14,17 +15,17 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
   ];
 
   const modGuides = [
-    { id: 'ae2', icon: Book, label: 'AE2 Completo', type: 'md' },
-    { id: 'cataclysm', icon: Book, label: 'Cataclysm Completo', type: 'md' },
-    { id: 'gear', icon: Book, label: 'Guia de Gear', type: 'md' },
-    { id: 'mi', icon: Book, label: 'Modern Industrialization', type: 'md' },
-    { id: 'oritech', icon: Book, label: 'Oritech Completo', type: 'md' },
-    { id: 'create', icon: BookOpen, label: 'Create Ecosystem', type: 'react' },
-    { id: 'apotheosis', icon: BookOpen, label: 'Apothic Ecosystem', type: 'react' },
-    { id: 'irons', icon: BookOpen, label: 'Iron\'s Spells & Sinergias', type: 'react' },
-    { id: 'powah', icon: BookOpen, label: 'Powah! (Energia)', type: 'react' },
-    { id: 'silentgear', icon: BookOpen, label: 'Silent Gear & Gems', type: 'react' },
-    { id: 'backpacks', icon: BookOpen, label: 'Sophisticated Backpacks', type: 'react' },
+    { id: 'ae2', logoUrl: '/assets/logos/ae2.png', label: 'AE2 Completo', type: 'md' },
+    { id: 'cataclysm', logoUrl: '/assets/logos/cataclysm.png', label: 'Cataclysm Completo', type: 'md' },
+    { id: 'gear', logoUrl: '/assets/logos/silent-gear.png', label: 'Silent Gear (Completo)', type: 'md' },
+    { id: 'mi', logoUrl: '/assets/logos/modern-industrialization.png', label: 'Modern Industrialization', type: 'md' },
+    { id: 'oritech', logoUrl: '/assets/logos/oritech.png', label: 'Oritech Completo', type: 'md' },
+    { id: 'create', logoUrl: '/assets/logos/create.png', label: 'Create Ecosystem', type: 'md' },
+    { id: 'apotheosis', logoUrl: '/assets/logos/apotheosis.png', label: 'Apothic Ecosystem', type: 'react' },
+    { id: 'irons_spells', logoUrl: '/assets/logos/irons-spells-n-spellbooks.png', label: 'Iron\'s Spells & Sinergias', type: 'md' },
+    { id: 'powah', logoUrl: '/assets/logos/powah.png', label: 'Powah! (Energia)', type: 'react' },
+    { id: 'silentgear', logoUrl: '/assets/logos/silent-gear.png', label: 'Silent Gear & Gems', type: 'react' },
+    { id: 'backpacks', logoUrl: '/assets/logos/sophisticated-backpacks.png', label: 'Sophisticated Backpacks', type: 'react' },
   ];
 
   const warlordTabs = [
@@ -33,6 +34,40 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
     { id: 'magic', icon: Sparkles, label: 'Fase 3: Magic' },
     { id: 'late', icon: Crown, label: 'Fase 4: Late Game' }
   ];
+
+  useEffect(() => {
+    const fetchTocs = async () => {
+      const newToc = {};
+      const mdGuides = modGuides.filter(g => g.type === 'md');
+      for (const guide of mdGuides) {
+        try {
+          const res = await fetch(`/docs/${guide.id}.md`);
+          const text = await res.text();
+          
+          const headings = [];
+          const regex = /^##\s+(.*)$/gm;
+          let match;
+          while ((match = regex.exec(text)) !== null) {
+            const title = match[1].trim();
+            // Ignora o bloco escrito "Sumário" que o autor possa ter deixado
+            if (title.toLowerCase() === 'sumario' || title.toLowerCase() === 'sumário') continue;
+            
+            // Simula o comportamento exato do rehype-slug (github-slugger)
+            const slug = title.toLowerCase().replace(/[^\w\s\-áàãâéèêíïóôõöúçñ]/g, '').trim().replace(/\s+/g, '-');
+            headings.push({ title, id: `#${slug}` });
+          }
+          
+          if (headings.length > 0) {
+            newToc[guide.id] = headings;
+          }
+        } catch (e) {
+          console.error('Failed to fetch TOC for', guide.id, e);
+        }
+      }
+      setTocData(newToc);
+    };
+    fetchTocs();
+  }, []);
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'warlord' : 'dark');
@@ -101,16 +136,95 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
           <nav className="nav-links" style={{ paddingLeft: '1.5rem', marginTop: '0.25rem' }}>
             {modGuides.map(tab => {
               const Icon = tab.icon;
+              const hasToc = tocData[tab.id] && tocData[tab.id].length > 0;
+              const isActive = activeTab === tab.id;
+              
               return (
-                <button
-                  key={tab.id}
-                  className={`nav-btn ${activeTab === tab.id && !searchQuery ? 'active' : ''}`}
-                  onClick={() => { setActiveTab(tab.id); setSearchQuery(''); }}
-                  style={{ padding: '0.35rem 0.5rem', fontSize: '0.9rem' }}
-                >
-                  <Icon size={16} />
-                  {tab.label}
-                </button>
+                <div key={tab.id} style={{ marginBottom: '0.25rem' }}>
+                  <button
+                    className={`nav-btn ${isActive && !searchQuery ? 'active' : ''}`}
+                    onClick={() => { 
+                      if (isActive) {
+                        setCollapsedTocs(prev => ({ ...prev, [tab.id]: !prev[tab.id] }));
+                      } else {
+                        setActiveTab(tab.id); 
+                        setSearchQuery(''); 
+                        setCollapsedTocs(prev => ({ ...prev, [tab.id]: false }));
+                      }
+                    }}
+                    style={{ padding: '0.35rem 0.5rem', fontSize: '0.9rem', color: tab.type === 'md' ? 'var(--accent-blue)' : 'inherit', width: '100%', display: 'flex', justifyContent: 'space-between' }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                      {tab.logoUrl ? (
+                        <img 
+                          src={tab.logoUrl} 
+                          alt={tab.label} 
+                          style={{ 
+                            width: 20, 
+                            height: 20, 
+                            objectFit: 'contain', 
+                            filter: isActive ? 'none' : 'grayscale(100%) opacity(0.7)',
+                            transition: 'filter 0.2s ease'
+                          }} 
+                        />
+                      ) : (
+                        <Icon size={20} />
+                      )}
+                      {tab.label}
+                    </div>
+                    {hasToc && isActive && (
+                      <ChevronDown 
+                        size={14} 
+                        style={{ 
+                          opacity: 0.7,
+                          transform: collapsedTocs[tab.id] ? 'rotate(-90deg)' : 'none',
+                          transition: 'transform 0.2s ease'
+                        }} 
+                      />
+                    )}
+                  </button>
+                  
+                  {hasToc && isActive && !collapsedTocs[tab.id] && (
+                    <div className="toc-submenu" style={{ paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: '0.5rem', marginBottom: '0.75rem', borderLeft: '1px solid var(--border-color)', marginLeft: '1rem' }}>
+                      {tocData[tab.id].map((heading, index) => (
+                        <a 
+                          key={index} 
+                          href={heading.id}
+                          style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textDecoration: 'none', lineHeight: '1.3', display: 'flex', alignItems: 'flex-start', gap: '0.4rem' }}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            if (!heading.id) return;
+                            
+                            // Tenta achar pelo ID
+                            const elementId = heading.id.startsWith('#') ? heading.id.substring(1) : heading.id;
+                            let element = document.getElementById(elementId);
+                            
+                            // Fallback: Tenta achar o <h2> correspondente pelo texto exato!
+                            if (!element) {
+                              const allH2 = document.querySelectorAll('.markdown-body h2, .markdown-body h1, .markdown-body h3');
+                              for (const header of allH2) {
+                                if (header.textContent.trim().toLowerCase() === heading.title.toLowerCase()) {
+                                  element = header;
+                                  break;
+                                }
+                              }
+                            }
+
+                            if (element) {
+                              // Pequeno ajuste para compensar a barra de navegação/padding se houver
+                              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                          }}
+                          onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
+                          onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+                        >
+                          <span style={{ color: 'var(--border-color)', marginTop: '-1px' }}>└</span>
+                          <span style={{ flex: 1 }}>{heading.title}</span>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               );
             })}
           </nav>

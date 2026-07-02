@@ -49,6 +49,22 @@ ultima_revisao: "2026-07-01"
 
 ---
 
+<div class="mc-recipe" style="margin: 2rem auto;">
+  <div class="mc-grid">
+    <div class="mc-slot" title="Bronze Plate"><img src="/assets/sprites/bronze_plate.png" alt="Bronze Plate" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Bronze Plate"><img src="/assets/sprites/bronze_plate.png" alt="Bronze Plate" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Bronze Plate"><img src="/assets/sprites/bronze_plate.png" alt="Bronze Plate" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Bronze Plate"><img src="/assets/sprites/bronze_plate.png" alt="Bronze Plate" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Bronze Gear"><img src="/assets/sprites/bronze_gear.png" alt="Bronze Gear" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Bronze Plate"><img src="/assets/sprites/bronze_plate.png" alt="Bronze Plate" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Bronze Plate"><img src="/assets/sprites/bronze_plate.png" alt="Bronze Plate" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Bronze Plate"><img src="/assets/sprites/bronze_plate.png" alt="Bronze Plate" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="Bronze Plate"><img src="/assets/sprites/bronze_plate.png" alt="Bronze Plate" onError="this.src='/assets/sprites/barrier.png'" /></div>
+  </div>
+  <div class="mc-arrow"></div>
+  <div class="mc-result" title="Bronze Machine Casing"><img src="/assets/sprites/bronze_machine_casing.png" alt="Bronze Machine Casing" onError="this.src='/assets/sprites/barrier.png'" /></div>
+</div>
+
 # 1. O que é Modern Industrialization no Astron City
 
 **Modern Industrialization**, ou **MI**, é o grande caminho de indústria pesada do Astron City. Ele transforma o jogador em engenheiro industrial: você começa com bronze, vapor e máquinas simples, passa para aço, eletricidade, cabos, química, multiblocos, petróleo, diesel, aço inox, energia nuclear, materiais avançados e, no fim, estruturas de escala absurda como fusão, plasma e tecnologia quantum.
@@ -83,22 +99,10 @@ MI é uma rota de progressão longa e profunda. Ele é excelente para survival m
 - jogador builder transforma usinas e refinarias em marcos da cidade;
 - jogador explorador fornece materiais raros para tiers avançados.
 
-## 2.2. Aviso importante sobre receitas
-
-O Astron City usa vários mods que podem alterar, unificar ou adicionar receitas: **AlmostUnified**, **JAOPCA**, **KubeJS**, **EMI**, **JEI**, Create, AE2, Oritech, Ender IO, Productive Bees/Metalworks e outros.
-
-Por isso, este guia ensina **ordem de progressão, uso das máquinas, fábricas e arquitetura de automação**. Para receitas exatas, sempre confirme no jogo usando:
-
-- **EMI/JEI** para receita final do servidor;
-- **Jade** para diagnosticar máquinas, tanques e estados;
-- **GuideME / guia in-game**, quando disponível;
-- busca por `@modern_industrialization`, `@extended_industrialization` e `@modern_dynamics`.
-
----
-
-# 3. Como usar este guia
-
-Use este guia em três modos:
+<div class="callout warning">
+  <div class="callout-title">?? AVISO SOBRE RECEITAS</div>
+  <p>O Astron City usa vários mods que podem alterar, unificar ou adicionar receitas: **AlmostUnified**, **JAOPCA**, **KubeJS**, **EMI**, **JEI**, Create, AE2, Oritech, Ender IO, Productive Bees/Metalworks e outros.<br><br>Por isso, este guia ensina **ordem de progressão, uso das máquinas, fábricas e arquitetura de automação**. Para receitas exatas, sempre confirme no jogo usando:<br><br>- **EMI/JEI** para receita final do servidor;<br>- **Jade** para diagnosticar máquinas, tanques e estados;<br>- **GuideME / guia in-game**, quando disponível;<br>- busca por `@modern_industrialization`, `@extended_industrialization` e `@modern_dynamics`.<br><br>---<br><br># 3. Como usar este guia<br><br>Use este guia em três modos:</p>
+</div>
 
 ## Modo jogador iniciante
 
@@ -518,11 +522,10 @@ Antes da Electric Age, produza:
              -> [Steel Parts]
 ```
 
-### Dica de servidor
-
-Transforme a siderúrgica em um prédio. No Astron City, fábricas devem virar marcos visuais, não apenas máquinas enterradas.
-
----
+<div class="callout info">
+  <div class="callout-title">?? DICA DE SERVIDOR</div>
+  <p>Transforme a siderúrgica em um prédio. No Astron City, fábricas devem virar marcos visuais, não apenas máquinas enterradas.</p>
+</div>
 
 # 9. Electric Age - cabos, EU e máquinas elétricas
 
@@ -678,11 +681,10 @@ Antes de montar:
 [Output Bus / Chest / AE2 Import futuro]
 ```
 
-### Dica
-
-Deixe um espaço atrás das máquinas para cabos e pipes. Manutenção fica muito mais fácil.
-
----
+<div class="callout info">
+  <div class="callout-title">?? DICA</div>
+  <p>Deixe um espaço atrás das máquinas para cabos e pipes. Manutenção fica muito mais fácil.</p>
+</div>
 
 # 10. Midgame - multiblocos, óleo, diesel e stainless steel
 
@@ -912,66 +914,10 @@ O Implosion Compressor é usado para materiais de alta pressão/explosão.
 [Explosive Supply / Safety Buffer]
 ```
 
-### Dica
-
-Coloque em sala separada por tema e segurança visual. Mesmo se não explodir como vanilla, o nome pede respeito.
-
-## 11.5. Nuclear Reactor
-
-O Nuclear Reactor é uma fonte avançada de energia e também um megaprojeto do servidor.
-
-### Antes de montar
-
-- entenda o guia in-game;
-- teste em criativo se o servidor permitir;
-- prepare shutdown manual;
-- prepare estoque de combustível;
-- prepare armazenamento de subprodutos;
-- isole a área;
-- documente chunkloading.
-
-### Design recomendado para Astron City
-
-```text
-[Fuel Processing] -> [Fuel Buffer] -> [Nuclear Reactor]
-                         |                |
-                         v                v
-                  [Waste/Byproduct]   [Energy Output]
-                                          |
-                                   [Power Backbone]
-```
-
-### Regra de servidor
-
-Toda usina nuclear deve ter:
-
-- dono/responsável;
-- placa explicando input/output;
-- botão de desligamento;
-- rota de acesso;
-- backup de energia;
-- controle de overflow;
-- chunkloading explícito.
-
-## 11.6. Large Tank
-
-Large Tank é essencial para fluido em escala.
-
-Use para:
-
-- steam;
-- water;
-- crude oil;
-- diesel;
-- creosote;
-- fluidos químicos;
-- buffers de usina.
-
-### Dica
-
-Nunca dependa de um único tank invisível. Use indicadores visuais, Jade e placas.
-
----
+<div class="callout info">
+  <div class="callout-title">?? DICA</div>
+  <p>Coloque em sala separada por tema e segurança visual. Mesmo se não explodir como vanilla, o nome pede respeito.<br><br>## 11.5. Nuclear Reactor<br><br>O Nuclear Reactor é uma fonte avançada de energia e também um megaprojeto do servidor.<br><br>### Antes de montar<br><br>- entenda o guia in-game;<br>- teste em criativo se o servidor permitir;<br>- prepare shutdown manual;<br>- prepare estoque de combustível;<br>- prepare armazenamento de subprodutos;<br>- isole a área;<br>- documente chunkloading.<br><br>### Design recomendado para Astron City<br><br>```text<br>[Fuel Processing] -> [Fuel Buffer] -> [Nuclear Reactor]<br>                         |                |<br>                         v                v<br>                  [Waste/Byproduct]   [Energy Output]<br>                                          |<br>                                   [Power Backbone]<br>```<br><br>### Regra de servidor<br><br>Toda usina nuclear deve ter:<br><br>- dono/responsável;<br>- placa explicando input/output;<br>- botão de desligamento;<br>- rota de acesso;<br>- backup de energia;<br>- controle de overflow;<br>- chunkloading explícito.<br><br>## 11.6. Large Tank<br><br>Large Tank é essencial para fluido em escala.<br><br>Use para:<br><br>- steam;<br>- water;<br>- crude oil;<br>- diesel;<br>- creosote;<br>- fluidos químicos;<br>- buffers de usina.<br><br>### Dica<br><br>Nunca dependa de um único tank invisível. Use indicadores visuais, Jade e placas.</p>
+</div>
 
 # 12. End Game - quantum, fusão, plasma e megaprojetos
 
@@ -1585,11 +1531,10 @@ Fire Clay -> Furnace/Compressor/etc -> Bricks/Parts
 - Fire clay.
 - Fire clay bricks.
 
-### Dica
-
-Creosote precisa de tank. Não deixe o Coke Oven travar porque o fluido encheu.
-
----
+<div class="callout info">
+  <div class="callout-title">?? DICA</div>
+  <p>Creosote precisa de tank. Não deixe o Coke Oven travar porque o fluido encheu.</p>
+</div>
 
 ## 17.4. Fábrica 4 - Siderúrgica
 
@@ -1698,11 +1643,10 @@ Toda quarry deve ter dono, placa, área definida e storage suficiente. Quarry se
 AE2/Chest Input -> Machines -> Output Buffer -> AE2/Storage
 ```
 
-### Dica
-
-Padronize as faces antes de ligar AE2.
-
----
+<div class="callout info">
+  <div class="callout-title">?? DICA</div>
+  <p>Padronize as faces antes de ligar AE2.</p>
+</div>
 
 ## 17.8. Fábrica 8 - Circuit Factory
 
@@ -1751,11 +1695,10 @@ Raw material / Oil products -> Chemical Reactor -> Rubber/Plastic intermediates
 Rubber/Plastic -> Assembler/Wiremill -> Cables/Circuits
 ```
 
-### Dica
-
-Use tanks pequenos para intermediários e tanques grandes para fluidos de alto volume.
-
----
+<div class="callout info">
+  <div class="callout-title">?? DICA</div>
+  <p>Use tanks pequenos para intermediários e tanques grandes para fluidos de alto volume.</p>
+</div>
 
 ## 17.10. Fábrica 10 - Electric Blast Furnace Hub
 
@@ -1777,11 +1720,10 @@ EBF -> Output Hatch -> Buffer
 - Ligas avançadas.
 - Materiais de alta temperatura.
 
-### Dica
-
-Um EBF sem energia estável é só decoração cara.
-
----
+<div class="callout info">
+  <div class="callout-title">?? DICA</div>
+  <p>Um EBF sem energia estável é só decoração cara.</p>
+</div>
 
 ## 17.11. Fábrica 11 - Refinaria Diesel
 
@@ -1841,11 +1783,10 @@ Stainless -> Compressor/Cutting/Assembler -> Advanced Parts
 Quarry Output -> Large Macerator/Crusher -> Dust Buffer -> Large Furnace -> Ingots
 ```
 
-### Dica
-
-Ideal para bases com quarry ou bees/metals renováveis.
-
----
+<div class="callout info">
+  <div class="callout-title">?? DICA</div>
+  <p>Ideal para bases com quarry ou bees/metals renováveis.</p>
+</div>
 
 ## 17.14. Fábrica 14 - Processing Array Autocrafting
 
@@ -1884,11 +1825,10 @@ AE2 Pattern Provider -> Processing Array -> Output Buffer -> AE2 Import
 Fuel + Water -> Large/HP Steam Boiler -> Steam Buffer -> Large Steam Turbine -> EU
 ```
 
-### Dica
-
-Use medidores visuais, tanks e desligamento manual.
-
----
+<div class="callout info">
+  <div class="callout-title">?? DICA</div>
+  <p>Use medidores visuais, tanks e desligamento manual.</p>
+</div>
 
 ## 17.16. Fábrica 16 - Nuclear Power Plant
 
@@ -1944,11 +1884,10 @@ Use AE2 Storage Bus para expor Quantum Barrel/Tank à rede, quando compatível.
 Fuel/Gases -> Fusion Reactor -> Plasma/Hot Fluid -> Plasma Turbine -> EU Backbone
 ```
 
-### Dica de design
-
-Faça como megaprojeto público. Combine com construção espacial/astral do Astron City.
-
----
+<div class="callout info">
+  <div class="callout-title">?? DICA DE DESIGN</div>
+  <p>Faça como megaprojeto público. Combine com construção espacial/astral do Astron City.</p>
+</div>
 
 ## 17.19. Fábrica 19 - EI Farming/Bio Industry
 
@@ -1982,11 +1921,10 @@ Farmer/Harvester -> Composter/Brewery/Canning -> Fluids/Items -> MI Processing
 [Input Wall] -> [Filtered Pipes] -> [Machines] -> [Output Pipes] -> [Storage/AE2]
 ```
 
-### Dica
-
-Uma boa fábrica tem corredor técnico. Se você não consegue ver para onde um pipe vai, a fábrica já está ficando perigosa.
-
----
+<div class="callout info">
+  <div class="callout-title">?? DICA</div>
+  <p>Uma boa fábrica tem corredor técnico. Se você não consegue ver para onde um pipe vai, a fábrica já está ficando perigosa.</p>
+</div>
 
 # 18. HOT TOPICS - o que é muito forte e útil
 

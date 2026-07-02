@@ -48,8 +48,8 @@ export default function App() {
             {activeTab === 'home' && 'Astron City Wiki'}
             {activeTab === 'modindex' && 'Biblioteca de Mods'}
             {activeTab === 'tips' && 'Dicas e Progressão Geral'}
-            {activeTab.startsWith('wiki-') || ['create', 'apotheosis', 'irons', 'powah', 'silentgear', 'backpacks'].includes(activeTab) ? 'Guia Profundo de Mod' : ''}
-            {['ae2', 'cataclysm', 'gear', 'mi', 'oritech'].includes(activeTab) && 'Guia Completo (Markdown Oficial)'}
+            {activeTab.startsWith('wiki-') || ['apotheosis', 'powah', 'silentgear', 'backpacks'].includes(activeTab) ? 'Guia Profundo de Mod' : ''}
+            {['ae2', 'cataclysm', 'gear', 'mi', 'oritech', 'create', 'irons_spells'].includes(activeTab) && 'Guia Completo (Markdown Oficial)'}
             {['early', 'tech', 'magic', 'late'].includes(activeTab) && "Warlord's Path"}
           </h2>
           <p style={{color: 'var(--text-secondary)'}}>
@@ -58,8 +58,8 @@ export default function App() {
             {activeTab === 'tips' && 'Informações valiosas para sobrevivência e otimização no dia a dia do modpack.'}
             {activeTab === 'bestiary' && 'Conheça os perigos e as fraquezas das criaturas de Astron City.'}
             {activeTab === 'dimensions' && 'Exploração entre mundos e o que esperar de cada um.'}
-            {activeTab.startsWith('wiki-') || ['create', 'apotheosis', 'irons', 'powah', 'silentgear', 'backpacks'].includes(activeTab) ? 'Informações extraídas diretamente dos arquivos para domínio completo do mod.' : ''}
-            {['ae2', 'cataclysm', 'gear', 'mi', 'oritech'].includes(activeTab) && 'Documentação nativa do Astron City transcrita diretamente do servidor oficial.'}
+            {activeTab.startsWith('wiki-') || ['apotheosis', 'powah', 'silentgear', 'backpacks'].includes(activeTab) ? 'Informações extraídas diretamente dos arquivos para domínio completo do mod.' : ''}
+            {['ae2', 'cataclysm', 'gear', 'mi', 'oritech', 'create', 'irons_spells'].includes(activeTab) && 'Documentação nativa do Astron City transcrita diretamente do servidor oficial.'}
             {['early', 'tech', 'magic', 'late'].includes(activeTab) && "A rota otimizada para o preparo letal contra os maiores chefes."}
           </p>
         </header>
@@ -75,12 +75,7 @@ export default function App() {
           {/* HOME */}
           {activeTab === 'home' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}} className="doc-layout">
-              <div style={{ 
-                borderBottom: '1px solid var(--border-color)', 
-                paddingBottom: '2rem',
-                textAlign: 'center',
-                marginTop: '1rem'
-              }}>
+              <div className="astron-hero-bg" style={{ marginBottom: '2rem' }}>
                 <h1 style={{ fontSize: '3rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>
                   A Enciclopédia do <span style={{ color: 'var(--accent-blue)' }}>Astron City</span>
                 </h1>
@@ -147,7 +142,7 @@ export default function App() {
           {/* WIKI - CREATE */}
           {activeTab === 'create' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
-              <WikiCreate onOpenRecipe={openRecipe} />
+              <MarkdownViewer fileUrl="/docs/create.md" />
             </div>
           )}
 
@@ -159,9 +154,9 @@ export default function App() {
           )}
 
           {/* WIKI - IRONS SPELLS */}
-          {activeTab === 'irons' && searchQuery.length === 0 && (
+          {activeTab === 'irons_spells' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}}>
-              <WikiIrons onOpenRecipe={openRecipe} />
+              <MarkdownViewer fileUrl="/docs/irons_spells.md" />
             </div>
           )}
 
