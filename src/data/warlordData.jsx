@@ -887,7 +887,12 @@ export const WARLORD_DATA = {
             id: "l_armor_4",
             icon: Anchor,
             title: "A Bateria Definitiva",
-            desc: "O Capacitor Dracônico Wireless avançado deve estar vinculado ao seu corpo para recarregar o escudo infinitamente sob o fogo de chefes supremos."
+            desc: "O Capacitor Dracônico Wireless avançado deve estar vinculado ao seu corpo para recarregar o escudo infinitamente sob o fogo de chefes supremos.",
+            tasks: [
+              "Forje o Draconic Flux Capacitor de nível máximo.",
+              "Vincule o Capacitor à sua rede de energia P2P.",
+              "Mantenha-o no inventário com a opção de carregar armadura ativada."
+            ]
           }
         ]
       },
