@@ -17,9 +17,9 @@ export default function WikiSearch({ query, onOpenRecipe, setActiveTab }) {
       const rec = recipes[key];
       return { id: key, ...rec };
     }).filter(rec => 
-      rec.title.toLowerCase().includes(lowerQuery) || 
-      rec.desc.toLowerCase().includes(lowerQuery) ||
-      rec.machine.toLowerCase().includes(lowerQuery)
+      (rec.title && rec.title.toLowerCase().includes(lowerQuery)) || 
+      (rec.description && rec.description.toLowerCase().includes(lowerQuery)) ||
+      (rec.machine && rec.machine.toLowerCase().includes(lowerQuery))
     );
 
     // 3. Search in Bestiary (Loot & Mobs)
