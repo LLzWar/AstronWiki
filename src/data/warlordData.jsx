@@ -1,5 +1,5 @@
 import { 
-  Backpack, Sparkles, Factory, Crown, Shield, Zap, Skull, Gem, 
+  Backpack, Sparkles, Factory, Crown, Shield, Zap, Skull, Gem, Pickaxe,
   BookOpen, Map, Hammer, Flame, Droplet, Box, Star, Database, Settings, Crosshair, Tent, Sword, Activity, Cpu, Wind, Moon, Sun, Anchor, Target, Battery, Compass, Layers, Zap as ZapIcon, Key
 } from 'lucide-react';
 
