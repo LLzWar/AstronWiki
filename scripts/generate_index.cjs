@@ -52,6 +52,14 @@ if (fs.existsSync(itemsDir)) {
       if (isJunk && !fileId.includes('gui_pattern')) return; // Just in case a real item has 'gui' we exclude if it's junk, but usually they are junk. 
       // Note: "empty_bottle" is a real item, so we specifically target "empty_armor" or "empty_slot" or just "_slot"
 
+      // Ignore 3D models flat UV textures (like Macaw's Furniture couches, chairs, roofs, tables, bridges)
+      const isUVMap = /(^|_)(couch|chair|desk|drawer|blind|roof|awning|bridge|catwalk|actuator|cabinet|wardrobe|counter|stool|door_top|door_bottom|bed_head|bed_foot|chest_top|chest_side|chest_front)(_|$)/i.test(fileId);
+      if (isUVMap) return;
+
+      // Ignore block geometric side textures (often look like distorted fragments in 2D)
+      const isBlockSide = /(^|_)(bottom|top|side|front|back|inner|outer|connected|window)(_|$)/i.test(fileId);
+      if (isBlockSide && !fileId.includes('window_pane')) return;
+
       const baseId = getBaseId(fileId);
       
       // If we don't have this base item yet, OR if the current file is the EXACT base item (e.g. glass vs glass_ctm_1), we prefer the exact match.

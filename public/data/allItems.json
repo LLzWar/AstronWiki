@@ -160,16 +160,6 @@
     "type": "item"
   },
   {
-    "id": "acacia_cabinet_front",
-    "name": "Acacia Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "acacia_chair",
-    "name": "Acacia Chair",
-    "type": "item"
-  },
-  {
     "id": "acacia_chest_boat",
     "name": "Acacia Chest Boat",
     "type": "item"
@@ -182,21 +172,6 @@
   {
     "id": "acacia_corner_trim_thin",
     "name": "Acacia Corner Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "acacia_couch",
-    "name": "Acacia Couch",
-    "type": "item"
-  },
-  {
-    "id": "acacia_counter_1",
-    "name": "Acacia Counter",
-    "type": "item"
-  },
-  {
-    "id": "acacia_desk",
-    "name": "Acacia Desk",
     "type": "item"
   },
   {
@@ -275,11 +250,6 @@
     "type": "item"
   },
   {
-    "id": "acacia_side_table",
-    "name": "Acacia Side Table",
-    "type": "item"
-  },
-  {
     "id": "acacia_sign",
     "name": "Acacia Sign",
     "type": "item"
@@ -297,16 +267,6 @@
   {
     "id": "acacia_trapdoor",
     "name": "Acacia Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "acacia_window",
-    "name": "Acacia Window",
-    "type": "item"
-  },
-  {
-    "id": "acacia_window_connected",
-    "name": "Acacia Window Connected",
     "type": "item"
   },
   {
@@ -357,11 +317,6 @@
   {
     "id": "accumulator_old",
     "name": "Accumulator Old",
-    "type": "item"
-  },
-  {
-    "id": "accumulator_side_connected",
-    "name": "Accumulator Side Connected",
     "type": "item"
   },
   {
@@ -417,36 +372,6 @@
   {
     "id": "activator_rail",
     "name": "Activator Rail",
-    "type": "item"
-  },
-  {
-    "id": "actuator_top",
-    "name": "Actuator",
-    "type": "item"
-  },
-  {
-    "id": "actuator_top_dark",
-    "name": "Actuator Top Dark",
-    "type": "item"
-  },
-  {
-    "id": "actuator_top_iesnium",
-    "name": "Actuator Top Iesnium",
-    "type": "item"
-  },
-  {
-    "id": "actuator_top_iesnium_dark",
-    "name": "Actuator Top Iesnium Dark",
-    "type": "item"
-  },
-  {
-    "id": "actuator_top_inert",
-    "name": "Actuator Top Inert",
-    "type": "item"
-  },
-  {
-    "id": "actuator_top_inert_dark",
-    "name": "Actuator Top Inert Dark",
     "type": "item"
   },
   {
@@ -595,18 +520,8 @@
     "type": "item"
   },
   {
-    "id": "advanced_display_connected",
-    "name": "Advanced Display Connected",
-    "type": "item"
-  },
-  {
     "id": "advanced_display_small",
     "name": "Advanced Display Small",
-    "type": "item"
-  },
-  {
-    "id": "advanced_display_small_connected",
-    "name": "Advanced Display Small Connected",
     "type": "item"
   },
   {
@@ -865,11 +780,6 @@
     "type": "item"
   },
   {
-    "id": "air_soil_side",
-    "name": "Air Soil",
-    "type": "item"
-  },
-  {
     "id": "akebia",
     "name": "Akebia",
     "type": "item"
@@ -1035,11 +945,6 @@
     "type": "item"
   },
   {
-    "id": "alloy_forge_bottom",
-    "name": "Alloy Forge",
-    "type": "item"
-  },
-  {
     "id": "alloy_ingot",
     "name": "Alloy Ingot",
     "type": "item"
@@ -1050,7 +955,7 @@
     "type": "item"
   },
   {
-    "id": "alloy_smelter_bottom",
+    "id": "alloy_smelter_off",
     "name": "Alloy Smelter",
     "type": "item"
   },
@@ -1185,11 +1090,6 @@
     "type": "item"
   },
   {
-    "id": "aluminum_barrel_side",
-    "name": "Aluminum Barrel",
-    "type": "item"
-  },
-  {
     "id": "aluminum_bars",
     "name": "Aluminum Bars",
     "type": "item"
@@ -1222,11 +1122,6 @@
   {
     "id": "aluminum_casing",
     "name": "Aluminum Casing",
-    "type": "item"
-  },
-  {
-    "id": "aluminum_casing_connected",
-    "name": "Aluminum Casing Connected",
     "type": "item"
   },
   {
@@ -1277,31 +1172,6 @@
   {
     "id": "aluminum_fluid_tank",
     "name": "Aluminum Fluid Tank",
-    "type": "item"
-  },
-  {
-    "id": "aluminum_fluid_tank_connected",
-    "name": "Aluminum Fluid Tank Connected",
-    "type": "item"
-  },
-  {
-    "id": "aluminum_fluid_tank_inner_connected",
-    "name": "Aluminum Fluid Tank Inner Connected",
-    "type": "item"
-  },
-  {
-    "id": "aluminum_fluid_tank_top_connected",
-    "name": "Aluminum Fluid Tank Top Connected",
-    "type": "item"
-  },
-  {
-    "id": "aluminum_fluid_tank_window",
-    "name": "Aluminum Fluid Tank Window",
-    "type": "item"
-  },
-  {
-    "id": "aluminum_fluid_tank_window_single",
-    "name": "Aluminum Fluid Tank Window Single",
     "type": "item"
   },
   {
@@ -1375,11 +1245,6 @@
     "type": "item"
   },
   {
-    "id": "aluminum_pipes_connected",
-    "name": "Aluminum Pipes Connected",
-    "type": "item"
-  },
-  {
     "id": "aluminum_plate",
     "name": "Aluminum Plate",
     "type": "item"
@@ -1420,18 +1285,8 @@
     "type": "item"
   },
   {
-    "id": "aluminum_scaffold_connected",
-    "name": "Aluminum Scaffold Connected",
-    "type": "item"
-  },
-  {
     "id": "aluminum_scaffold_inside",
     "name": "Aluminum Scaffold Inside",
-    "type": "item"
-  },
-  {
-    "id": "aluminum_scaffold_inside_connected",
-    "name": "Aluminum Scaffold Inside Connected",
     "type": "item"
   },
   {
@@ -1452,21 +1307,6 @@
   {
     "id": "aluminum_scaffolding_open_u",
     "name": "Aluminum Scaffolding Open U",
-    "type": "item"
-  },
-  {
-    "id": "aluminum_scaffolding_top_grate_top",
-    "name": "Aluminum Scaffolding Top Grate",
-    "type": "item"
-  },
-  {
-    "id": "aluminum_scaffolding_top_standard",
-    "name": "Aluminum Scaffolding Top Standard",
-    "type": "item"
-  },
-  {
-    "id": "aluminum_scaffolding_top_wooden_top",
-    "name": "Aluminum Scaffolding Top Wooden",
     "type": "item"
   },
   {
@@ -1497,11 +1337,6 @@
   {
     "id": "aluminum_tank",
     "name": "Aluminum Tank",
-    "type": "item"
-  },
-  {
-    "id": "aluminum_tesla_winding_side",
-    "name": "Aluminum Tesla Winding",
     "type": "item"
   },
   {
@@ -1720,11 +1555,6 @@
     "type": "item"
   },
   {
-    "id": "ancient_debris_side",
-    "name": "Ancient Debris",
-    "type": "item"
-  },
-  {
     "id": "ancient_knowledge_fragment",
     "name": "Ancient Knowledge Fragment",
     "type": "item"
@@ -1805,11 +1635,6 @@
     "type": "item"
   },
   {
-    "id": "andesite_casing_connected",
-    "name": "Andesite Casing Connected",
-    "type": "item"
-  },
-  {
     "id": "andesite_casing_piston",
     "name": "Andesite Casing Piston",
     "type": "item"
@@ -1827,31 +1652,6 @@
   {
     "id": "andesite_casing_xxshort",
     "name": "Andesite Casing Xxshort",
-    "type": "item"
-  },
-  {
-    "id": "andesite_catwalk",
-    "name": "Andesite Catwalk",
-    "type": "item"
-  },
-  {
-    "id": "andesite_catwalk_connected",
-    "name": "Andesite Catwalk Connected",
-    "type": "item"
-  },
-  {
-    "id": "andesite_catwalk_rail",
-    "name": "Andesite Catwalk Rail",
-    "type": "item"
-  },
-  {
-    "id": "andesite_catwalk_stairs",
-    "name": "Andesite Catwalk Stairs",
-    "type": "item"
-  },
-  {
-    "id": "andesite_catwalk_template",
-    "name": "Andesite Catwalk Template",
     "type": "item"
   },
   {
@@ -1900,11 +1700,6 @@
     "type": "item"
   },
   {
-    "id": "andesite_cut_cap_connected",
-    "name": "Andesite Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "andesite_cut_herring",
     "name": "Andesite Cut Herring",
     "type": "item"
@@ -1920,18 +1715,8 @@
     "type": "item"
   },
   {
-    "id": "andesite_cut_layered_connected",
-    "name": "Andesite Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "andesite_cut_pillar",
     "name": "Andesite Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "andesite_cut_pillar_connected",
-    "name": "Andesite Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -1952,16 +1737,6 @@
   {
     "id": "andesite_door",
     "name": "Andesite Door",
-    "type": "item"
-  },
-  {
-    "id": "andesite_encased_cogwheel_side",
-    "name": "Andesite Encased Cogwheel",
-    "type": "item"
-  },
-  {
-    "id": "andesite_encased_cogwheel_side_connected",
-    "name": "Andesite Encased Cogwheel Side Connected",
     "type": "item"
   },
   {
@@ -2000,18 +1775,8 @@
     "type": "item"
   },
   {
-    "id": "andesite_hull_front",
-    "name": "Andesite Hull",
-    "type": "item"
-  },
-  {
     "id": "andesite_lamp",
     "name": "Andesite Lamp",
-    "type": "item"
-  },
-  {
-    "id": "andesite_pattern_provider_bottom",
-    "name": "Andesite Pattern Provider",
     "type": "item"
   },
   {
@@ -2060,18 +1825,8 @@
     "type": "item"
   },
   {
-    "id": "andesite_pipes_connected",
-    "name": "Andesite Pipes Connected",
-    "type": "item"
-  },
-  {
     "id": "andesite_plate_metal",
     "name": "Andesite Plate Metal",
-    "type": "item"
-  },
-  {
-    "id": "andesite_plate_metal_connected",
-    "name": "Andesite Plate Metal Connected",
     "type": "item"
   },
   {
@@ -2080,18 +1835,8 @@
     "type": "item"
   },
   {
-    "id": "andesite_scaffold_connected",
-    "name": "Andesite Scaffold Connected",
-    "type": "item"
-  },
-  {
     "id": "andesite_scaffold_inside",
     "name": "Andesite Scaffold Inside",
-    "type": "item"
-  },
-  {
-    "id": "andesite_scaffold_inside_connected",
-    "name": "Andesite Scaffold Inside Connected",
     "type": "item"
   },
   {
@@ -2102,11 +1847,6 @@
   {
     "id": "andesite_sheet_metal",
     "name": "Andesite Sheet Metal",
-    "type": "item"
-  },
-  {
-    "id": "andesite_sheet_metal_connected",
-    "name": "Andesite Sheet Metal Connected",
     "type": "item"
   },
   {
@@ -2125,11 +1865,6 @@
     "type": "item"
   },
   {
-    "id": "andesite_switch_top",
-    "name": "Andesite Switch",
-    "type": "item"
-  },
-  {
     "id": "andesite_switch_flag",
     "name": "Andesite Switch Flag",
     "type": "item"
@@ -2142,41 +1877,6 @@
   {
     "id": "andesite_tunnel",
     "name": "Andesite Tunnel",
-    "type": "item"
-  },
-  {
-    "id": "andesite_tunnel_top_connected",
-    "name": "Andesite Tunnel Top Connected",
-    "type": "item"
-  },
-  {
-    "id": "andesite_tunnel_top_window",
-    "name": "Andesite Tunnel Top Window",
-    "type": "item"
-  },
-  {
-    "id": "andesite_window",
-    "name": "Andesite Window",
-    "type": "item"
-  },
-  {
-    "id": "andesite_window_alt",
-    "name": "Andesite Window Alt",
-    "type": "item"
-  },
-  {
-    "id": "andesite_window_connected",
-    "name": "Andesite Window Connected",
-    "type": "item"
-  },
-  {
-    "id": "andesite_window_connected_alt",
-    "name": "Andesite Window Connected Alt",
-    "type": "item"
-  },
-  {
-    "id": "andesite_window_end",
-    "name": "Andesite Window End",
     "type": "item"
   },
   {
@@ -2257,11 +1957,6 @@
   {
     "id": "annealed_copper_plate",
     "name": "Annealed Copper Plate",
-    "type": "item"
-  },
-  {
-    "id": "annealed_copper_tesla_winding_side",
-    "name": "Annealed Copper Tesla Winding",
     "type": "item"
   },
   {
@@ -2615,11 +2310,6 @@
     "type": "item"
   },
   {
-    "id": "arcane_debris_side",
-    "name": "Arcane Debris",
-    "type": "item"
-  },
-  {
     "id": "arcane_dragon_egg",
     "name": "Arcane Dragon Egg",
     "type": "item"
@@ -2657,11 +2347,6 @@
   {
     "id": "arcane_polished_darkstone_pillar",
     "name": "Arcane Polished Darkstone Pillar",
-    "type": "item"
-  },
-  {
-    "id": "arcane_polished_darkstone_rod_side",
-    "name": "Arcane Polished Darkstone Rod",
     "type": "item"
   },
   {
@@ -3305,11 +2990,6 @@
     "type": "item"
   },
   {
-    "id": "asurine_cut_cap_connected",
-    "name": "Asurine Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "asurine_cut_herring",
     "name": "Asurine Cut Herring",
     "type": "item"
@@ -3325,18 +3005,8 @@
     "type": "item"
   },
   {
-    "id": "asurine_cut_layered_connected",
-    "name": "Asurine Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "asurine_cut_pillar",
     "name": "Asurine Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "asurine_cut_pillar_connected",
-    "name": "Asurine Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -3745,11 +3415,6 @@
     "type": "item"
   },
   {
-    "id": "azalea_side",
-    "name": "Azalea",
-    "type": "item"
-  },
-  {
     "id": "azalea_leaves",
     "name": "Azalea Leaves",
     "type": "item"
@@ -3887,11 +3552,6 @@
   {
     "id": "babyturtle",
     "name": "Babyturtle",
-    "type": "item"
-  },
-  {
-    "id": "back",
-    "name": "Back",
     "type": "item"
   },
   {
@@ -4080,11 +3740,6 @@
     "type": "item"
   },
   {
-    "id": "bamboo_basket_bottom",
-    "name": "Bamboo Basket",
-    "type": "item"
-  },
-  {
     "id": "bamboo_basket_handle",
     "name": "Bamboo Basket Handle",
     "type": "item"
@@ -4100,16 +3755,6 @@
     "type": "item"
   },
   {
-    "id": "bamboo_cabinet_front",
-    "name": "Bamboo Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "bamboo_chair",
-    "name": "Bamboo Chair",
-    "type": "item"
-  },
-  {
     "id": "bamboo_chest_raft",
     "name": "Bamboo Chest Raft",
     "type": "item"
@@ -4122,21 +3767,6 @@
   {
     "id": "bamboo_corner_trim_thin",
     "name": "Bamboo Corner Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "bamboo_couch",
-    "name": "Bamboo Couch",
-    "type": "item"
-  },
-  {
-    "id": "bamboo_counter_1",
-    "name": "Bamboo Counter",
-    "type": "item"
-  },
-  {
-    "id": "bamboo_desk",
-    "name": "Bamboo Desk",
     "type": "item"
   },
   {
@@ -4225,11 +3855,6 @@
     "type": "item"
   },
   {
-    "id": "bamboo_side_table",
-    "name": "Bamboo Side Table",
-    "type": "item"
-  },
-  {
     "id": "bamboo_sign",
     "name": "Bamboo Sign",
     "type": "item"
@@ -4267,16 +3892,6 @@
   {
     "id": "bamboo_trapdoor",
     "name": "Bamboo Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "bamboo_window",
-    "name": "Bamboo Window",
-    "type": "item"
-  },
-  {
-    "id": "bamboo_window_connected",
-    "name": "Bamboo Window Connected",
     "type": "item"
   },
   {
@@ -4540,23 +4155,8 @@
     "type": "item"
   },
   {
-    "id": "barley_bottom_alt",
-    "name": "Barley Bottom Alt",
-    "type": "item"
-  },
-  {
-    "id": "barley_top_alt",
-    "name": "Barley Top Alt",
-    "type": "item"
-  },
-  {
     "id": "barnacles",
     "name": "Barnacles",
-    "type": "item"
-  },
-  {
-    "id": "barrel_bottom",
-    "name": "Barrel",
     "type": "item"
   },
   {
@@ -4582,11 +4182,6 @@
   {
     "id": "barrier_hit",
     "name": "Barrier Hit",
-    "type": "item"
-  },
-  {
-    "id": "basalt_side",
-    "name": "Basalt",
     "type": "item"
   },
   {
@@ -4910,11 +4505,6 @@
     "type": "item"
   },
   {
-    "id": "battery_side_connected",
-    "name": "Battery Side Connected",
-    "type": "item"
-  },
-  {
     "id": "battery_spirited",
     "name": "Battery Spirited",
     "type": "item"
@@ -4922,11 +4512,6 @@
   {
     "id": "battery_starter",
     "name": "Battery Starter",
-    "type": "item"
-  },
-  {
-    "id": "battery_top_connected",
-    "name": "Battery Top Connected",
     "type": "item"
   },
   {
@@ -4980,11 +4565,6 @@
     "type": "item"
   },
   {
-    "id": "bauxite_cut_cap_connected",
-    "name": "Bauxite Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "bauxite_cut_herring",
     "name": "Bauxite Cut Herring",
     "type": "item"
@@ -5000,18 +4580,8 @@
     "type": "item"
   },
   {
-    "id": "bauxite_cut_layered_connected",
-    "name": "Bauxite Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "bauxite_cut_pillar",
     "name": "Bauxite Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "bauxite_cut_pillar_connected",
-    "name": "Bauxite Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -5120,11 +4690,6 @@
     "type": "item"
   },
   {
-    "id": "bearing_top",
-    "name": "Bearing",
-    "type": "item"
-  },
-  {
     "id": "beaver_icon",
     "name": "Beaver Icon",
     "type": "item"
@@ -5215,18 +4780,8 @@
     "type": "item"
   },
   {
-    "id": "bee_nest_bottom",
-    "name": "Bee Nest",
-    "type": "item"
-  },
-  {
     "id": "bee_nest_diamond_helmet",
     "name": "Bee Nest Diamond Helmet",
-    "type": "item"
-  },
-  {
-    "id": "bee_nest_front_honey",
-    "name": "Bee Nest Front Honey",
     "type": "item"
   },
   {
@@ -5310,11 +4865,6 @@
     "type": "item"
   },
   {
-    "id": "beehive_front",
-    "name": "Beehive",
-    "type": "item"
-  },
-  {
     "id": "beehive_beeswax",
     "name": "Beehive Beeswax",
     "type": "item"
@@ -5322,11 +4872,6 @@
   {
     "id": "beehive_end",
     "name": "Beehive End",
-    "type": "item"
-  },
-  {
-    "id": "beehive_front_honey",
-    "name": "Beehive Front Honey",
     "type": "item"
   },
   {
@@ -5357,11 +4902,6 @@
   {
     "id": "beetroot",
     "name": "Beetroot",
-    "type": "item"
-  },
-  {
-    "id": "beetroot_crate_side",
-    "name": "Beetroot Crate",
     "type": "item"
   },
   {
@@ -5660,11 +5200,6 @@
     "type": "item"
   },
   {
-    "id": "big_dripleaf_side",
-    "name": "Big Dripleaf",
-    "type": "item"
-  },
-  {
     "id": "big_dripleaf_stem",
     "name": "Big Dripleaf Stem",
     "type": "item"
@@ -5905,16 +5440,6 @@
     "type": "item"
   },
   {
-    "id": "birch_cabinet_front",
-    "name": "Birch Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "birch_chair",
-    "name": "Birch Chair",
-    "type": "item"
-  },
-  {
     "id": "birch_chest_boat",
     "name": "Birch Chest Boat",
     "type": "item"
@@ -5927,21 +5452,6 @@
   {
     "id": "birch_corner_trim_thin",
     "name": "Birch Corner Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "birch_couch",
-    "name": "Birch Couch",
-    "type": "item"
-  },
-  {
-    "id": "birch_counter_1",
-    "name": "Birch Counter",
-    "type": "item"
-  },
-  {
-    "id": "birch_desk",
-    "name": "Birch Desk",
     "type": "item"
   },
   {
@@ -6020,11 +5530,6 @@
     "type": "item"
   },
   {
-    "id": "birch_side_table",
-    "name": "Birch Side Table",
-    "type": "item"
-  },
-  {
     "id": "birch_sign",
     "name": "Birch Sign",
     "type": "item"
@@ -6042,16 +5547,6 @@
   {
     "id": "birch_trapdoor",
     "name": "Birch Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "birch_window",
-    "name": "Birch Window",
-    "type": "item"
-  },
-  {
-    "id": "birch_window_connected",
-    "name": "Birch Window Connected",
     "type": "item"
   },
   {
@@ -6290,21 +5785,6 @@
     "type": "item"
   },
   {
-    "id": "black_foundry_capacitor_front",
-    "name": "Black Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "black_foundry_tank_front",
-    "name": "Black Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "black_foundry_window_front",
-    "name": "Black Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "black_glazed_terracotta",
     "name": "Black Glazed Terracotta",
     "type": "item"
@@ -6425,11 +5905,6 @@
     "type": "item"
   },
   {
-    "id": "black_stained_glass_pane_top",
-    "name": "Black Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "black_steel_axe",
     "name": "Black Steel Axe",
     "type": "item"
@@ -6480,11 +5955,6 @@
     "type": "item"
   },
   {
-    "id": "black_top_end",
-    "name": "Black Top End",
-    "type": "item"
-  },
-  {
     "id": "black_wool",
     "name": "Black Wool",
     "type": "item"
@@ -6512,21 +5982,6 @@
   {
     "id": "blackstone",
     "name": "Blackstone",
-    "type": "item"
-  },
-  {
-    "id": "blackstone_bricks_cabinet_back",
-    "name": "Blackstone Bricks Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "blackstone_bricks_cabinet_east",
-    "name": "Blackstone Bricks Cabinet East",
-    "type": "item"
-  },
-  {
-    "id": "blackstone_bricks_cabinet_west",
-    "name": "Blackstone Bricks Cabinet West",
     "type": "item"
   },
   {
@@ -6667,26 +6122,6 @@
   {
     "id": "blast_furnace_reinforcement",
     "name": "Blast Furnace Reinforcement",
-    "type": "item"
-  },
-  {
-    "id": "blast_furnace_reinforcement_connected",
-    "name": "Blast Furnace Reinforcement Connected",
-    "type": "item"
-  },
-  {
-    "id": "blast_stove_side",
-    "name": "Blast Stove",
-    "type": "item"
-  },
-  {
-    "id": "blast_stove_side_connected",
-    "name": "Blast Stove Side Connected",
-    "type": "item"
-  },
-  {
-    "id": "blast_stove_top_connected",
-    "name": "Blast Stove Top Connected",
     "type": "item"
   },
   {
@@ -6910,36 +6345,6 @@
     "type": "item"
   },
   {
-    "id": "block_connected",
-    "name": "Block Connected",
-    "type": "item"
-  },
-  {
-    "id": "block_connected_dev",
-    "name": "Block Connected Dev",
-    "type": "item"
-  },
-  {
-    "id": "block_connected_old",
-    "name": "Block Connected Old",
-    "type": "item"
-  },
-  {
-    "id": "block_connected_old2",
-    "name": "Block Connected Old2",
-    "type": "item"
-  },
-  {
-    "id": "block_connected_variant1",
-    "name": "Block Connected Variant1",
-    "type": "item"
-  },
-  {
-    "id": "block_connected_variant2",
-    "name": "Block Connected Variant2",
-    "type": "item"
-  },
-  {
     "id": "block_destroyer_head",
     "name": "Block Destroyer Head",
     "type": "item"
@@ -6967,16 +6372,6 @@
   {
     "id": "block_powered",
     "name": "Block Powered",
-    "type": "item"
-  },
-  {
-    "id": "block_top_connected",
-    "name": "Block Top Connected",
-    "type": "item"
-  },
-  {
-    "id": "block_top_connected_old",
-    "name": "Block Top Connected Old",
     "type": "item"
   },
   {
@@ -7295,21 +6690,6 @@
     "type": "item"
   },
   {
-    "id": "blue_foundry_capacitor_front",
-    "name": "Blue Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "blue_foundry_tank_front",
-    "name": "Blue Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "blue_foundry_window_front",
-    "name": "Blue Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "blue_glazed_medium_pot",
     "name": "Blue Glazed Medium Pot",
     "type": "item"
@@ -7347,11 +6727,6 @@
   {
     "id": "blue_herring",
     "name": "Blue Herring",
-    "type": "item"
-  },
-  {
-    "id": "blue_hydrangea_bottom",
-    "name": "Blue Hydrangea",
     "type": "item"
   },
   {
@@ -7460,11 +6835,6 @@
     "type": "item"
   },
   {
-    "id": "blue_stained_glass_pane_top",
-    "name": "Blue Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "blue_tenderloin_steak",
     "name": "Blue Tenderloin Steak",
     "type": "item"
@@ -7472,11 +6842,6 @@
   {
     "id": "blue_terracotta",
     "name": "Blue Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "blue_top_end",
-    "name": "Blue Top End",
     "type": "item"
   },
   {
@@ -7755,11 +7120,6 @@
     "type": "item"
   },
   {
-    "id": "blueprint_table_bottom",
-    "name": "Blueprint Table",
-    "type": "item"
-  },
-  {
     "id": "blueprint_tip",
     "name": "Blueprint Tip",
     "type": "item"
@@ -7805,11 +7165,6 @@
     "type": "item"
   },
   {
-    "id": "bogey_top",
-    "name": "Bogey",
-    "type": "item"
-  },
-  {
     "id": "bogged_plushie",
     "name": "Bogged Plushie",
     "type": "item"
@@ -7835,11 +7190,6 @@
     "type": "item"
   },
   {
-    "id": "boiler_side",
-    "name": "Boiler",
-    "type": "item"
-  },
-  {
     "id": "boiler_gauge",
     "name": "Boiler Gauge",
     "type": "item"
@@ -7850,18 +7200,8 @@
     "type": "item"
   },
   {
-    "id": "boiler_side_connected",
-    "name": "Boiler Side Connected",
-    "type": "item"
-  },
-  {
     "id": "bone",
     "name": "Bone",
-    "type": "item"
-  },
-  {
-    "id": "bone_block_side",
-    "name": "Bone Block",
     "type": "item"
   },
   {
@@ -7887,26 +7227,6 @@
   {
     "id": "bone_reptile_helmet",
     "name": "Bone Reptile Helmet",
-    "type": "item"
-  },
-  {
-    "id": "bone_vault_bottom",
-    "name": "Bone Vault",
-    "type": "item"
-  },
-  {
-    "id": "bone_vault_front_ejecting",
-    "name": "Bone Vault Front Ejecting",
-    "type": "item"
-  },
-  {
-    "id": "bone_vault_front_unlocking",
-    "name": "Bone Vault Front Unlocking",
-    "type": "item"
-  },
-  {
-    "id": "bone_vault_top_ejecting",
-    "name": "Bone Vault Top Ejecting",
     "type": "item"
   },
   {
@@ -8170,26 +7490,6 @@
     "type": "item"
   },
   {
-    "id": "bottom",
-    "name": "Bottom",
-    "type": "item"
-  },
-  {
-    "id": "bottom_connected",
-    "name": "Bottom Connected",
-    "type": "item"
-  },
-  {
-    "id": "bottom_left",
-    "name": "Bottom Left",
-    "type": "item"
-  },
-  {
-    "id": "bottom_right",
-    "name": "Bottom Right",
-    "type": "item"
-  },
-  {
     "id": "bottom0",
     "name": "Bottom0",
     "type": "item"
@@ -8217,11 +7517,6 @@
   {
     "id": "boulti",
     "name": "Boulti",
-    "type": "item"
-  },
-  {
-    "id": "bound_cardboard_block_front",
-    "name": "Bound Cardboard Block",
     "type": "item"
   },
   {
@@ -8430,11 +7725,6 @@
     "type": "item"
   },
   {
-    "id": "brass_bookshelf_bottom",
-    "name": "Brass Bookshelf",
-    "type": "item"
-  },
-  {
     "id": "brass_cable_hub",
     "name": "Brass Cable Hub",
     "type": "item"
@@ -8452,36 +7742,6 @@
   {
     "id": "brass_casing",
     "name": "Brass Casing",
-    "type": "item"
-  },
-  {
-    "id": "brass_casing_connected",
-    "name": "Brass Casing Connected",
-    "type": "item"
-  },
-  {
-    "id": "brass_catwalk",
-    "name": "Brass Catwalk",
-    "type": "item"
-  },
-  {
-    "id": "brass_catwalk_connected",
-    "name": "Brass Catwalk Connected",
-    "type": "item"
-  },
-  {
-    "id": "brass_catwalk_rail",
-    "name": "Brass Catwalk Rail",
-    "type": "item"
-  },
-  {
-    "id": "brass_catwalk_stairs",
-    "name": "Brass Catwalk Stairs",
-    "type": "item"
-  },
-  {
-    "id": "brass_catwalk_template",
-    "name": "Brass Catwalk Template",
     "type": "item"
   },
   {
@@ -8537,16 +7797,6 @@
   {
     "id": "brass_electric_motor_old",
     "name": "Brass Electric Motor Old",
-    "type": "item"
-  },
-  {
-    "id": "brass_encased_cogwheel_side",
-    "name": "Brass Encased Cogwheel",
-    "type": "item"
-  },
-  {
-    "id": "brass_encased_cogwheel_side_connected",
-    "name": "Brass Encased Cogwheel Side Connected",
     "type": "item"
   },
   {
@@ -8615,11 +7865,6 @@
     "type": "item"
   },
   {
-    "id": "brass_hull_front",
-    "name": "Brass Hull",
-    "type": "item"
-  },
-  {
     "id": "brass_ingot",
     "name": "Brass Ingot",
     "type": "item"
@@ -8642,11 +7887,6 @@
   {
     "id": "brass_nugget",
     "name": "Brass Nugget",
-    "type": "item"
-  },
-  {
-    "id": "brass_pattern_provider_bottom",
-    "name": "Brass Pattern Provider",
     "type": "item"
   },
   {
@@ -8680,18 +7920,8 @@
     "type": "item"
   },
   {
-    "id": "brass_pipes_connected",
-    "name": "Brass Pipes Connected",
-    "type": "item"
-  },
-  {
     "id": "brass_plate_metal",
     "name": "Brass Plate Metal",
-    "type": "item"
-  },
-  {
-    "id": "brass_plate_metal_connected",
-    "name": "Brass Plate Metal Connected",
     "type": "item"
   },
   {
@@ -8710,18 +7940,8 @@
     "type": "item"
   },
   {
-    "id": "brass_scaffold_connected",
-    "name": "Brass Scaffold Connected",
-    "type": "item"
-  },
-  {
     "id": "brass_scaffold_inside",
     "name": "Brass Scaffold Inside",
-    "type": "item"
-  },
-  {
-    "id": "brass_scaffold_inside_connected",
-    "name": "Brass Scaffold Inside Connected",
     "type": "item"
   },
   {
@@ -8732,11 +7952,6 @@
   {
     "id": "brass_sheet_metal",
     "name": "Brass Sheet Metal",
-    "type": "item"
-  },
-  {
-    "id": "brass_sheet_metal_connected",
-    "name": "Brass Sheet Metal Connected",
     "type": "item"
   },
   {
@@ -8780,33 +7995,8 @@
     "type": "item"
   },
   {
-    "id": "brass_tunnel_top_connected",
-    "name": "Brass Tunnel Top Connected",
-    "type": "item"
-  },
-  {
-    "id": "brass_tunnel_top_window",
-    "name": "Brass Tunnel Top Window",
-    "type": "item"
-  },
-  {
     "id": "brass_valve_closed",
     "name": "Brass Valve",
-    "type": "item"
-  },
-  {
-    "id": "brass_window",
-    "name": "Brass Window",
-    "type": "item"
-  },
-  {
-    "id": "brass_window_connected",
-    "name": "Brass Window Connected",
-    "type": "item"
-  },
-  {
-    "id": "brass_window_end",
-    "name": "Brass Window End",
     "type": "item"
   },
   {
@@ -9035,11 +8225,6 @@
     "type": "item"
   },
   {
-    "id": "brimstone_cluster_bottom",
-    "name": "Brimstone Cluster",
-    "type": "item"
-  },
-  {
     "id": "brimstone_fumarole",
     "name": "Brimstone Fumarole",
     "type": "item"
@@ -9102,11 +8287,6 @@
   {
     "id": "brontes_layer",
     "name": "Brontes Layer",
-    "type": "item"
-  },
-  {
-    "id": "bronze_barrel_side",
-    "name": "Bronze Barrel",
     "type": "item"
   },
   {
@@ -9310,21 +8490,6 @@
     "type": "item"
   },
   {
-    "id": "brown_foundry_capacitor_front",
-    "name": "Brown Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "brown_foundry_tank_front",
-    "name": "Brown Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "brown_foundry_window_front",
-    "name": "Brown Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "brown_glazed_terracotta",
     "name": "Brown Glazed Terracotta",
     "type": "item"
@@ -9435,18 +8600,8 @@
     "type": "item"
   },
   {
-    "id": "brown_stained_glass_pane_top",
-    "name": "Brown Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "brown_terracotta",
     "name": "Brown Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "brown_top_end",
-    "name": "Brown Top End",
     "type": "item"
   },
   {
@@ -9675,11 +8830,6 @@
     "type": "item"
   },
   {
-    "id": "bullet_pepper_crate_bottom",
-    "name": "Bullet Pepper Crate",
-    "type": "item"
-  },
-  {
     "id": "bullet_potion",
     "name": "Bullet Potion",
     "type": "item"
@@ -9722,11 +8872,6 @@
   {
     "id": "bumble_bee_chestplate_trans_1",
     "name": "Bumble Bee Chestplate Trans",
-    "type": "item"
-  },
-  {
-    "id": "bumble_bee_nest_overlay_top",
-    "name": "Bumble Bee Nest",
     "type": "item"
   },
   {
@@ -9900,11 +9045,6 @@
     "type": "item"
   },
   {
-    "id": "cabbage_crate_side",
-    "name": "Cabbage Crate",
-    "type": "item"
-  },
-  {
     "id": "cabbage_leaf",
     "name": "Cabbage Leaf",
     "type": "item"
@@ -10042,11 +9182,6 @@
   {
     "id": "cactifish_stew",
     "name": "Cactifish Stew",
-    "type": "item"
-  },
-  {
-    "id": "cactus_bottom",
-    "name": "Cactus",
     "type": "item"
   },
   {
@@ -10315,11 +9450,6 @@
     "type": "item"
   },
   {
-    "id": "calcite_cut_cap_connected",
-    "name": "Calcite Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "calcite_cut_herring",
     "name": "Calcite Cut Herring",
     "type": "item"
@@ -10335,18 +9465,8 @@
     "type": "item"
   },
   {
-    "id": "calcite_cut_layered_connected",
-    "name": "Calcite Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "calcite_cut_pillar",
     "name": "Calcite Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "calcite_cut_pillar_connected",
-    "name": "Calcite Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -10405,18 +9525,8 @@
     "type": "item"
   },
   {
-    "id": "calibrated_sculk_sensor_top",
-    "name": "Calibrated Sculk Sensor",
-    "type": "item"
-  },
-  {
     "id": "calibrated_sculk_sensor_amethyst",
     "name": "Calibrated Sculk Sensor Amethyst",
-    "type": "item"
-  },
-  {
-    "id": "calibrated_sculk_sensor_input_side",
-    "name": "Calibrated Sculk Sensor Input",
     "type": "item"
   },
   {
@@ -10960,21 +10070,6 @@
     "type": "item"
   },
   {
-    "id": "capacitor_creative_side_in",
-    "name": "Capacitor Creative Side In",
-    "type": "item"
-  },
-  {
-    "id": "capacitor_creative_side_none",
-    "name": "Capacitor Creative Side None",
-    "type": "item"
-  },
-  {
-    "id": "capacitor_creative_side_out",
-    "name": "Capacitor Creative Side Out",
-    "type": "item"
-  },
-  {
     "id": "capacitor_creative_up_in",
     "name": "Capacitor Creative Up In",
     "type": "item"
@@ -11007,21 +10102,6 @@
   {
     "id": "capacitor_hv_down_out",
     "name": "Capacitor Hv Down Out",
-    "type": "item"
-  },
-  {
-    "id": "capacitor_hv_side_in",
-    "name": "Capacitor Hv Side In",
-    "type": "item"
-  },
-  {
-    "id": "capacitor_hv_side_none",
-    "name": "Capacitor Hv Side None",
-    "type": "item"
-  },
-  {
-    "id": "capacitor_hv_side_out",
-    "name": "Capacitor Hv Side Out",
     "type": "item"
   },
   {
@@ -11060,21 +10140,6 @@
     "type": "item"
   },
   {
-    "id": "capacitor_lv_side_in",
-    "name": "Capacitor Lv Side In",
-    "type": "item"
-  },
-  {
-    "id": "capacitor_lv_side_none",
-    "name": "Capacitor Lv Side None",
-    "type": "item"
-  },
-  {
-    "id": "capacitor_lv_side_out",
-    "name": "Capacitor Lv Side Out",
-    "type": "item"
-  },
-  {
     "id": "capacitor_lv_up_in",
     "name": "Capacitor Lv Up In",
     "type": "item"
@@ -11102,21 +10167,6 @@
   {
     "id": "capacitor_mv_down_out",
     "name": "Capacitor Mv Down Out",
-    "type": "item"
-  },
-  {
-    "id": "capacitor_mv_side_in",
-    "name": "Capacitor Mv Side In",
-    "type": "item"
-  },
-  {
-    "id": "capacitor_mv_side_none",
-    "name": "Capacitor Mv Side None",
-    "type": "item"
-  },
-  {
-    "id": "capacitor_mv_side_out",
-    "name": "Capacitor Mv Side Out",
     "type": "item"
   },
   {
@@ -11217,11 +10267,6 @@
   {
     "id": "carapace_block",
     "name": "Carapace Block",
-    "type": "item"
-  },
-  {
-    "id": "carapace_sack_bottom",
-    "name": "Carapace Sack",
     "type": "item"
   },
   {
@@ -11337,11 +10382,6 @@
   {
     "id": "cardboard",
     "name": "Cardboard",
-    "type": "item"
-  },
-  {
-    "id": "cardboard_block_front",
-    "name": "Cardboard Block",
     "type": "item"
   },
   {
@@ -11465,11 +10505,6 @@
     "type": "item"
   },
   {
-    "id": "carrot_crate_side",
-    "name": "Carrot Crate",
-    "type": "item"
-  },
-  {
     "id": "carrot_eater_pufferfish_texture",
     "name": "Carrot Eater Pufferfish Texture",
     "type": "item"
@@ -11502,16 +10537,6 @@
   {
     "id": "carrots_stage3",
     "name": "Carrots Stage3",
-    "type": "item"
-  },
-  {
-    "id": "cart_assembler_side",
-    "name": "Cart Assembler",
-    "type": "item"
-  },
-  {
-    "id": "cartography_table_top",
-    "name": "Cartography Table",
     "type": "item"
   },
   {
@@ -11560,11 +10585,6 @@
     "type": "item"
   },
   {
-    "id": "casing_side",
-    "name": "Casing",
-    "type": "item"
-  },
-  {
     "id": "casing_full",
     "name": "Casing Full",
     "type": "item"
@@ -11590,11 +10610,6 @@
     "type": "item"
   },
   {
-    "id": "cast_iron_block_connected",
-    "name": "Cast Iron Block Connected",
-    "type": "item"
-  },
-  {
     "id": "cast_iron_encased_pipe",
     "name": "Cast Iron Encased Pipe",
     "type": "item"
@@ -11602,31 +10617,6 @@
   {
     "id": "cast_iron_fluid_tank",
     "name": "Cast Iron Fluid Tank",
-    "type": "item"
-  },
-  {
-    "id": "cast_iron_fluid_tank_connected",
-    "name": "Cast Iron Fluid Tank Connected",
-    "type": "item"
-  },
-  {
-    "id": "cast_iron_fluid_tank_inner_connected",
-    "name": "Cast Iron Fluid Tank Inner Connected",
-    "type": "item"
-  },
-  {
-    "id": "cast_iron_fluid_tank_top_connected",
-    "name": "Cast Iron Fluid Tank Top Connected",
-    "type": "item"
-  },
-  {
-    "id": "cast_iron_fluid_tank_window",
-    "name": "Cast Iron Fluid Tank Window",
-    "type": "item"
-  },
-  {
-    "id": "cast_iron_fluid_tank_window_single",
-    "name": "Cast Iron Fluid Tank Window Single",
     "type": "item"
   },
   {
@@ -11665,11 +10655,6 @@
     "type": "item"
   },
   {
-    "id": "cast_iron_pipes_connected",
-    "name": "Cast Iron Pipes Connected",
-    "type": "item"
-  },
-  {
     "id": "cast_iron_pump",
     "name": "Cast Iron Pump",
     "type": "item"
@@ -11700,26 +10685,6 @@
     "type": "item"
   },
   {
-    "id": "cast_iron_vat_connected",
-    "name": "Cast Iron Vat Connected",
-    "type": "item"
-  },
-  {
-    "id": "cast_iron_vat_top_connected",
-    "name": "Cast Iron Vat Top Connected",
-    "type": "item"
-  },
-  {
-    "id": "cast_iron_vat_window",
-    "name": "Cast Iron Vat Window",
-    "type": "item"
-  },
-  {
-    "id": "cast_iron_vat_window_single",
-    "name": "Cast Iron Vat Window Single",
-    "type": "item"
-  },
-  {
     "id": "cast_time_ring",
     "name": "Cast Time Ring",
     "type": "item"
@@ -11737,11 +10702,6 @@
   {
     "id": "casting_basin",
     "name": "Casting Basin",
-    "type": "item"
-  },
-  {
-    "id": "casting_table_bottom",
-    "name": "Casting Table",
     "type": "item"
   },
   {
@@ -11970,11 +10930,6 @@
     "type": "item"
   },
   {
-    "id": "cell_workbench_side",
-    "name": "Cell Workbench",
-    "type": "item"
-  },
-  {
     "id": "cement",
     "name": "Cement",
     "type": "item"
@@ -12162,11 +11117,6 @@
   {
     "id": "chain_amulet_of_protection",
     "name": "Chain Amulet Of Protection",
-    "type": "item"
-  },
-  {
-    "id": "chain_command_block_back",
-    "name": "Chain Command Block",
     "type": "item"
   },
   {
@@ -12815,11 +11765,6 @@
     "type": "item"
   },
   {
-    "id": "channel_side_rotated",
-    "name": "Channel Side Rotated",
-    "type": "item"
-  },
-  {
     "id": "chaos_crystal",
     "name": "Chaos Crystal",
     "type": "item"
@@ -12967,16 +11912,6 @@
   {
     "id": "chared_dirt",
     "name": "Chared Dirt",
-    "type": "item"
-  },
-  {
-    "id": "chared_dirt_path_side",
-    "name": "Chared Dirt Path",
-    "type": "item"
-  },
-  {
-    "id": "chared_grass_side",
-    "name": "Chared Grass",
     "type": "item"
   },
   {
@@ -13160,16 +12095,6 @@
     "type": "item"
   },
   {
-    "id": "cherry_cabinet_front",
-    "name": "Cherry Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "cherry_chair",
-    "name": "Cherry Chair",
-    "type": "item"
-  },
-  {
     "id": "cherry_chest_boat",
     "name": "Cherry Chest Boat",
     "type": "item"
@@ -13182,21 +12107,6 @@
   {
     "id": "cherry_corner_trim_thin",
     "name": "Cherry Corner Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "cherry_couch",
-    "name": "Cherry Couch",
-    "type": "item"
-  },
-  {
-    "id": "cherry_counter_1",
-    "name": "Cherry Counter",
-    "type": "item"
-  },
-  {
-    "id": "cherry_desk",
-    "name": "Cherry Desk",
     "type": "item"
   },
   {
@@ -13285,11 +12195,6 @@
     "type": "item"
   },
   {
-    "id": "cherry_side_table",
-    "name": "Cherry Side Table",
-    "type": "item"
-  },
-  {
     "id": "cherry_sign",
     "name": "Cherry Sign",
     "type": "item"
@@ -13307,16 +12212,6 @@
   {
     "id": "cherry_trapdoor",
     "name": "Cherry Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "cherry_window",
-    "name": "Cherry Window",
-    "type": "item"
-  },
-  {
-    "id": "cherry_window_connected",
-    "name": "Cherry Window Connected",
     "type": "item"
   },
   {
@@ -13400,11 +12295,6 @@
     "type": "item"
   },
   {
-    "id": "chipped_anvil_top",
-    "name": "Chipped Anvil",
-    "type": "item"
-  },
-  {
     "id": "chipped_budding_quartz",
     "name": "Chipped Budding Quartz",
     "type": "item"
@@ -13467,11 +12357,6 @@
   {
     "id": "chiseled_black_sandstone",
     "name": "Chiseled Black Sandstone",
-    "type": "item"
-  },
-  {
-    "id": "chiseled_bookshelf_side",
-    "name": "Chiseled Bookshelf",
     "type": "item"
   },
   {
@@ -13780,11 +12665,6 @@
     "type": "item"
   },
   {
-    "id": "chorus_crate_side",
-    "name": "Chorus Crate",
-    "type": "item"
-  },
-  {
     "id": "chorus_flower",
     "name": "Chorus Flower",
     "type": "item"
@@ -14045,26 +12925,6 @@
     "type": "item"
   },
   {
-    "id": "cinderous_vault_bottom",
-    "name": "Cinderous Vault",
-    "type": "item"
-  },
-  {
-    "id": "cinderous_vault_front_ejecting",
-    "name": "Cinderous Vault Front Ejecting",
-    "type": "item"
-  },
-  {
-    "id": "cinderous_vault_front_unlocking",
-    "name": "Cinderous Vault Front Unlocking",
-    "type": "item"
-  },
-  {
-    "id": "cinderous_vault_top_ejecting",
-    "name": "Cinderous Vault Top Ejecting",
-    "type": "item"
-  },
-  {
     "id": "cindy_texture",
     "name": "Cindy Texture",
     "type": "item"
@@ -14202,11 +13062,6 @@
   {
     "id": "clarent",
     "name": "Clarent",
-    "type": "item"
-  },
-  {
-    "id": "claw_machine_bottom",
-    "name": "Claw Machine",
     "type": "item"
   },
   {
@@ -14395,33 +13250,8 @@
     "type": "item"
   },
   {
-    "id": "clibano_side",
-    "name": "Clibano",
-    "type": "item"
-  },
-  {
-    "id": "clibano_center_front",
-    "name": "Clibano Center",
-    "type": "item"
-  },
-  {
     "id": "clibano_corner",
     "name": "Clibano Corner",
-    "type": "item"
-  },
-  {
-    "id": "clinker_brick_sill_top",
-    "name": "Clinker Brick Sill",
-    "type": "item"
-  },
-  {
-    "id": "clinker_brick_sill_side_down",
-    "name": "Clinker Brick Sill Side Down",
-    "type": "item"
-  },
-  {
-    "id": "clinker_brick_sill_side_up",
-    "name": "Clinker Brick Sill Side Up",
     "type": "item"
   },
   {
@@ -14575,11 +13405,6 @@
     "type": "item"
   },
   {
-    "id": "clockwork_bearing_side",
-    "name": "Clockwork Bearing",
-    "type": "item"
-  },
-  {
     "id": "clot_of_time_disabled",
     "name": "Clot Of Time Disabled",
     "type": "item"
@@ -14702,11 +13527,6 @@
   {
     "id": "coal_dust",
     "name": "Coal Dust",
-    "type": "item"
-  },
-  {
-    "id": "coal_generator_bottom",
-    "name": "Coal Generator",
     "type": "item"
   },
   {
@@ -14985,21 +13805,6 @@
     "type": "item"
   },
   {
-    "id": "coil_hv_side",
-    "name": "Coil Hv",
-    "type": "item"
-  },
-  {
-    "id": "coil_lv_side",
-    "name": "Coil Lv",
-    "type": "item"
-  },
-  {
-    "id": "coil_mv_side",
-    "name": "Coil Mv",
-    "type": "item"
-  },
-  {
     "id": "coilspring_frame",
     "name": "Coilspring Frame",
     "type": "item"
@@ -15032,11 +13837,6 @@
   {
     "id": "coke_oven_door_middle",
     "name": "Coke Oven Door Middle",
-    "type": "item"
-  },
-  {
-    "id": "coke_oven_front_middle_off",
-    "name": "Coke Oven Front Middle",
     "type": "item"
   },
   {
@@ -15097,11 +13897,6 @@
   {
     "id": "comedy_mask_texture",
     "name": "Comedy Mask Texture",
-    "type": "item"
-  },
-  {
-    "id": "command_block_back",
-    "name": "Command Block",
     "type": "item"
   },
   {
@@ -15182,11 +13977,6 @@
   {
     "id": "composted_manure_bucket",
     "name": "Composted Manure Bucket",
-    "type": "item"
-  },
-  {
-    "id": "composter_bottom",
-    "name": "Composter",
     "type": "item"
   },
   {
@@ -15312,11 +14102,6 @@
   {
     "id": "concrete_leaded",
     "name": "Concrete Leaded",
-    "type": "item"
-  },
-  {
-    "id": "concrete_leaded_wall_top",
-    "name": "Concrete Leaded Wall",
     "type": "item"
   },
   {
@@ -15650,28 +14435,8 @@
     "type": "item"
   },
   {
-    "id": "contact_back",
-    "name": "Contact",
-    "type": "item"
-  },
-  {
-    "id": "contact_side_powered",
-    "name": "Contact Side Powered",
-    "type": "item"
-  },
-  {
-    "id": "contained_remnant_inner",
-    "name": "Contained Remnant",
-    "type": "item"
-  },
-  {
     "id": "content_observer",
     "name": "Content Observer",
-    "type": "item"
-  },
-  {
-    "id": "content_observer_inner_powered",
-    "name": "Content Observer Inner Powered",
     "type": "item"
   },
   {
@@ -16015,11 +14780,6 @@
     "type": "item"
   },
   {
-    "id": "cooking_pot_tray_side",
-    "name": "Cooking Pot Tray",
-    "type": "item"
-  },
-  {
     "id": "cool_book",
     "name": "Cool Book",
     "type": "item"
@@ -16225,36 +14985,6 @@
     "type": "item"
   },
   {
-    "id": "copper_casing_connected",
-    "name": "Copper Casing Connected",
-    "type": "item"
-  },
-  {
-    "id": "copper_catwalk",
-    "name": "Copper Catwalk",
-    "type": "item"
-  },
-  {
-    "id": "copper_catwalk_connected",
-    "name": "Copper Catwalk Connected",
-    "type": "item"
-  },
-  {
-    "id": "copper_catwalk_rail",
-    "name": "Copper Catwalk Rail",
-    "type": "item"
-  },
-  {
-    "id": "copper_catwalk_stairs",
-    "name": "Copper Catwalk Stairs",
-    "type": "item"
-  },
-  {
-    "id": "copper_catwalk_template",
-    "name": "Copper Catwalk Template",
-    "type": "item"
-  },
-  {
     "id": "copper_chain_link",
     "name": "Copper Chain Link",
     "type": "item"
@@ -16335,16 +15065,6 @@
     "type": "item"
   },
   {
-    "id": "copper_encased_cogwheel_side",
-    "name": "Copper Encased Cogwheel",
-    "type": "item"
-  },
-  {
-    "id": "copper_encased_cogwheel_side_connected",
-    "name": "Copper Encased Cogwheel Side Connected",
-    "type": "item"
-  },
-  {
     "id": "copper_fine_wire",
     "name": "Copper Fine Wire",
     "type": "item"
@@ -16380,11 +15100,6 @@
     "type": "item"
   },
   {
-    "id": "copper_glass_casing_connected",
-    "name": "Copper Glass Casing Connected",
-    "type": "item"
-  },
-  {
     "id": "copper_grenade",
     "name": "Copper Grenade",
     "type": "item"
@@ -16402,11 +15117,6 @@
   {
     "id": "copper_hook",
     "name": "Copper Hook",
-    "type": "item"
-  },
-  {
-    "id": "copper_hull_front",
-    "name": "Copper Hull",
     "type": "item"
   },
   {
@@ -16470,11 +15180,6 @@
     "type": "item"
   },
   {
-    "id": "copper_plate_metal_connected",
-    "name": "Copper Plate Metal Connected",
-    "type": "item"
-  },
-  {
     "id": "copper_powder",
     "name": "Copper Powder",
     "type": "item"
@@ -16510,11 +15215,6 @@
     "type": "item"
   },
   {
-    "id": "copper_roof_top",
-    "name": "Copper Roof",
-    "type": "item"
-  },
-  {
     "id": "copper_rotor",
     "name": "Copper Rotor",
     "type": "item"
@@ -16525,18 +15225,8 @@
     "type": "item"
   },
   {
-    "id": "copper_scaffold_connected",
-    "name": "Copper Scaffold Connected",
-    "type": "item"
-  },
-  {
     "id": "copper_scaffold_inside",
     "name": "Copper Scaffold Inside",
-    "type": "item"
-  },
-  {
-    "id": "copper_scaffold_inside_connected",
-    "name": "Copper Scaffold Inside Connected",
     "type": "item"
   },
   {
@@ -16555,18 +15245,8 @@
     "type": "item"
   },
   {
-    "id": "copper_sheet_metal_connected",
-    "name": "Copper Sheet Metal Connected",
-    "type": "item"
-  },
-  {
     "id": "copper_shingles",
     "name": "Copper Shingles",
-    "type": "item"
-  },
-  {
-    "id": "copper_shingles_top_connected",
-    "name": "Copper Shingles Top Connected",
     "type": "item"
   },
   {
@@ -16605,11 +15285,6 @@
     "type": "item"
   },
   {
-    "id": "copper_tesla_winding_side",
-    "name": "Copper Tesla Winding",
-    "type": "item"
-  },
-  {
     "id": "copper_tesla_winding_end",
     "name": "Copper Tesla Winding End",
     "type": "item"
@@ -16620,18 +15295,8 @@
     "type": "item"
   },
   {
-    "id": "copper_tiles_top_connected",
-    "name": "Copper Tiles Top Connected",
-    "type": "item"
-  },
-  {
     "id": "copper_tinted_glass_casing",
     "name": "Copper Tinted Glass Casing",
-    "type": "item"
-  },
-  {
-    "id": "copper_tinted_glass_casing_connected",
-    "name": "Copper Tinted Glass Casing Connected",
     "type": "item"
   },
   {
@@ -16655,21 +15320,6 @@
     "type": "item"
   },
   {
-    "id": "copper_window",
-    "name": "Copper Window",
-    "type": "item"
-  },
-  {
-    "id": "copper_window_connected",
-    "name": "Copper Window Connected",
-    "type": "item"
-  },
-  {
-    "id": "copper_window_end",
-    "name": "Copper Window End",
-    "type": "item"
-  },
-  {
     "id": "copper_wire",
     "name": "Copper Wire",
     "type": "item"
@@ -16680,23 +15330,8 @@
     "type": "item"
   },
   {
-    "id": "copper_wrapped_boiler_side",
-    "name": "Copper Wrapped Boiler",
-    "type": "item"
-  },
-  {
-    "id": "copper_wrapped_boiler_side_connected",
-    "name": "Copper Wrapped Boiler Side Connected",
-    "type": "item"
-  },
-  {
     "id": "copper_wrapped_slashed",
     "name": "Copper Wrapped Slashed",
-    "type": "item"
-  },
-  {
-    "id": "copper_wrapped_slashed_connected",
-    "name": "Copper Wrapped Slashed Connected",
     "type": "item"
   },
   {
@@ -16927,11 +15562,6 @@
   {
     "id": "corrugated_metro_old",
     "name": "Corrugated Metro Old",
-    "type": "item"
-  },
-  {
-    "id": "corrugated_panel_side",
-    "name": "Corrugated Panel",
     "type": "item"
   },
   {
@@ -17195,16 +15825,6 @@
     "type": "item"
   },
   {
-    "id": "crackled_dirt_path_side",
-    "name": "Crackled Dirt Path",
-    "type": "item"
-  },
-  {
-    "id": "crackled_grass_side",
-    "name": "Crackled Grass",
-    "type": "item"
-  },
-  {
     "id": "crackled_gravel",
     "name": "Crackled Gravel",
     "type": "item"
@@ -17220,18 +15840,8 @@
     "type": "item"
   },
   {
-    "id": "crafter_front",
-    "name": "Crafter",
-    "type": "item"
-  },
-  {
     "id": "crafter_core",
     "name": "Crafter Core",
-    "type": "item"
-  },
-  {
-    "id": "crafter_side_connected",
-    "name": "Crafter Side Connected",
     "type": "item"
   },
   {
@@ -17257,11 +15867,6 @@
   {
     "id": "crafting_pattern",
     "name": "Crafting Pattern",
-    "type": "item"
-  },
-  {
-    "id": "crafting_table_front",
-    "name": "Crafting Table",
     "type": "item"
   },
   {
@@ -17320,11 +15925,6 @@
     "type": "item"
   },
   {
-    "id": "creative_barrel_side",
-    "name": "Creative Barrel",
-    "type": "item"
-  },
-  {
     "id": "creative_blaze_cake",
     "name": "Creative Blaze Cake",
     "type": "item"
@@ -17350,11 +15950,6 @@
     "type": "item"
   },
   {
-    "id": "creative_casing_connected",
-    "name": "Creative Casing Connected",
-    "type": "item"
-  },
-  {
     "id": "creative_dragon_meal",
     "name": "Creative Dragon Meal",
     "type": "item"
@@ -17365,33 +15960,8 @@
     "type": "item"
   },
   {
-    "id": "creative_fluid_container_window",
-    "name": "Creative Fluid Container Window",
-    "type": "item"
-  },
-  {
-    "id": "creative_fluid_container_window_single",
-    "name": "Creative Fluid Container Window Single",
-    "type": "item"
-  },
-  {
     "id": "creative_fluid_tank",
     "name": "Creative Fluid Tank",
-    "type": "item"
-  },
-  {
-    "id": "creative_fluid_tank_connected",
-    "name": "Creative Fluid Tank Connected",
-    "type": "item"
-  },
-  {
-    "id": "creative_fluid_tank_window",
-    "name": "Creative Fluid Tank Window",
-    "type": "item"
-  },
-  {
-    "id": "creative_fluid_tank_window_single",
-    "name": "Creative Fluid Tank Window Single",
     "type": "item"
   },
   {
@@ -17545,11 +16115,6 @@
     "type": "item"
   },
   {
-    "id": "crimsite_cut_cap_connected",
-    "name": "Crimsite Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "crimsite_cut_herring",
     "name": "Crimsite Cut Herring",
     "type": "item"
@@ -17565,18 +16130,8 @@
     "type": "item"
   },
   {
-    "id": "crimsite_cut_layered_connected",
-    "name": "Crimsite Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "crimsite_cut_pillar",
     "name": "Crimsite Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "crimsite_cut_pillar_connected",
-    "name": "Crimsite Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -17595,28 +16150,8 @@
     "type": "item"
   },
   {
-    "id": "crimson_bee_nest_bottom",
-    "name": "Crimson Bee Nest",
-    "type": "item"
-  },
-  {
-    "id": "crimson_bee_nest_front_honey",
-    "name": "Crimson Bee Nest Front Honey",
-    "type": "item"
-  },
-  {
     "id": "crimson_bench",
     "name": "Crimson Bench",
-    "type": "item"
-  },
-  {
-    "id": "crimson_cabinet_front",
-    "name": "Crimson Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "crimson_chair",
-    "name": "Crimson Chair",
     "type": "item"
   },
   {
@@ -17627,21 +16162,6 @@
   {
     "id": "crimson_corner_trim_thin",
     "name": "Crimson Corner Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "crimson_couch",
-    "name": "Crimson Couch",
-    "type": "item"
-  },
-  {
-    "id": "crimson_counter_1",
-    "name": "Crimson Counter",
-    "type": "item"
-  },
-  {
-    "id": "crimson_desk",
-    "name": "Crimson Desk",
     "type": "item"
   },
   {
@@ -17785,11 +16305,6 @@
     "type": "item"
   },
   {
-    "id": "crimson_side_table",
-    "name": "Crimson Side Table",
-    "type": "item"
-  },
-  {
     "id": "crimson_sign",
     "name": "Crimson Sign",
     "type": "item"
@@ -17837,16 +16352,6 @@
   {
     "id": "crimson_trapdoor",
     "name": "Crimson Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "crimson_window",
-    "name": "Crimson Window",
-    "type": "item"
-  },
-  {
-    "id": "crimson_window_connected",
-    "name": "Crimson Window Connected",
     "type": "item"
   },
   {
@@ -18260,11 +16765,6 @@
     "type": "item"
   },
   {
-    "id": "crystallized_amber_inner",
-    "name": "Crystallized Amber",
-    "type": "item"
-  },
-  {
     "id": "crystallized_coral",
     "name": "Crystallized Coral",
     "type": "item"
@@ -18377,11 +16877,6 @@
   {
     "id": "cupronickel_block",
     "name": "Cupronickel Block",
-    "type": "item"
-  },
-  {
-    "id": "cupronickel_coil_side",
-    "name": "Cupronickel Coil",
     "type": "item"
   },
   {
@@ -18567,11 +17062,6 @@
   {
     "id": "cut_sculk_stone",
     "name": "Cut Sculk Stone",
-    "type": "item"
-  },
-  {
-    "id": "cut_soulless_sandstone_side",
-    "name": "Cut Soulless Sandstone",
     "type": "item"
   },
   {
@@ -18775,21 +17265,6 @@
     "type": "item"
   },
   {
-    "id": "cyan_foundry_capacitor_front",
-    "name": "Cyan Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "cyan_foundry_tank_front",
-    "name": "Cyan Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "cyan_foundry_window_front",
-    "name": "Cyan Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "cyan_glazed_terracotta",
     "name": "Cyan Glazed Terracotta",
     "type": "item"
@@ -18855,18 +17330,8 @@
     "type": "item"
   },
   {
-    "id": "cyan_stained_glass_pane_top",
-    "name": "Cyan Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "cyan_terracotta",
     "name": "Cyan Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "cyan_top_end",
-    "name": "Cyan Top End",
     "type": "item"
   },
   {
@@ -18912,11 +17377,6 @@
   {
     "id": "dairyqueen",
     "name": "Dairyqueen",
-    "type": "item"
-  },
-  {
-    "id": "damaged_anvil_top",
-    "name": "Damaged Anvil",
     "type": "item"
   },
   {
@@ -19010,16 +17470,6 @@
     "type": "item"
   },
   {
-    "id": "dark_oak_cabinet_front",
-    "name": "Dark Oak Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "dark_oak_chair",
-    "name": "Dark Oak Chair",
-    "type": "item"
-  },
-  {
     "id": "dark_oak_chest_boat",
     "name": "Dark Oak Chest Boat",
     "type": "item"
@@ -19032,21 +17482,6 @@
   {
     "id": "dark_oak_corner_trim_thin",
     "name": "Dark Oak Corner Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "dark_oak_couch",
-    "name": "Dark Oak Couch",
-    "type": "item"
-  },
-  {
-    "id": "dark_oak_counter_1",
-    "name": "Dark Oak Counter",
-    "type": "item"
-  },
-  {
-    "id": "dark_oak_desk",
-    "name": "Dark Oak Desk",
     "type": "item"
   },
   {
@@ -19130,11 +17565,6 @@
     "type": "item"
   },
   {
-    "id": "dark_oak_side_table",
-    "name": "Dark Oak Side Table",
-    "type": "item"
-  },
-  {
     "id": "dark_oak_sign",
     "name": "Dark Oak Sign",
     "type": "item"
@@ -19155,16 +17585,6 @@
     "type": "item"
   },
   {
-    "id": "dark_oak_window",
-    "name": "Dark Oak Window",
-    "type": "item"
-  },
-  {
-    "id": "dark_oak_window_connected",
-    "name": "Dark Oak Window Connected",
-    "type": "item"
-  },
-  {
     "id": "dark_prismarine",
     "name": "Dark Prismarine",
     "type": "item"
@@ -19182,11 +17602,6 @@
   {
     "id": "dark_runic_glass",
     "name": "Dark Runic Glass",
-    "type": "item"
-  },
-  {
-    "id": "dark_runic_glass_pane_top",
-    "name": "Dark Runic Glass Pane",
     "type": "item"
   },
   {
@@ -19322,11 +17737,6 @@
   {
     "id": "dark_steel_treetap",
     "name": "Dark Steel Treetap",
-    "type": "item"
-  },
-  {
-    "id": "dark_steel_upgrade_top",
-    "name": "Dark Steel Upgrade",
     "type": "item"
   },
   {
@@ -19582,16 +17992,6 @@
   {
     "id": "datura_stage5",
     "name": "Datura Stage5",
-    "type": "item"
-  },
-  {
-    "id": "daylight_detector_side",
-    "name": "Daylight Detector",
-    "type": "item"
-  },
-  {
-    "id": "daylight_detector_inverted_top",
-    "name": "Daylight Detector Inverted",
     "type": "item"
   },
   {
@@ -19895,11 +18295,6 @@
     "type": "item"
   },
   {
-    "id": "decal_back",
-    "name": "Decal",
-    "type": "item"
-  },
-  {
     "id": "decal_creeper",
     "name": "Decal Creeper",
     "type": "item"
@@ -19985,16 +18380,6 @@
     "type": "item"
   },
   {
-    "id": "decal_top_left",
-    "name": "Decal Top Left",
-    "type": "item"
-  },
-  {
-    "id": "decal_top_right",
-    "name": "Decal Top Right",
-    "type": "item"
-  },
-  {
     "id": "decal_up",
     "name": "Decal Up",
     "type": "item"
@@ -20007,11 +18392,6 @@
   {
     "id": "decay",
     "name": "Decay",
-    "type": "item"
-  },
-  {
-    "id": "decayed_workbench_bottom",
-    "name": "Decayed Workbench",
     "type": "item"
   },
   {
@@ -20195,11 +18575,6 @@
     "type": "item"
   },
   {
-    "id": "deepslate_cut_cap_connected",
-    "name": "Deepslate Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "deepslate_cut_herring",
     "name": "Deepslate Cut Herring",
     "type": "item"
@@ -20215,18 +18590,8 @@
     "type": "item"
   },
   {
-    "id": "deepslate_cut_layered_connected",
-    "name": "Deepslate Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "deepslate_cut_pillar",
     "name": "Deepslate Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "deepslate_cut_pillar_connected",
-    "name": "Deepslate Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -20560,11 +18925,6 @@
     "type": "item"
   },
   {
-    "id": "deorum_glass_pane_top",
-    "name": "Deorum Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "deorum_ingot",
     "name": "Deorum Ingot",
     "type": "item"
@@ -20602,11 +18962,6 @@
   {
     "id": "deposit_upgrade",
     "name": "Deposit Upgrade",
-    "type": "item"
-  },
-  {
-    "id": "depot_side",
-    "name": "Depot",
     "type": "item"
   },
   {
@@ -20650,11 +19005,6 @@
     "type": "item"
   },
   {
-    "id": "desh_pillar_side",
-    "name": "Desh Pillar",
-    "type": "item"
-  },
-  {
     "id": "desh_pillar_end",
     "name": "Desh Pillar End",
     "type": "item"
@@ -20677,21 +19027,6 @@
   {
     "id": "desh_sword",
     "name": "Desh Sword",
-    "type": "item"
-  },
-  {
-    "id": "desk_back",
-    "name": "Desk",
-    "type": "item"
-  },
-  {
-    "id": "desk_bell",
-    "name": "Desk Bell",
-    "type": "item"
-  },
-  {
-    "id": "desk_inside",
-    "name": "Desk Inside",
     "type": "item"
   },
   {
@@ -21085,11 +19420,6 @@
     "type": "item"
   },
   {
-    "id": "diesel_engine_back",
-    "name": "Diesel Engine",
-    "type": "item"
-  },
-  {
     "id": "diesel_engine_cylinder",
     "name": "Diesel Engine Cylinder",
     "type": "item"
@@ -21185,11 +19515,6 @@
     "type": "item"
   },
   {
-    "id": "dimensional_mineshaft_top",
-    "name": "Dimensional Mineshaft",
-    "type": "item"
-  },
-  {
     "id": "dimensional_mineshaft_portal",
     "name": "Dimensional Mineshaft Portal",
     "type": "item"
@@ -21245,11 +19570,6 @@
     "type": "item"
   },
   {
-    "id": "diorite_cut_cap_connected",
-    "name": "Diorite Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "diorite_cut_herring",
     "name": "Diorite Cut Herring",
     "type": "item"
@@ -21265,18 +19585,8 @@
     "type": "item"
   },
   {
-    "id": "diorite_cut_layered_connected",
-    "name": "Diorite Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "diorite_cut_pillar",
     "name": "Diorite Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "diorite_cut_pillar_connected",
-    "name": "Diorite Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -21330,11 +19640,6 @@
     "type": "item"
   },
   {
-    "id": "dirt_path_side",
-    "name": "Dirt Path",
-    "type": "item"
-  },
-  {
     "id": "dirt_pellet",
     "name": "Dirt Pellet",
     "type": "item"
@@ -21367,11 +19672,6 @@
   {
     "id": "discoball_e",
     "name": "Discoball E",
-    "type": "item"
-  },
-  {
-    "id": "disenchanter_bottom",
-    "name": "Disenchanter",
     "type": "item"
   },
   {
@@ -21437,16 +19737,6 @@
   {
     "id": "dislocator_receptacle_active",
     "name": "Dislocator Receptacle",
-    "type": "item"
-  },
-  {
-    "id": "dispenser_front",
-    "name": "Dispenser",
-    "type": "item"
-  },
-  {
-    "id": "dispenser_front_vertical",
-    "name": "Dispenser Front Vertical",
     "type": "item"
   },
   {
@@ -22715,46 +21005,6 @@
     "type": "item"
   },
   {
-    "id": "drain_front",
-    "name": "Drain",
-    "type": "item"
-  },
-  {
-    "id": "drawer",
-    "name": "Drawer",
-    "type": "item"
-  },
-  {
-    "id": "drawer_left",
-    "name": "Drawer Left",
-    "type": "item"
-  },
-  {
-    "id": "drawer_middle",
-    "name": "Drawer Middle",
-    "type": "item"
-  },
-  {
-    "id": "drawer_right",
-    "name": "Drawer Right",
-    "type": "item"
-  },
-  {
-    "id": "drawer_side_left",
-    "name": "Drawer Side Left",
-    "type": "item"
-  },
-  {
-    "id": "drawer_side_right",
-    "name": "Drawer Side Right",
-    "type": "item"
-  },
-  {
-    "id": "drawer_single",
-    "name": "Drawer Single",
-    "type": "item"
-  },
-  {
     "id": "dread_key",
     "name": "Dread Key",
     "type": "item"
@@ -23055,11 +21305,6 @@
     "type": "item"
   },
   {
-    "id": "dripstone_cut_cap_connected",
-    "name": "Dripstone Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "dripstone_cut_herring",
     "name": "Dripstone Cut Herring",
     "type": "item"
@@ -23075,18 +21320,8 @@
     "type": "item"
   },
   {
-    "id": "dripstone_cut_layered_connected",
-    "name": "Dripstone Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "dripstone_cut_pillar",
     "name": "Dripstone Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "dripstone_cut_pillar_connected",
-    "name": "Dripstone Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -23122,11 +21357,6 @@
   {
     "id": "dripstone_pillar_trim_thin",
     "name": "Dripstone Pillar Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "drive_front",
-    "name": "Drive",
     "type": "item"
   },
   {
@@ -23192,11 +21422,6 @@
   {
     "id": "dropper",
     "name": "Dropper",
-    "type": "item"
-  },
-  {
-    "id": "dropper_front_vertical",
-    "name": "Dropper Front Vertical",
     "type": "item"
   },
   {
@@ -23380,11 +21605,6 @@
     "type": "item"
   },
   {
-    "id": "dynamo_bottom",
-    "name": "Dynamo",
-    "type": "item"
-  },
-  {
     "id": "earmuffs",
     "name": "Earmuffs",
     "type": "item"
@@ -23397,11 +21617,6 @@
   {
     "id": "earth_globe",
     "name": "Earth Globe",
-    "type": "item"
-  },
-  {
-    "id": "earth_soil_side",
-    "name": "Earth Soil",
     "type": "item"
   },
   {
@@ -23910,11 +22125,6 @@
     "type": "item"
   },
   {
-    "id": "electrum_tesla_winding_side",
-    "name": "Electrum Tesla Winding",
-    "type": "item"
-  },
-  {
     "id": "electrum_tesla_winding_end",
     "name": "Electrum Tesla Winding End",
     "type": "item"
@@ -23942,21 +22152,6 @@
   {
     "id": "elementarium",
     "name": "Elementarium",
-    "type": "item"
-  },
-  {
-    "id": "elevator_contact_side",
-    "name": "Elevator Contact",
-    "type": "item"
-  },
-  {
-    "id": "elevator_contact_side_dim",
-    "name": "Elevator Contact Side Dim",
-    "type": "item"
-  },
-  {
-    "id": "elevator_contact_side_powered",
-    "name": "Elevator Contact Side Powered",
     "type": "item"
   },
   {
@@ -24275,28 +22470,13 @@
     "type": "item"
   },
   {
-    "id": "encased_aluminum_pipe_side_connected",
-    "name": "Encased Aluminum Pipe Side Connected",
-    "type": "item"
-  },
-  {
     "id": "encased_brass_pipe",
     "name": "Encased Brass Pipe",
     "type": "item"
   },
   {
-    "id": "encased_brass_pipe_side_connected",
-    "name": "Encased Brass Pipe Side Connected",
-    "type": "item"
-  },
-  {
     "id": "encased_cast_iron_pipe",
     "name": "Encased Cast Iron Pipe",
-    "type": "item"
-  },
-  {
-    "id": "encased_cast_iron_pipe_side_connected",
-    "name": "Encased Cast Iron Pipe Side Connected",
     "type": "item"
   },
   {
@@ -24320,16 +22500,6 @@
     "type": "item"
   },
   {
-    "id": "encased_diode_back",
-    "name": "Encased Diode",
-    "type": "item"
-  },
-  {
-    "id": "encased_heat_pipe_top",
-    "name": "Encased Heat Pipe",
-    "type": "item"
-  },
-  {
     "id": "encased_lead_pipe",
     "name": "Encased Lead Pipe",
     "type": "item"
@@ -24345,11 +22515,6 @@
     "type": "item"
   },
   {
-    "id": "encased_plastic_pipe_side_connected",
-    "name": "Encased Plastic Pipe Side Connected",
-    "type": "item"
-  },
-  {
     "id": "encased_resistor",
     "name": "Encased Resistor",
     "type": "item"
@@ -24357,11 +22522,6 @@
   {
     "id": "encased_steel_pipe",
     "name": "Encased Steel Pipe",
-    "type": "item"
-  },
-  {
-    "id": "encased_steel_pipe_side_connected",
-    "name": "Encased Steel Pipe Side Connected",
     "type": "item"
   },
   {
@@ -24397,11 +22557,6 @@
   {
     "id": "enchanter_hat_small",
     "name": "Enchanter Hat Small",
-    "type": "item"
-  },
-  {
-    "id": "enchanting_table_bottom",
-    "name": "Enchanting Table",
     "type": "item"
   },
   {
@@ -24527,11 +22682,6 @@
   {
     "id": "end_peridot_ore",
     "name": "End Peridot Ore",
-    "type": "item"
-  },
-  {
-    "id": "end_portal_frame_side",
-    "name": "End Portal Frame",
     "type": "item"
   },
   {
@@ -25040,11 +23190,6 @@
     "type": "item"
   },
   {
-    "id": "energetic_side",
-    "name": "Energetic",
-    "type": "item"
-  },
-  {
     "id": "energetic_alloy_block",
     "name": "Energetic Alloy Block",
     "type": "item"
@@ -25265,11 +23410,6 @@
     "type": "item"
   },
   {
-    "id": "energy_discharger_side",
-    "name": "Energy Discharger",
-    "type": "item"
-  },
-  {
     "id": "energy_discharger_comps",
     "name": "Energy Discharger Comps",
     "type": "item"
@@ -25287,11 +23427,6 @@
   {
     "id": "energy_gen",
     "name": "Energy Gen",
-    "type": "item"
-  },
-  {
-    "id": "energy_hopper_back",
-    "name": "Energy Hopper",
     "type": "item"
   },
   {
@@ -25370,11 +23505,6 @@
     "type": "item"
   },
   {
-    "id": "engine_bottom_connected",
-    "name": "Engine Bottom Connected",
-    "type": "item"
-  },
-  {
     "id": "engine_chamber",
     "name": "Engine Chamber",
     "type": "item"
@@ -25405,11 +23535,6 @@
     "type": "item"
   },
   {
-    "id": "engine_front_tall",
-    "name": "Engine Front Tall",
-    "type": "item"
-  },
-  {
     "id": "engine_gearbox",
     "name": "Engine Gearbox",
     "type": "item"
@@ -25417,26 +23542,6 @@
   {
     "id": "engine_generator",
     "name": "Engine Generator",
-    "type": "item"
-  },
-  {
-    "id": "engine_side_connected",
-    "name": "Engine Side Connected",
-    "type": "item"
-  },
-  {
-    "id": "engine_side_tall",
-    "name": "Engine Side Tall",
-    "type": "item"
-  },
-  {
-    "id": "engine_side_tall_connected",
-    "name": "Engine Side Tall Connected",
-    "type": "item"
-  },
-  {
-    "id": "engine_top_connected",
-    "name": "Engine Top Connected",
     "type": "item"
   },
   {
@@ -25457,11 +23562,6 @@
   {
     "id": "enhanced_extension_bars",
     "name": "Enhanced Extension Bars",
-    "type": "item"
-  },
-  {
-    "id": "enhanced_machine_back",
-    "name": "Enhanced Machine",
     "type": "item"
   },
   {
@@ -25765,11 +23865,6 @@
     "type": "item"
   },
   {
-    "id": "ex_drive_bottom",
-    "name": "Ex Drive",
-    "type": "item"
-  },
-  {
     "id": "ex_emc_interface",
     "name": "Ex Emc Interface",
     "type": "item"
@@ -25782,11 +23877,6 @@
   {
     "id": "ex_interface",
     "name": "Ex Interface",
-    "type": "item"
-  },
-  {
-    "id": "ex_io_port_bottom",
-    "name": "Ex Io Port",
     "type": "item"
   },
   {
@@ -25950,11 +24040,6 @@
     "type": "item"
   },
   {
-    "id": "experience_lantern_bottom",
-    "name": "Experience Lantern",
-    "type": "item"
-  },
-  {
     "id": "experience_lantern_bulb",
     "name": "Experience Lantern Bulb",
     "type": "item"
@@ -25995,28 +24080,13 @@
     "type": "item"
   },
   {
-    "id": "exposed_copper_roof_top",
-    "name": "Exposed Copper Roof",
-    "type": "item"
-  },
-  {
     "id": "exposed_copper_shingles",
     "name": "Exposed Copper Shingles",
     "type": "item"
   },
   {
-    "id": "exposed_copper_shingles_top_connected",
-    "name": "Exposed Copper Shingles Top Connected",
-    "type": "item"
-  },
-  {
     "id": "exposed_copper_tiles",
     "name": "Exposed Copper Tiles",
-    "type": "item"
-  },
-  {
-    "id": "exposed_copper_tiles_top_connected",
-    "name": "Exposed Copper Tiles Top Connected",
     "type": "item"
   },
   {
@@ -26337,11 +24407,6 @@
   {
     "id": "farmerbrim",
     "name": "Farmerbrim",
-    "type": "item"
-  },
-  {
-    "id": "farming_station_side",
-    "name": "Farming Station",
     "type": "item"
   },
   {
@@ -26810,11 +24875,6 @@
     "type": "item"
   },
   {
-    "id": "fire_soil_side",
-    "name": "Fire Soil",
-    "type": "item"
-  },
-  {
     "id": "fire_starter",
     "name": "Fire Starter",
     "type": "item"
@@ -26845,11 +24905,6 @@
     "type": "item"
   },
   {
-    "id": "firebox_top_connected",
-    "name": "Firebox Top Connected",
-    "type": "item"
-  },
-  {
     "id": "firebrand",
     "name": "Firebrand",
     "type": "item"
@@ -26857,11 +24912,6 @@
   {
     "id": "firebrick_vat",
     "name": "Firebrick Vat",
-    "type": "item"
-  },
-  {
-    "id": "firebrick_vat_connected",
-    "name": "Firebrick Vat Connected",
     "type": "item"
   },
   {
@@ -27200,11 +25250,6 @@
     "type": "item"
   },
   {
-    "id": "flap_display_front",
-    "name": "Flap Display",
-    "type": "item"
-  },
-  {
     "id": "flap_display_inside",
     "name": "Flap Display Inside",
     "type": "item"
@@ -27317,11 +25362,6 @@
   {
     "id": "fletching_generic",
     "name": "Fletching Generic",
-    "type": "item"
-  },
-  {
-    "id": "fletching_table_front",
-    "name": "Fletching Table",
     "type": "item"
   },
   {
@@ -27460,11 +25500,6 @@
     "type": "item"
   },
   {
-    "id": "flowering_azalea_side",
-    "name": "Flowering Azalea",
-    "type": "item"
-  },
-  {
     "id": "flowering_azalea_leaves",
     "name": "Flowering Azalea Leaves",
     "type": "item"
@@ -27590,21 +25625,6 @@
     "type": "item"
   },
   {
-    "id": "fluid_container_window",
-    "name": "Fluid Container Window",
-    "type": "item"
-  },
-  {
-    "id": "fluid_container_window_debug",
-    "name": "Fluid Container Window Debug",
-    "type": "item"
-  },
-  {
-    "id": "fluid_container_window_single",
-    "name": "Fluid Container Window Single",
-    "type": "item"
-  },
-  {
     "id": "fluid_containers_bottle_biodiesel",
     "name": "Fluid Containers Bottle Biodiesel",
     "type": "item"
@@ -27710,41 +25730,6 @@
     "type": "item"
   },
   {
-    "id": "fluid_placer_side_in",
-    "name": "Fluid Placer Side In",
-    "type": "item"
-  },
-  {
-    "id": "fluid_placer_side_none",
-    "name": "Fluid Placer Side None",
-    "type": "item"
-  },
-  {
-    "id": "fluid_placer_side_out",
-    "name": "Fluid Placer Side Out",
-    "type": "item"
-  },
-  {
-    "id": "fluid_pump_top",
-    "name": "Fluid Pump",
-    "type": "item"
-  },
-  {
-    "id": "fluid_pump_side_in",
-    "name": "Fluid Pump Side In",
-    "type": "item"
-  },
-  {
-    "id": "fluid_pump_side_none",
-    "name": "Fluid Pump Side None",
-    "type": "item"
-  },
-  {
-    "id": "fluid_pump_side_out",
-    "name": "Fluid Pump Side Out",
-    "type": "item"
-  },
-  {
     "id": "fluid_pump_up_in",
     "name": "Fluid Pump Up In",
     "type": "item"
@@ -27812,31 +25797,6 @@
   {
     "id": "fluid_tank",
     "name": "Fluid Tank",
-    "type": "item"
-  },
-  {
-    "id": "fluid_tank_connected",
-    "name": "Fluid Tank Connected",
-    "type": "item"
-  },
-  {
-    "id": "fluid_tank_inner_connected",
-    "name": "Fluid Tank Inner Connected",
-    "type": "item"
-  },
-  {
-    "id": "fluid_tank_top_connected",
-    "name": "Fluid Tank Top Connected",
-    "type": "item"
-  },
-  {
-    "id": "fluid_tank_window",
-    "name": "Fluid Tank Window",
-    "type": "item"
-  },
-  {
-    "id": "fluid_tank_window_single",
-    "name": "Fluid Tank Window Single",
     "type": "item"
   },
   {
@@ -28010,11 +25970,6 @@
     "type": "item"
   },
   {
-    "id": "forbiddenomicon_back",
-    "name": "Forbiddenomicon",
-    "type": "item"
-  },
-  {
     "id": "forbiddenomicon_inside",
     "name": "Forbiddenomicon Inside",
     "type": "item"
@@ -28117,21 +26072,6 @@
   {
     "id": "foundry_block_white",
     "name": "Foundry Block White",
-    "type": "item"
-  },
-  {
-    "id": "foundry_controller_front_off",
-    "name": "Foundry Controller",
-    "type": "item"
-  },
-  {
-    "id": "foundry_drain_front",
-    "name": "Foundry Drain",
-    "type": "item"
-  },
-  {
-    "id": "foundry_tank_front",
-    "name": "Foundry Tank",
     "type": "item"
   },
   {
@@ -28255,16 +26195,6 @@
     "type": "item"
   },
   {
-    "id": "framed_glass_connected",
-    "name": "Framed Glass Connected",
-    "type": "item"
-  },
-  {
-    "id": "framed_glass_pane_top",
-    "name": "Framed Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "framed_pipe",
     "name": "Framed Pipe",
     "type": "item"
@@ -28347,46 +26277,6 @@
   {
     "id": "frogspawn",
     "name": "Frogspawn",
-    "type": "item"
-  },
-  {
-    "id": "front",
-    "name": "Front",
-    "type": "item"
-  },
-  {
-    "id": "front_down",
-    "name": "Front Down",
-    "type": "item"
-  },
-  {
-    "id": "front_full",
-    "name": "Front Full",
-    "type": "item"
-  },
-  {
-    "id": "front_item",
-    "name": "Front Item",
-    "type": "item"
-  },
-  {
-    "id": "front_left",
-    "name": "Front Left",
-    "type": "item"
-  },
-  {
-    "id": "front_outline",
-    "name": "Front Outline",
-    "type": "item"
-  },
-  {
-    "id": "front_right",
-    "name": "Front Right",
-    "type": "item"
-  },
-  {
-    "id": "front_up",
-    "name": "Front Up",
     "type": "item"
   },
   {
@@ -28515,16 +26405,6 @@
     "type": "item"
   },
   {
-    "id": "frozen_dirt_path_side",
-    "name": "Frozen Dirt Path",
-    "type": "item"
-  },
-  {
-    "id": "frozen_grass_side",
-    "name": "Frozen Grass",
-    "type": "item"
-  },
-  {
     "id": "frozen_gravel",
     "name": "Frozen Gravel",
     "type": "item"
@@ -28640,16 +26520,6 @@
     "type": "item"
   },
   {
-    "id": "fuel_refinery_bottom",
-    "name": "Fuel Refinery",
-    "type": "item"
-  },
-  {
-    "id": "fuel_refinery_front_on2",
-    "name": "Fuel Refinery Front On2",
-    "type": "item"
-  },
-  {
     "id": "fuel_still",
     "name": "Fuel Still",
     "type": "item"
@@ -28657,36 +26527,6 @@
   {
     "id": "fuel_tank",
     "name": "Fuel Tank",
-    "type": "item"
-  },
-  {
-    "id": "fuel_tank_connected",
-    "name": "Fuel Tank Connected",
-    "type": "item"
-  },
-  {
-    "id": "fuel_tank_inner_connected",
-    "name": "Fuel Tank Inner Connected",
-    "type": "item"
-  },
-  {
-    "id": "fuel_tank_inner_window",
-    "name": "Fuel Tank Inner Window",
-    "type": "item"
-  },
-  {
-    "id": "fuel_tank_top_connected",
-    "name": "Fuel Tank Top Connected",
-    "type": "item"
-  },
-  {
-    "id": "fuel_tank_window",
-    "name": "Fuel Tank Window",
-    "type": "item"
-  },
-  {
-    "id": "fuel_tank_window_single",
-    "name": "Fuel Tank Window Single",
     "type": "item"
   },
   {
@@ -28707,11 +26547,6 @@
   {
     "id": "full_black_chocolate_bar",
     "name": "Full Black Chocolate Bar",
-    "type": "item"
-  },
-  {
-    "id": "full_blast_furnace_top",
-    "name": "Full Blast Furnace",
     "type": "item"
   },
   {
@@ -28785,11 +26620,6 @@
     "type": "item"
   },
   {
-    "id": "fungal_transmuter_bottom",
-    "name": "Fungal Transmuter",
-    "type": "item"
-  },
-  {
     "id": "fungyss",
     "name": "Fungyss",
     "type": "item"
@@ -28830,7 +26660,7 @@
     "type": "item"
   },
   {
-    "id": "funnel_back",
+    "id": "funnel_closed",
     "name": "Funnel",
     "type": "item"
   },
@@ -28842,11 +26672,6 @@
   {
     "id": "furled_map_ancient",
     "name": "Furled Map Ancient",
-    "type": "item"
-  },
-  {
-    "id": "furnace_front",
-    "name": "Furnace",
     "type": "item"
   },
   {
@@ -28950,11 +26775,6 @@
     "type": "item"
   },
   {
-    "id": "galena_cut_cap_connected",
-    "name": "Galena Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "galena_cut_herring",
     "name": "Galena Cut Herring",
     "type": "item"
@@ -28970,18 +26790,8 @@
     "type": "item"
   },
   {
-    "id": "galena_cut_layered_connected",
-    "name": "Galena Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "galena_cut_pillar",
     "name": "Galena Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "galena_cut_pillar_connected",
-    "name": "Galena Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -29037,11 +26847,6 @@
   {
     "id": "gar",
     "name": "Gar",
-    "type": "item"
-  },
-  {
-    "id": "gardening_table_bottom",
-    "name": "Gardening Table",
     "type": "item"
   },
   {
@@ -29175,11 +26980,6 @@
     "type": "item"
   },
   {
-    "id": "gear_smithing_table_bottom",
-    "name": "Gear Smithing Table",
-    "type": "item"
-  },
-  {
     "id": "gearbox",
     "name": "Gearbox",
     "type": "item"
@@ -29277,11 +27077,6 @@
   {
     "id": "gem_tearstone",
     "name": "Gem Tearstone",
-    "type": "item"
-  },
-  {
-    "id": "gems_side",
-    "name": "Gems",
     "type": "item"
   },
   {
@@ -29570,11 +27365,6 @@
     "type": "item"
   },
   {
-    "id": "girder_pole_side_connected",
-    "name": "Girder Pole Side Connected",
-    "type": "item"
-  },
-  {
     "id": "gk",
     "name": "Gk",
     "type": "item"
@@ -29737,11 +27527,6 @@
   {
     "id": "glass_insulator",
     "name": "Glass Insulator",
-    "type": "item"
-  },
-  {
-    "id": "glass_pane_top",
-    "name": "Glass Pane",
     "type": "item"
   },
   {
@@ -29987,11 +27772,6 @@
   {
     "id": "gloomslate_tiles",
     "name": "Gloomslate Tiles",
-    "type": "item"
-  },
-  {
-    "id": "gloomy_cactus_side",
-    "name": "Gloomy Cactus",
     "type": "item"
   },
   {
@@ -30310,31 +28090,6 @@
     "type": "item"
   },
   {
-    "id": "gold_catwalk",
-    "name": "Gold Catwalk",
-    "type": "item"
-  },
-  {
-    "id": "gold_catwalk_connected",
-    "name": "Gold Catwalk Connected",
-    "type": "item"
-  },
-  {
-    "id": "gold_catwalk_rail",
-    "name": "Gold Catwalk Rail",
-    "type": "item"
-  },
-  {
-    "id": "gold_catwalk_stairs",
-    "name": "Gold Catwalk Stairs",
-    "type": "item"
-  },
-  {
-    "id": "gold_catwalk_template",
-    "name": "Gold Catwalk Template",
-    "type": "item"
-  },
-  {
     "id": "gold_chain_link",
     "name": "Gold Chain Link",
     "type": "item"
@@ -30515,11 +28270,6 @@
     "type": "item"
   },
   {
-    "id": "gold_pipes_connected",
-    "name": "Gold Pipes Connected",
-    "type": "item"
-  },
-  {
     "id": "gold_planks",
     "name": "Gold Planks",
     "type": "item"
@@ -30532,11 +28282,6 @@
   {
     "id": "gold_plate_metal",
     "name": "Gold Plate Metal",
-    "type": "item"
-  },
-  {
-    "id": "gold_plate_metal_connected",
-    "name": "Gold Plate Metal Connected",
     "type": "item"
   },
   {
@@ -30572,11 +28317,6 @@
   {
     "id": "gold_sheet_metal",
     "name": "Gold Sheet Metal",
-    "type": "item"
-  },
-  {
-    "id": "gold_sheet_metal_connected",
-    "name": "Gold Sheet Metal Connected",
     "type": "item"
   },
   {
@@ -30775,11 +28515,6 @@
     "type": "item"
   },
   {
-    "id": "golden_plush_box_bottom",
-    "name": "Golden Plush Box",
-    "type": "item"
-  },
-  {
     "id": "golden_rambley_texture",
     "name": "Golden Rambley Texture",
     "type": "item"
@@ -30837,11 +28572,6 @@
   {
     "id": "golden_wide_pot",
     "name": "Golden Wide Pot",
-    "type": "item"
-  },
-  {
-    "id": "goldenrod_bottom",
-    "name": "Goldenrod",
     "type": "item"
   },
   {
@@ -30960,11 +28690,6 @@
     "type": "item"
   },
   {
-    "id": "granite_cut_cap_connected",
-    "name": "Granite Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "granite_cut_herring",
     "name": "Granite Cut Herring",
     "type": "item"
@@ -30980,18 +28705,8 @@
     "type": "item"
   },
   {
-    "id": "granite_cut_layered_connected",
-    "name": "Granite Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "granite_cut_pillar",
     "name": "Granite Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "granite_cut_pillar_connected",
-    "name": "Granite Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -31082,11 +28797,6 @@
   {
     "id": "grass",
     "name": "Grass",
-    "type": "item"
-  },
-  {
-    "id": "grass_block_side",
-    "name": "Grass Block",
     "type": "item"
   },
   {
@@ -31195,21 +28905,6 @@
     "type": "item"
   },
   {
-    "id": "gray_foundry_capacitor_front",
-    "name": "Gray Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "gray_foundry_tank_front",
-    "name": "Gray Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "gray_foundry_window_front",
-    "name": "Gray Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "gray_glazed_terracotta",
     "name": "Gray Glazed Terracotta",
     "type": "item"
@@ -31280,18 +28975,8 @@
     "type": "item"
   },
   {
-    "id": "gray_stained_glass_pane_top",
-    "name": "Gray Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "gray_terracotta",
     "name": "Gray Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "gray_top_end",
-    "name": "Gray Top End",
     "type": "item"
   },
   {
@@ -31660,21 +29345,6 @@
     "type": "item"
   },
   {
-    "id": "green_foundry_capacitor_front",
-    "name": "Green Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "green_foundry_tank_front",
-    "name": "Green Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "green_foundry_window_front",
-    "name": "Green Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "green_glazed_terracotta",
     "name": "Green Glazed Terracotta",
     "type": "item"
@@ -31750,18 +29420,8 @@
     "type": "item"
   },
   {
-    "id": "green_stained_glass_pane_top",
-    "name": "Green Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "green_terracotta",
     "name": "Green Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "green_top_end",
-    "name": "Green Top End",
     "type": "item"
   },
   {
@@ -31855,11 +29515,6 @@
     "type": "item"
   },
   {
-    "id": "grindstone_side",
-    "name": "Grindstone",
-    "type": "item"
-  },
-  {
     "id": "grindstone_pivot",
     "name": "Grindstone Pivot",
     "type": "item"
@@ -31930,23 +29585,8 @@
     "type": "item"
   },
   {
-    "id": "grove_crafter_bottom",
+    "id": "grove_crafter_inactive",
     "name": "Grove Crafter",
-    "type": "item"
-  },
-  {
-    "id": "grove_crafter_top_emissive",
-    "name": "Grove Crafter Top Emissive",
-    "type": "item"
-  },
-  {
-    "id": "grove_crafter_top_runestone",
-    "name": "Grove Crafter Top Runestone",
-    "type": "item"
-  },
-  {
-    "id": "grove_crafter_top_smooth_runestone",
-    "name": "Grove Crafter Top Smooth Runestone",
     "type": "item"
   },
   {
@@ -31972,11 +29612,6 @@
   {
     "id": "growing_edelwood",
     "name": "Growing Edelwood",
-    "type": "item"
-  },
-  {
-    "id": "growth_accelerator_bottom",
-    "name": "Growth Accelerator",
     "type": "item"
   },
   {
@@ -32550,11 +30185,6 @@
     "type": "item"
   },
   {
-    "id": "hay_block_side",
-    "name": "Hay Block",
-    "type": "item"
-  },
-  {
     "id": "hazel",
     "name": "Hazel",
     "type": "item"
@@ -32825,18 +30455,8 @@
     "type": "item"
   },
   {
-    "id": "heated_top",
-    "name": "Heated",
-    "type": "item"
-  },
-  {
     "id": "heater",
     "name": "Heater",
-    "type": "item"
-  },
-  {
-    "id": "heating_tray_side",
-    "name": "Heating Tray",
     "type": "item"
   },
   {
@@ -32852,11 +30472,6 @@
   {
     "id": "heavy_cable_hub",
     "name": "Heavy Cable Hub",
-    "type": "item"
-  },
-  {
-    "id": "heavy_casing_side",
-    "name": "Heavy Casing",
     "type": "item"
   },
   {
@@ -32892,36 +30507,6 @@
   {
     "id": "heavy_machinery_casing",
     "name": "Heavy Machinery Casing",
-    "type": "item"
-  },
-  {
-    "id": "heavy_machinery_casing_connected",
-    "name": "Heavy Machinery Casing Connected",
-    "type": "item"
-  },
-  {
-    "id": "heavy_machinery_encased_cogwheel_side",
-    "name": "Heavy Machinery Encased Cogwheel",
-    "type": "item"
-  },
-  {
-    "id": "heavy_machinery_encased_cogwheel_side_connected",
-    "name": "Heavy Machinery Encased Cogwheel Side Connected",
-    "type": "item"
-  },
-  {
-    "id": "heavy_machinery_encased_cogwheel_side_horizontal",
-    "name": "Heavy Machinery Encased Cogwheel Side Horizontal",
-    "type": "item"
-  },
-  {
-    "id": "heavy_machinery_encased_cogwheel_side_horizontal_connected",
-    "name": "Heavy Machinery Encased Cogwheel Side Horizontal Connected",
-    "type": "item"
-  },
-  {
-    "id": "heavy_machinery_encased_cogwheel_side_large",
-    "name": "Heavy Machinery Encased Cogwheel Side Large",
     "type": "item"
   },
   {
@@ -33255,11 +30840,6 @@
     "type": "item"
   },
   {
-    "id": "high_powered_heating_coil_side_off",
-    "name": "High Powered Heating Coil",
-    "type": "item"
-  },
-  {
     "id": "high_pressure_heavy_water_bucket",
     "name": "High Pressure Heavy Water Bucket",
     "type": "item"
@@ -33440,11 +31020,6 @@
     "type": "item"
   },
   {
-    "id": "honey_block_bottom",
-    "name": "Honey Block",
-    "type": "item"
-  },
-  {
     "id": "honey_bottle",
     "name": "Honey Bottle",
     "type": "item"
@@ -33545,11 +31120,6 @@
     "type": "item"
   },
   {
-    "id": "honey_glazed_ham_side_dish",
-    "name": "Honey Glazed Ham Side Dish",
-    "type": "item"
-  },
-  {
     "id": "honey_liquid",
     "name": "Honey Liquid",
     "type": "item"
@@ -33592,11 +31162,6 @@
   {
     "id": "honeycomb_block",
     "name": "Honeycomb Block",
-    "type": "item"
-  },
-  {
-    "id": "honeycomb_brood_block_side",
-    "name": "Honeycomb Brood Block",
     "type": "item"
   },
   {
@@ -33662,11 +31227,6 @@
   {
     "id": "horizontal_framed_glass",
     "name": "Horizontal Framed Glass",
-    "type": "item"
-  },
-  {
-    "id": "horizontal_framed_glass_connected",
-    "name": "Horizontal Framed Glass Connected",
     "type": "item"
   },
   {
@@ -33937,11 +31497,6 @@
   {
     "id": "hunting_belt_flawless",
     "name": "Hunting Belt Flawless",
-    "type": "item"
-  },
-  {
-    "id": "hunting_post_back",
-    "name": "Hunting Post",
     "type": "item"
   },
   {
@@ -34315,11 +31870,6 @@
     "type": "item"
   },
   {
-    "id": "icy_iris_bottom",
-    "name": "Icy Iris",
-    "type": "item"
-  },
-  {
     "id": "icy_pearl",
     "name": "Icy Pearl",
     "type": "item"
@@ -34332,11 +31882,6 @@
   {
     "id": "idle",
     "name": "Idle",
-    "type": "item"
-  },
-  {
-    "id": "iesnium_anvil_top",
-    "name": "Iesnium Anvil",
     "type": "item"
   },
   {
@@ -34455,11 +32000,6 @@
     "type": "item"
   },
   {
-    "id": "impulse_hopper_front",
-    "name": "Impulse Hopper",
-    "type": "item"
-  },
-  {
     "id": "inception_upgrade",
     "name": "Inception Upgrade",
     "type": "item"
@@ -34525,16 +32065,6 @@
     "type": "item"
   },
   {
-    "id": "industrial_aluminum_casing_connected",
-    "name": "Industrial Aluminum Casing Connected",
-    "type": "item"
-  },
-  {
-    "id": "industrial_barrel_back",
-    "name": "Industrial Barrel",
-    "type": "item"
-  },
-  {
     "id": "industrial_insulation",
     "name": "Industrial Insulation",
     "type": "item"
@@ -34552,31 +32082,6 @@
   {
     "id": "industrial_iron_block",
     "name": "Industrial Iron Block",
-    "type": "item"
-  },
-  {
-    "id": "industrial_iron_catwalk",
-    "name": "Industrial Iron Catwalk",
-    "type": "item"
-  },
-  {
-    "id": "industrial_iron_catwalk_connected",
-    "name": "Industrial Iron Catwalk Connected",
-    "type": "item"
-  },
-  {
-    "id": "industrial_iron_catwalk_rail",
-    "name": "Industrial Iron Catwalk Rail",
-    "type": "item"
-  },
-  {
-    "id": "industrial_iron_catwalk_stairs",
-    "name": "Industrial Iron Catwalk Stairs",
-    "type": "item"
-  },
-  {
-    "id": "industrial_iron_catwalk_template",
-    "name": "Industrial Iron Catwalk Template",
     "type": "item"
   },
   {
@@ -34600,11 +32105,6 @@
     "type": "item"
   },
   {
-    "id": "industrial_iron_hull_front",
-    "name": "Industrial Iron Hull",
-    "type": "item"
-  },
-  {
     "id": "industrial_iron_ingot",
     "name": "Industrial Iron Ingot",
     "type": "item"
@@ -34625,11 +32125,6 @@
     "type": "item"
   },
   {
-    "id": "industrial_iron_plate_metal_connected",
-    "name": "Industrial Iron Plate Metal Connected",
-    "type": "item"
-  },
-  {
     "id": "industrial_iron_sheet",
     "name": "Industrial Iron Sheet",
     "type": "item"
@@ -34637,11 +32132,6 @@
   {
     "id": "industrial_iron_sheet_metal",
     "name": "Industrial Iron Sheet Metal",
-    "type": "item"
-  },
-  {
-    "id": "industrial_iron_sheet_metal_connected",
-    "name": "Industrial Iron Sheet Metal Connected",
     "type": "item"
   },
   {
@@ -34657,21 +32147,6 @@
   {
     "id": "industrial_iron_trapdoor",
     "name": "Industrial Iron Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "industrial_iron_window",
-    "name": "Industrial Iron Window",
-    "type": "item"
-  },
-  {
-    "id": "industrial_iron_window_connected",
-    "name": "Industrial Iron Window Connected",
-    "type": "item"
-  },
-  {
-    "id": "industrial_iron_window_end",
-    "name": "Industrial Iron Window End",
     "type": "item"
   },
   {
@@ -34805,11 +32280,6 @@
     "type": "item"
   },
   {
-    "id": "injector_top",
-    "name": "Injector",
-    "type": "item"
-  },
-  {
     "id": "injector_base",
     "name": "Injector Base",
     "type": "item"
@@ -34847,11 +32317,6 @@
   {
     "id": "ink_sac",
     "name": "Ink Sac",
-    "type": "item"
-  },
-  {
-    "id": "inner",
-    "name": "Inner",
     "type": "item"
   },
   {
@@ -35030,28 +32495,8 @@
     "type": "item"
   },
   {
-    "id": "inventory_access_port_back",
+    "id": "inventory_access_port_off",
     "name": "Inventory Access Port",
-    "type": "item"
-  },
-  {
-    "id": "inventory_bridge_front",
-    "name": "Inventory Bridge",
-    "type": "item"
-  },
-  {
-    "id": "inventory_bridge_both",
-    "name": "Inventory Bridge Both",
-    "type": "item"
-  },
-  {
-    "id": "inventory_bridge_negative",
-    "name": "Inventory Bridge Negative",
-    "type": "item"
-  },
-  {
-    "id": "inventory_bridge_positive",
-    "name": "Inventory Bridge Positive",
     "type": "item"
   },
   {
@@ -35107,11 +32552,6 @@
   {
     "id": "io_bus_upgrade",
     "name": "Io Bus Upgrade",
-    "type": "item"
-  },
-  {
-    "id": "io_port_front",
-    "name": "Io Port",
     "type": "item"
   },
   {
@@ -35245,11 +32685,6 @@
     "type": "item"
   },
   {
-    "id": "iron_barrel_side",
-    "name": "Iron Barrel",
-    "type": "item"
-  },
-  {
     "id": "iron_bars",
     "name": "Iron Bars",
     "type": "item"
@@ -35282,31 +32717,6 @@
   {
     "id": "iron_brick",
     "name": "Iron Brick",
-    "type": "item"
-  },
-  {
-    "id": "iron_catwalk",
-    "name": "Iron Catwalk",
-    "type": "item"
-  },
-  {
-    "id": "iron_catwalk_connected",
-    "name": "Iron Catwalk Connected",
-    "type": "item"
-  },
-  {
-    "id": "iron_catwalk_rail",
-    "name": "Iron Catwalk Rail",
-    "type": "item"
-  },
-  {
-    "id": "iron_catwalk_stairs",
-    "name": "Iron Catwalk Stairs",
-    "type": "item"
-  },
-  {
-    "id": "iron_catwalk_template",
-    "name": "Iron Catwalk Template",
     "type": "item"
   },
   {
@@ -35450,11 +32860,6 @@
     "type": "item"
   },
   {
-    "id": "iron_hull_front",
-    "name": "Iron Hull",
-    "type": "item"
-  },
-  {
     "id": "iron_hummer_new",
     "name": "Iron Hummer New",
     "type": "item"
@@ -35510,11 +32915,6 @@
     "type": "item"
   },
   {
-    "id": "iron_pillar_side",
-    "name": "Iron Pillar",
-    "type": "item"
-  },
-  {
     "id": "iron_pillar_end",
     "name": "Iron Pillar End",
     "type": "item"
@@ -35530,11 +32930,6 @@
     "type": "item"
   },
   {
-    "id": "iron_pipes_connected",
-    "name": "Iron Pipes Connected",
-    "type": "item"
-  },
-  {
     "id": "iron_plate",
     "name": "Iron Plate",
     "type": "item"
@@ -35542,11 +32937,6 @@
   {
     "id": "iron_plate_metal",
     "name": "Iron Plate Metal",
-    "type": "item"
-  },
-  {
-    "id": "iron_plate_metal_connected",
-    "name": "Iron Plate Metal Connected",
     "type": "item"
   },
   {
@@ -35597,11 +32987,6 @@
   {
     "id": "iron_sheet_metal",
     "name": "Iron Sheet Metal",
-    "type": "item"
-  },
-  {
-    "id": "iron_sheet_metal_connected",
-    "name": "Iron Sheet Metal Connected",
     "type": "item"
   },
   {
@@ -35665,43 +33050,13 @@
     "type": "item"
   },
   {
-    "id": "iron_window",
-    "name": "Iron Window",
-    "type": "item"
-  },
-  {
-    "id": "iron_window_connected",
-    "name": "Iron Window Connected",
-    "type": "item"
-  },
-  {
-    "id": "iron_window_end",
-    "name": "Iron Window End",
-    "type": "item"
-  },
-  {
     "id": "iron_wire",
     "name": "Iron Wire",
     "type": "item"
   },
   {
-    "id": "iron_wrapped_boiler_side",
-    "name": "Iron Wrapped Boiler",
-    "type": "item"
-  },
-  {
-    "id": "iron_wrapped_boiler_side_connected",
-    "name": "Iron Wrapped Boiler Side Connected",
-    "type": "item"
-  },
-  {
     "id": "iron_wrapped_slashed",
     "name": "Iron Wrapped Slashed",
-    "type": "item"
-  },
-  {
-    "id": "iron_wrapped_slashed_connected",
-    "name": "Iron Wrapped Slashed Connected",
     "type": "item"
   },
   {
@@ -35770,11 +33125,6 @@
     "type": "item"
   },
   {
-    "id": "item_drain_side",
-    "name": "Item Drain",
-    "type": "item"
-  },
-  {
     "id": "item_empty_honeycomb_brood_block",
     "name": "Item Empty Honeycomb Brood Block",
     "type": "item"
@@ -35792,11 +33142,6 @@
   {
     "id": "item_gen",
     "name": "Item Gen",
-    "type": "item"
-  },
-  {
-    "id": "item_honeycomb_brood_block_side",
-    "name": "Item Honeycomb Brood Block",
     "type": "item"
   },
   {
@@ -36095,11 +33440,6 @@
     "type": "item"
   },
   {
-    "id": "jigsaw_bottom",
-    "name": "Jigsaw",
-    "type": "item"
-  },
-  {
     "id": "jigsaw_lock",
     "name": "Jigsaw Lock",
     "type": "item"
@@ -36107,11 +33447,6 @@
   {
     "id": "joel",
     "name": "Joel",
-    "type": "item"
-  },
-  {
-    "id": "jukebox_side",
-    "name": "Jukebox",
     "type": "item"
   },
   {
@@ -36160,16 +33495,6 @@
     "type": "item"
   },
   {
-    "id": "jungle_cabinet_front",
-    "name": "Jungle Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "jungle_chair",
-    "name": "Jungle Chair",
-    "type": "item"
-  },
-  {
     "id": "jungle_chest_boat",
     "name": "Jungle Chest Boat",
     "type": "item"
@@ -36182,21 +33507,6 @@
   {
     "id": "jungle_corner_trim_thin",
     "name": "Jungle Corner Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "jungle_couch",
-    "name": "Jungle Couch",
-    "type": "item"
-  },
-  {
-    "id": "jungle_counter_1",
-    "name": "Jungle Counter",
-    "type": "item"
-  },
-  {
-    "id": "jungle_desk",
-    "name": "Jungle Desk",
     "type": "item"
   },
   {
@@ -36275,11 +33585,6 @@
     "type": "item"
   },
   {
-    "id": "jungle_side_table",
-    "name": "Jungle Side Table",
-    "type": "item"
-  },
-  {
     "id": "jungle_sign",
     "name": "Jungle Sign",
     "type": "item"
@@ -36297,16 +33602,6 @@
   {
     "id": "jungle_trapdoor",
     "name": "Jungle Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "jungle_window",
-    "name": "Jungle Window",
-    "type": "item"
-  },
-  {
-    "id": "jungle_window_connected",
-    "name": "Jungle Window Connected",
     "type": "item"
   },
   {
@@ -36347,11 +33642,6 @@
   {
     "id": "kanthal_block",
     "name": "Kanthal Block",
-    "type": "item"
-  },
-  {
-    "id": "kanthal_coil_side",
-    "name": "Kanthal Coil",
     "type": "item"
   },
   {
@@ -36607,16 +33897,6 @@
   {
     "id": "kinetic_belt_wings_flawless",
     "name": "Kinetic Belt Wings Flawless",
-    "type": "item"
-  },
-  {
-    "id": "kinetic_bridge_destination",
-    "name": "Kinetic Bridge Destination",
-    "type": "item"
-  },
-  {
-    "id": "kinetic_bridge_source",
-    "name": "Kinetic Bridge Source",
     "type": "item"
   },
   {
@@ -37025,18 +34305,8 @@
     "type": "item"
   },
   {
-    "id": "large_coil_side",
-    "name": "Large Coil",
-    "type": "item"
-  },
-  {
     "id": "large_connector",
     "name": "Large Connector",
-    "type": "item"
-  },
-  {
-    "id": "large_copper_encased_cogwheel_side",
-    "name": "Large Copper Encased Cogwheel",
     "type": "item"
   },
   {
@@ -37047,11 +34317,6 @@
   {
     "id": "large_entro_bud",
     "name": "Large Entro Bud",
-    "type": "item"
-  },
-  {
-    "id": "large_fern_bottom",
-    "name": "Large Fern",
     "type": "item"
   },
   {
@@ -37350,11 +34615,6 @@
     "type": "item"
   },
   {
-    "id": "layered_bauxite_connected",
-    "name": "Layered Bauxite Connected",
-    "type": "item"
-  },
-  {
     "id": "layered_magnet",
     "name": "Layered Magnet",
     "type": "item"
@@ -37485,11 +34745,6 @@
     "type": "item"
   },
   {
-    "id": "lead_block_connected",
-    "name": "Lead Block Connected",
-    "type": "item"
-  },
-  {
     "id": "lead_double_ingot",
     "name": "Lead Double Ingot",
     "type": "item"
@@ -37522,11 +34777,6 @@
   {
     "id": "lead_glass",
     "name": "Lead Glass",
-    "type": "item"
-  },
-  {
-    "id": "lead_glass_connected",
-    "name": "Lead Glass Connected",
     "type": "item"
   },
   {
@@ -37567,11 +34817,6 @@
   {
     "id": "lead_pipes",
     "name": "Lead Pipes",
-    "type": "item"
-  },
-  {
-    "id": "lead_pipes_connected",
-    "name": "Lead Pipes Connected",
     "type": "item"
   },
   {
@@ -38050,21 +35295,6 @@
     "type": "item"
   },
   {
-    "id": "light_blue_foundry_capacitor_front",
-    "name": "Light Blue Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "light_blue_foundry_tank_front",
-    "name": "Light Blue Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "light_blue_foundry_window_front",
-    "name": "Light Blue Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "light_blue_glazed_terracotta",
     "name": "Light Blue Glazed Terracotta",
     "type": "item"
@@ -38130,18 +35360,8 @@
     "type": "item"
   },
   {
-    "id": "light_blue_stained_glass_pane_top",
-    "name": "Light Blue Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "light_blue_terracotta",
     "name": "Light Blue Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "light_blue_top_end",
-    "name": "Light Blue Top End",
     "type": "item"
   },
   {
@@ -38250,21 +35470,6 @@
     "type": "item"
   },
   {
-    "id": "light_gray_foundry_capacitor_front",
-    "name": "Light Gray Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "light_gray_foundry_tank_front",
-    "name": "Light Gray Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "light_gray_foundry_window_front",
-    "name": "Light Gray Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "light_gray_glazed_terracotta",
     "name": "Light Gray Glazed Terracotta",
     "type": "item"
@@ -38330,18 +35535,8 @@
     "type": "item"
   },
   {
-    "id": "light_gray_stained_glass_pane_top",
-    "name": "Light Gray Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "light_gray_terracotta",
     "name": "Light Gray Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "light_gray_top_end",
-    "name": "Light Gray Top End",
     "type": "item"
   },
   {
@@ -38470,21 +35665,6 @@
     "type": "item"
   },
   {
-    "id": "lightroom_bottom",
-    "name": "Lightroom",
-    "type": "item"
-  },
-  {
-    "id": "lightroom_front_printing",
-    "name": "Lightroom Front Printing",
-    "type": "item"
-  },
-  {
-    "id": "lightroom_top_printing",
-    "name": "Lightroom Top Printing",
-    "type": "item"
-  },
-  {
     "id": "lights_off",
     "name": "Lights",
     "type": "item"
@@ -38547,11 +35727,6 @@
   {
     "id": "lil_termagant",
     "name": "Lil Termagant",
-    "type": "item"
-  },
-  {
-    "id": "lilac_bottom",
-    "name": "Lilac",
     "type": "item"
   },
   {
@@ -38665,21 +35840,6 @@
     "type": "item"
   },
   {
-    "id": "lime_foundry_capacitor_front",
-    "name": "Lime Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "lime_foundry_tank_front",
-    "name": "Lime Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "lime_foundry_window_front",
-    "name": "Lime Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "lime_glazed_terracotta",
     "name": "Lime Glazed Terracotta",
     "type": "item"
@@ -38755,18 +35915,8 @@
     "type": "item"
   },
   {
-    "id": "lime_stained_glass_pane_top",
-    "name": "Lime Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "lime_terracotta",
     "name": "Lime Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "lime_top_end",
-    "name": "Lime Top End",
     "type": "item"
   },
   {
@@ -38810,11 +35960,6 @@
     "type": "item"
   },
   {
-    "id": "limestone_cut_cap_connected",
-    "name": "Limestone Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "limestone_cut_herring",
     "name": "Limestone Cut Herring",
     "type": "item"
@@ -38830,18 +35975,8 @@
     "type": "item"
   },
   {
-    "id": "limestone_cut_layered_connected",
-    "name": "Limestone Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "limestone_cut_pillar",
     "name": "Limestone Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "limestone_cut_pillar_connected",
-    "name": "Limestone Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -38870,33 +36005,13 @@
     "type": "item"
   },
   {
-    "id": "linear_chassis_side",
-    "name": "Linear Chassis",
-    "type": "item"
-  },
-  {
     "id": "linear_chassis_end",
     "name": "Linear Chassis End",
     "type": "item"
   },
   {
-    "id": "linear_chassis_end_connected",
-    "name": "Linear Chassis End Connected",
-    "type": "item"
-  },
-  {
     "id": "linear_chassis_end_sticky",
     "name": "Linear Chassis End Sticky",
-    "type": "item"
-  },
-  {
-    "id": "linear_chassis_end_sticky_connected",
-    "name": "Linear Chassis End Sticky Connected",
-    "type": "item"
-  },
-  {
-    "id": "linear_chassis_side_connected",
-    "name": "Linear Chassis Side Connected",
     "type": "item"
   },
   {
@@ -38982,11 +36097,6 @@
   {
     "id": "liquid_darkness_still",
     "name": "Liquid Darkness Still",
-    "type": "item"
-  },
-  {
-    "id": "liquid_heating_coil_side_off",
-    "name": "Liquid Heating Coil",
     "type": "item"
   },
   {
@@ -39192,11 +36302,6 @@
   {
     "id": "locked_zinc_door",
     "name": "Locked Zinc Door",
-    "type": "item"
-  },
-  {
-    "id": "lodestone_side",
-    "name": "Lodestone",
     "type": "item"
   },
   {
@@ -39425,11 +36530,6 @@
     "type": "item"
   },
   {
-    "id": "loom_bottom",
-    "name": "Loom",
-    "type": "item"
-  },
-  {
     "id": "loom_table_upgrade",
     "name": "Loom Table Upgrade",
     "type": "item"
@@ -39555,18 +36655,8 @@
     "type": "item"
   },
   {
-    "id": "machine_back",
-    "name": "Machine",
-    "type": "item"
-  },
-  {
     "id": "machine_acceptor_addon_off",
     "name": "Machine Acceptor Addon",
-    "type": "item"
-  },
-  {
-    "id": "machine_base_top",
-    "name": "Machine Base",
     "type": "item"
   },
   {
@@ -39577,11 +36667,6 @@
   {
     "id": "machine_capacitor_addon_off",
     "name": "Machine Capacitor Addon",
-    "type": "item"
-  },
-  {
-    "id": "machine_chainer_relay_side",
-    "name": "Machine Chainer Relay",
     "type": "item"
   },
   {
@@ -39785,21 +36870,6 @@
     "type": "item"
   },
   {
-    "id": "magenta_foundry_capacitor_front",
-    "name": "Magenta Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "magenta_foundry_tank_front",
-    "name": "Magenta Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "magenta_foundry_window_front",
-    "name": "Magenta Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "magenta_glazed_terracotta",
     "name": "Magenta Glazed Terracotta",
     "type": "item"
@@ -39865,18 +36935,8 @@
     "type": "item"
   },
   {
-    "id": "magenta_stained_glass_pane_top",
-    "name": "Magenta Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "magenta_terracotta",
     "name": "Magenta Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "magenta_top_end",
-    "name": "Magenta Top End",
     "type": "item"
   },
   {
@@ -40097,11 +37157,6 @@
   {
     "id": "magmatic",
     "name": "Magmatic",
-    "type": "item"
-  },
-  {
-    "id": "magmator_side",
-    "name": "Magmator",
     "type": "item"
   },
   {
@@ -40350,16 +37405,6 @@
     "type": "item"
   },
   {
-    "id": "mangrove_cabinet_front",
-    "name": "Mangrove Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "mangrove_chair",
-    "name": "Mangrove Chair",
-    "type": "item"
-  },
-  {
     "id": "mangrove_chest_boat",
     "name": "Mangrove Chest Boat",
     "type": "item"
@@ -40372,21 +37417,6 @@
   {
     "id": "mangrove_corner_trim_thin",
     "name": "Mangrove Corner Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "mangrove_couch",
-    "name": "Mangrove Couch",
-    "type": "item"
-  },
-  {
-    "id": "mangrove_counter_1",
-    "name": "Mangrove Counter",
-    "type": "item"
-  },
-  {
-    "id": "mangrove_desk",
-    "name": "Mangrove Desk",
     "type": "item"
   },
   {
@@ -40465,16 +37495,6 @@
     "type": "item"
   },
   {
-    "id": "mangrove_roots_side",
-    "name": "Mangrove Roots",
-    "type": "item"
-  },
-  {
-    "id": "mangrove_side_table",
-    "name": "Mangrove Side Table",
-    "type": "item"
-  },
-  {
     "id": "mangrove_sign",
     "name": "Mangrove Sign",
     "type": "item"
@@ -40492,16 +37512,6 @@
   {
     "id": "mangrove_trapdoor",
     "name": "Mangrove Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "mangrove_window",
-    "name": "Mangrove Window",
-    "type": "item"
-  },
-  {
-    "id": "mangrove_window_connected",
-    "name": "Mangrove Window Connected",
     "type": "item"
   },
   {
@@ -40635,11 +37645,6 @@
     "type": "item"
   },
   {
-    "id": "mars_pillar_side",
-    "name": "Mars Pillar",
-    "type": "item"
-  },
-  {
     "id": "mars_pillar_end",
     "name": "Mars Pillar End",
     "type": "item"
@@ -40662,11 +37667,6 @@
   {
     "id": "mars_stone_bricks",
     "name": "Mars Stone Bricks",
-    "type": "item"
-  },
-  {
-    "id": "mars_stone_pillar_side",
-    "name": "Mars Stone Pillar",
     "type": "item"
   },
   {
@@ -40920,18 +37920,8 @@
     "type": "item"
   },
   {
-    "id": "me_gearbox_side",
-    "name": "Me Gearbox",
-    "type": "item"
-  },
-  {
     "id": "me_gearbox_casing",
     "name": "Me Gearbox Casing",
-    "type": "item"
-  },
-  {
-    "id": "meat_block_side",
-    "name": "Meat Block",
     "type": "item"
   },
   {
@@ -40975,16 +37965,6 @@
     "type": "item"
   },
   {
-    "id": "mechanical_bearing_side",
-    "name": "Mechanical Bearing",
-    "type": "item"
-  },
-  {
-    "id": "mechanical_drill_top",
-    "name": "Mechanical Drill",
-    "type": "item"
-  },
-  {
     "id": "mechanical_fusion_anvil",
     "name": "Mechanical Fusion Anvil",
     "type": "item"
@@ -40995,16 +37975,6 @@
     "type": "item"
   },
   {
-    "id": "mechanical_grinder_back",
-    "name": "Mechanical Grinder",
-    "type": "item"
-  },
-  {
-    "id": "mechanical_press_bottom",
-    "name": "Mechanical Press",
-    "type": "item"
-  },
-  {
     "id": "mechanical_press_head",
     "name": "Mechanical Press Head",
     "type": "item"
@@ -41012,16 +37982,6 @@
   {
     "id": "mechanical_press_pole",
     "name": "Mechanical Press Pole",
-    "type": "item"
-  },
-  {
-    "id": "mechanical_saw_top",
-    "name": "Mechanical Saw",
-    "type": "item"
-  },
-  {
-    "id": "mechanical_saw_top_vertical",
-    "name": "Mechanical Saw Top Vertical",
     "type": "item"
   },
   {
@@ -41150,11 +38110,6 @@
     "type": "item"
   },
   {
-    "id": "melon_side",
-    "name": "Melon",
-    "type": "item"
-  },
-  {
     "id": "melon_juice",
     "name": "Melon Juice",
     "type": "item"
@@ -41232,11 +38187,6 @@
   {
     "id": "mercury_stone_bricks",
     "name": "Mercury Stone Bricks",
-    "type": "item"
-  },
-  {
-    "id": "mercury_stone_pillar_side",
-    "name": "Mercury Stone Pillar",
     "type": "item"
   },
   {
@@ -41575,18 +38525,8 @@
     "type": "item"
   },
   {
-    "id": "metro_door_side",
-    "name": "Metro Door",
-    "type": "item"
-  },
-  {
     "id": "metro_trapdoor",
     "name": "Metro Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "metro_window",
-    "name": "Metro Window",
     "type": "item"
   },
   {
@@ -41820,11 +38760,6 @@
     "type": "item"
   },
   {
-    "id": "mining_bench_back",
-    "name": "Mining Bench",
-    "type": "item"
-  },
-  {
     "id": "mining_bench_left",
     "name": "Mining Bench Left",
     "type": "item"
@@ -41935,11 +38870,6 @@
     "type": "item"
   },
   {
-    "id": "mixer_base_side",
-    "name": "Mixer Base",
-    "type": "item"
-  },
-  {
     "id": "mixer_blade",
     "name": "Mixer Blade",
     "type": "item"
@@ -42047,11 +38977,6 @@
   {
     "id": "modular_pumpjack",
     "name": "Modular Pumpjack",
-    "type": "item"
-  },
-  {
-    "id": "modular_router_back",
-    "name": "Modular Router",
     "type": "item"
   },
   {
@@ -42400,11 +39325,6 @@
     "type": "item"
   },
   {
-    "id": "monorail_side_buffer_stop",
-    "name": "Monorail Side Buffer Stop",
-    "type": "item"
-  },
-  {
     "id": "monster_token",
     "name": "Monster Token",
     "type": "item"
@@ -42475,11 +39395,6 @@
     "type": "item"
   },
   {
-    "id": "moon_pillar_side",
-    "name": "Moon Pillar",
-    "type": "item"
-  },
-  {
     "id": "moon_pillar_end",
     "name": "Moon Pillar End",
     "type": "item"
@@ -42507,11 +39422,6 @@
   {
     "id": "moon_stone_dust",
     "name": "Moon Stone Dust",
-    "type": "item"
-  },
-  {
-    "id": "moon_stone_pillar_side",
-    "name": "Moon Stone Pillar",
     "type": "item"
   },
   {
@@ -42742,11 +39652,6 @@
   {
     "id": "mud_bricks",
     "name": "Mud Bricks",
-    "type": "item"
-  },
-  {
-    "id": "muddy_mangrove_roots_side",
-    "name": "Muddy Mangrove Roots",
     "type": "item"
   },
   {
@@ -43035,11 +39940,6 @@
     "type": "item"
   },
   {
-    "id": "music_disc_the_bright_side",
-    "name": "Music Disc The Bright Side",
-    "type": "item"
-  },
-  {
     "id": "music_disc_the_cataclysmfarer",
     "name": "Music Disc The Cataclysmfarer",
     "type": "item"
@@ -43100,11 +40000,6 @@
     "type": "item"
   },
   {
-    "id": "mycelium_side",
-    "name": "Mycelium",
-    "type": "item"
-  },
-  {
     "id": "myrtle_ebony",
     "name": "Myrtle Ebony",
     "type": "item"
@@ -43117,11 +40012,6 @@
   {
     "id": "myrtle_ebony_sign",
     "name": "Myrtle Ebony Sign",
-    "type": "item"
-  },
-  {
-    "id": "mysterious_cube_bottom",
-    "name": "Mysterious Cube",
     "type": "item"
   },
   {
@@ -43332,11 +40222,6 @@
   {
     "id": "nano_saber",
     "name": "Nano Saber",
-    "type": "item"
-  },
-  {
-    "id": "napalm_bomb_bottom",
-    "name": "Napalm Bomb",
     "type": "item"
   },
   {
@@ -43620,11 +40505,6 @@
     "type": "item"
   },
   {
-    "id": "nether_bricks_cabinet_front",
-    "name": "Nether Bricks Cabinet",
-    "type": "item"
-  },
-  {
     "id": "nether_burger",
     "name": "Nether Burger",
     "type": "item"
@@ -43785,21 +40665,6 @@
     "type": "item"
   },
   {
-    "id": "nether_stove_bottom",
-    "name": "Nether Stove",
-    "type": "item"
-  },
-  {
-    "id": "nether_stove_front_soul",
-    "name": "Nether Stove Front Soul",
-    "type": "item"
-  },
-  {
-    "id": "nether_stove_top_soul",
-    "name": "Nether Stove Top Soul",
-    "type": "item"
-  },
-  {
     "id": "nether_tanzanite_ore",
     "name": "Nether Tanzanite Ore",
     "type": "item"
@@ -43887,31 +40752,6 @@
   {
     "id": "netherite_boots",
     "name": "Netherite Boots",
-    "type": "item"
-  },
-  {
-    "id": "netherite_catwalk",
-    "name": "Netherite Catwalk",
-    "type": "item"
-  },
-  {
-    "id": "netherite_catwalk_connected",
-    "name": "Netherite Catwalk Connected",
-    "type": "item"
-  },
-  {
-    "id": "netherite_catwalk_rail",
-    "name": "Netherite Catwalk Rail",
-    "type": "item"
-  },
-  {
-    "id": "netherite_catwalk_stairs",
-    "name": "Netherite Catwalk Stairs",
-    "type": "item"
-  },
-  {
-    "id": "netherite_catwalk_template",
-    "name": "Netherite Catwalk Template",
     "type": "item"
   },
   {
@@ -44100,11 +40940,6 @@
     "type": "item"
   },
   {
-    "id": "netherite_plate_metal_connected",
-    "name": "Netherite Plate Metal Connected",
-    "type": "item"
-  },
-  {
     "id": "netherite_powder",
     "name": "Netherite Powder",
     "type": "item"
@@ -44147,11 +40982,6 @@
   {
     "id": "netherite_sheet_metal",
     "name": "Netherite Sheet Metal",
-    "type": "item"
-  },
-  {
-    "id": "netherite_sheet_metal_connected",
-    "name": "Netherite Sheet Metal Connected",
     "type": "item"
   },
   {
@@ -44277,11 +41107,6 @@
   {
     "id": "new_generator",
     "name": "New Generator",
-    "type": "item"
-  },
-  {
-    "id": "niard_front",
-    "name": "Niard",
     "type": "item"
   },
   {
@@ -44680,11 +41505,6 @@
     "type": "item"
   },
   {
-    "id": "oak_beehive_front",
-    "name": "Oak Beehive",
-    "type": "item"
-  },
-  {
     "id": "oak_beehive_end",
     "name": "Oak Beehive End",
     "type": "item"
@@ -44700,71 +41520,6 @@
     "type": "item"
   },
   {
-    "id": "oak_beehive_front_down",
-    "name": "Oak Beehive Front Down",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_front_down_honey",
-    "name": "Oak Beehive Front Down Honey",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_front_honey",
-    "name": "Oak Beehive Front Honey",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_front_left",
-    "name": "Oak Beehive Front Left",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_front_left_honey",
-    "name": "Oak Beehive Front Left Honey",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_front_right",
-    "name": "Oak Beehive Front Right",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_front_right_honey",
-    "name": "Oak Beehive Front Right Honey",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_front_up",
-    "name": "Oak Beehive Front Up",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_front_up_honey",
-    "name": "Oak Beehive Front Up Honey",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_side_down",
-    "name": "Oak Beehive Side Down",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_side_left",
-    "name": "Oak Beehive Side Left",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_side_right",
-    "name": "Oak Beehive Side Right",
-    "type": "item"
-  },
-  {
-    "id": "oak_beehive_side_up",
-    "name": "Oak Beehive Side Up",
-    "type": "item"
-  },
-  {
     "id": "oak_bench",
     "name": "Oak Bench",
     "type": "item"
@@ -44772,16 +41527,6 @@
   {
     "id": "oak_boat",
     "name": "Oak Boat",
-    "type": "item"
-  },
-  {
-    "id": "oak_cabinet_front",
-    "name": "Oak Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "oak_chair",
-    "name": "Oak Chair",
     "type": "item"
   },
   {
@@ -44797,21 +41542,6 @@
   {
     "id": "oak_corner_trim_thin",
     "name": "Oak Corner Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "oak_couch",
-    "name": "Oak Couch",
-    "type": "item"
-  },
-  {
-    "id": "oak_counter_1",
-    "name": "Oak Counter",
-    "type": "item"
-  },
-  {
-    "id": "oak_desk",
-    "name": "Oak Desk",
     "type": "item"
   },
   {
@@ -44890,11 +41620,6 @@
     "type": "item"
   },
   {
-    "id": "oak_side_table",
-    "name": "Oak Side Table",
-    "type": "item"
-  },
-  {
     "id": "oak_sign",
     "name": "Oak Sign",
     "type": "item"
@@ -44912,16 +41637,6 @@
   {
     "id": "oak_trapdoor",
     "name": "Oak Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "oak_window",
-    "name": "Oak Window",
-    "type": "item"
-  },
-  {
-    "id": "oak_window_connected",
-    "name": "Oak Window Connected",
     "type": "item"
   },
   {
@@ -44977,11 +41692,6 @@
   {
     "id": "obidontiee",
     "name": "Obidontiee",
-    "type": "item"
-  },
-  {
-    "id": "observer_back",
-    "name": "Observer",
     "type": "item"
   },
   {
@@ -45085,18 +41795,8 @@
     "type": "item"
   },
   {
-    "id": "oceanography_table_back",
-    "name": "Oceanography Table",
-    "type": "item"
-  },
-  {
     "id": "ocelot_plushie",
     "name": "Ocelot Plushie",
-    "type": "item"
-  },
-  {
-    "id": "ochre_froglight_side",
-    "name": "Ochre Froglight",
     "type": "item"
   },
   {
@@ -45130,11 +41830,6 @@
     "type": "item"
   },
   {
-    "id": "ochrum_cut_cap_connected",
-    "name": "Ochrum Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "ochrum_cut_herring",
     "name": "Ochrum Cut Herring",
     "type": "item"
@@ -45150,18 +41845,8 @@
     "type": "item"
   },
   {
-    "id": "ochrum_cut_layered_connected",
-    "name": "Ochrum Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "ochrum_cut_pillar",
     "name": "Ochrum Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "ochrum_cut_pillar_connected",
-    "name": "Ochrum Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -45265,11 +41950,6 @@
     "type": "item"
   },
   {
-    "id": "old_barrel_bottom",
-    "name": "Old Barrel",
-    "type": "item"
-  },
-  {
     "id": "old_cartoon_bendy_texture",
     "name": "Old Cartoon Bendy Texture",
     "type": "item"
@@ -45297,11 +41977,6 @@
   {
     "id": "old_grove_supplication",
     "name": "Old Grove Supplication",
-    "type": "item"
-  },
-  {
-    "id": "old_opened_barrel_bottom",
-    "name": "Old Opened Barrel",
     "type": "item"
   },
   {
@@ -45347,11 +42022,6 @@
   {
     "id": "onion",
     "name": "Onion",
-    "type": "item"
-  },
-  {
-    "id": "onion_crate_side",
-    "name": "Onion Crate",
     "type": "item"
   },
   {
@@ -45437,11 +42107,6 @@
   {
     "id": "opal_tiles",
     "name": "Opal Tiles",
-    "type": "item"
-  },
-  {
-    "id": "opened_barrel_bottom",
-    "name": "Opened Barrel",
     "type": "item"
   },
   {
@@ -45537,21 +42202,6 @@
   {
     "id": "orange_fluffy_block",
     "name": "Orange Fluffy Block",
-    "type": "item"
-  },
-  {
-    "id": "orange_foundry_capacitor_front",
-    "name": "Orange Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "orange_foundry_tank_front",
-    "name": "Orange Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "orange_foundry_window_front",
-    "name": "Orange Foundry Window",
     "type": "item"
   },
   {
@@ -45675,18 +42325,8 @@
     "type": "item"
   },
   {
-    "id": "orange_stained_glass_pane_top",
-    "name": "Orange Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "orange_terracotta",
     "name": "Orange Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "orange_top_end",
-    "name": "Orange Top End",
     "type": "item"
   },
   {
@@ -45830,11 +42470,6 @@
     "type": "item"
   },
   {
-    "id": "origin_grass_block_side",
-    "name": "Origin Grass Block",
-    "type": "item"
-  },
-  {
     "id": "origin_grass_block_snow",
     "name": "Origin Grass Block Snow",
     "type": "item"
@@ -45867,21 +42502,6 @@
   {
     "id": "oritech_small_clumps",
     "name": "Oritech Small Clumps",
-    "type": "item"
-  },
-  {
-    "id": "ornate_iron_window",
-    "name": "Ornate Iron Window",
-    "type": "item"
-  },
-  {
-    "id": "ornate_iron_window_connected",
-    "name": "Ornate Iron Window Connected",
-    "type": "item"
-  },
-  {
-    "id": "ornate_iron_window_end",
-    "name": "Ornate Iron Window End",
     "type": "item"
   },
   {
@@ -46105,11 +42725,6 @@
     "type": "item"
   },
   {
-    "id": "oven_bottom",
-    "name": "Oven",
-    "type": "item"
-  },
-  {
     "id": "overcharged_alloy",
     "name": "Overcharged Alloy",
     "type": "item"
@@ -46122,11 +42737,6 @@
   {
     "id": "overcharged_casing",
     "name": "Overcharged Casing",
-    "type": "item"
-  },
-  {
-    "id": "overcharged_casing_connected",
-    "name": "Overcharged Casing Connected",
     "type": "item"
   },
   {
@@ -46305,28 +42915,13 @@
     "type": "item"
   },
   {
-    "id": "oxidized_copper_roof_top",
-    "name": "Oxidized Copper Roof",
-    "type": "item"
-  },
-  {
     "id": "oxidized_copper_shingles",
     "name": "Oxidized Copper Shingles",
     "type": "item"
   },
   {
-    "id": "oxidized_copper_shingles_top_connected",
-    "name": "Oxidized Copper Shingles Top Connected",
-    "type": "item"
-  },
-  {
     "id": "oxidized_copper_tiles",
     "name": "Oxidized Copper Tiles",
-    "type": "item"
-  },
-  {
-    "id": "oxidized_copper_tiles_top_connected",
-    "name": "Oxidized Copper Tiles Top Connected",
     "type": "item"
   },
   {
@@ -46342,11 +42937,6 @@
   {
     "id": "oxygen_bucket",
     "name": "Oxygen Bucket",
-    "type": "item"
-  },
-  {
-    "id": "oxygen_distributor_bottom",
-    "name": "Oxygen Distributor",
     "type": "item"
   },
   {
@@ -46535,11 +43125,6 @@
     "type": "item"
   },
   {
-    "id": "painting_machine_front",
-    "name": "Painting Machine",
-    "type": "item"
-  },
-  {
     "id": "paladin_chestplate",
     "name": "Paladin Chestplate",
     "type": "item"
@@ -46637,11 +43222,6 @@
   {
     "id": "pandanus_sign",
     "name": "Pandanus Sign",
-    "type": "item"
-  },
-  {
-    "id": "panel_side",
-    "name": "Panel",
     "type": "item"
   },
   {
@@ -46880,11 +43460,6 @@
     "type": "item"
   },
   {
-    "id": "pearlescent_froglight_side",
-    "name": "Pearlescent Froglight",
-    "type": "item"
-  },
-  {
     "id": "peashooter_texture",
     "name": "Peashooter Texture",
     "type": "item"
@@ -46907,11 +43482,6 @@
   {
     "id": "pecan_sign",
     "name": "Pecan Sign",
-    "type": "item"
-  },
-  {
-    "id": "pedestal_bottom",
-    "name": "Pedestal",
     "type": "item"
   },
   {
@@ -46947,11 +43517,6 @@
   {
     "id": "pentacle",
     "name": "Pentacle",
-    "type": "item"
-  },
-  {
-    "id": "peony_bottom",
-    "name": "Peony",
     "type": "item"
   },
   {
@@ -47245,11 +43810,6 @@
     "type": "item"
   },
   {
-    "id": "pie_bottom",
-    "name": "Pie",
-    "type": "item"
-  },
-  {
     "id": "pie_crust",
     "name": "Pie Crust",
     "type": "item"
@@ -47500,21 +44060,6 @@
     "type": "item"
   },
   {
-    "id": "pink_foundry_capacitor_front",
-    "name": "Pink Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "pink_foundry_tank_front",
-    "name": "Pink Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "pink_foundry_window_front",
-    "name": "Pink Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "pink_glazed_terracotta",
     "name": "Pink Glazed Terracotta",
     "type": "item"
@@ -47640,18 +44185,8 @@
     "type": "item"
   },
   {
-    "id": "pink_stained_glass_pane_top",
-    "name": "Pink Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "pink_terracotta",
     "name": "Pink Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "pink_top_end",
-    "name": "Pink Top End",
     "type": "item"
   },
   {
@@ -47710,11 +44245,6 @@
     "type": "item"
   },
   {
-    "id": "pipe_valve_side",
-    "name": "Pipe Valve",
-    "type": "item"
-  },
-  {
     "id": "pipe_valve_connector",
     "name": "Pipe Valve Connector",
     "type": "item"
@@ -47727,11 +44257,6 @@
   {
     "id": "pipes",
     "name": "Pipes",
-    "type": "item"
-  },
-  {
-    "id": "pipes_connected",
-    "name": "Pipes Connected",
     "type": "item"
   },
   {
@@ -47762,26 +44287,6 @@
   {
     "id": "piston_rods",
     "name": "Piston Rods",
-    "type": "item"
-  },
-  {
-    "id": "piston_top_sticky",
-    "name": "Piston Top Sticky",
-    "type": "item"
-  },
-  {
-    "id": "pitcher_crop_bottom",
-    "name": "Pitcher Crop",
-    "type": "item"
-  },
-  {
-    "id": "pitcher_crop_bottom_stage_1",
-    "name": "Pitcher Crop Bottom Stage",
-    "type": "item"
-  },
-  {
-    "id": "pitcher_crop_top_stage_3",
-    "name": "Pitcher Crop Top Stage",
     "type": "item"
   },
   {
@@ -47827,11 +44332,6 @@
   {
     "id": "placeholder_pipes",
     "name": "Placeholder Pipes",
-    "type": "item"
-  },
-  {
-    "id": "placeholder_pipes_connected",
-    "name": "Placeholder Pipes Connected",
     "type": "item"
   },
   {
@@ -47952,11 +44452,6 @@
   {
     "id": "plastic_pipes",
     "name": "Plastic Pipes",
-    "type": "item"
-  },
-  {
-    "id": "plastic_pipes_connected",
-    "name": "Plastic Pipes Connected",
     "type": "item"
   },
   {
@@ -48170,11 +44665,6 @@
     "type": "item"
   },
   {
-    "id": "plush_box_side",
-    "name": "Plush Box",
-    "type": "item"
-  },
-  {
     "id": "plush_box_bottom2",
     "name": "Plush Box Bottom2",
     "type": "item"
@@ -48237,11 +44727,6 @@
   {
     "id": "pocket_piston",
     "name": "Pocket Piston",
-    "type": "item"
-  },
-  {
-    "id": "podzol_side",
-    "name": "Podzol",
     "type": "item"
   },
   {
@@ -48442,11 +44927,6 @@
   {
     "id": "polished_azure_seastone",
     "name": "Polished Azure Seastone",
-    "type": "item"
-  },
-  {
-    "id": "polished_basalt_side",
-    "name": "Polished Basalt",
     "type": "item"
   },
   {
@@ -48907,56 +45387,6 @@
   {
     "id": "portable_cell_screen",
     "name": "Portable Cell Screen",
-    "type": "item"
-  },
-  {
-    "id": "portable_cell_side_16k",
-    "name": "Portable Cell Side 16k",
-    "type": "item"
-  },
-  {
-    "id": "portable_cell_side_16m",
-    "name": "Portable Cell Side 16m",
-    "type": "item"
-  },
-  {
-    "id": "portable_cell_side_1k",
-    "name": "Portable Cell Side 1k",
-    "type": "item"
-  },
-  {
-    "id": "portable_cell_side_1m",
-    "name": "Portable Cell Side 1m",
-    "type": "item"
-  },
-  {
-    "id": "portable_cell_side_256k",
-    "name": "Portable Cell Side 256k",
-    "type": "item"
-  },
-  {
-    "id": "portable_cell_side_256m",
-    "name": "Portable Cell Side 256m",
-    "type": "item"
-  },
-  {
-    "id": "portable_cell_side_4k",
-    "name": "Portable Cell Side 4k",
-    "type": "item"
-  },
-  {
-    "id": "portable_cell_side_4m",
-    "name": "Portable Cell Side 4m",
-    "type": "item"
-  },
-  {
-    "id": "portable_cell_side_64k",
-    "name": "Portable Cell Side 64k",
-    "type": "item"
-  },
-  {
-    "id": "portable_cell_side_64m",
-    "name": "Portable Cell Side 64m",
     "type": "item"
   },
   {
@@ -50000,11 +46430,6 @@
     "type": "item"
   },
   {
-    "id": "potato_crate_side",
-    "name": "Potato Crate",
-    "type": "item"
-  },
-  {
     "id": "potato_on_a_stick",
     "name": "Potato On A Stick",
     "type": "item"
@@ -50145,11 +46570,6 @@
     "type": "item"
   },
   {
-    "id": "potted_azalea_bush_side",
-    "name": "Potted Azalea Bush",
-    "type": "item"
-  },
-  {
     "id": "potted_azalea_bush_plant",
     "name": "Potted Azalea Bush Plant",
     "type": "item"
@@ -50157,11 +46577,6 @@
   {
     "id": "potted_endbloom",
     "name": "Potted Endbloom",
-    "type": "item"
-  },
-  {
-    "id": "potted_flowering_azalea_bush_side",
-    "name": "Potted Flowering Azalea Bush",
     "type": "item"
   },
   {
@@ -50290,18 +46705,8 @@
     "type": "item"
   },
   {
-    "id": "powdery_basket_bottom",
-    "name": "Powdery Basket",
-    "type": "item"
-  },
-  {
     "id": "powdery_block",
     "name": "Powdery Block",
-    "type": "item"
-  },
-  {
-    "id": "powdery_cabinet_front",
-    "name": "Powdery Cabinet",
     "type": "item"
   },
   {
@@ -50365,11 +46770,6 @@
     "type": "item"
   },
   {
-    "id": "powdery_door_bottom",
-    "name": "Powdery Door",
-    "type": "item"
-  },
-  {
     "id": "powdery_fence",
     "name": "Powdery Fence",
     "type": "item"
@@ -50390,16 +46790,6 @@
     "type": "item"
   },
   {
-    "id": "powdery_scaffolding_bottom",
-    "name": "Powdery Scaffolding",
-    "type": "item"
-  },
-  {
-    "id": "powdery_top_leaves",
-    "name": "Powdery Top Leaves",
-    "type": "item"
-  },
-  {
     "id": "powdery_torch",
     "name": "Powdery Torch",
     "type": "item"
@@ -50407,11 +46797,6 @@
   {
     "id": "powdery_trapdoor",
     "name": "Powdery Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "power_bank_bottom",
-    "name": "Power Bank",
     "type": "item"
   },
   {
@@ -50490,11 +46875,6 @@
     "type": "item"
   },
   {
-    "id": "powered_heating_coil_side_off",
-    "name": "Powered Heating Coil",
-    "type": "item"
-  },
-  {
     "id": "powered_powering",
     "name": "Powered Powering",
     "type": "item"
@@ -50502,11 +46882,6 @@
   {
     "id": "powered_rail",
     "name": "Powered Rail",
-    "type": "item"
-  },
-  {
-    "id": "powered_spawner_front",
-    "name": "Powered Spawner",
     "type": "item"
   },
   {
@@ -50795,11 +47170,6 @@
     "type": "item"
   },
   {
-    "id": "pulsating_side",
-    "name": "Pulsating",
-    "type": "item"
-  },
-  {
     "id": "pulsating_alloy_block",
     "name": "Pulsating Alloy Block",
     "type": "item"
@@ -50972,11 +47342,6 @@
   {
     "id": "pumpjack_hammer_part",
     "name": "Pumpjack Hammer Part",
-    "type": "item"
-  },
-  {
-    "id": "pumpkin_side",
-    "name": "Pumpkin",
     "type": "item"
   },
   {
@@ -51175,21 +47540,6 @@
     "type": "item"
   },
   {
-    "id": "purple_foundry_capacitor_front",
-    "name": "Purple Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "purple_foundry_tank_front",
-    "name": "Purple Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "purple_foundry_window_front",
-    "name": "Purple Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "purple_glazed_terracotta",
     "name": "Purple Glazed Terracotta",
     "type": "item"
@@ -51295,18 +47645,8 @@
     "type": "item"
   },
   {
-    "id": "purple_stained_glass_pane_top",
-    "name": "Purple Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "purple_terracotta",
     "name": "Purple Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "purple_top_end",
-    "name": "Purple Top End",
     "type": "item"
   },
   {
@@ -51327,11 +47667,6 @@
   {
     "id": "purpleheart_sign",
     "name": "Purpleheart Sign",
-    "type": "item"
-  },
-  {
-    "id": "purpur_altar_back",
-    "name": "Purpur Altar",
     "type": "item"
   },
   {
@@ -51515,11 +47850,6 @@
     "type": "item"
   },
   {
-    "id": "quantum_barrel_side",
-    "name": "Quantum Barrel",
-    "type": "item"
-  },
-  {
     "id": "quantum_boots",
     "name": "Quantum Boots",
     "type": "item"
@@ -51577,11 +47907,6 @@
   {
     "id": "quantum_core_out",
     "name": "Quantum Core Out",
-    "type": "item"
-  },
-  {
-    "id": "quantum_crafter_bottom",
-    "name": "Quantum Crafter",
     "type": "item"
   },
   {
@@ -52045,26 +48370,6 @@
     "type": "item"
   },
   {
-    "id": "quoin_overlay_top_bl",
-    "name": "Quoin Overlay Top Bl",
-    "type": "item"
-  },
-  {
-    "id": "quoin_overlay_top_br",
-    "name": "Quoin Overlay Top Br",
-    "type": "item"
-  },
-  {
-    "id": "quoin_overlay_top_tl",
-    "name": "Quoin Overlay Top Tl",
-    "type": "item"
-  },
-  {
-    "id": "quoin_overlay_top_tr",
-    "name": "Quoin Overlay Top Tr",
-    "type": "item"
-  },
-  {
     "id": "rabbit",
     "name": "Rabbit",
     "type": "item"
@@ -52110,18 +48415,8 @@
     "type": "item"
   },
   {
-    "id": "radial_chassis_side",
-    "name": "Radial Chassis",
-    "type": "item"
-  },
-  {
     "id": "radial_chassis_end",
     "name": "Radial Chassis End",
-    "type": "item"
-  },
-  {
-    "id": "radial_chassis_side_sticky",
-    "name": "Radial Chassis Side Sticky",
     "type": "item"
   },
   {
@@ -52172,11 +48467,6 @@
   {
     "id": "radioactive_chemical_cell",
     "name": "Radioactive Chemical Cell",
-    "type": "item"
-  },
-  {
-    "id": "radioactive_generator_bottom",
-    "name": "Radioactive Generator",
     "type": "item"
   },
   {
@@ -52275,16 +48565,6 @@
     "type": "item"
   },
   {
-    "id": "railway_casing_connected",
-    "name": "Railway Casing Connected",
-    "type": "item"
-  },
-  {
-    "id": "railway_casing_side_connected",
-    "name": "Railway Casing Side Connected",
-    "type": "item"
-  },
-  {
     "id": "rain_sensor_active",
     "name": "Rain Sensor",
     "type": "item"
@@ -52302,11 +48582,6 @@
   {
     "id": "rainbow_crewmate_texture",
     "name": "Rainbow Crewmate Texture",
-    "type": "item"
-  },
-  {
-    "id": "rainbow_eucalypsus_front",
-    "name": "Rainbow Eucalypsus",
     "type": "item"
   },
   {
@@ -52895,11 +49170,6 @@
     "type": "item"
   },
   {
-    "id": "reaction_chamber_bottom",
-    "name": "Reaction Chamber",
-    "type": "item"
-  },
-  {
     "id": "reaction_chamber_details",
     "name": "Reaction Chamber Details",
     "type": "item"
@@ -52927,11 +49197,6 @@
   {
     "id": "reactor_casing",
     "name": "Reactor Casing",
-    "type": "item"
-  },
-  {
-    "id": "reactor_casing_connected",
-    "name": "Reactor Casing Connected",
     "type": "item"
   },
   {
@@ -52982,11 +49247,6 @@
   {
     "id": "reactor_glass",
     "name": "Reactor Glass",
-    "type": "item"
-  },
-  {
-    "id": "reactor_glass_connected",
-    "name": "Reactor Glass Connected",
     "type": "item"
   },
   {
@@ -53070,11 +49330,6 @@
     "type": "item"
   },
   {
-    "id": "rebar_pile_side",
-    "name": "Rebar Pile",
-    "type": "item"
-  },
-  {
     "id": "rebar_stairs",
     "name": "Rebar Stairs",
     "type": "item"
@@ -53097,11 +49352,6 @@
   {
     "id": "recovery_compass_00",
     "name": "Recovery Compass",
-    "type": "item"
-  },
-  {
-    "id": "recrystallizer_side",
-    "name": "Recrystallizer",
     "type": "item"
   },
   {
@@ -53275,21 +49525,6 @@
     "type": "item"
   },
   {
-    "id": "red_foundry_capacitor_front",
-    "name": "Red Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "red_foundry_tank_front",
-    "name": "Red Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "red_foundry_window_front",
-    "name": "Red Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "red_fox_plushie",
     "name": "Red Fox Plushie",
     "type": "item"
@@ -53417,11 +49652,6 @@
   {
     "id": "red_nether_bricks",
     "name": "Red Nether Bricks",
-    "type": "item"
-  },
-  {
-    "id": "red_nether_bricks_cabinet_front",
-    "name": "Red Nether Bricks Cabinet",
     "type": "item"
   },
   {
@@ -53570,18 +49800,8 @@
     "type": "item"
   },
   {
-    "id": "red_stained_glass_pane_top",
-    "name": "Red Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "red_terracotta",
     "name": "Red Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "red_top_end",
-    "name": "Red Top End",
     "type": "item"
   },
   {
@@ -53712,16 +49932,6 @@
   {
     "id": "redstone_breaker",
     "name": "Redstone Breaker",
-    "type": "item"
-  },
-  {
-    "id": "redstone_bridge",
-    "name": "Redstone Bridge",
-    "type": "item"
-  },
-  {
-    "id": "redstone_bridge_powered",
-    "name": "Redstone Bridge Powered",
     "type": "item"
   },
   {
@@ -53892,11 +50102,6 @@
   {
     "id": "redstone_magnet",
     "name": "Redstone Magnet",
-    "type": "item"
-  },
-  {
-    "id": "redstone_magnet_connected",
-    "name": "Redstone Magnet Connected",
     "type": "item"
   },
   {
@@ -54100,11 +50305,6 @@
     "type": "item"
   },
   {
-    "id": "refined_radiance_casing_connected",
-    "name": "Refined Radiance Casing Connected",
-    "type": "item"
-  },
-  {
     "id": "refinery",
     "name": "Refinery",
     "type": "item"
@@ -54245,11 +50445,6 @@
     "type": "item"
   },
   {
-    "id": "reinforced_deepslate_bottom",
-    "name": "Reinforced Deepslate",
-    "type": "item"
-  },
-  {
     "id": "reinforced_deorum_axe",
     "name": "Reinforced Deorum Axe",
     "type": "item"
@@ -54360,11 +50555,6 @@
     "type": "item"
   },
   {
-    "id": "repeating_command_block_back",
-    "name": "Repeating Command Block",
-    "type": "item"
-  },
-  {
     "id": "repeating_command_block_conditional",
     "name": "Repeating Command Block Conditional",
     "type": "item"
@@ -54387,11 +50577,6 @@
   {
     "id": "requester",
     "name": "Requester",
-    "type": "item"
-  },
-  {
-    "id": "research_desk_back",
-    "name": "Research Desk",
     "type": "item"
   },
   {
@@ -54542,11 +50727,6 @@
   {
     "id": "resource_node_uranium",
     "name": "Resource Node Uranium",
-    "type": "item"
-  },
-  {
-    "id": "respawn_anchor_bottom",
-    "name": "Respawn Anchor",
     "type": "item"
   },
   {
@@ -54885,21 +51065,6 @@
     "type": "item"
   },
   {
-    "id": "rice_bag_bottom",
-    "name": "Rice Bag",
-    "type": "item"
-  },
-  {
-    "id": "rice_bag_side_tied",
-    "name": "Rice Bag Side Tied",
-    "type": "item"
-  },
-  {
-    "id": "rice_bale_bottom",
-    "name": "Rice Bale",
-    "type": "item"
-  },
-  {
     "id": "rice_panicle",
     "name": "Rice Panicle",
     "type": "item"
@@ -55045,16 +51210,6 @@
     "type": "item"
   },
   {
-    "id": "ring_side_hor",
-    "name": "Ring Side Hor",
-    "type": "item"
-  },
-  {
-    "id": "ring_side_ver",
-    "name": "Ring Side Ver",
-    "type": "item"
-  },
-  {
     "id": "rippling_willow",
     "name": "Rippling Willow",
     "type": "item"
@@ -55125,16 +51280,6 @@
     "type": "item"
   },
   {
-    "id": "riveted_connected",
-    "name": "Riveted Connected",
-    "type": "item"
-  },
-  {
-    "id": "riveted_pillar_side",
-    "name": "Riveted Pillar",
-    "type": "item"
-  },
-  {
     "id": "road_maker",
     "name": "Road Maker",
     "type": "item"
@@ -55162,11 +51307,6 @@
   {
     "id": "roast_chicken_leftovers",
     "name": "Roast Chicken Leftovers",
-    "type": "item"
-  },
-  {
-    "id": "roast_chicken_side_dish",
-    "name": "Roast Chicken Side Dish",
     "type": "item"
   },
   {
@@ -55455,11 +51595,6 @@
     "type": "item"
   },
   {
-    "id": "rose_bush_bottom",
-    "name": "Rose Bush",
-    "type": "item"
-  },
-  {
     "id": "rose_cordial",
     "name": "Rose Cordial",
     "type": "item"
@@ -55642,11 +51777,6 @@
   {
     "id": "rowan_sign",
     "name": "Rowan Sign",
-    "type": "item"
-  },
-  {
-    "id": "royal_jelly_block_bottom",
-    "name": "Royal Jelly Block",
     "type": "item"
   },
   {
@@ -55985,11 +52115,6 @@
     "type": "item"
   },
   {
-    "id": "runic_glass_pane_top",
-    "name": "Runic Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "runic_greataxe",
     "name": "Runic Greataxe",
     "type": "item"
@@ -56135,11 +52260,6 @@
     "type": "item"
   },
   {
-    "id": "rusted_blast_furnace_reinforcement_connected",
-    "name": "Rusted Blast Furnace Reinforcement Connected",
-    "type": "item"
-  },
-  {
     "id": "sabermore",
     "name": "Sabermore",
     "type": "item"
@@ -56182,11 +52302,6 @@
   {
     "id": "safety_net",
     "name": "Safety Net",
-    "type": "item"
-  },
-  {
-    "id": "sag_mill_front",
-    "name": "Sag Mill",
     "type": "item"
   },
   {
@@ -56475,11 +52590,6 @@
     "type": "item"
   },
   {
-    "id": "sandstone_ignite_trap_top_off",
-    "name": "Sandstone Ignite Trap",
-    "type": "item"
-  },
-  {
     "id": "sandstone_pillar_trim_2_thicc",
     "name": "Sandstone Pillar Trim 2 Thicc",
     "type": "item"
@@ -56497,11 +52607,6 @@
   {
     "id": "sandstone_pillar_trim_thin",
     "name": "Sandstone Pillar Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "sandstone_poison_dart_trap_front_off",
-    "name": "Sandstone Poison Dart Trap",
     "type": "item"
   },
   {
@@ -56810,11 +52915,6 @@
     "type": "item"
   },
   {
-    "id": "schematic_table_side",
-    "name": "Schematic Table",
-    "type": "item"
-  },
-  {
     "id": "schematicannon",
     "name": "Schematicannon",
     "type": "item"
@@ -56860,11 +52960,6 @@
     "type": "item"
   },
   {
-    "id": "scorchia_cut_cap_connected",
-    "name": "Scorchia Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "scorchia_cut_herring",
     "name": "Scorchia Cut Herring",
     "type": "item"
@@ -56880,18 +52975,8 @@
     "type": "item"
   },
   {
-    "id": "scorchia_cut_layered_connected",
-    "name": "Scorchia Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "scorchia_cut_pillar",
     "name": "Scorchia Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "scorchia_cut_pillar_connected",
-    "name": "Scorchia Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -56940,11 +53025,6 @@
     "type": "item"
   },
   {
-    "id": "scoria_cut_cap_connected",
-    "name": "Scoria Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "scoria_cut_herring",
     "name": "Scoria Cut Herring",
     "type": "item"
@@ -56960,18 +53040,8 @@
     "type": "item"
   },
   {
-    "id": "scoria_cut_layered_connected",
-    "name": "Scoria Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "scoria_cut_pillar",
     "name": "Scoria Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "scoria_cut_pillar_connected",
-    "name": "Scoria Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -57007,11 +53077,6 @@
   {
     "id": "scouter",
     "name": "Scouter",
-    "type": "item"
-  },
-  {
-    "id": "screen_front",
-    "name": "Screen",
     "type": "item"
   },
   {
@@ -57052,11 +53117,6 @@
   {
     "id": "scroll_fire",
     "name": "Scroll Fire",
-    "type": "item"
-  },
-  {
-    "id": "scroll_forge_bottom",
-    "name": "Scroll Forge",
     "type": "item"
   },
   {
@@ -57115,11 +53175,6 @@
     "type": "item"
   },
   {
-    "id": "sculk_catalyst_bottom",
-    "name": "Sculk Catalyst",
-    "type": "item"
-  },
-  {
     "id": "sculk_gleam",
     "name": "Sculk Gleam",
     "type": "item"
@@ -57150,23 +53205,8 @@
     "type": "item"
   },
   {
-    "id": "sculk_sensor_bottom",
-    "name": "Sculk Sensor",
-    "type": "item"
-  },
-  {
     "id": "sculk_sensor_tendril_active",
     "name": "Sculk Sensor Tendril",
-    "type": "item"
-  },
-  {
-    "id": "sculk_shrieker_bottom",
-    "name": "Sculk Shrieker",
-    "type": "item"
-  },
-  {
-    "id": "sculk_shrieker_can_summon_inner_top",
-    "name": "Sculk Shrieker Can Summon",
     "type": "item"
   },
   {
@@ -57480,31 +53520,6 @@
     "type": "item"
   },
   {
-    "id": "season_sensor_side",
-    "name": "Season Sensor",
-    "type": "item"
-  },
-  {
-    "id": "season_sensor_autumn_top",
-    "name": "Season Sensor Autumn",
-    "type": "item"
-  },
-  {
-    "id": "season_sensor_spring_top",
-    "name": "Season Sensor Spring",
-    "type": "item"
-  },
-  {
-    "id": "season_sensor_summer_top",
-    "name": "Season Sensor Summer",
-    "type": "item"
-  },
-  {
-    "id": "season_sensor_winter_top",
-    "name": "Season Sensor Winter",
-    "type": "item"
-  },
-  {
     "id": "seatwood_planks",
     "name": "Seatwood Planks",
     "type": "item"
@@ -57517,16 +53532,6 @@
   {
     "id": "secondary",
     "name": "Secondary",
-    "type": "item"
-  },
-  {
-    "id": "secondary_linear_chassis_side",
-    "name": "Secondary Linear Chassis",
-    "type": "item"
-  },
-  {
-    "id": "secondary_linear_chassis_side_connected",
-    "name": "Secondary Linear Chassis Side Connected",
     "type": "item"
   },
   {
@@ -57562,11 +53567,6 @@
   {
     "id": "segmented_display_screen",
     "name": "Segmented Display Screen",
-    "type": "item"
-  },
-  {
-    "id": "segmented_display_screen_connected",
-    "name": "Segmented Display Screen Connected",
     "type": "item"
   },
   {
@@ -57742,11 +53742,6 @@
   {
     "id": "shadow_steel_casing",
     "name": "Shadow Steel Casing",
-    "type": "item"
-  },
-  {
-    "id": "shadow_steel_casing_connected",
-    "name": "Shadow Steel Casing Connected",
     "type": "item"
   },
   {
@@ -58055,16 +54050,6 @@
     "type": "item"
   },
   {
-    "id": "shelf_side_left",
-    "name": "Shelf Side Left",
-    "type": "item"
-  },
-  {
-    "id": "shelf_side_right",
-    "name": "Shelf Side Right",
-    "type": "item"
-  },
-  {
     "id": "shelf_single",
     "name": "Shelf Single",
     "type": "item"
@@ -58357,241 +54342,6 @@
   {
     "id": "sickly_dragon_meal",
     "name": "Sickly Dragon Meal",
-    "type": "item"
-  },
-  {
-    "id": "side",
-    "name": "Side",
-    "type": "item"
-  },
-  {
-    "id": "side_b",
-    "name": "Side B",
-    "type": "item"
-  },
-  {
-    "id": "side_black",
-    "name": "Side Black",
-    "type": "item"
-  },
-  {
-    "id": "side_blue",
-    "name": "Side Blue",
-    "type": "item"
-  },
-  {
-    "id": "side_brown",
-    "name": "Side Brown",
-    "type": "item"
-  },
-  {
-    "id": "side_connected",
-    "name": "Side Connected",
-    "type": "item"
-  },
-  {
-    "id": "side_cyan",
-    "name": "Side Cyan",
-    "type": "item"
-  },
-  {
-    "id": "side_down",
-    "name": "Side Down",
-    "type": "item"
-  },
-  {
-    "id": "side_flipped",
-    "name": "Side Flipped",
-    "type": "item"
-  },
-  {
-    "id": "side_gray",
-    "name": "Side Gray",
-    "type": "item"
-  },
-  {
-    "id": "side_green",
-    "name": "Side Green",
-    "type": "item"
-  },
-  {
-    "id": "side_kelp_front",
-    "name": "Side Kelp",
-    "type": "item"
-  },
-  {
-    "id": "side_l",
-    "name": "Side L",
-    "type": "item"
-  },
-  {
-    "id": "side_layer",
-    "name": "Side Layer",
-    "type": "item"
-  },
-  {
-    "id": "side_left",
-    "name": "Side Left",
-    "type": "item"
-  },
-  {
-    "id": "side_light_blue",
-    "name": "Side Light Blue",
-    "type": "item"
-  },
-  {
-    "id": "side_light_gray",
-    "name": "Side Light Gray",
-    "type": "item"
-  },
-  {
-    "id": "side_lime",
-    "name": "Side Lime",
-    "type": "item"
-  },
-  {
-    "id": "side_magenta",
-    "name": "Side Magenta",
-    "type": "item"
-  },
-  {
-    "id": "side_orange",
-    "name": "Side Orange",
-    "type": "item"
-  },
-  {
-    "id": "side_outline",
-    "name": "Side Outline",
-    "type": "item"
-  },
-  {
-    "id": "side_pink",
-    "name": "Side Pink",
-    "type": "item"
-  },
-  {
-    "id": "side_purple",
-    "name": "Side Purple",
-    "type": "item"
-  },
-  {
-    "id": "side_r",
-    "name": "Side R",
-    "type": "item"
-  },
-  {
-    "id": "side_red",
-    "name": "Side Red",
-    "type": "item"
-  },
-  {
-    "id": "side_right",
-    "name": "Side Right",
-    "type": "item"
-  },
-  {
-    "id": "side_t",
-    "name": "Side T",
-    "type": "item"
-  },
-  {
-    "id": "side_top_black",
-    "name": "Side Top Black",
-    "type": "item"
-  },
-  {
-    "id": "side_top_blue",
-    "name": "Side Top Blue",
-    "type": "item"
-  },
-  {
-    "id": "side_top_brown",
-    "name": "Side Top Brown",
-    "type": "item"
-  },
-  {
-    "id": "side_top_cyan",
-    "name": "Side Top Cyan",
-    "type": "item"
-  },
-  {
-    "id": "side_top_gray",
-    "name": "Side Top Gray",
-    "type": "item"
-  },
-  {
-    "id": "side_top_green",
-    "name": "Side Top Green",
-    "type": "item"
-  },
-  {
-    "id": "side_top_kelp",
-    "name": "Side Top Kelp",
-    "type": "item"
-  },
-  {
-    "id": "side_top_light_blue",
-    "name": "Side Top Light Blue",
-    "type": "item"
-  },
-  {
-    "id": "side_top_light_gray",
-    "name": "Side Top Light Gray",
-    "type": "item"
-  },
-  {
-    "id": "side_top_lime",
-    "name": "Side Top Lime",
-    "type": "item"
-  },
-  {
-    "id": "side_top_magenta",
-    "name": "Side Top Magenta",
-    "type": "item"
-  },
-  {
-    "id": "side_top_orange",
-    "name": "Side Top Orange",
-    "type": "item"
-  },
-  {
-    "id": "side_top_pink",
-    "name": "Side Top Pink",
-    "type": "item"
-  },
-  {
-    "id": "side_top_purple",
-    "name": "Side Top Purple",
-    "type": "item"
-  },
-  {
-    "id": "side_top_red",
-    "name": "Side Top Red",
-    "type": "item"
-  },
-  {
-    "id": "side_top_white",
-    "name": "Side Top White",
-    "type": "item"
-  },
-  {
-    "id": "side_top_yellow",
-    "name": "Side Top Yellow",
-    "type": "item"
-  },
-  {
-    "id": "side_up",
-    "name": "Side Up",
-    "type": "item"
-  },
-  {
-    "id": "side_white",
-    "name": "Side White",
-    "type": "item"
-  },
-  {
-    "id": "side_yellow",
-    "name": "Side Yellow",
     "type": "item"
   },
   {
@@ -58910,11 +54660,6 @@
     "type": "item"
   },
   {
-    "id": "silver_tesla_top_load",
-    "name": "Silver Tesla Top Load",
-    "type": "item"
-  },
-  {
     "id": "silver_tiny_dust",
     "name": "Silver Tiny Dust",
     "type": "item"
@@ -59047,11 +54792,6 @@
   {
     "id": "skeleton_skull",
     "name": "Skeleton Skull",
-    "type": "item"
-  },
-  {
-    "id": "skillet_bottom",
-    "name": "Skillet",
     "type": "item"
   },
   {
@@ -59380,11 +55120,6 @@
     "type": "item"
   },
   {
-    "id": "slashed_connected",
-    "name": "Slashed Connected",
-    "type": "item"
-  },
-  {
     "id": "sled_ready_guff_texture",
     "name": "Sled Ready Guff Texture",
     "type": "item"
@@ -59392,11 +55127,6 @@
   {
     "id": "sleepeyemask",
     "name": "Sleepeyemask",
-    "type": "item"
-  },
-  {
-    "id": "slice_and_splice_front",
-    "name": "Slice And Splice",
     "type": "item"
   },
   {
@@ -59655,16 +55385,6 @@
     "type": "item"
   },
   {
-    "id": "small_dripleaf_side",
-    "name": "Small Dripleaf",
-    "type": "item"
-  },
-  {
-    "id": "small_dripleaf_stem_bottom",
-    "name": "Small Dripleaf Stem",
-    "type": "item"
-  },
-  {
     "id": "small_dusts",
     "name": "Small Dusts",
     "type": "item"
@@ -59850,11 +55570,6 @@
     "type": "item"
   },
   {
-    "id": "smart_observer_side_powered",
-    "name": "Smart Observer Side Powered",
-    "type": "item"
-  },
-  {
     "id": "smart_pipe_1",
     "name": "Smart Pipe",
     "type": "item"
@@ -59875,11 +55590,6 @@
     "type": "item"
   },
   {
-    "id": "smithing_table_bottom",
-    "name": "Smithing Table",
-    "type": "item"
-  },
-  {
     "id": "smithing_table_pattern",
     "name": "Smithing Table Pattern",
     "type": "item"
@@ -59895,23 +55605,8 @@
     "type": "item"
   },
   {
-    "id": "smokebox_tank_top",
-    "name": "Smokebox Tank",
-    "type": "item"
-  },
-  {
     "id": "smoked_ham",
     "name": "Smoked Ham",
-    "type": "item"
-  },
-  {
-    "id": "smoker_bottom",
-    "name": "Smoker",
-    "type": "item"
-  },
-  {
-    "id": "smokestack_top",
-    "name": "Smokestack",
     "type": "item"
   },
   {
@@ -59957,11 +55652,6 @@
   {
     "id": "smooth_citrine",
     "name": "Smooth Citrine",
-    "type": "item"
-  },
-  {
-    "id": "smooth_dark_log_top",
-    "name": "Smooth Dark Log",
     "type": "item"
   },
   {
@@ -60075,11 +55765,6 @@
     "type": "item"
   },
   {
-    "id": "smooth_stone_slab_side",
-    "name": "Smooth Stone Slab",
-    "type": "item"
-  },
-  {
     "id": "smooth_tanzanite",
     "name": "Smooth Tanzanite",
     "type": "item"
@@ -60125,11 +55810,6 @@
     "type": "item"
   },
   {
-    "id": "sniffer_egg_not_cracked_bottom",
-    "name": "Sniffer Egg Not Cracked",
-    "type": "item"
-  },
-  {
     "id": "sniffer_egg_not_cracked_east",
     "name": "Sniffer Egg Not Cracked East",
     "type": "item"
@@ -60150,11 +55830,6 @@
     "type": "item"
   },
   {
-    "id": "sniffer_egg_slightly_cracked_bottom",
-    "name": "Sniffer Egg Slightly Cracked",
-    "type": "item"
-  },
-  {
     "id": "sniffer_egg_slightly_cracked_east",
     "name": "Sniffer Egg Slightly Cracked East",
     "type": "item"
@@ -60172,11 +55847,6 @@
   {
     "id": "sniffer_egg_slightly_cracked_west",
     "name": "Sniffer Egg Slightly Cracked West",
-    "type": "item"
-  },
-  {
-    "id": "sniffer_egg_very_cracked_bottom",
-    "name": "Sniffer Egg Very Cracked",
     "type": "item"
   },
   {
@@ -60365,11 +56035,6 @@
     "type": "item"
   },
   {
-    "id": "solar_panel_starter_top",
-    "name": "Solar Panel Starter",
-    "type": "item"
-  },
-  {
     "id": "solar_panel_starter_frame",
     "name": "Solar Panel Starter Frame",
     "type": "item"
@@ -60460,11 +56125,6 @@
     "type": "item"
   },
   {
-    "id": "soul_binder_front",
-    "name": "Soul Binder",
-    "type": "item"
-  },
-  {
     "id": "soul_binding_crystal",
     "name": "Soul Binding Crystal",
     "type": "item"
@@ -60515,16 +56175,6 @@
     "type": "item"
   },
   {
-    "id": "soul_engine_front",
-    "name": "Soul Engine",
-    "type": "item"
-  },
-  {
-    "id": "soul_extractor_side",
-    "name": "Soul Extractor",
-    "type": "item"
-  },
-  {
     "id": "soul_extractor_up",
     "name": "Soul Extractor Up",
     "type": "item"
@@ -60552,11 +56202,6 @@
   {
     "id": "soul_lantern",
     "name": "Soul Lantern",
-    "type": "item"
-  },
-  {
-    "id": "soul_machine_back",
-    "name": "Soul Machine",
     "type": "item"
   },
   {
@@ -60875,11 +56520,6 @@
     "type": "item"
   },
   {
-    "id": "spatial_anchor_front",
-    "name": "Spatial Anchor",
-    "type": "item"
-  },
-  {
     "id": "spatial_assembler",
     "name": "Spatial Assembler",
     "type": "item"
@@ -60887,11 +56527,6 @@
   {
     "id": "spatial_cell_component_128",
     "name": "Spatial Cell Component",
-    "type": "item"
-  },
-  {
-    "id": "spatial_io_port_front",
-    "name": "Spatial Io Port",
     "type": "item"
   },
   {
@@ -61430,11 +57065,6 @@
     "type": "item"
   },
   {
-    "id": "sprinkler_bottom",
-    "name": "Sprinkler",
-    "type": "item"
-  },
-  {
     "id": "sprinkler_grid",
     "name": "Sprinkler Grid",
     "type": "item"
@@ -61465,16 +57095,6 @@
     "type": "item"
   },
   {
-    "id": "spruce_cabinet_front",
-    "name": "Spruce Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "spruce_chair",
-    "name": "Spruce Chair",
-    "type": "item"
-  },
-  {
     "id": "spruce_chest_boat",
     "name": "Spruce Chest Boat",
     "type": "item"
@@ -61487,21 +57107,6 @@
   {
     "id": "spruce_corner_trim_thin",
     "name": "Spruce Corner Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "spruce_couch",
-    "name": "Spruce Couch",
-    "type": "item"
-  },
-  {
-    "id": "spruce_counter_1",
-    "name": "Spruce Counter",
-    "type": "item"
-  },
-  {
-    "id": "spruce_desk",
-    "name": "Spruce Desk",
     "type": "item"
   },
   {
@@ -61580,11 +57185,6 @@
     "type": "item"
   },
   {
-    "id": "spruce_side_table",
-    "name": "Spruce Side Table",
-    "type": "item"
-  },
-  {
     "id": "spruce_sign",
     "name": "Spruce Sign",
     "type": "item"
@@ -61602,16 +57202,6 @@
   {
     "id": "spruce_trapdoor",
     "name": "Spruce Trapdoor",
-    "type": "item"
-  },
-  {
-    "id": "spruce_window",
-    "name": "Spruce Window",
-    "type": "item"
-  },
-  {
-    "id": "spruce_window_connected",
-    "name": "Spruce Window Connected",
     "type": "item"
   },
   {
@@ -61802,11 +57392,6 @@
   {
     "id": "stage_4_honeycomb_brood_block_1",
     "name": "Stage 4 Honeycomb Brood Block",
-    "type": "item"
-  },
-  {
-    "id": "stainless_steel_barrel_side",
-    "name": "Stainless Steel Barrel",
     "type": "item"
   },
   {
@@ -63485,11 +59070,6 @@
     "type": "item"
   },
   {
-    "id": "steel_barrel_side",
-    "name": "Steel Barrel",
-    "type": "item"
-  },
-  {
     "id": "steel_bars",
     "name": "Steel Bars",
     "type": "item"
@@ -63502,11 +59082,6 @@
   {
     "id": "steel_block",
     "name": "Steel Block",
-    "type": "item"
-  },
-  {
-    "id": "steel_block_connected",
-    "name": "Steel Block Connected",
     "type": "item"
   },
   {
@@ -63532,11 +59107,6 @@
   {
     "id": "steel_casing_cable_hub",
     "name": "Steel Casing Cable Hub",
-    "type": "item"
-  },
-  {
-    "id": "steel_casing_connected",
-    "name": "Steel Casing Connected",
     "type": "item"
   },
   {
@@ -63595,31 +59165,6 @@
     "type": "item"
   },
   {
-    "id": "steel_encased_cogwheel_side",
-    "name": "Steel Encased Cogwheel",
-    "type": "item"
-  },
-  {
-    "id": "steel_encased_cogwheel_side_connected",
-    "name": "Steel Encased Cogwheel Side Connected",
-    "type": "item"
-  },
-  {
-    "id": "steel_encased_cogwheel_side_horizontal",
-    "name": "Steel Encased Cogwheel Side Horizontal",
-    "type": "item"
-  },
-  {
-    "id": "steel_encased_cogwheel_side_horizontal_connected",
-    "name": "Steel Encased Cogwheel Side Horizontal Connected",
-    "type": "item"
-  },
-  {
-    "id": "steel_encased_cogwheel_side_large",
-    "name": "Steel Encased Cogwheel Side Large",
-    "type": "item"
-  },
-  {
     "id": "steel_encased_pipe",
     "name": "Steel Encased Pipe",
     "type": "item"
@@ -63632,31 +59177,6 @@
   {
     "id": "steel_fluid_tank",
     "name": "Steel Fluid Tank",
-    "type": "item"
-  },
-  {
-    "id": "steel_fluid_tank_connected",
-    "name": "Steel Fluid Tank Connected",
-    "type": "item"
-  },
-  {
-    "id": "steel_fluid_tank_inner_connected",
-    "name": "Steel Fluid Tank Inner Connected",
-    "type": "item"
-  },
-  {
-    "id": "steel_fluid_tank_top_connected",
-    "name": "Steel Fluid Tank Top Connected",
-    "type": "item"
-  },
-  {
-    "id": "steel_fluid_tank_window",
-    "name": "Steel Fluid Tank Window",
-    "type": "item"
-  },
-  {
-    "id": "steel_fluid_tank_window_single",
-    "name": "Steel Fluid Tank Window Single",
     "type": "item"
   },
   {
@@ -63760,11 +59280,6 @@
     "type": "item"
   },
   {
-    "id": "steel_pillar_side",
-    "name": "Steel Pillar",
-    "type": "item"
-  },
-  {
     "id": "steel_pillar_end",
     "name": "Steel Pillar End",
     "type": "item"
@@ -63772,11 +59287,6 @@
   {
     "id": "steel_pipes",
     "name": "Steel Pipes",
-    "type": "item"
-  },
-  {
-    "id": "steel_pipes_connected",
-    "name": "Steel Pipes Connected",
     "type": "item"
   },
   {
@@ -63830,18 +59340,8 @@
     "type": "item"
   },
   {
-    "id": "steel_scaffold_connected",
-    "name": "Steel Scaffold Connected",
-    "type": "item"
-  },
-  {
     "id": "steel_scaffold_inside",
     "name": "Steel Scaffold Inside",
-    "type": "item"
-  },
-  {
-    "id": "steel_scaffold_inside_connected",
-    "name": "Steel Scaffold Inside Connected",
     "type": "item"
   },
   {
@@ -63862,21 +59362,6 @@
   {
     "id": "steel_scaffolding_open_u",
     "name": "Steel Scaffolding Open U",
-    "type": "item"
-  },
-  {
-    "id": "steel_scaffolding_top_grate_top",
-    "name": "Steel Scaffolding Top Grate",
-    "type": "item"
-  },
-  {
-    "id": "steel_scaffolding_top_standard",
-    "name": "Steel Scaffolding Top Standard",
-    "type": "item"
-  },
-  {
-    "id": "steel_scaffolding_top_wooden_top",
-    "name": "Steel Scaffolding Top Wooden",
     "type": "item"
   },
   {
@@ -63932,26 +59417,6 @@
   {
     "id": "steel_vat",
     "name": "Steel Vat",
-    "type": "item"
-  },
-  {
-    "id": "steel_vat_connected",
-    "name": "Steel Vat Connected",
-    "type": "item"
-  },
-  {
-    "id": "steel_vat_top_connected",
-    "name": "Steel Vat Top Connected",
-    "type": "item"
-  },
-  {
-    "id": "steel_vat_window",
-    "name": "Steel Vat Window",
-    "type": "item"
-  },
-  {
-    "id": "steel_vat_window_single",
-    "name": "Steel Vat Window Single",
     "type": "item"
   },
   {
@@ -64037,11 +59502,6 @@
   {
     "id": "sticker",
     "name": "Sticker",
-    "type": "item"
-  },
-  {
-    "id": "sticker_side_powered",
-    "name": "Sticker Side Powered",
     "type": "item"
   },
   {
@@ -64172,11 +59632,6 @@
   {
     "id": "stirling_engine",
     "name": "Stirling Engine",
-    "type": "item"
-  },
-  {
-    "id": "stirling_generator_front",
-    "name": "Stirling Generator",
     "type": "item"
   },
   {
@@ -64330,11 +59785,6 @@
     "type": "item"
   },
   {
-    "id": "stonecutter_bottom",
-    "name": "Stonecutter",
-    "type": "item"
-  },
-  {
     "id": "stonecutter_saw",
     "name": "Stonecutter Saw",
     "type": "item"
@@ -64395,56 +59845,6 @@
     "type": "item"
   },
   {
-    "id": "storage_cell_side_16k",
-    "name": "Storage Cell Side 16k",
-    "type": "item"
-  },
-  {
-    "id": "storage_cell_side_16m",
-    "name": "Storage Cell Side 16m",
-    "type": "item"
-  },
-  {
-    "id": "storage_cell_side_1k",
-    "name": "Storage Cell Side 1k",
-    "type": "item"
-  },
-  {
-    "id": "storage_cell_side_1m",
-    "name": "Storage Cell Side 1m",
-    "type": "item"
-  },
-  {
-    "id": "storage_cell_side_256k",
-    "name": "Storage Cell Side 256k",
-    "type": "item"
-  },
-  {
-    "id": "storage_cell_side_256m",
-    "name": "Storage Cell Side 256m",
-    "type": "item"
-  },
-  {
-    "id": "storage_cell_side_4k",
-    "name": "Storage Cell Side 4k",
-    "type": "item"
-  },
-  {
-    "id": "storage_cell_side_4m",
-    "name": "Storage Cell Side 4m",
-    "type": "item"
-  },
-  {
-    "id": "storage_cell_side_64k",
-    "name": "Storage Cell Side 64k",
-    "type": "item"
-  },
-  {
-    "id": "storage_cell_side_64m",
-    "name": "Storage Cell Side 64m",
-    "type": "item"
-  },
-  {
     "id": "storage_constantan",
     "name": "Storage Constantan",
     "type": "item"
@@ -64492,11 +59892,6 @@
   {
     "id": "storage_steel",
     "name": "Storage Steel",
-    "type": "item"
-  },
-  {
-    "id": "storage_uranium_side",
-    "name": "Storage Uranium",
     "type": "item"
   },
   {
@@ -64555,11 +59950,6 @@
     "type": "item"
   },
   {
-    "id": "stove_bottom",
-    "name": "Stove",
-    "type": "item"
-  },
-  {
     "id": "strange_eclair",
     "name": "Strange Eclair",
     "type": "item"
@@ -64577,11 +59967,6 @@
   {
     "id": "straw",
     "name": "Straw",
-    "type": "item"
-  },
-  {
-    "id": "straw_bale_side",
-    "name": "Straw Bale",
     "type": "item"
   },
   {
@@ -65070,16 +60455,6 @@
     "type": "item"
   },
   {
-    "id": "stuffed_pumpkin_top_eaten",
-    "name": "Stuffed Pumpkin Top Eaten",
-    "type": "item"
-  },
-  {
-    "id": "stuffed_shulker_bottom",
-    "name": "Stuffed Shulker",
-    "type": "item"
-  },
-  {
     "id": "stuffed_shulker_block",
     "name": "Stuffed Shulker Block",
     "type": "item"
@@ -65092,11 +60467,6 @@
   {
     "id": "stuffed_shulker_details",
     "name": "Stuffed Shulker Details",
-    "type": "item"
-  },
-  {
-    "id": "stuffed_shulker_top_eaten",
-    "name": "Stuffed Shulker Top Eaten",
     "type": "item"
   },
   {
@@ -65245,16 +60615,6 @@
     "type": "item"
   },
   {
-    "id": "sugarbag_bottom",
-    "name": "Sugarbag",
-    "type": "item"
-  },
-  {
-    "id": "sugarbag_front_honey",
-    "name": "Sugarbag Front Honey",
-    "type": "item"
-  },
-  {
     "id": "sugarbag_honeycomb",
     "name": "Sugarbag Honeycomb",
     "type": "item"
@@ -65375,11 +60735,6 @@
     "type": "item"
   },
   {
-    "id": "sunflower_back",
-    "name": "Sunflower",
-    "type": "item"
-  },
-  {
     "id": "sunglasses",
     "name": "Sunglasses",
     "type": "item"
@@ -65440,18 +60795,8 @@
     "type": "item"
   },
   {
-    "id": "supercharger_bottom",
-    "name": "Supercharger",
-    "type": "item"
-  },
-  {
     "id": "superconductor",
     "name": "Superconductor",
-    "type": "item"
-  },
-  {
-    "id": "superconductor_coil_side",
-    "name": "Superconductor Coil",
     "type": "item"
   },
   {
@@ -65487,11 +60832,6 @@
   {
     "id": "superconductor_plate",
     "name": "Superconductor Plate",
-    "type": "item"
-  },
-  {
-    "id": "superconductor_tesla_winding_side",
-    "name": "Superconductor Tesla Winding",
     "type": "item"
   },
   {
@@ -65965,26 +61305,6 @@
     "type": "item"
   },
   {
-    "id": "tall_grass_bottom",
-    "name": "Tall Grass",
-    "type": "item"
-  },
-  {
-    "id": "tall_lavender_bottom",
-    "name": "Tall Lavender",
-    "type": "item"
-  },
-  {
-    "id": "tall_seagrass_bottom",
-    "name": "Tall Seagrass",
-    "type": "item"
-  },
-  {
-    "id": "tall_white_lavender_bottom",
-    "name": "Tall White Lavender",
-    "type": "item"
-  },
-  {
     "id": "tallow",
     "name": "Tallow",
     "type": "item"
@@ -65997,11 +61317,6 @@
   {
     "id": "tambaqui",
     "name": "Tambaqui",
-    "type": "item"
-  },
-  {
-    "id": "tampered_remnant_inner",
-    "name": "Tampered Remnant",
     "type": "item"
   },
   {
@@ -66090,11 +61405,6 @@
     "type": "item"
   },
   {
-    "id": "target_side",
-    "name": "Target",
-    "type": "item"
-  },
-  {
     "id": "target_designator",
     "name": "Target Designator",
     "type": "item"
@@ -66122,11 +61432,6 @@
   {
     "id": "tatami_even",
     "name": "Tatami Even",
-    "type": "item"
-  },
-  {
-    "id": "tatami_mat_side",
-    "name": "Tatami Mat",
     "type": "item"
   },
   {
@@ -66365,11 +61670,6 @@
     "type": "item"
   },
   {
-    "id": "tender_bogey_outer",
-    "name": "Tender Bogey",
-    "type": "item"
-  },
-  {
     "id": "tenna_texture",
     "name": "Tenna Texture",
     "type": "item"
@@ -66505,11 +61805,6 @@
     "type": "item"
   },
   {
-    "id": "thatch_block_side",
-    "name": "Thatch Block",
-    "type": "item"
-  },
-  {
     "id": "the_annihilator",
     "name": "The Annihilator",
     "type": "item"
@@ -66605,28 +61900,13 @@
     "type": "item"
   },
   {
-    "id": "thermo_generator_basic_top",
-    "name": "Thermo Generator Basic",
-    "type": "item"
-  },
-  {
     "id": "thermo_generator_basic_core",
     "name": "Thermo Generator Basic Core",
     "type": "item"
   },
   {
-    "id": "thermo_generator_blazing_top",
-    "name": "Thermo Generator Blazing",
-    "type": "item"
-  },
-  {
     "id": "thermo_generator_blazing_core",
     "name": "Thermo Generator Blazing Core",
-    "type": "item"
-  },
-  {
-    "id": "thermo_generator_hardened_top",
-    "name": "Thermo Generator Hardened",
     "type": "item"
   },
   {
@@ -66640,18 +61920,8 @@
     "type": "item"
   },
   {
-    "id": "thermo_generator_niotic_top",
-    "name": "Thermo Generator Niotic",
-    "type": "item"
-  },
-  {
     "id": "thermo_generator_niotic_core",
     "name": "Thermo Generator Niotic Core",
-    "type": "item"
-  },
-  {
-    "id": "thermo_generator_nitro_top",
-    "name": "Thermo Generator Nitro",
     "type": "item"
   },
   {
@@ -66660,18 +61930,8 @@
     "type": "item"
   },
   {
-    "id": "thermo_generator_spirited_top",
-    "name": "Thermo Generator Spirited",
-    "type": "item"
-  },
-  {
     "id": "thermo_generator_spirited_core",
     "name": "Thermo Generator Spirited Core",
-    "type": "item"
-  },
-  {
-    "id": "thermo_generator_starter_top",
-    "name": "Thermo Generator Starter",
     "type": "item"
   },
   {
@@ -66682,11 +61942,6 @@
   {
     "id": "thermo_generator_starter_heater",
     "name": "Thermo Generator Starter Heater",
-    "type": "item"
-  },
-  {
-    "id": "thermoelectric_gen_bottom",
-    "name": "Thermoelectric Gen",
     "type": "item"
   },
   {
@@ -66732,11 +61987,6 @@
   {
     "id": "thorn_pendant",
     "name": "Thorn Pendant",
-    "type": "item"
-  },
-  {
-    "id": "threshold_switch_back",
-    "name": "Threshold Switch",
     "type": "item"
   },
   {
@@ -67220,11 +62470,6 @@
     "type": "item"
   },
   {
-    "id": "titanium_barrel_side",
-    "name": "Titanium Barrel",
-    "type": "item"
-  },
-  {
     "id": "titanium_blade",
     "name": "Titanium Blade",
     "type": "item"
@@ -67330,11 +62575,6 @@
     "type": "item"
   },
   {
-    "id": "tnt_bottom",
-    "name": "Tnt",
-    "type": "item"
-  },
-  {
     "id": "tnt_minecart",
     "name": "Tnt Minecart",
     "type": "item"
@@ -67387,11 +62627,6 @@
   {
     "id": "tomato",
     "name": "Tomato",
-    "type": "item"
-  },
-  {
-    "id": "tomato_crate_side",
-    "name": "Tomato Crate",
     "type": "item"
   },
   {
@@ -67662,126 +62897,6 @@
   {
     "id": "toolupgrade_skyhook_slope",
     "name": "Toolupgrade Skyhook Slope",
-    "type": "item"
-  },
-  {
-    "id": "top",
-    "name": "Top",
-    "type": "item"
-  },
-  {
-    "id": "top_black",
-    "name": "Top Black",
-    "type": "item"
-  },
-  {
-    "id": "top_blue",
-    "name": "Top Blue",
-    "type": "item"
-  },
-  {
-    "id": "top_brown",
-    "name": "Top Brown",
-    "type": "item"
-  },
-  {
-    "id": "top_connected",
-    "name": "Top Connected",
-    "type": "item"
-  },
-  {
-    "id": "top_cyan",
-    "name": "Top Cyan",
-    "type": "item"
-  },
-  {
-    "id": "top_gray",
-    "name": "Top Gray",
-    "type": "item"
-  },
-  {
-    "id": "top_green",
-    "name": "Top Green",
-    "type": "item"
-  },
-  {
-    "id": "top_invisible",
-    "name": "Top Invisible",
-    "type": "item"
-  },
-  {
-    "id": "top_item",
-    "name": "Top Item",
-    "type": "item"
-  },
-  {
-    "id": "top_layer",
-    "name": "Top Layer",
-    "type": "item"
-  },
-  {
-    "id": "top_left",
-    "name": "Top Left",
-    "type": "item"
-  },
-  {
-    "id": "top_light_blue",
-    "name": "Top Light Blue",
-    "type": "item"
-  },
-  {
-    "id": "top_light_gray",
-    "name": "Top Light Gray",
-    "type": "item"
-  },
-  {
-    "id": "top_lime",
-    "name": "Top Lime",
-    "type": "item"
-  },
-  {
-    "id": "top_magenta",
-    "name": "Top Magenta",
-    "type": "item"
-  },
-  {
-    "id": "top_orange",
-    "name": "Top Orange",
-    "type": "item"
-  },
-  {
-    "id": "top_outline",
-    "name": "Top Outline",
-    "type": "item"
-  },
-  {
-    "id": "top_pink",
-    "name": "Top Pink",
-    "type": "item"
-  },
-  {
-    "id": "top_purple",
-    "name": "Top Purple",
-    "type": "item"
-  },
-  {
-    "id": "top_red",
-    "name": "Top Red",
-    "type": "item"
-  },
-  {
-    "id": "top_right",
-    "name": "Top Right",
-    "type": "item"
-  },
-  {
-    "id": "top_white",
-    "name": "Top White",
-    "type": "item"
-  },
-  {
-    "id": "top_yellow",
-    "name": "Top Yellow",
     "type": "item"
   },
   {
@@ -70675,11 +65790,6 @@
     "type": "item"
   },
   {
-    "id": "trailing_bogey_outer",
-    "name": "Trailing Bogey",
-    "type": "item"
-  },
-  {
     "id": "trailing_bogey_base",
     "name": "Trailing Bogey Base",
     "type": "item"
@@ -70697,11 +65807,6 @@
   {
     "id": "train_door",
     "name": "Train Door",
-    "type": "item"
-  },
-  {
-    "id": "train_observer_top",
-    "name": "Train Observer",
     "type": "item"
   },
   {
@@ -70822,16 +65927,6 @@
   {
     "id": "treat_on_a_stick",
     "name": "Treat On A Stick",
-    "type": "item"
-  },
-  {
-    "id": "treated_door_bottom",
-    "name": "Treated Door",
-    "type": "item"
-  },
-  {
-    "id": "treated_door_framed_bottom",
-    "name": "Treated Door Framed",
     "type": "item"
   },
   {
@@ -71135,11 +66230,6 @@
     "type": "item"
   },
   {
-    "id": "tuff_cut_cap_connected",
-    "name": "Tuff Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "tuff_cut_herring",
     "name": "Tuff Cut Herring",
     "type": "item"
@@ -71155,18 +66245,8 @@
     "type": "item"
   },
   {
-    "id": "tuff_cut_layered_connected",
-    "name": "Tuff Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "tuff_cut_pillar",
     "name": "Tuff Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "tuff_cut_pillar_connected",
-    "name": "Tuff Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -72290,11 +67370,6 @@
     "type": "item"
   },
   {
-    "id": "utrem_jar_bottom",
-    "name": "Utrem Jar",
-    "type": "item"
-  },
-  {
     "id": "uu_matter_bucket",
     "name": "Uu Matter Bucket",
     "type": "item"
@@ -72317,11 +67392,6 @@
   {
     "id": "vacuum_portal",
     "name": "Vacuum Portal",
-    "type": "item"
-  },
-  {
-    "id": "vacuumator_bottom",
-    "name": "Vacuumator",
     "type": "item"
   },
   {
@@ -72445,73 +67515,8 @@
     "type": "item"
   },
   {
-    "id": "vat_back",
-    "name": "Vat",
-    "type": "item"
-  },
-  {
-    "id": "vault_bottom_large",
-    "name": "Vault Bottom Large",
-    "type": "item"
-  },
-  {
-    "id": "vault_bottom_medium",
-    "name": "Vault Bottom Medium",
-    "type": "item"
-  },
-  {
-    "id": "vault_bottom_small",
-    "name": "Vault Bottom Small",
-    "type": "item"
-  },
-  {
     "id": "vault_boy_texture",
     "name": "Vault Boy Texture",
-    "type": "item"
-  },
-  {
-    "id": "vault_front_large",
-    "name": "Vault Front Large",
-    "type": "item"
-  },
-  {
-    "id": "vault_front_medium",
-    "name": "Vault Front Medium",
-    "type": "item"
-  },
-  {
-    "id": "vault_front_small",
-    "name": "Vault Front Small",
-    "type": "item"
-  },
-  {
-    "id": "vault_side_large",
-    "name": "Vault Side Large",
-    "type": "item"
-  },
-  {
-    "id": "vault_side_medium",
-    "name": "Vault Side Medium",
-    "type": "item"
-  },
-  {
-    "id": "vault_side_small",
-    "name": "Vault Side Small",
-    "type": "item"
-  },
-  {
-    "id": "vault_top_large",
-    "name": "Vault Top Large",
-    "type": "item"
-  },
-  {
-    "id": "vault_top_medium",
-    "name": "Vault Top Medium",
-    "type": "item"
-  },
-  {
-    "id": "vault_top_small",
-    "name": "Vault Top Small",
     "type": "item"
   },
   {
@@ -72585,11 +67590,6 @@
     "type": "item"
   },
   {
-    "id": "venus_pillar_side",
-    "name": "Venus Pillar",
-    "type": "item"
-  },
-  {
     "id": "venus_pillar_end",
     "name": "Venus Pillar End",
     "type": "item"
@@ -72635,11 +67635,6 @@
     "type": "item"
   },
   {
-    "id": "verdant_froglight_side",
-    "name": "Verdant Froglight",
-    "type": "item"
-  },
-  {
     "id": "veridium_0",
     "name": "Veridium",
     "type": "item"
@@ -72670,11 +67665,6 @@
     "type": "item"
   },
   {
-    "id": "veridium_cut_cap_connected",
-    "name": "Veridium Cut Cap Connected",
-    "type": "item"
-  },
-  {
     "id": "veridium_cut_herring",
     "name": "Veridium Cut Herring",
     "type": "item"
@@ -72690,18 +67680,8 @@
     "type": "item"
   },
   {
-    "id": "veridium_cut_layered_connected",
-    "name": "Veridium Cut Layered Connected",
-    "type": "item"
-  },
-  {
     "id": "veridium_cut_pillar",
     "name": "Veridium Cut Pillar",
-    "type": "item"
-  },
-  {
-    "id": "veridium_cut_pillar_connected",
-    "name": "Veridium Cut Pillar Connected",
     "type": "item"
   },
   {
@@ -72730,11 +67710,6 @@
     "type": "item"
   },
   {
-    "id": "vertical_framed_glass_connected",
-    "name": "Vertical Framed Glass Connected",
-    "type": "item"
-  },
-  {
     "id": "very_crude_repair_kit",
     "name": "Very Crude Repair Kit",
     "type": "item"
@@ -72757,11 +67732,6 @@
   {
     "id": "vibranium_powder",
     "name": "Vibranium Powder",
-    "type": "item"
-  },
-  {
-    "id": "vibrant_side",
-    "name": "Vibrant",
     "type": "item"
   },
   {
@@ -72822,11 +67792,6 @@
   {
     "id": "vibrant_powder",
     "name": "Vibrant Powder",
-    "type": "item"
-  },
-  {
-    "id": "vibration_chamber_back",
-    "name": "Vibration Chamber",
     "type": "item"
   },
   {
@@ -73315,28 +68280,8 @@
     "type": "item"
   },
   {
-    "id": "warped_bee_nest_bottom",
-    "name": "Warped Bee Nest",
-    "type": "item"
-  },
-  {
-    "id": "warped_bee_nest_front_honey",
-    "name": "Warped Bee Nest Front Honey",
-    "type": "item"
-  },
-  {
     "id": "warped_bench",
     "name": "Warped Bench",
-    "type": "item"
-  },
-  {
-    "id": "warped_cabinet_front",
-    "name": "Warped Cabinet",
-    "type": "item"
-  },
-  {
-    "id": "warped_chair",
-    "name": "Warped Chair",
     "type": "item"
   },
   {
@@ -73347,21 +68292,6 @@
   {
     "id": "warped_corner_trim_thin",
     "name": "Warped Corner Trim Thin",
-    "type": "item"
-  },
-  {
-    "id": "warped_couch",
-    "name": "Warped Couch",
-    "type": "item"
-  },
-  {
-    "id": "warped_counter_1",
-    "name": "Warped Counter",
-    "type": "item"
-  },
-  {
-    "id": "warped_desk",
-    "name": "Warped Desk",
     "type": "item"
   },
   {
@@ -73475,11 +68405,6 @@
     "type": "item"
   },
   {
-    "id": "warped_side_table",
-    "name": "Warped Side Table",
-    "type": "item"
-  },
-  {
     "id": "warped_sign",
     "name": "Warped Sign",
     "type": "item"
@@ -73502,16 +68427,6 @@
   {
     "id": "warped_wart_block",
     "name": "Warped Wart Block",
-    "type": "item"
-  },
-  {
-    "id": "warped_window",
-    "name": "Warped Window",
-    "type": "item"
-  },
-  {
-    "id": "warped_window_connected",
-    "name": "Warped Window Connected",
     "type": "item"
   },
   {
@@ -73582,16 +68497,6 @@
   {
     "id": "water_pump",
     "name": "Water Pump",
-    "type": "item"
-  },
-  {
-    "id": "water_separator_bottom",
-    "name": "Water Separator",
-    "type": "item"
-  },
-  {
-    "id": "water_soil_side",
-    "name": "Water Soil",
     "type": "item"
   },
   {
@@ -73730,28 +68635,13 @@
     "type": "item"
   },
   {
-    "id": "weathered_copper_roof_top",
-    "name": "Weathered Copper Roof",
-    "type": "item"
-  },
-  {
     "id": "weathered_copper_shingles",
     "name": "Weathered Copper Shingles",
     "type": "item"
   },
   {
-    "id": "weathered_copper_shingles_top_connected",
-    "name": "Weathered Copper Shingles Top Connected",
-    "type": "item"
-  },
-  {
     "id": "weathered_copper_tiles",
     "name": "Weathered Copper Tiles",
-    "type": "item"
-  },
-  {
-    "id": "weathered_copper_tiles_top_connected",
-    "name": "Weathered Copper Tiles Top Connected",
     "type": "item"
   },
   {
@@ -73762,51 +68652,6 @@
   {
     "id": "weathered_iron_block",
     "name": "Weathered Iron Block",
-    "type": "item"
-  },
-  {
-    "id": "weathered_iron_window",
-    "name": "Weathered Iron Window",
-    "type": "item"
-  },
-  {
-    "id": "weathered_iron_window_1_connected",
-    "name": "Weathered Iron Window 1 Connected",
-    "type": "item"
-  },
-  {
-    "id": "weathered_iron_window_1_end",
-    "name": "Weathered Iron Window 1 End",
-    "type": "item"
-  },
-  {
-    "id": "weathered_iron_window_2_connected",
-    "name": "Weathered Iron Window 2 Connected",
-    "type": "item"
-  },
-  {
-    "id": "weathered_iron_window_2_end",
-    "name": "Weathered Iron Window 2 End",
-    "type": "item"
-  },
-  {
-    "id": "weathered_iron_window_3_connected",
-    "name": "Weathered Iron Window 3 Connected",
-    "type": "item"
-  },
-  {
-    "id": "weathered_iron_window_3_end",
-    "name": "Weathered Iron Window 3 End",
-    "type": "item"
-  },
-  {
-    "id": "weathered_iron_window_4_connected",
-    "name": "Weathered Iron Window 4 Connected",
-    "type": "item"
-  },
-  {
-    "id": "weathered_iron_window_4_end",
-    "name": "Weathered Iron Window 4 End",
     "type": "item"
   },
   {
@@ -73842,11 +68687,6 @@
   {
     "id": "weezer_blue_album",
     "name": "Weezer Blue Album",
-    "type": "item"
-  },
-  {
-    "id": "weighted_ejector_inner",
-    "name": "Weighted Ejector",
     "type": "item"
   },
   {
@@ -73972,11 +68812,6 @@
   {
     "id": "whichball_skin_doll",
     "name": "Whichball Skin Doll",
-    "type": "item"
-  },
-  {
-    "id": "whirlwind_side",
-    "name": "Whirlwind",
     "type": "item"
   },
   {
@@ -74225,21 +69060,6 @@
     "type": "item"
   },
   {
-    "id": "white_foundry_capacitor_front",
-    "name": "White Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "white_foundry_tank_front",
-    "name": "White Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "white_foundry_window_front",
-    "name": "White Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "white_fox_plushie",
     "name": "White Fox Plushie",
     "type": "item"
@@ -74415,18 +69235,8 @@
     "type": "item"
   },
   {
-    "id": "white_stained_glass_pane_top",
-    "name": "White Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "white_terracotta",
     "name": "White Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "white_top_end",
-    "name": "White Top End",
     "type": "item"
   },
   {
@@ -74582,11 +69392,6 @@
   {
     "id": "wild_potatoes",
     "name": "Wild Potatoes",
-    "type": "item"
-  },
-  {
-    "id": "wild_rice_bottom",
-    "name": "Wild Rice",
     "type": "item"
   },
   {
@@ -74805,16 +69610,6 @@
     "type": "item"
   },
   {
-    "id": "windmill_bearing_side",
-    "name": "Windmill Bearing",
-    "type": "item"
-  },
-  {
-    "id": "window_glass",
-    "name": "Window Glass",
-    "type": "item"
-  },
-  {
     "id": "windswept_hills_enderman_spawn_egg",
     "name": "Windswept Hills Enderman Spawn Egg",
     "type": "item"
@@ -74842,11 +69637,6 @@
   {
     "id": "wire",
     "name": "Wire",
-    "type": "item"
-  },
-  {
-    "id": "wire_block_top",
-    "name": "Wire Block",
     "type": "item"
   },
   {
@@ -74890,11 +69680,6 @@
     "type": "item"
   },
   {
-    "id": "wired_charger_front",
-    "name": "Wired Charger",
-    "type": "item"
-  },
-  {
     "id": "wireless_access_point",
     "name": "Wireless Access Point",
     "type": "item"
@@ -74902,11 +69687,6 @@
   {
     "id": "wireless_booster",
     "name": "Wireless Booster",
-    "type": "item"
-  },
-  {
-    "id": "wireless_charger_front",
-    "name": "Wireless Charger",
     "type": "item"
   },
   {
@@ -75137,11 +69917,6 @@
   {
     "id": "wisewood_bookshelf_01",
     "name": "Wisewood Bookshelf",
-    "type": "item"
-  },
-  {
-    "id": "wisewood_chiseled_bookshelf_side",
-    "name": "Wisewood Chiseled Bookshelf",
     "type": "item"
   },
   {
@@ -75380,11 +70155,6 @@
     "type": "item"
   },
   {
-    "id": "wooden_basket_bottom",
-    "name": "Wooden Basket",
-    "type": "item"
-  },
-  {
     "id": "wooden_basket_handle",
     "name": "Wooden Basket Handle",
     "type": "item"
@@ -75445,11 +70215,6 @@
     "type": "item"
   },
   {
-    "id": "woodworking_table_back",
-    "name": "Woodworking Table",
-    "type": "item"
-  },
-  {
     "id": "woodworking_table_side2",
     "name": "Woodworking Table Side2",
     "type": "item"
@@ -75462,11 +70227,6 @@
   {
     "id": "worm",
     "name": "Worm",
-    "type": "item"
-  },
-  {
-    "id": "worm_farm_bottom",
-    "name": "Worm Farm",
     "type": "item"
   },
   {
@@ -75510,23 +70270,8 @@
     "type": "item"
   },
   {
-    "id": "wrapped_boiler_side",
-    "name": "Wrapped Boiler",
-    "type": "item"
-  },
-  {
-    "id": "wrapped_boiler_side_connected",
-    "name": "Wrapped Boiler Side Connected",
-    "type": "item"
-  },
-  {
     "id": "wrapped_slashed",
     "name": "Wrapped Slashed",
-    "type": "item"
-  },
-  {
-    "id": "wrapped_slashed_connected",
-    "name": "Wrapped Slashed Connected",
     "type": "item"
   },
   {
@@ -75870,21 +70615,6 @@
     "type": "item"
   },
   {
-    "id": "yellow_foundry_capacitor_front",
-    "name": "Yellow Foundry Capacitor",
-    "type": "item"
-  },
-  {
-    "id": "yellow_foundry_tank_front",
-    "name": "Yellow Foundry Tank",
-    "type": "item"
-  },
-  {
-    "id": "yellow_foundry_window_front",
-    "name": "Yellow Foundry Window",
-    "type": "item"
-  },
-  {
     "id": "yellow_glazed_terracotta",
     "name": "Yellow Glazed Terracotta",
     "type": "item"
@@ -76015,18 +70745,8 @@
     "type": "item"
   },
   {
-    "id": "yellow_stained_glass_pane_top",
-    "name": "Yellow Stained Glass Pane",
-    "type": "item"
-  },
-  {
     "id": "yellow_terracotta",
     "name": "Yellow Terracotta",
-    "type": "item"
-  },
-  {
-    "id": "yellow_top_end",
-    "name": "Yellow Top End",
     "type": "item"
   },
   {
@@ -76125,31 +70845,6 @@
     "type": "item"
   },
   {
-    "id": "zinc_catwalk",
-    "name": "Zinc Catwalk",
-    "type": "item"
-  },
-  {
-    "id": "zinc_catwalk_connected",
-    "name": "Zinc Catwalk Connected",
-    "type": "item"
-  },
-  {
-    "id": "zinc_catwalk_rail",
-    "name": "Zinc Catwalk Rail",
-    "type": "item"
-  },
-  {
-    "id": "zinc_catwalk_stairs",
-    "name": "Zinc Catwalk Stairs",
-    "type": "item"
-  },
-  {
-    "id": "zinc_catwalk_template",
-    "name": "Zinc Catwalk Template",
-    "type": "item"
-  },
-  {
     "id": "zinc_chain_link",
     "name": "Zinc Chain Link",
     "type": "item"
@@ -76177,11 +70872,6 @@
   {
     "id": "zinc_grenade",
     "name": "Zinc Grenade",
-    "type": "item"
-  },
-  {
-    "id": "zinc_hull_front",
-    "name": "Zinc Hull",
     "type": "item"
   },
   {
@@ -76215,18 +70905,8 @@
     "type": "item"
   },
   {
-    "id": "zinc_pipes_connected",
-    "name": "Zinc Pipes Connected",
-    "type": "item"
-  },
-  {
     "id": "zinc_plate_metal",
     "name": "Zinc Plate Metal",
-    "type": "item"
-  },
-  {
-    "id": "zinc_plate_metal_connected",
-    "name": "Zinc Plate Metal Connected",
     "type": "item"
   },
   {
@@ -76242,11 +70922,6 @@
   {
     "id": "zinc_sheet_metal",
     "name": "Zinc Sheet Metal",
-    "type": "item"
-  },
-  {
-    "id": "zinc_sheet_metal_connected",
-    "name": "Zinc Sheet Metal Connected",
     "type": "item"
   },
   {
@@ -76267,21 +70942,6 @@
   {
     "id": "zinc_truss",
     "name": "Zinc Truss",
-    "type": "item"
-  },
-  {
-    "id": "zinc_window",
-    "name": "Zinc Window",
-    "type": "item"
-  },
-  {
-    "id": "zinc_window_connected",
-    "name": "Zinc Window Connected",
-    "type": "item"
-  },
-  {
-    "id": "zinc_window_end",
-    "name": "Zinc Window End",
     "type": "item"
   },
   {
