@@ -321,5 +321,67 @@ export const BESTIARY_DATA = [
       { name: 'Blood Staff / Arcanomancer Robes', rarity: 'legendary', desc: 'Melhores multiplicadores mágicos do mid-game.' },
       { name: 'Spellbooks Lendários', rarity: 'common' }
     ]
+  },
+
+  // ==============================
+  // MOBS COMUNS / VANILLA & OUTROS
+  // ==============================
+  {
+    id: 'enderman',
+    name: 'Enderman',
+    mod: 'common',
+    modName: 'Minecraft Vanilla / Gerais',
+    icon: Target,
+    image: null,
+    lore: 'Criaturas altas das dimensões sombrias.',
+    stats: { hp: '40 HP', type: 'Comum / Teleporte' },
+    mechanics: 'Toma dano para água. Foge de projéteis teletransportando-se.',
+    drops: [
+      { name: 'Ender Pearl', rarity: 'common', desc: 'Item fundamental para craftar o Eye of Void e itens de tecnologia.' }
+    ]
+  },
+  {
+    id: 'blaze',
+    name: 'Blaze',
+    mod: 'common',
+    modName: 'Minecraft Vanilla / Gerais',
+    icon: Flame,
+    image: null,
+    lore: 'Sentinelas de fogo das fortalezas do Nether.',
+    stats: { hp: '20 HP', type: 'Comum / Fogo Voador' },
+    mechanics: 'Atiram sequências de 3 bolas de fogo. Fracos contra dano mágico de Gelo.',
+    drops: [
+      { name: 'Blaze Rod', rarity: 'common', desc: 'Necessário para poções e craftings de pó.' }
+    ]
+  },
+  {
+    id: 'wither_skeleton',
+    name: 'Wither Skeleton',
+    mod: 'common',
+    modName: 'Minecraft Vanilla / Gerais',
+    icon: Skull,
+    image: null,
+    lore: 'Esqueletos carbonizados e letais do Nether.',
+    stats: { hp: '20 HP', type: 'Comum / Wither Melee' },
+    mechanics: 'O toque causa Wither II, que escurece a barra de vida e causa dano contínuo.',
+    drops: [
+      { name: 'Wither Skeleton Skull', rarity: 'rare', desc: 'Usado para invocar o Wither Vanilla.' },
+      { name: 'Coal', rarity: 'common' },
+      { name: 'Bone', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'creeper',
+    name: 'Creeper',
+    mod: 'common',
+    modName: 'Minecraft Vanilla / Gerais',
+    icon: Activity,
+    image: null,
+    lore: 'Ameaça furtiva silenciosa.',
+    stats: { hp: '20 HP', type: 'Comum / Explosão' },
+    mechanics: 'Se aproxima sem fazer som. Pode ser forçado a explodir com Flint and Steel.',
+    drops: [
+      { name: 'Gunpowder', rarity: 'common', desc: 'Usado em TNT e para munição de alguns mods de arma.' }
+    ]
   }
 ];
