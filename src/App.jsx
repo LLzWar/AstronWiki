@@ -17,6 +17,7 @@ import WikiDimensions from './components/WikiDimensions';
 import WikiSearch from './components/WikiSearch';
 import MarkdownViewer from './components/MarkdownViewer';
 import JEISidebar from './components/JEISidebar';
+import ItemModal from './components/ItemModal';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -24,6 +25,7 @@ export default function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('astronTheme') || 'dark');
   const [searchQuery, setSearchQuery] = useState('');
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [activeItem, setActiveItem] = useState(null);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -303,8 +305,9 @@ export default function App() {
         </div>
       </main>
 
-      <JEISidebar setSearchQuery={setSearchQuery} />
+      <JEISidebar setSearchQuery={setSearchQuery} onOpenItem={setActiveItem} />
       <CraftingModal recipeId={activeRecipe} onClose={closeRecipe} />
+      <ItemModal item={activeItem} onClose={() => setActiveItem(null)} />
     </div>
   );
 }

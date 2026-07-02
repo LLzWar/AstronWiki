@@ -30,7 +30,7 @@ const JeiItemCell = ({ item, onClick }) => {
     <div 
       className="jei-item"
       title={item.name}
-      onClick={() => onClick(item.name)}
+      onClick={() => onClick(item)}
       style={{ borderColor }}
     >
       {!imageError ? (
@@ -47,7 +47,7 @@ const JeiItemCell = ({ item, onClick }) => {
   );
 };
 
-export default function JEISidebar({ setSearchQuery }) {
+export default function JEISidebar({ setSearchQuery, onOpenItem }) {
   const [isOpen, setIsOpen] = useState(false);
   const [jeiQuery, setJeiQuery] = useState('');
   const deferredQuery = useDeferredValue(jeiQuery);
@@ -124,7 +124,9 @@ export default function JEISidebar({ setSearchQuery }) {
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const currentItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
-  const handleItemClick = (itemName) => setSearchQuery(itemName);
+  const handleItemClick = (item) => {
+    onOpenItem(item);
+  };
 
   return (
     <aside className={`jei-sidebar ${isOpen ? 'open' : ''}`}>
