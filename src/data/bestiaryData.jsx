@@ -551,6 +551,35 @@ export const BESTIARY_DATA = [
       { name: 'Ectoplasm', rarity: 'common' }
     ]
   },
+  {
+    id: 'dread_mobs',
+    name: 'Dread Legion (Undead)',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Skull,
+    image: null,
+    lore: 'Exércitos de mortos-vivos congelados (Knights, Ghouls, Beasts) comandados pelo Dread Lich em mausoléus de gelo.',
+    stats: { hp: '20 - 100 HP', type: 'Morto-Vivo / Gelo' },
+    mechanics: 'O Dread Lich invoca lacaios constantemente e lança magias congelantes. Evite combate corpo-a-corpo longo sem magias de fogo.',
+    drops: [
+      { name: 'Dread Shard', rarity: 'common' },
+      { name: 'Lich Staff', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'hippocampus',
+    name: 'Hippocampus',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Droplet,
+    image: null,
+    lore: 'Cavalos marinhos mágicos majestosos e pacíficos que habitam os grandes oceanos.',
+    stats: { hp: '40 HP', type: 'Aquático / Montaria' },
+    mechanics: 'Podem ser domados usando esponjas (Sponge) para servirem como velozes montarias subaquáticas.',
+    drops: [
+      { name: 'Hippocampus Fin', rarity: 'common' }
+    ]
+  },
 
   // ==============================
   // MOWZIE'S MOBS
@@ -749,6 +778,177 @@ export const BESTIARY_DATA = [
     mechanics: 'Curam aldeões e a si mesmos. Pacíficos, mas se você atacá-los, usarão Wisp e Smite contra você.',
     drops: [
       { name: 'Holy Spell Book', rarity: 'rare' }
+    ]
+  },
+  // ==============================
+  // MOWZIE'S MOBS (COMPLEMENTO)
+  // ==============================
+  {
+    id: 'barakoa',
+    name: 'Barakoa & Barakoana',
+    mod: 'mowzies',
+    modName: "Mowzie's Mobs",
+    icon: Sword,
+    image: null,
+    lore: 'Tribos de caçadores mascarados (Barakoa) liderados por seus campeões de elite (Barakoana) nas savanas.',
+    stats: { hp: '20 - 60 HP', type: 'Terrestre / Tribo' },
+    mechanics: 'Trabalham em equipe. Guerreiros atacam com lanças, enquanto os curandeiros bufam a tribo. Derrotar um Barakoana dropa a sua máscara.',
+    drops: [
+      { name: 'Barakoa Mask', rarity: 'rare', desc: 'Concede buffs em bando aos aliados.' }
+    ]
+  },
+  {
+    id: 'lantern',
+    name: 'Lantern',
+    mod: 'mowzies',
+    modName: "Mowzie's Mobs",
+    icon: Sparkles,
+    image: null,
+    lore: 'Águas-vivas luminosas que flutuam graciosamente sobre pântanos e selvas à noite.',
+    stats: { hp: '4 HP', type: 'Voador / Pacífico' },
+    mechanics: 'São inofensivas, mas emitem luz. Se você pisar em uma no chão, você ganha um buff de lentidão no pulo.',
+    drops: [
+      { name: 'Luminous Jelly', rarity: 'common' }
+    ]
+  },
+
+  // ==============================
+  // OCCULTISM
+  // ==============================
+  {
+    id: 'foliot',
+    name: 'Foliot',
+    mod: 'occultism',
+    modName: 'Occultism',
+    icon: Wind,
+    image: null,
+    lore: 'Pequenos demônios espirituais conjurados via rituais mágicos para atuarem como serventes e lenhadores.',
+    stats: { hp: '20 HP', type: 'Demônio / Trabalhador' },
+    mechanics: 'Podem ser vinculados a tarefas (como coletar madeira ou minérios). Livres, são fracos em combate.',
+    drops: [
+      { name: 'Demon Spirit', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'djinni',
+    name: 'Djinni',
+    mod: 'occultism',
+    modName: 'Occultism',
+    icon: Flame,
+    image: null,
+    lore: 'Demônios esguios e rápidos que conseguem operar forjas e fornos rituais complexos.',
+    stats: { hp: '40 HP', type: 'Demônio / Mineral' },
+    mechanics: 'Muito usados para rituais de trituração de minérios (Ore Crushing). São invocáveis temporariamente.',
+    drops: [
+      { name: 'Djinni Essence', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'afrit',
+    name: 'Afrit',
+    mod: 'occultism',
+    modName: 'Occultism',
+    icon: Sword,
+    image: null,
+    lore: 'Os demônios infernais puros. Conjurá-los requer sacrifícios e um círculo ritual de nível alto.',
+    stats: { hp: '100 HP', type: 'Demônio / Guerreiro' },
+    mechanics: 'Extremamente destrutivos se invocados sem vínculo (Unbound). Queimam tudo ao redor.',
+    drops: [
+      { name: 'Afrit Essence', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'marid',
+    name: 'Marid',
+    mod: 'occultism',
+    modName: 'Occultism',
+    icon: Crown,
+    image: null,
+    lore: 'Os lordes absolutos do The Other (A outra dimensão). Exigem os círculos mágicos perfeitos.',
+    stats: { hp: '250 HP', type: 'Demônio Maior / Elite' },
+    mechanics: 'Geralmente domados apenas para o trabalho supremo (Marid Crusher) que septuplica os minérios (x7).',
+    drops: [
+      { name: 'Marid Essence', rarity: 'legendary' }
+    ]
+  },
+  {
+    id: 'possessed_mobs',
+    name: 'Possessed Creatures',
+    mod: 'occultism',
+    modName: 'Occultism',
+    icon: Skull,
+    image: null,
+    lore: 'Animais comuns que foram corrompidos por rituais de sacrifício fracassados.',
+    stats: { hp: '30 - 150 HP', type: 'Morto-Vivo / Corrupção' },
+    mechanics: 'Apresentam olhos macabros e força sobre-humana. Atacam o jogador à primeira vista no círculo ritual.',
+    drops: [
+      { name: 'Tallow', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'familiar',
+    name: 'Familiars',
+    mod: 'occultism',
+    modName: 'Occultism',
+    icon: Sparkles,
+    image: null,
+    lore: 'Demônios diminutos (como o Beholder, Cthulhu e Morcego) que seguem o conjurador.',
+    stats: { hp: 'Invulnerável', type: 'Mascote / Suporte' },
+    mechanics: 'Fornecem buffs passivos (Visão Noturna, Sorte, Reparação Mágica) enquanto estiverem ativos e próximos.',
+    drops: [
+      { name: 'Nenhum', rarity: 'common' }
+    ]
+  },
+
+  // ==============================
+  // AQUACULTURE 2 & DELIGHT
+  // ==============================
+  {
+    id: 'aquaculture_fishes',
+    name: 'Fauna de Aquaculture',
+    mod: 'aquaculture',
+    modName: 'Aquaculture 2',
+    icon: Droplet,
+    image: null,
+    lore: 'Dezenas de espécies (Tambaqui, Halibut, Jellyfish, Tartarugas Box) espalhadas pelos rios e mares.',
+    stats: { hp: '2 - 10 HP', type: 'Peixe / Pesca' },
+    mechanics: 'Eles podem ser pescados usando varas de pescar e iscas específicas do mod. A captura mais perigosa é o tesouro Lockbox (Neptunium).',
+    drops: [
+      { name: 'Fillet (Raw Fish)', rarity: 'common' },
+      { name: 'Neptunium Ingot (Lockbox)', rarity: 'legendary' }
+    ]
+  },
+  {
+    id: 'farmers_delight_mobs',
+    name: 'Fauna do Ecossistema Delight',
+    mod: 'farmers_delight',
+    modName: "Farmer's Delight / Ocean's Delight",
+    icon: Activity,
+    image: null,
+    lore: 'Pequenos caranguejos de praia, crustáceos e vida selvagem culinária.',
+    stats: { hp: '10 HP', type: 'Pacífico / Comida' },
+    mechanics: 'São passivos e caçados exclusivamente para as panelas e fogões industriais (Skillets/Pots).',
+    drops: [
+      { name: 'Carne de Caranguejo', rarity: 'common' }
+    ]
+  },
+
+  // ==============================
+  // PRODUCTIVE BEES
+  // ==============================
+  {
+    id: 'productive_bees',
+    name: 'Mutated Bees (Abelhas Produtivas)',
+    mod: 'productivebees',
+    modName: 'Productive Bees',
+    icon: Target,
+    image: null,
+    lore: 'Mais de 150 espécies de abelhas transmutadas (Iron Bee, Diamond Bee, Radioactive Bee, Draconic Bee).',
+    stats: { hp: '10 - 50 HP', type: 'Inseto / Indústria' },
+    mechanics: 'Abelhas mutantes polinizam blocos específicos (ex: blocos de ferro) para gerar favos do próprio minério. As variações extremas (Radioactive/Wither) causarão efeitos de status letais se você se aproximar sem um Traje de Apicultor completo.',
+    drops: [
+      { name: 'Combs (Ferro, Ouro, Diamante, etc)', rarity: 'common', desc: 'Favos que são centrifugados para extrair o recurso.' },
+      { name: 'Bee Genes', rarity: 'rare' }
     ]
   }
 ];
