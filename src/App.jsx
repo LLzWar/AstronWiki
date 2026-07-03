@@ -1,6 +1,6 @@
 import React, { useEffect, Suspense } from 'react';
 import { useLocation, useNavigate, Routes, Route } from 'react-router-dom';
-import { BatteryCharging, Compass, Settings, Database, Sparkles, Skull, Search, Loader, Menu, Library } from 'lucide-react';
+import { BatteryCharging, Compass, Settings, Database, Sparkles, Skull, Search, Loader, Menu, Library, Download } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { AnimatePresence } from 'framer-motion';
 import useStore from './store/useStore';
@@ -72,12 +72,57 @@ export default function App() {
     return `${activeTab.charAt(0).toUpperCase() + activeTab.slice(1)} | Astron City Wiki`;
   };
 
+  const [deferredPrompt, setDeferredPrompt] = React.useState(null);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    };
+  }, []);
+
+  const handleInstallClick = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      }
+      setDeferredPrompt(null);
+    }
+  };
+
   return (
     <div data-theme={theme} className="app-container">
       <Helmet>
         <title>{getPageTitle()}</title>
         <meta name="theme-color" content={theme === 'dark' ? '#121212' : theme === 'warlord' ? '#0f0000' : '#f5f5f5'} />
       </Helmet>
+
+      {/* Floating Install App Button */}
+      {deferredPrompt && (
+        <div style={{ position: 'fixed', bottom: '2rem', right: '2rem', zIndex: 10000 }}>
+          <button 
+            onClick={handleInstallClick} 
+            className="craft-btn"
+            style={{ 
+              boxShadow: '0 10px 20px rgba(0,0,0,0.5)', 
+              padding: '1rem 2rem', 
+              fontSize: '1.2rem', 
+              borderRadius: '50px',
+              border: '2px solid rgba(255,255,255,0.2)'
+            }}
+          >
+            <Download size={20} style={{ marginRight: '8px' }} /> Baixar App da Wiki
+          </button>
+        </div>
+      )}
 
       {/* Scroll Tracker Bar */}
       <div style={{
