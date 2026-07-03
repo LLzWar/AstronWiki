@@ -18,17 +18,45 @@ export default function ItemModal({ item, onClose }) {
   };
 
   const getSlugFromInternal = (internalId) => {
-    // "minecraft:iron_ingot" -> "barra_de_ferro"
-    // Also handle tags like { "tag": "forge:ingots/iron" } by guessing or just returning null
     if (typeof internalId === 'object' && internalId.tag) {
-      // Very basic tag resolving
-      const parts = internalId.tag.split('/');
-      return parts[parts.length - 1]; // "iron" - might not work, but better than crash
+      const tag = internalId.tag;
+      const parts = tag.split('/');
+      let name = parts[parts.length - 1]; 
+      let category = parts.length > 1 ? parts[parts.length - 2].split(':').pop() : tag.split(':').pop(); 
+
+      let result = name;
+      if (name === 'redstone' && category === 'dusts') result = 'redstone';
+      else if (name === 'glowstone' && category === 'dusts') result = 'glowstone_dust';
+      else if (category === 'planks') result = 'oak_planks';
+      else if (category === 'logs') result = 'oak_log';
+      else if (category === 'wool') result = 'white_wool';
+      else if (category === 'glass_blocks') result = 'glass';
+      else if (category === 'bookshelves') result = 'bookshelf';
+      else if (name === 'ender_pearls' || category === 'ender_pearls') result = 'ender_pearl';
+      else if (name === 'strings' || category === 'strings') result = 'string';
+      else if (name === 'bones' || category === 'bones') result = 'bone';
+      else if (category === 'ingots') result = name + '_ingot';
+      else if (category === 'dusts') result = name + '_dust';
+      else if (category === 'nuggets') result = name + '_nugget';
+      else if (category === 'gems') {
+         if (name === 'amethyst') result = 'amethyst_shard';
+         else result = name;
+      }
+      else if (category === 'storage_blocks') {
+         if (['copper', 'iron', 'gold', 'diamond', 'emerald', 'redstone', 'coal'].includes(name)) result = name + '_block';
+         else result = 'block_of_' + name;
+      }
+      else if (category === 'dyes') result = name + '_dye';
+      
+      if (result.includes(':')) result = result.split(':')[1];
+      return result;
     }
     if (typeof internalId === 'object' && internalId.item) {
-      return idMap[internalId.item];
+      const itm = idMap[internalId.item] || internalId.item;
+      return itm.includes(':') ? itm.split(':')[1] : itm;
     }
-    return idMap[internalId];
+    const mapped = idMap[internalId] || internalId;
+    return mapped.includes(':') ? mapped.split(':')[1] : mapped;
   };
 
   const internalId = getInternalId(item.id);
