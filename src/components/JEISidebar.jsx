@@ -146,30 +146,30 @@ export default function JEISidebar({ setSearchQuery, onOpenItem }) {
             <JeiItemCell key={`${item.name}-${idx}`} item={item} onClick={handleItemClick} />
           ))}
         </div>
-
-        {/* Pagination Controls (Bottom of Grid) */}
-        {totalPages > 1 && (
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', marginTop: '1rem', padding: '0.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-            <button 
-              onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-              disabled={currentPage === 1}
-              style={{ background: 'transparent', border: 'none', color: currentPage === 1 ? '#555' : '#fff', cursor: currentPage === 1 ? 'default' : 'pointer' }}
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <span style={{ color: 'var(--text-primary)', fontFamily: 'monospace', fontSize: '0.9rem' }}>
-              {currentPage} / {totalPages}
-            </span>
-            <button 
-              onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-              disabled={currentPage === totalPages}
-              style={{ background: 'transparent', border: 'none', color: currentPage === totalPages ? '#555' : '#fff', cursor: currentPage === totalPages ? 'default' : 'pointer' }}
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
-        )}
       </div>
+
+      {/* Pagination Controls (Bottom of Grid, Always Visible) */}
+      {totalPages > 1 && (
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', padding: '0.5rem', borderTop: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(13, 17, 23, 0.95)' }}>
+          <button 
+            onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+            disabled={currentPage === 1}
+            style={{ background: 'transparent', border: 'none', color: currentPage === 1 ? '#555' : '#fff', cursor: currentPage === 1 ? 'default' : 'pointer' }}
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <span style={{ color: 'var(--text-primary)', fontFamily: 'monospace', fontSize: '0.9rem' }}>
+            {currentPage} / {totalPages}
+          </span>
+          <button 
+            onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+            disabled={currentPage === totalPages}
+            style={{ background: 'transparent', border: 'none', color: currentPage === totalPages ? '#555' : '#fff', cursor: currentPage === totalPages ? 'default' : 'pointer' }}
+          >
+            <ChevronRight size={20} />
+          </button>
+        </div>
+      )}
 
       {/* Search Input */}
       <div className="jei-search-wrapper">
