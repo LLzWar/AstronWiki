@@ -27,6 +27,7 @@ export default function ItemModal({ item, onClose, onNavigate, onOpenWebJEI }) {
       const tag = internalId.tag;
       const parts = tag.split('/');
       let name = parts[parts.length - 1]; 
+      if (name.includes(':')) name = name.split(':')[1];
       let category = parts.length > 1 ? parts[parts.length - 2].split(':').pop() : tag.split(':').pop(); 
 
       let result = name;
