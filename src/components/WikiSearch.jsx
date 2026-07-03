@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { Search, Box, BookOpen, Skull, ChevronRight } from 'lucide-react';
+import Fuse from 'fuse.js';
 import { modsList } from '../data/modsList';
 import { recipes } from '../data/recipes';
 import { BESTIARY_DATA } from '../data/bestiaryData';
@@ -8,30 +9,30 @@ import { MOBS_DATA } from '../data/mobsData';
 export default function WikiSearch({ query, onOpenRecipe, setActiveTab }) {
   const results = useMemo(() => {
     if (!query) return { mods: [], recipes: [], loot: [] };
-    const lowerQuery = query.toLowerCase();
 
-    // 1. Search in Mods List
-    const matchedMods = modsList.filter(mod => mod.toLowerCase().includes(lowerQuery));
+    // 1. Search in Mods List (Fuzzy)
+    const modsFuse = new Fuse(modsList, { threshold: 0.4 });
+    const matchedMods = modsFuse.search(query).map(res => res.item);
 
-    // 2. Search in Recipes Database
-    const matchedRecipes = [];
-    for (const key in recipes) {
-      const rec = recipes[key];
-      if (
-        (rec.title && rec.title.toLowerCase().includes(lowerQuery)) || 
-        (rec.description && rec.description.toLowerCase().includes(lowerQuery)) ||
-        (rec.machine && rec.machine.toLowerCase().includes(lowerQuery))
-      ) {
-        matchedRecipes.push({ id: key, ...rec });
-      }
-    }
+    // 2. Search in Recipes Database (Fuzzy)
+    const recipesArray = Object.keys(recipes).map(key => ({ id: key, ...recipes[key] }));
+    const recipesFuse = new Fuse(recipesArray, { 
+      keys: ['title', 'description', 'machine'], 
+      threshold: 0.4 
+    });
+    const matchedRecipes = recipesFuse.search(query).map(res => res.item);
 
-    // 3. Search in Bestiary (Loot & Mobs)
+    // 3. Search in Bestiary (Loot & Mobs) (Fuzzy)
     const matchedLoot = [];
     
     const checkMob = (mob, sourceTab) => {
-      const matchedDrops = mob.drops.filter(drop => drop.name.toLowerCase().includes(lowerQuery));
-      if (mob.name.toLowerCase().includes(lowerQuery) || matchedDrops.length > 0) {
+      const dropsFuse = new Fuse(mob.drops, { keys: ['name'], threshold: 0.4 });
+      const matchedDrops = dropsFuse.search(query).map(res => res.item);
+      
+      const mobFuse = new Fuse([mob.name], { threshold: 0.4 });
+      const isMobMatch = mobFuse.search(query).length > 0;
+      
+      if (isMobMatch || matchedDrops.length > 0) {
         matchedLoot.push({
           mobName: mob.name,
           modName: mob.modName,

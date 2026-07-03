@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Home, Backpack, Factory, Sparkles, Crown, Library, ChevronDown, ChevronRight, Folder, Search, Moon, Sun, Skull, Target } from 'lucide-react';
+import { Home, Backpack, Factory, Sparkles, Crown, Library, ChevronDown, ChevronRight, Folder, Search, Moon, Sun, Skull, Target, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const wikiTabs = [
   { id: 'home', icon: Home, label: 'Página Inicial' },
@@ -31,15 +32,21 @@ const warlordTabs = [
   { id: 'late', icon: Crown, label: 'Fase 4: Imortalidade' }
 ];
 
-export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery }) {
+export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery, toggleTheme }) {
   const [modsOpen, setModsOpen] = useState(true);
   const [warlordOpen, setWarlordOpen] = useState(true);
   const [tocData, setTocData] = useState({});
   const [collapsedTocs, setCollapsedTocs] = useState({});
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language.startsWith('en') ? 'pt' : 'en');
+  };
 
   useEffect(() => {
     const fetchTocs = async () => {
       const mdGuides = modGuides.filter(g => g.type === 'md');
+      const newToc = {};
       
       const fetchPromises = mdGuides.map(async (guide) => {
         try {
@@ -51,10 +58,8 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
           let match;
           while ((match = regex.exec(text)) !== null) {
             const title = match[1].trim();
-            // Ignora o bloco escrito "Sumário" que o autor possa ter deixado
             if (title.toLowerCase() === 'sumario' || title.toLowerCase() === 'sumário') continue;
             
-            // Simula o comportamento exato do rehype-slug (github-slugger)
             const slug = title.toLowerCase().replace(/[^\w\s\-áàãâéèêíïóôõöúçñ]/g, '').trim().replace(/\s+/g, '-');
             headings.push({ title, id: `#${slug}` });
           }
@@ -64,16 +69,10 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
           }
         } catch (e) {
           console.error('Failed to fetch TOC for', guide.id, e);
-          return null;
         }
       });
       
-      const results = await Promise.all(fetchPromises);
-      const newToc = {};
-      results.forEach(res => {
-        if (res) newToc[res.id] = res.headings;
-      });
-      
+      await Promise.all(fetchPromises);
       setTocData(newToc);
     };
     fetchTocs();
@@ -85,14 +84,13 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
     themeTimerRef.current = setTimeout(() => {
       setTheme('warlord');
       themeTimerRef.current = null;
-    }, 3000); // 3 seconds to unlock
+    }, 3000);
   };
 
   const handleThemeRelease = () => {
     if (themeTimerRef.current) {
       clearTimeout(themeTimerRef.current);
       themeTimerRef.current = null;
-      // Short click: toggle between dark and light
       setTheme(theme === 'dark' ? 'light' : 'dark');
     }
   };
@@ -118,7 +116,6 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
         </button>
       </div>
       
-      {/* SEARCH BAR */}
       <div style={{ position: 'relative', marginBottom: '1.5rem' }}>
         <Search size={16} style={{ position: 'absolute', left: '0.75rem', top: '0.85rem', color: 'var(--text-secondary)' }} />
         <input 
@@ -131,7 +128,6 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
         />
       </div>
       
-      {/* GERAL */}
       <div className="sidebar-group">
         <h2 className="sidebar-subtitle">Wiki Geral</h2>
         <nav className="nav-links">
@@ -151,7 +147,6 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
         </nav>
       </div>
 
-      {/* MODS (COLLAPSIBLE) */}
       <div className="sidebar-group" style={{marginTop: '1.5rem'}}>
         <button 
           className="nav-btn" 
@@ -300,6 +295,16 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
         )}
       </div>
       )}
+      <div className="sidebar-footer" style={{ borderTop: '1px solid var(--border-color)', padding: '1rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: 'auto' }}>
+        <button className="theme-toggle" onClick={toggleTheme} style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '0.5rem' }}>
+          {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          <span>{theme === 'dark' ? 'Modo Claro' : 'Modo Escuro'}</span>
+        </button>
+        <button className="theme-toggle" onClick={toggleLanguage} style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '0.5rem' }}>
+          <Globe size={20} />
+          <span>{t('btn_language')}</span>
+        </button>
+      </div>
     </aside>
   );
 }
