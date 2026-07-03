@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Suspense } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Sword, BatteryCharging, BookOpen, ShieldAlert, Compass, Settings, Database, Sparkles, Book, Crown, Library, Skull, Search, Loader, Menu } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import WikiCard from './components/WikiCard';
@@ -21,7 +22,15 @@ const WikiSearch = React.lazy(() => import('./components/WikiSearch'));
 const MarkdownViewer = React.lazy(() => import('./components/MarkdownViewer'));
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('home');
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  const rawPath = location.pathname.substring(1);
+  const activeTab = rawPath || 'home';
+  
+  const setActiveTab = (tab) => {
+    navigate(`/${tab === 'home' ? '' : tab}`);
+  };
   const [activeRecipe, setActiveRecipe] = useState(null);
   const [theme, setTheme] = useState(() => localStorage.getItem('astronTheme') || 'dark');
   const [searchQuery, setSearchQuery] = useState('');
