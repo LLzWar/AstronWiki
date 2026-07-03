@@ -97,7 +97,7 @@ export default function App() {
       </div>
       
       <main className="main-content" onScroll={handleScroll}>
-        <div className="mobile-header" style={{ display: 'none' }}>
+        <div className="mobile-header">
           <h2 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '1.2rem' }}>Astron Wiki</h2>
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} style={{ background: 'transparent', border: 'none', color: 'var(--text-primary)' }}>
             <Menu size={24} />
