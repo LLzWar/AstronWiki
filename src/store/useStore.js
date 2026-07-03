@@ -8,7 +8,7 @@ const useStore = create(
       theme: 'dark',
       setTheme: (theme) => set({ theme }),
       toggleTheme: () => set((state) => {
-        const nextTheme = state.theme === 'dark' ? 'warlord' : state.theme === 'warlord' ? 'light' : 'dark';
+        const nextTheme = state.theme === 'light' ? 'dark' : 'light';
         return { theme: nextTheme };
       }),
 
