@@ -727,6 +727,14 @@ body {
   .mobile-only-flex {
     display: flex !important;
   }
+  .mobile-col {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .mobile-col > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
   .jei-sidebar.open .jei-toggle-btn {
     display: none;
   }

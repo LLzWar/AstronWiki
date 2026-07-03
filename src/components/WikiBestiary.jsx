@@ -72,7 +72,7 @@ export default function WikiBestiary({ onOpenRecipe }) {
           const IconComponent = mob.icon || Skull; // Fallback icon
           
           return (
-            <section key={mob.id} className="doc-section" style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', margin: 0 }}>
+            <section key={mob.id} className="doc-section mobile-col" style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', margin: 0 }}>
               <div style={{ flex: 1 }}>
                 <h3 className="doc-section-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <IconComponent size={24} />
