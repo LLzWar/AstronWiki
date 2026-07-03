@@ -55,10 +55,10 @@ export default function ItemModal({ item, onClose, onNavigate }) {
       else if (category === 'tanks' || category === 'fluid_tanks') {
          result = name.endsWith('s') ? name.slice(0, -1) : name;
       }
-      else if (['honeycombs', 'hives', 'campfires', 'chests', 'beds', 'fences', 'fence_gates', 'saplings', 'leaves', 'shears'].includes(name)) {
-         if (name === 'hives') result = 'beehive';
+      else if (['honeycombs', 'hives', 'campfires', 'chests', 'beds', 'fences', 'fence_gates', 'saplings', 'leaves', 'shears', 'shear'].includes(name)) {
+         if (name === 'hives') result = 'advanced_oak_beehive';
          else if (name === 'leaves') result = 'oak_leaves';
-         else if (name === 'shears') result = 'shears';
+         else if (name === 'shears' || name === 'shear') result = 'shears';
          else result = name.endsWith('s') ? name.slice(0, -1) : name;
       }
       
