@@ -207,7 +207,7 @@ export default function App() {
 
       <JEISidebar setSearchQuery={setSearchQuery} onOpenItem={setActiveItem} />
       <CraftingModal recipeId={activeRecipe} onClose={closeRecipe} />
-      {activeItem && <ItemModal item={activeItem} onClose={() => setActiveItem(null)} onNavigate={setActiveTab} />}
+      {activeItem && <ItemModal item={activeItem} onClose={() => setActiveItem(null)} onNavigate={setActiveTab} onOpenWebJEI={setActiveItem} />}
     </div>
   );
 }

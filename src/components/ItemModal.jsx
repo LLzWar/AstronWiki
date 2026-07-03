@@ -4,7 +4,7 @@ import { useRecipes } from '../hooks/useRecipes';
 import { BESTIARY_DATA } from '../data/bestiaryData';
 import { MOBS_DATA } from '../data/mobsData';
 
-export default function ItemModal({ item, onClose, onNavigate }) {
+export default function ItemModal({ item, onClose, onNavigate, onOpenWebJEI }) {
   const { recipesByResult, recipesByUsage, idMap, reverseMap, loading } = useRecipes();
 
   // Combine both bestiary and mob data
@@ -91,15 +91,44 @@ export default function ItemModal({ item, onClose, onNavigate }) {
     if (Array.isArray(ing)) ing = ing[0];
     const slug = getSlugFromInternal(ing);
     if (!slug) return <div className="unknown-item">?</div>;
+
+    // Resolve o nome para o onClick (navegação infinita)
+    let displayName = slug;
+    let originalId = slug;
+    if (typeof ing === 'object' && ing.item) {
+        originalId = ing.item;
+        const itm = idMap[ing.item];
+        if (itm) displayName = itm.name || slug;
+    } else if (typeof ing === 'string') {
+        originalId = ing;
+        const mapped = idMap[ing];
+        if (mapped) displayName = mapped.name || slug;
+    }
+
     return (
-      <div style={{ position: 'relative', width: '100%', height: '100%' }} title={slug}>
+      <div 
+        style={{ position: 'relative', width: '100%', height: '100%', cursor: onOpenWebJEI ? 'pointer' : 'default' }} 
+        title={displayName}
+        onClick={() => {
+            if (onOpenWebJEI) onOpenWebJEI({ id: originalId, name: displayName });
+        }}
+      >
         <img 
           src={getItemImage(slug)} 
           alt={slug} 
           style={{ width: '100%', height: '100%', objectFit: 'contain', imageRendering: 'pixelated' }} 
           onError={(e) => {
-            e.target.style.display = 'none';
-            if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex';
+            // Sistema robusto de fallback para itens Vanilla ausentes usando o CDN oficial do Minecraft Assets
+            if (!e.target.dataset.fallbackTried) {
+               e.target.dataset.fallbackTried = "true";
+               e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/item/${slug}.png`;
+            } else if (e.target.dataset.fallbackTried === "true") {
+               e.target.dataset.fallbackTried = "block";
+               e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/block/${slug}.png`;
+            } else {
+               e.target.style.display = 'none';
+               if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex';
+            }
           }}
         />
         <div style={{ display: 'none', position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(255,255,255,0.05)', alignItems: 'center', justifyContent: 'center', borderRadius: '4px', overflow: 'hidden' }}>
