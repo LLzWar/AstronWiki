@@ -3,9 +3,12 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Sword, BatteryCharging, BookOpen, ShieldAlert, Compass, Settings, Database, Sparkles, Book, Crown, Library, Skull, Search, Loader, Menu } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import WikiCard from './components/WikiCard';
-import CraftingModal from './components/CraftingModal';
-import JEISidebar from './components/JEISidebar';
-import ItemModal from './components/ItemModal';
+const CraftingModal = React.lazy(() => import('./components/CraftingModal'));
+const JEISidebar = React.lazy(() => import('./components/JEISidebar'));
+const ItemModal = React.lazy(() => import('./components/ItemModal'));
+import ErrorBoundaryFallback from './components/ErrorBoundary';
+import NotFound from './components/NotFound';
+import { Helmet } from 'react-helmet-async';
 
 const WikiModIndex = React.lazy(() => import('./components/WikiModIndex'));
 const WikiCreate = React.lazy(() => import('./components/WikiCreate'));
@@ -27,6 +30,9 @@ export default function App() {
   
   const rawPath = location.pathname.substring(1);
   const activeTab = rawPath || 'home';
+  
+  const validTabs = ['home', 'modindex', 'bestiary', 'mobs', 'dimensions', 'create', 'apotheosis', 'irons_spells', 'powah', 'silentgear', 'backpacks', 'early', 'tech', 'magic', 'late', 'tips', 'ae2', 'cataclysm', 'ice_and_fire', 'gear', 'mi', 'oritech'];
+  const isNotFound = rawPath && !validTabs.includes(activeTab);
   
   const setActiveTab = (tab) => {
     navigate(`/${tab === 'home' ? '' : tab}`);
@@ -70,6 +76,14 @@ export default function App() {
 
   return (
     <div data-theme={theme} className="app-container">
+      <Helmet>
+        <title>
+          {isNotFound ? 'Página não encontrada | Astron Wiki' : 
+            activeTab === 'home' ? 'Astron City Wiki - Enciclopédia Oficial' : 
+            `${activeTab.charAt(0).toUpperCase() + activeTab.slice(1)} | Astron City Wiki`}
+        </title>
+        <meta name="theme-color" content={theme === 'dark' ? '#121212' : theme === 'warlord' ? '#0f0000' : '#f5f5f5'} />
+      </Helmet>
       {/* Scroll Tracker Bar */}
       <div style={{
         position: 'fixed', top: 0, left: 0, height: '3px', width: `${scrollProgress}%`,
@@ -97,6 +111,7 @@ export default function App() {
       </div>
       
       <main className="main-content" onScroll={handleScroll}>
+        <ErrorBoundaryFallback>
         <div className="mobile-header">
           <h2 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '1.2rem' }}>Astron Wiki</h2>
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} style={{ background: 'transparent', border: 'none', color: 'var(--text-primary)' }}>
