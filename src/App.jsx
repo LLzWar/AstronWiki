@@ -165,21 +165,21 @@ export default function App() {
                     } />
                     
                     <Route path="/modindex" element={<PageWrapper><WikiModIndex /></PageWrapper>} />
-                    <Route path="/bestiary" element={<PageWrapper><WikiBestiary onOpenRecipe={openRecipe} /></PageWrapper>} />
+                    <Route path="/bestiary" element={<PageWrapper><WikiBestiary onOpenRecipe={openRecipe} onOpenWebJEI={setActiveItem} /></PageWrapper>} />
                     <Route path="/mobs" element={<PageWrapper><WikiMobs /></PageWrapper>} />
                     <Route path="/dimensions" element={<PageWrapper><WikiDimensions onOpenRecipe={openRecipe} /></PageWrapper>} />
-                    <Route path="/create" element={<PageWrapper><MarkdownViewer fileUrl="/docs/create.md" /></PageWrapper>} />
+                    <Route path="/create" element={<PageWrapper><MarkdownViewer fileUrl="/docs/create.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
                     <Route path="/apotheosis" element={<PageWrapper><WikiApotheosis onOpenRecipe={openRecipe} /></PageWrapper>} />
-                    <Route path="/irons_spells" element={<PageWrapper><MarkdownViewer fileUrl="/docs/irons_spells.md" /></PageWrapper>} />
+                    <Route path="/irons_spells" element={<PageWrapper><MarkdownViewer fileUrl="/docs/irons_spells.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
                     <Route path="/powah" element={<PageWrapper><WikiPowah onOpenRecipe={openRecipe} /></PageWrapper>} />
                     <Route path="/silentgear" element={<PageWrapper><WikiSilentGear onOpenRecipe={openRecipe} /></PageWrapper>} />
                     <Route path="/backpacks" element={<PageWrapper><WikiBackpacks onOpenRecipe={openRecipe} /></PageWrapper>} />
-                    <Route path="/ae2" element={<PageWrapper><MarkdownViewer fileUrl="/docs/ae2.md" /></PageWrapper>} />
-                    <Route path="/cataclysm" element={<PageWrapper><MarkdownViewer fileUrl="/docs/cataclysm.md" /></PageWrapper>} />
-                    <Route path="/mi" element={<PageWrapper><MarkdownViewer fileUrl="/docs/mi.md" /></PageWrapper>} />
-                    <Route path="/oritech" element={<PageWrapper><MarkdownViewer fileUrl="/docs/oritech.md" /></PageWrapper>} />
-                    <Route path="/gear" element={<PageWrapper><MarkdownViewer fileUrl="/docs/gear.md" pdfUrl="/docs/gear.pdf" /></PageWrapper>} />
-                    <Route path="/ice_and_fire" element={<PageWrapper><MarkdownViewer fileUrl="/docs/ice_and_fire.md" /></PageWrapper>} />
+                    <Route path="/ae2" element={<PageWrapper><MarkdownViewer fileUrl="/docs/ae2.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
+                    <Route path="/cataclysm" element={<PageWrapper><MarkdownViewer fileUrl="/docs/cataclysm.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
+                    <Route path="/mi" element={<PageWrapper><MarkdownViewer fileUrl="/docs/mi.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
+                    <Route path="/oritech" element={<PageWrapper><MarkdownViewer fileUrl="/docs/oritech.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
+                    <Route path="/gear" element={<PageWrapper><MarkdownViewer fileUrl="/docs/gear.md" pdfUrl="/docs/gear.pdf" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
+                    <Route path="/ice_and_fire" element={<PageWrapper><MarkdownViewer fileUrl="/docs/ice_and_fire.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
                     
                     <Route path="/tips" element={
                       <PageWrapper>
@@ -207,7 +207,7 @@ export default function App() {
 
       <JEISidebar setSearchQuery={setSearchQuery} onOpenItem={setActiveItem} />
       <CraftingModal recipeId={activeRecipe} onClose={closeRecipe} />
-      {activeItem && <ItemModal item={activeItem} onClose={() => setActiveItem(null)} />}
+      {activeItem && <ItemModal item={activeItem} onClose={() => setActiveItem(null)} onNavigate={setActiveTab} />}
     </div>
   );
 }

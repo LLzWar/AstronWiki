@@ -72,7 +72,7 @@ export default function WikiBestiary({ onOpenRecipe }) {
           const IconComponent = mob.icon || Skull; // Fallback icon
           
           return (
-            <section key={mob.id} className="doc-section mobile-col" style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', margin: 0 }}>
+            <section id={mob.id} key={mob.id} className="doc-section mobile-col" style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', margin: 0 }}>
               <div style={{ flex: 1 }}>
                 <h3 className="doc-section-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <IconComponent size={24} />
@@ -100,14 +100,22 @@ export default function WikiBestiary({ onOpenRecipe }) {
                   <li><strong>Mecânicas Letais:</strong> {mob.mechanics}</li>
                 </ul>
 
-                <div style={{ marginTop: '1.5rem', backgroundColor: 'var(--bg-primary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                  <div style={{ marginTop: '1.5rem', backgroundColor: 'var(--bg-primary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                   <h4 style={{ marginBottom: '1rem', color: 'var(--text-primary)' }}>Tabela de Drops</h4>
                   <ul style={{ listStyleType: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                     {mob.drops.map((drop, idx) => (
-                      <li key={idx} style={{ paddingBottom: '0.5rem', borderBottom: '1px dashed var(--border-color)' }}>
-                        <span style={{ color: 'var(--accent-blue)', fontWeight: 'bold' }}>{drop.name}</span>
-                        <span className={`drop-tag ${getRarityClass(drop.rarity)}`}>{getRarityLabel(drop.rarity)}</span>
-                        {drop.desc && <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>{drop.desc}</p>}
+                      <li key={idx} style={{ paddingBottom: '0.5rem', borderBottom: '1px dashed var(--border-color)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', width: '100%' }}>
+                          <button 
+                            className="craft-btn" 
+                            style={{ padding: '2px 8px', fontSize: '0.9rem', backgroundColor: 'rgba(88, 166, 255, 0.1)', border: '1px solid rgba(88, 166, 255, 0.3)', color: 'var(--accent-blue)', textAlign: 'left' }}
+                            onClick={() => onOpenWebJEI({ id: drop.id || drop.name.toLowerCase().replace(/ /g, '_'), name: drop.name })}
+                          >
+                            {drop.name}
+                          </button>
+                          <span className={`drop-tag ${getRarityClass(drop.rarity)}`} style={{ marginLeft: 'auto' }}>{getRarityLabel(drop.rarity)}</span>
+                        </div>
+                        {drop.desc && <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.5rem' }}>{drop.desc}</p>}
                       </li>
                     ))}
                   </ul>

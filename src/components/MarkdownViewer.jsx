@@ -57,7 +57,7 @@ const bannerConfigs = {
   }
 };
 
-const MarkdownViewer = ({ fileUrl, pdfUrl }) => {
+const MarkdownViewer = ({ fileUrl, pdfUrl, onOpenWebJEI }) => {
   const modId = fileUrl ? fileUrl.split('/').pop().replace('.md', '') : null;
   const bannerConfig = bannerConfigs[modId];
 
@@ -75,8 +75,9 @@ const MarkdownViewer = ({ fileUrl, pdfUrl }) => {
         return response.text();
       })
       .then(text => {
-        // Remove blocos de metadados YAML (frontmatter) que o react-markdown não suporta nativamente
-        const cleanText = text.replace(/^\s*---[\s\S]*?---\s*/, '');
+        let cleanText = text.replace(/^\s*---[\s\S]*?---\s*/, '');
+        // Inject WebJEI custom tags [item:Item Name]
+        cleanText = cleanText.replace(/\[item:(.*?)\]/g, '<button class="webjei-link" data-item="$1">✨ $1</button>');
         setContent(cleanText);
         setLoading(false);
       })
@@ -108,6 +109,14 @@ const MarkdownViewer = ({ fileUrl, pdfUrl }) => {
   // Intercepta cliques em âncoras internas e substitui textos de craft por imagens
   useEffect(() => {
     const handleAnchorClick = (e) => {
+      const webJeiBtn = e.target.closest('.webjei-link');
+      if (webJeiBtn && onOpenWebJEI) {
+        e.preventDefault();
+        const itemName = webJeiBtn.getAttribute('data-item');
+        onOpenWebJEI({ id: itemName.toLowerCase().replace(/ /g, '_'), name: itemName });
+        return;
+      }
+
       const target = e.target.closest('a');
       if (target && target.getAttribute('href') && target.getAttribute('href').startsWith('#')) {
         e.preventDefault();

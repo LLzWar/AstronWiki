@@ -4,7 +4,7 @@ import { useRecipes } from '../hooks/useRecipes';
 import { BESTIARY_DATA } from '../data/bestiaryData';
 import { MOBS_DATA } from '../data/mobsData';
 
-export default function ItemModal({ item, onClose }) {
+export default function ItemModal({ item, onClose, onNavigate }) {
   const { recipesByResult, recipesByUsage, idMap, reverseMap, loading } = useRecipes();
 
   // Combine both bestiary and mob data
@@ -294,7 +294,19 @@ export default function ItemModal({ item, onClose }) {
                     {mobDroppers.map((mob, idx) => {
                       const IconComponent = mob.icon || ShieldAlert;
                       return (
-                        <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '12px', transition: 'background 0.2s' }} className="hover-highlight">
+                        <div key={idx} 
+                          onClick={() => {
+                            if (onNavigate) {
+                              onClose();
+                              onNavigate('bestiary');
+                              setTimeout(() => {
+                                window.location.hash = '#' + mob.id;
+                                const el = document.getElementById(mob.id);
+                                if (el) el.scrollIntoView({ behavior: 'smooth' });
+                              }, 150);
+                            }
+                          }}
+                          style={{ cursor: onNavigate ? 'pointer' : 'default', display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '12px', transition: 'background 0.2s' }} className="hover-highlight">
                           <div style={{ width: '56px', height: '56px', flexShrink: 0, background: 'rgba(0,0,0,0.5)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,255,255,0.1)' }}>
                             {mob.image ? (
                                <img src={mob.image} alt={mob.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
