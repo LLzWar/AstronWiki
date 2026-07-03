@@ -119,45 +119,48 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
 
   return (
     <aside className={`sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-        <div 
-          style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }}
-          onClick={() => { setActiveTab('home'); setSearchQuery(''); }}
-        >
-          <img src="/assets/logo.png" alt="Astron City Logo" style={{ width: '32px', height: '32px', borderRadius: '8px' }} />
-          <h1 style={{ paddingBottom: 0, borderBottom: 'none' }}>Astron City</h1>
+      <div className="sidebar-header">
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+          <div 
+            style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }}
+            onClick={() => { setActiveTab('home'); setSearchQuery(''); }}
+          >
+            <img src="/assets/logo.png" alt="Astron City Logo" style={{ width: '32px', height: '32px', borderRadius: '8px' }} />
+            <h1 style={{ paddingBottom: 0, borderBottom: 'none' }}>Astron City</h1>
+          </div>
+          <div style={{ display: 'flex', gap: '0.25rem' }}>
+            <button 
+              className="nav-btn" 
+              onClick={toggleLanguage}
+              style={{ padding: '0.5rem', transition: 'all 0.3s' }} 
+              title={t('btn_language')}
+            >
+              <Globe size={20} />
+            </button>
+            <button 
+              onMouseDown={handleThemePress} onMouseUp={handleThemeRelease} onMouseLeave={handleThemeRelease} onTouchStart={handleThemePress} onTouchEnd={handleThemeRelease}
+              className="nav-btn" 
+              style={{ padding: '0.5rem', transition: 'all 0.3s' }} 
+              title="Alternar Tema"
+            >
+              {theme === 'light' ? <Sun size={20} /> : theme === 'dark' ? <Moon size={20} /> : <Crown size={20} color="var(--accent-primary)" />}
+            </button>
+          </div>
         </div>
-        <div style={{ display: 'flex', gap: '0.25rem' }}>
-          <button 
-            className="nav-btn" 
-            onClick={toggleLanguage}
-            style={{ padding: '0.5rem', transition: 'all 0.3s' }} 
-            title={t('btn_language')}
-          >
-            <Globe size={20} />
-          </button>
-          <button 
-            onMouseDown={handleThemePress} onMouseUp={handleThemeRelease} onMouseLeave={handleThemeRelease} onTouchStart={handleThemePress} onTouchEnd={handleThemeRelease}
-            className="nav-btn" 
-            style={{ padding: '0.5rem', transition: 'all 0.3s' }} 
-            title="Alternar Tema"
-          >
-            {theme === 'light' ? <Sun size={20} /> : theme === 'dark' ? <Moon size={20} /> : <Crown size={20} color="var(--accent-primary)" />}
-          </button>
+        
+        <div style={{ position: 'relative' }}>
+          <Search size={16} style={{ position: 'absolute', left: '0.75rem', top: '0.85rem', color: 'var(--text-secondary)' }} />
+          <input 
+            type="text" placeholder="Buscar mods ou itens..." 
+            className="search-input" value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            style={{ paddingLeft: '2.5rem' }}
+          />
         </div>
       </div>
       
-      <div style={{ position: 'relative', marginBottom: '1.5rem' }}>
-        <Search size={16} style={{ position: 'absolute', left: '0.75rem', top: '0.85rem', color: 'var(--text-secondary)' }} />
-        <input 
-          type="text" placeholder="Buscar mods ou itens..." 
-          className="search-input" value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          style={{ paddingLeft: '2.5rem' }}
-        />
-      </div>
-      
-      <div className="sidebar-group">
+      <div className="sidebar-content">
+        <div className="sidebar-group">
         <h2 className="sidebar-subtitle">Wiki Geral</h2>
         <nav className="nav-links">
           {wikiTabs.map(tab => {
@@ -330,6 +333,7 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
           </AnimatePresence>
         </div>
       )}
+      </div>
     </aside>
   );
 }
