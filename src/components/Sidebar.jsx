@@ -1,5 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { Home, Lightbulb, Backpack, Factory, Sparkles, Crown, Library, BookOpen, Book, ChevronDown, ChevronRight, Folder, Search, Moon, Sun, Skull, List, Target } from 'lucide-react';
+import { Home, Backpack, Factory, Sparkles, Crown, Library, ChevronDown, ChevronRight, Folder, Search, Moon, Sun, Skull, Target } from 'lucide-react';
+
+const wikiTabs = [
+  { id: 'home', icon: Home, label: 'Página Inicial' },
+  { id: 'modindex', icon: Library, label: 'Mod Index' },
+  { id: 'bestiary', icon: Skull, label: 'Bestiário (Bosses)' },
+  { id: 'mobs', icon: Target, label: 'Bestiário (Mobs)' },
+  { id: 'dimensions', icon: Sparkles, label: 'Guia de Dimensões' }
+];
+
+const modGuides = [
+  { id: 'ae2', logoUrl: '/assets/logos/ae2.png', label: 'AE2 Completo', type: 'md' },
+  { id: 'cataclysm', logoUrl: '/assets/logos/cataclysm.png', label: 'Cataclysm Completo', type: 'md' },
+  { id: 'ice_and_fire', logoUrl: '/assets/logos/ice-and-fire.png', label: 'Ice and Fire: Dragons', type: 'md' },
+  { id: 'gear', logoUrl: '/assets/logos/silent-gear.png', label: 'Silent Gear (Completo)', type: 'md' },
+  { id: 'mi', logoUrl: '/assets/logos/modern-industrialization.png', label: 'Modern Industrialization', type: 'md' },
+  { id: 'oritech', logoUrl: '/assets/logos/oritech.png', label: 'Oritech Completo', type: 'md' },
+  { id: 'create', logoUrl: '/assets/logos/create.png', label: 'Create Ecosystem', type: 'md' },
+  { id: 'apotheosis', logoUrl: '/assets/logos/apotheosis.png', label: 'Apothic Ecosystem', type: 'react' },
+  { id: 'irons_spells', logoUrl: '/assets/logos/irons-spells-n-spellbooks.png', label: 'Iron\'s Spells & Sinergias', type: 'md' },
+  { id: 'powah', logoUrl: '/assets/logos/powah.png', label: 'Powah! (Energia)', type: 'react' },
+  { id: 'silentgear', logoUrl: '/assets/logos/silent-gear.png', label: 'Silent Gear & Gems', type: 'react' },
+  { id: 'backpacks', logoUrl: '/assets/logos/sophisticated-backpacks.png', label: 'Sophisticated Backpacks', type: 'react' },
+];
+
+const warlordTabs = [
+  { id: 'early', icon: Backpack, label: 'Fase 1: Sobrevivência & Sangue' },
+  { id: 'tech', icon: Factory, label: 'Fase 2: Despertar de Poder' },
+  { id: 'magic', icon: Sparkles, label: 'Fase 3: A Singularidade' },
+  { id: 'late', icon: Crown, label: 'Fase 4: Imortalidade' }
+];
 
 export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery }) {
   const [modsOpen, setModsOpen] = useState(true);
@@ -7,41 +37,11 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
   const [tocData, setTocData] = useState({});
   const [collapsedTocs, setCollapsedTocs] = useState({});
 
-  const wikiTabs = [
-    { id: 'home', icon: Home, label: 'Página Inicial' },
-    { id: 'modindex', icon: Library, label: 'Mod Index' },
-    { id: 'bestiary', icon: Skull, label: 'Bestiário (Bosses)' },
-    { id: 'mobs', icon: Target, label: 'Bestiário (Mobs)' },
-    { id: 'dimensions', icon: Sparkles, label: 'Guia de Dimensões' }
-  ];
-
-  const modGuides = [
-    { id: 'ae2', logoUrl: '/assets/logos/ae2.png', label: 'AE2 Completo', type: 'md' },
-    { id: 'cataclysm', logoUrl: '/assets/logos/cataclysm.png', label: 'Cataclysm Completo', type: 'md' },
-    { id: 'ice_and_fire', logoUrl: '/assets/logos/ice-and-fire.png', label: 'Ice and Fire: Dragons', type: 'md' },
-    { id: 'gear', logoUrl: '/assets/logos/silent-gear.png', label: 'Silent Gear (Completo)', type: 'md' },
-    { id: 'mi', logoUrl: '/assets/logos/modern-industrialization.png', label: 'Modern Industrialization', type: 'md' },
-    { id: 'oritech', logoUrl: '/assets/logos/oritech.png', label: 'Oritech Completo', type: 'md' },
-    { id: 'create', logoUrl: '/assets/logos/create.png', label: 'Create Ecosystem', type: 'md' },
-    { id: 'apotheosis', logoUrl: '/assets/logos/apotheosis.png', label: 'Apothic Ecosystem', type: 'react' },
-    { id: 'irons_spells', logoUrl: '/assets/logos/irons-spells-n-spellbooks.png', label: 'Iron\'s Spells & Sinergias', type: 'md' },
-    { id: 'powah', logoUrl: '/assets/logos/powah.png', label: 'Powah! (Energia)', type: 'react' },
-    { id: 'silentgear', logoUrl: '/assets/logos/silent-gear.png', label: 'Silent Gear & Gems', type: 'react' },
-    { id: 'backpacks', logoUrl: '/assets/logos/sophisticated-backpacks.png', label: 'Sophisticated Backpacks', type: 'react' },
-  ];
-
-  const warlordTabs = [
-    { id: 'early', icon: Backpack, label: 'Fase 1: Sobrevivência & Sangue' },
-    { id: 'tech', icon: Factory, label: 'Fase 2: Despertar de Poder' },
-    { id: 'magic', icon: Sparkles, label: 'Fase 3: A Singularidade' },
-    { id: 'late', icon: Crown, label: 'Fase 4: Imortalidade' }
-  ];
-
   useEffect(() => {
     const fetchTocs = async () => {
-      const newToc = {};
       const mdGuides = modGuides.filter(g => g.type === 'md');
-      for (const guide of mdGuides) {
+      
+      const fetchPromises = mdGuides.map(async (guide) => {
         try {
           const res = await fetch(`/docs/${guide.id}.md`);
           const text = await res.text();
@@ -64,8 +64,16 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
           }
         } catch (e) {
           console.error('Failed to fetch TOC for', guide.id, e);
+          return null;
         }
-      }
+      });
+      
+      const results = await Promise.all(fetchPromises);
+      const newToc = {};
+      results.forEach(res => {
+        if (res) newToc[res.id] = res.headings;
+      });
+      
       setTocData(newToc);
     };
     fetchTocs();
@@ -211,9 +219,9 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
                   
                   {hasToc && isActive && !collapsedTocs[tab.id] && (
                     <div className="toc-submenu" style={{ paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: '0.5rem', marginBottom: '0.75rem', borderLeft: '1px solid var(--border-color)', marginLeft: '1rem' }}>
-                      {tocData[tab.id].map((heading, index) => (
+                      {tocData[tab.id].map((heading) => (
                         <a 
-                          key={index} 
+                          key={heading.id} 
                           href={heading.id}
                           style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textDecoration: 'none', lineHeight: '1.3', display: 'flex', alignItems: 'flex-start', gap: '0.4rem' }}
                           onClick={(e) => {

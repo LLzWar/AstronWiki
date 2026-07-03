@@ -1,5 +1,5 @@
 import React from 'react';
-import { Backpack, Magnet, Trash2, Heart, Crown } from 'lucide-react';
+import { Backpack, Heart, Crown } from 'lucide-react';
 
 export default function WikiBackpacks({ onOpenRecipe }) {
   return (

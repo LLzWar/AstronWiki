@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { Sword, BatteryCharging, BookOpen, ShieldAlert, Compass, Settings, Database, Sparkles, Book, Crown, Library, Skull, Search } from 'lucide-react';
+import React, { useState, useEffect, Suspense } from 'react';
+import { Sword, BatteryCharging, BookOpen, ShieldAlert, Compass, Settings, Database, Sparkles, Book, Crown, Library, Skull, Search, Loader } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import WikiCard from './components/WikiCard';
 import CraftingModal from './components/CraftingModal';
-import WikiModIndex from './components/WikiModIndex';
-import WikiCreate from './components/WikiCreate';
-import WikiApotheosis from './components/WikiApotheosis';
-import WikiIrons from './components/WikiIrons';
-import WikiPowah from './components/WikiPowah';
-import WikiSilentGear from './components/WikiSilentGear';
-import WikiBackpacks from './components/WikiBackpacks';
-import WarlordPath from './components/WarlordPath';
-import WikiBestiary from './components/WikiBestiary';
-import WikiMobs from './components/WikiMobs';
-import WikiDimensions from './components/WikiDimensions';
-import WikiSearch from './components/WikiSearch';
-import MarkdownViewer from './components/MarkdownViewer';
 import JEISidebar from './components/JEISidebar';
 import ItemModal from './components/ItemModal';
+
+const WikiModIndex = React.lazy(() => import('./components/WikiModIndex'));
+const WikiCreate = React.lazy(() => import('./components/WikiCreate'));
+const WikiApotheosis = React.lazy(() => import('./components/WikiApotheosis'));
+const WikiIrons = React.lazy(() => import('./components/WikiIrons'));
+const WikiPowah = React.lazy(() => import('./components/WikiPowah'));
+const WikiSilentGear = React.lazy(() => import('./components/WikiSilentGear'));
+const WikiBackpacks = React.lazy(() => import('./components/WikiBackpacks'));
+const WarlordPath = React.lazy(() => import('./components/WarlordPath'));
+const WikiBestiary = React.lazy(() => import('./components/WikiBestiary'));
+const WikiMobs = React.lazy(() => import('./components/WikiMobs'));
+const WikiDimensions = React.lazy(() => import('./components/WikiDimensions'));
+const WikiSearch = React.lazy(() => import('./components/WikiSearch'));
+const MarkdownViewer = React.lazy(() => import('./components/MarkdownViewer'));
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -99,12 +100,13 @@ export default function App() {
         </header>
 
         <div className="cards-grid">
-          {/* GLOBAL SEARCH RESULTS (Overrides other tabs if query exists) */}
-          {searchQuery.length > 0 && (
-            <div style={{gridColumn: '1 / -1'}}>
-              <WikiSearch query={searchQuery} onOpenRecipe={openRecipe} setActiveTab={setActiveTab} />
-            </div>
-          )}
+          <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gridColumn: '1 / -1', padding: '4rem', color: 'var(--accent-blue)' }}><Loader className="spin-animation" size={32} /></div>}>
+            {/* GLOBAL SEARCH RESULTS (Overrides other tabs if query exists) */}
+            {searchQuery.length > 0 && (
+              <div style={{gridColumn: '1 / -1'}}>
+                <WikiSearch query={searchQuery} onOpenRecipe={openRecipe} setActiveTab={setActiveTab} />
+              </div>
+            )}
 
           {/* HOME */}
           {activeTab === 'home' && searchQuery.length === 0 && (
@@ -302,6 +304,7 @@ export default function App() {
               <WarlordPath phase={activeTab} onOpenRecipe={openRecipe} setActiveTab={setActiveTab} />
             </div>
           )}
+          </Suspense>
         </div>
       </main>
 

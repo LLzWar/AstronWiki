@@ -14,35 +14,35 @@ export default function WikiSearch({ query, onOpenRecipe, setActiveTab }) {
     const matchedMods = modsList.filter(mod => mod.toLowerCase().includes(lowerQuery));
 
     // 2. Search in Recipes Database
-    const matchedRecipes = Object.keys(recipes).map(key => {
+    const matchedRecipes = [];
+    for (const key in recipes) {
       const rec = recipes[key];
-      return { id: key, ...rec };
-    }).filter(rec => 
-      (rec.title && rec.title.toLowerCase().includes(lowerQuery)) || 
-      (rec.description && rec.description.toLowerCase().includes(lowerQuery)) ||
-      (rec.machine && rec.machine.toLowerCase().includes(lowerQuery))
-    );
+      if (
+        (rec.title && rec.title.toLowerCase().includes(lowerQuery)) || 
+        (rec.description && rec.description.toLowerCase().includes(lowerQuery)) ||
+        (rec.machine && rec.machine.toLowerCase().includes(lowerQuery))
+      ) {
+        matchedRecipes.push({ id: key, ...rec });
+      }
+    }
 
     // 3. Search in Bestiary (Loot & Mobs)
     const matchedLoot = [];
-    const allEntities = [
-      ...BESTIARY_DATA.map(mob => ({ ...mob, sourceTab: 'bestiary' })),
-      ...MOBS_DATA.map(mob => ({ ...mob, sourceTab: 'mobs' }))
-    ];
     
-    allEntities.forEach(mob => {
-      // Se o nome do mob bate com a busca, ou algum drop dele bate
+    const checkMob = (mob, sourceTab) => {
       const matchedDrops = mob.drops.filter(drop => drop.name.toLowerCase().includes(lowerQuery));
-      
       if (mob.name.toLowerCase().includes(lowerQuery) || matchedDrops.length > 0) {
         matchedLoot.push({
           mobName: mob.name,
           modName: mob.modName,
-          sourceTab: mob.sourceTab,
-          matchedDrops: matchedDrops.length > 0 ? matchedDrops : mob.drops // Mostra os drops exatos se achou, senão mostra todos
+          sourceTab: sourceTab,
+          matchedDrops: matchedDrops.length > 0 ? matchedDrops : mob.drops
         });
       }
-    });
+    };
+
+    BESTIARY_DATA.forEach(mob => checkMob(mob, 'bestiary'));
+    MOBS_DATA.forEach(mob => checkMob(mob, 'mobs'));
 
     return { mods: matchedMods, recipes: matchedRecipes, loot: matchedLoot };
   }, [query]);
@@ -91,8 +91,8 @@ export default function WikiSearch({ query, onOpenRecipe, setActiveTab }) {
         <section className="doc-section">
           <h3 className="doc-section-title"><Skull size={24}/> Fontes de Loot (Mundo e Monstros)</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
-            {results.loot.map((lootItem, idx) => (
-              <div key={idx} className="wiki-card" style={{ padding: '1rem', display: 'flex', flexDirection: 'column' }}>
+            {results.loot.map((lootItem) => (
+              <div key={lootItem.mobName + lootItem.modName} className="wiki-card" style={{ padding: '1rem', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ marginBottom: '0.5rem' }}>
                   <h4 style={{ color: 'var(--text-primary)', fontSize: '1rem', display: 'flex', justifyContent: 'space-between' }}>
                     Obtido em: {lootItem.mobName}
@@ -104,8 +104,8 @@ export default function WikiSearch({ query, onOpenRecipe, setActiveTab }) {
                 <div style={{ marginTop: '0.5rem', flex: 1 }}>
                   <strong style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Drops Relacionados:</strong>
                   <ul style={{ listStyleType: 'none', padding: 0, marginTop: '0.5rem' }}>
-                    {lootItem.matchedDrops.map((drop, dIdx) => (
-                      <li key={dIdx} style={{ marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    {lootItem.matchedDrops.map((drop) => (
+                      <li key={drop.name} style={{ marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <span style={{ color: 'var(--accent-blue)', fontSize: '0.9rem' }}>{drop.name}</span>
                         <span className={`drop-tag ${getRarityClass(drop.rarity)}`} style={{ marginLeft: 'auto', fontSize: '0.65rem' }}>
                           {getRarityLabel(drop.rarity)}
