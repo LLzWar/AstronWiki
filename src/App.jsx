@@ -129,19 +129,19 @@ export default function App() {
           {activeTab === 'home' && searchQuery.length === 0 && (
             <div style={{gridColumn: '1 / -1'}} className="doc-layout">
               {/* HERO BANNER */}
-              <div className="astron-hero-bg" style={{ marginBottom: '1rem', padding: '5rem 2rem' }}>
-                <h1 style={{ fontSize: '3.5rem', color: 'var(--text-primary)', marginBottom: '1rem', fontWeight: 800, letterSpacing: '-1px' }}>
+              <div className="astron-hero-bg" style={{ marginBottom: '1rem' }}>
+                <h1 className="hero-title">
                   A Enciclopédia <span style={{ color: 'var(--accent-blue)' }}>Astron City</span>
                 </h1>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto', lineHeight: 1.6 }}>
+                <p className="hero-subtitle">
                   Sua central definitiva de conhecimento. Domine a sobrevivência letal, táticas avançadas de automação industrial e estatísticas exatas dos deuses que habitam os mundos.
                 </p>
                 
-                <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', marginTop: '3rem' }}>
-                  <button onClick={() => setActiveTab('modindex')} className="craft-btn" style={{ fontSize: '1.1rem', padding: '0.8rem 2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '30px' }}>
+                <div className="hero-buttons">
+                  <button onClick={() => setActiveTab('modindex')} className="craft-btn hero-btn">
                     <Library size={20} /> Explorar Biblioteca de Mods
                   </button>
-                  <button onClick={() => setActiveTab('bestiary')} className="nav-btn" style={{ fontSize: '1.1rem', padding: '0.8rem 2rem', border: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '30px', backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
+                  <button onClick={() => setActiveTab('bestiary')} className="nav-btn hero-btn">
                     <Skull size={20} /> Consultar o Bestiário
                   </button>
                 </div>
