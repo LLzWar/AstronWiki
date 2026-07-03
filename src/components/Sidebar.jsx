@@ -32,7 +32,10 @@ const warlordTabs = [
   { id: 'late', icon: Crown, label: 'Fase 4: Imortalidade' }
 ];
 
-export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery, toggleTheme }) {
+import useStore from '../store/useStore';
+
+export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery }) {
+  const toggleTheme = useStore((state) => state.toggleTheme);
   const [modsOpen, setModsOpen] = useState(true);
   const [warlordOpen, setWarlordOpen] = useState(true);
   const [tocData, setTocData] = useState({});
