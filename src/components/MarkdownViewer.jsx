@@ -105,8 +105,7 @@ const MarkdownViewer = ({ fileUrl, pdfUrl }) => {
     };
   }, []);
 
-  // Intercepta cliques em âncoras internas no Markdown (ex: [Link](#id))
-  // para garantir scroll suave e suporte a containers internos
+  // Intercepta cliques em âncoras internas e substitui textos de craft por imagens
   useEffect(() => {
     const handleAnchorClick = (e) => {
       const target = e.target.closest('a');
@@ -120,11 +119,53 @@ const MarkdownViewer = ({ fileUrl, pdfUrl }) => {
       }
     };
 
-    // Usando setTimeout para garantir que a renderização do ReactMarkdown já terminou
     const timer = setTimeout(() => {
       const container = document.querySelector('.markdown-body');
       if (container) {
         container.addEventListener('click', handleAnchorClick);
+        
+        // Formata os slots de craft estáticos (textos -> Imagens/Siglas)
+        const slots = container.querySelectorAll('.mc-slot, .mc-result');
+        slots.forEach(slot => {
+          if (slot.querySelector('img') || slot.querySelector('span')) return; // Já formatado
+          
+          const text = slot.textContent.trim();
+          if (!text) return; // Slot vazio
+          
+          // Preservar o tooltip nativo
+          if (!slot.getAttribute('title')) {
+            slot.setAttribute('title', text);
+          }
+
+          slot.textContent = ''; // Limpar o texto cru espremido
+
+          const getInitials = (name) => {
+            const words = name.replace(/[^a-zA-Z0-9\s]/g, '').split(/\s+/);
+            if (words.length === 1) return words[0].substring(0, 2).toUpperCase();
+            return (words[0][0] + (words[1] ? words[1][0] : '')).toUpperCase();
+          };
+
+          const slug = text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          const imagePath = `/assets/items/${slug}.png`;
+
+          const img = document.createElement('img');
+          img.src = imagePath;
+          img.alt = text;
+          
+          img.onerror = () => {
+            img.style.display = 'none';
+            const initialsSpan = document.createElement('span');
+            initialsSpan.textContent = getInitials(text);
+            initialsSpan.style.color = '#fff';
+            initialsSpan.style.fontWeight = 'bold';
+            initialsSpan.style.fontSize = slot.classList.contains('mc-result') ? '1.2rem' : '0.85rem';
+            initialsSpan.style.letterSpacing = '1px';
+            initialsSpan.style.textShadow = '1px 1px 0 #000';
+            slot.appendChild(initialsSpan);
+          };
+
+          slot.appendChild(img);
+        });
       }
     }, 100);
 
