@@ -150,23 +150,46 @@ export default function JEISidebar({ setSearchQuery, onOpenItem }) {
 
       {/* Pagination Controls (Bottom of Grid, Always Visible) */}
       {totalPages > 1 && (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', padding: '0.5rem', borderTop: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(13, 17, 23, 0.95)' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.5rem', padding: '1rem 0.5rem', borderTop: '1px solid rgba(255,255,255,0.05)', backgroundColor: 'rgba(13, 17, 23, 0.95)', backdropFilter: 'blur(10px)' }}>
           <button 
             onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
             disabled={currentPage === 1}
-            style={{ background: 'transparent', border: 'none', color: currentPage === 1 ? '#555' : '#fff', cursor: currentPage === 1 ? 'default' : 'pointer' }}
+            className={`hover-scale ${currentPage !== 1 ? 'hover-highlight' : ''}`}
+            style={{ 
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              width: '40px', height: '40px', borderRadius: '50%',
+              background: currentPage === 1 ? 'rgba(255,255,255,0.02)' : 'rgba(88,166,255,0.1)', 
+              border: `1px solid ${currentPage === 1 ? 'rgba(255,255,255,0.05)' : 'rgba(88,166,255,0.3)'}`, 
+              color: currentPage === 1 ? '#444' : 'var(--accent-blue)', 
+              cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+              transition: 'all 0.2s', boxShadow: currentPage !== 1 ? '0 0 10px rgba(88,166,255,0.1)' : 'none'
+            }}
           >
-            <ChevronLeft size={20} />
+            <ChevronLeft size={22} />
           </button>
-          <span style={{ color: 'var(--text-primary)', fontFamily: 'monospace', fontSize: '0.9rem' }}>
-            {currentPage} / {totalPages}
-          </span>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <span style={{ color: 'var(--text-secondary)', fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '2px' }}>Página</span>
+            <span style={{ color: 'var(--text-primary)', fontFamily: 'monospace', fontSize: '1.1rem', fontWeight: 'bold' }}>
+              {currentPage} <span style={{ color: '#555', fontWeight: 'normal', margin: '0 4px' }}>/</span> {totalPages}
+            </span>
+          </div>
+
           <button 
             onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
             disabled={currentPage === totalPages}
-            style={{ background: 'transparent', border: 'none', color: currentPage === totalPages ? '#555' : '#fff', cursor: currentPage === totalPages ? 'default' : 'pointer' }}
+            className={`hover-scale ${currentPage !== totalPages ? 'hover-highlight' : ''}`}
+            style={{ 
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              width: '40px', height: '40px', borderRadius: '50%',
+              background: currentPage === totalPages ? 'rgba(255,255,255,0.02)' : 'rgba(88,166,255,0.1)', 
+              border: `1px solid ${currentPage === totalPages ? 'rgba(255,255,255,0.05)' : 'rgba(88,166,255,0.3)'}`, 
+              color: currentPage === totalPages ? '#444' : 'var(--accent-blue)', 
+              cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
+              transition: 'all 0.2s', boxShadow: currentPage !== totalPages ? '0 0 10px rgba(88,166,255,0.1)' : 'none'
+            }}
           >
-            <ChevronRight size={20} />
+            <ChevronRight size={22} />
           </button>
         </div>
       )}
