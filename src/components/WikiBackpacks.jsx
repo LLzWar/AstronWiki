@@ -38,8 +38,6 @@ export default function WikiBackpacks({ onOpenRecipe, onOpenWebJEI }) {
         <ul className="doc-list">
           <li>
             <strong style={{color: 'var(--accent-blue)'}}>1. The Magnet:</strong> 
-          <li>
-            <strong style={{color: 'var(--accent-blue)'}}>1. The Magnet:</strong> 
             Você deve investir rapidamente num <JEI name="Magnet Upgrade" />. 
             Ele anula a necessidade de encostar em itens, sugando todo o loot num raio gigante da arena para dentro da mochila enquanto você está matando.
           </li>
