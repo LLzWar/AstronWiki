@@ -408,14 +408,14 @@ body {
 
 .hero-title {
   font-size: 3.5rem;
-  color: var(--text-primary);
+  color: #f8fafc;
   margin-bottom: 1rem;
   font-weight: 800;
   letter-spacing: -1px;
 }
 
 .hero-subtitle {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1.25rem;
   max-width: 800px;
   margin: 0 auto;
