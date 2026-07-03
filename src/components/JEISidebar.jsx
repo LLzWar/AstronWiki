@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useDeferredValue } from 'react';
-import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Search } from 'lucide-react';
 import { recipes } from '../data/recipes';
 import { BESTIARY_DATA } from '../data/bestiaryData';
 import { MOBS_DATA } from '../data/mobsData';
@@ -54,7 +54,21 @@ export default function JEISidebar({ setSearchQuery, onOpenItem }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [allItemsDB, setAllItemsDB] = useState([]);
 
-  const ITEMS_PER_PAGE = 120; // Like in Minecraft
+  const [itemsPerPage, setItemsPerPage] = useState(120);
+
+  // Calcula quantos itens cabem na tela perfeitamente sem gerar barra de rolagem
+  useEffect(() => {
+    const updatePagination = () => {
+      // Subtraindo headers, padding, margin, barra de pesquisa e setas
+      const availableHeight = window.innerHeight - 240; 
+      const rows = Math.max(1, Math.floor(availableHeight / 44));
+      setItemsPerPage(rows * 6); // 6 colunas
+    };
+
+    updatePagination();
+    window.addEventListener('resize', updatePagination);
+    return () => window.removeEventListener('resize', updatePagination);
+  }, []);
 
   // Load the massive extracted database asynchronously
   useEffect(() => {
@@ -120,9 +134,9 @@ export default function JEISidebar({ setSearchQuery, onOpenItem }) {
   }, [jeiQuery]);
 
   // Pagination Logic
-  const totalPages = Math.max(1, Math.ceil(filteredItems.length / ITEMS_PER_PAGE));
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const totalPages = Math.max(1, Math.ceil(filteredItems.length / itemsPerPage));
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
 
   const handleItemClick = (item) => {
     onOpenItem(item);
@@ -136,7 +150,7 @@ export default function JEISidebar({ setSearchQuery, onOpenItem }) {
       </div>
 
       {/* Grid Container */}
-      <div className="jei-grid-container" style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className="jei-grid-container" style={{ display: 'flex', flexDirection: 'column', flex: 1, overflow: 'hidden', padding: '1rem' }}>
         <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', marginBottom: '1rem', textAlign: 'center' }}>
           {filteredItems.length.toLocaleString()} Itens Encontrados
         </div>
@@ -195,14 +209,29 @@ export default function JEISidebar({ setSearchQuery, onOpenItem }) {
       )}
 
       {/* Search Input */}
-      <div className="jei-search-wrapper">
+      <div className="jei-search-wrapper" style={{ padding: '1rem', background: 'rgba(13, 17, 23, 0.95)', borderTop: '1px solid rgba(255,255,255,0.05)', position: 'relative' }}>
         <input 
           type="text" 
-          className="jei-search-input"
-          placeholder="Search..."
+          placeholder="Pesquisar no WebJEI..."
           value={jeiQuery}
           onChange={(e) => setJeiQuery(e.target.value)}
+          style={{
+            width: '100%',
+            background: 'rgba(0,0,0,0.4)',
+            border: '1px solid rgba(88,166,255,0.2)',
+            borderRadius: '8px',
+            color: 'var(--text-primary)',
+            padding: '0.75rem 1rem 0.75rem 2.5rem',
+            fontFamily: 'inherit',
+            fontSize: '0.95rem',
+            outline: 'none',
+            transition: 'all 0.2s',
+            boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.5)'
+          }}
+          onFocus={(e) => { e.target.style.borderColor = 'rgba(88,166,255,0.6)'; e.target.style.boxShadow = '0 0 10px rgba(88,166,255,0.1)'; }}
+          onBlur={(e) => { e.target.style.borderColor = 'rgba(88,166,255,0.2)'; e.target.style.boxShadow = 'inset 0 2px 4px rgba(0,0,0,0.5)'; }}
         />
+        <Search size={18} color="rgba(88,166,255,0.5)" style={{ position: 'absolute', left: '1.75rem', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} />
       </div>
     </aside>
   );
