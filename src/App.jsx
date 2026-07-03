@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense } from 'react';
-import { Sword, BatteryCharging, BookOpen, ShieldAlert, Compass, Settings, Database, Sparkles, Book, Crown, Library, Skull, Search, Loader } from 'lucide-react';
+import { Sword, BatteryCharging, BookOpen, ShieldAlert, Compass, Settings, Database, Sparkles, Book, Crown, Library, Skull, Search, Loader, Menu } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import WikiCard from './components/WikiCard';
 import CraftingModal from './components/CraftingModal';
@@ -27,6 +27,7 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeItem, setActiveItem] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -67,17 +68,33 @@ export default function App() {
         boxShadow: '0 0 10px var(--accent-primary)'
       }} />
 
-      <Sidebar 
-        activeTab={activeTab} 
-        setActiveTab={setActiveTab} 
-        theme={theme}
-        setTheme={setTheme}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-      />
+      {/* Dark Overlay for Mobile Menu */}
+      {mobileMenuOpen && (
+        <div 
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.7)', zIndex: 9998, backdropFilter: 'blur(4px)' }}
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
+      <div className={`sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+        <Sidebar 
+          activeTab={activeTab} 
+          setActiveTab={(t) => { setActiveTab(t); setMobileMenuOpen(false); }} 
+          theme={theme}
+          setTheme={setTheme}
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+        />
+      </div>
       
       <main className="main-content" onScroll={handleScroll}>
-        <header className="mb-4">
+        <div className="mobile-header" style={{ display: 'none' }}>
+          <h2 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '1.2rem' }}>Astron Wiki</h2>
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} style={{ background: 'transparent', border: 'none', color: 'var(--text-primary)' }}>
+            <Menu size={24} />
+          </button>
+        </div>
+        <header className="mb-4 mt-4">
           <h2 style={{fontSize: '2rem', marginBottom: '0.5rem', color: 'var(--text-primary)'}}>
             {activeTab === 'home' && 'Astron City Wiki'}
             {activeTab === 'modindex' && 'Biblioteca de Mods'}

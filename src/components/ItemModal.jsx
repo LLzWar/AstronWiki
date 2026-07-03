@@ -140,7 +140,7 @@ export default function ItemModal({ item, onClose }) {
         }
       });
       return (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
           <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 40px)', gap: '4px', padding: '8px', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
             {grid.map((row, r) => row.map((cell, c) => (
               <div key={`cell-${r}-${c}`} className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px' }}>
@@ -156,7 +156,7 @@ export default function ItemModal({ item, onClose }) {
     
     if (recipe.type === 'minecraft:crafting_shapeless') {
       return (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
           <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 40px)', gap: '4px', padding: '8px', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', alignContent: 'start' }}>
             {recipe.ingredients.map((ing, idx) => (
               <div key={`shapeless-${idx}`} className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px' }}>
@@ -172,7 +172,7 @@ export default function ItemModal({ item, onClose }) {
 
     if (recipe.type.includes('smelting') || recipe.type.includes('blasting') || recipe.type.includes('smoking') || recipe.type.includes('campfire')) {
       return (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: 'rgba(0,0,0,0.3)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem', background: 'rgba(0,0,0,0.3)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
           <div className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px' }}>
             {renderIngredient(recipe.ingredient)}
           </div>

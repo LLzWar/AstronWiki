@@ -151,8 +151,17 @@ export default function JEISidebar({ setSearchQuery, onOpenItem }) {
 
       {/* Grid Container */}
       <div className="jei-grid-container" style={{ display: 'flex', flexDirection: 'column', flex: 1, overflow: 'hidden', padding: '1rem' }}>
-        <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', marginBottom: '1rem', textAlign: 'center' }}>
-          {filteredItems.length.toLocaleString()} Itens Encontrados
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+          <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', flex: 1, textAlign: 'center' }}>
+            {filteredItems.length.toLocaleString()} Itens Encontrados
+          </div>
+          <button 
+            className="mobile-only-flex"
+            onClick={() => setIsOpen(false)}
+            style={{ background: 'transparent', border: '1px solid var(--border-color)', borderRadius: '4px', color: 'var(--text-primary)', padding: '0.2rem 0.5rem', display: 'none' }}
+          >
+            Fechar
+          </button>
         </div>
         
         <div className="jei-grid" style={{ flex: 1, alignContent: 'start' }}>
