@@ -171,7 +171,7 @@ export default function ItemModal({ item, onClose, onNavigate, onOpenWebJEI }) {
       });
       return (
         <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '2rem', background: '#c6c6c6', padding: '1rem 1.5rem', borderTop: '2px solid #ffffff', borderLeft: '2px solid #ffffff', borderBottom: '2px solid #555555', borderRight: '2px solid #555555' }}>
-          <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 36px)', gap: 0, padding: 0, background: 'transparent' }}>
+          <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 36px)', gridTemplateRows: 'repeat(3, 36px)', gap: 0, padding: 0, background: 'transparent' }}>
             {grid.map((row, r) => row.map((cell, c) => (
               <div key={`cell-${r}-${c}`} className="crafting-slot" style={{ borderTop: '2px solid #373737', borderLeft: '2px solid #373737', borderBottom: '2px solid #ffffff', borderRight: '2px solid #ffffff', background: '#8b8b8b', width: '36px', height: '36px', padding: '2px' }}>
                 {renderIngredient(cell)}
@@ -187,7 +187,7 @@ export default function ItemModal({ item, onClose, onNavigate, onOpenWebJEI }) {
     if (recipe.type === 'minecraft:crafting_shapeless') {
       return (
         <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '2rem', background: '#c6c6c6', padding: '1rem 1.5rem', borderTop: '2px solid #ffffff', borderLeft: '2px solid #ffffff', borderBottom: '2px solid #555555', borderRight: '2px solid #555555' }}>
-          <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 36px)', gap: 0, padding: 0, background: 'transparent', alignContent: 'start' }}>
+          <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 36px)', gridTemplateRows: 'repeat(3, 36px)', gap: 0, padding: 0, background: 'transparent', alignContent: 'start' }}>
             {recipe.ingredients.map((ing, idx) => (
               <div key={`shapeless-${idx}`} className="crafting-slot" style={{ borderTop: '2px solid #373737', borderLeft: '2px solid #373737', borderBottom: '2px solid #ffffff', borderRight: '2px solid #ffffff', background: '#8b8b8b', width: '36px', height: '36px', padding: '2px' }}>
                 {renderIngredient(ing)}
