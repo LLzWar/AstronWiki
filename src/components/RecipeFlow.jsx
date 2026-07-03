@@ -1,7 +1,31 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { ReactFlow, Controls, Background } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { itemImages } from '../data/recipes';
+
+const FlowImage = ({ item, defaultSrc }) => {
+  const fileName = item.replace(/\(.*?\)/g, '').trim().replace(/['\s-]+/g, '_').toLowerCase();
+  const imgSrc = defaultSrc || `/assets/items/${fileName}.png`;
+
+  return (
+    <img 
+      src={imgSrc} 
+      alt={item} 
+      style={{ width: 24, height: 24, marginBottom: '5px', objectFit: 'contain', imageRendering: 'pixelated' }} 
+      onError={(e) => {
+        if (!e.target.dataset.fallbackTried) {
+           e.target.dataset.fallbackTried = "true";
+           e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/item/${fileName}.png`;
+        } else if (e.target.dataset.fallbackTried === "true") {
+           e.target.dataset.fallbackTried = "block";
+           e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/block/${fileName}.png`;
+        } else {
+           e.target.style.display = 'none';
+        }
+      }} 
+    />
+  );
+};
 
 export default function RecipeFlow({ recipe, recipeId }) {
   const { nodes, edges } = useMemo(() => {
@@ -15,7 +39,7 @@ export default function RecipeFlow({ recipe, recipeId }) {
       data: { 
         label: (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '10px' }}>
-            {itemImages[recipeId] && <img src={itemImages[recipeId]} alt={recipe.title} style={{ width: 32, height: 32, marginBottom: '5px' }} />}
+            <FlowImage item={recipe.title} defaultSrc={itemImages[recipeId]} />
             <b style={{color: 'black'}}>{recipe.title}</b>
           </div>
         )
@@ -44,7 +68,7 @@ export default function RecipeFlow({ recipe, recipeId }) {
         data: {
           label: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '5px' }}>
-              {itemImages[ing] && <img src={itemImages[ing]} alt={ing} style={{ width: 24, height: 24, marginBottom: '5px' }} />}
+              <FlowImage item={ing} defaultSrc={itemImages[ing]} />
               <span style={{ fontSize: '10px', color: 'black' }}>{ing}</span>
             </div>
           )

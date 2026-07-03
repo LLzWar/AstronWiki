@@ -19,18 +19,29 @@ const CraftingSlotItem = ({ item }) => {
 
   return (
     <>
-      {!imageError ? (
-        <img 
-          src={imgSrc} 
-          alt={item} 
-          title={item}
-          onError={() => setImageError(true)} 
-        />
-      ) : (
-        <span title={item} style={{ fontSize: '14px', fontWeight: 'bold', color: 'rgba(255,255,255,0.7)' }}>
+      <img 
+        src={imgSrc} 
+        alt={item} 
+        title={item}
+        style={{ width: '100%', height: '100%', objectFit: 'contain', imageRendering: 'pixelated' }}
+        onError={(e) => {
+          if (!e.target.dataset.fallbackTried) {
+             e.target.dataset.fallbackTried = "true";
+             e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/item/${fileName}.png`;
+          } else if (e.target.dataset.fallbackTried === "true") {
+             e.target.dataset.fallbackTried = "block";
+             e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/block/${fileName}.png`;
+          } else {
+             e.target.style.display = 'none';
+             if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex';
+          }
+        }} 
+      />
+      <div style={{ display: 'none', position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' }}>
+        <span title={item} style={{ fontSize: '10px', fontWeight: 'bold', color: 'rgba(255,255,255,0.7)', textShadow: '1px 1px 0 #333' }}>
           {getInitials(item)}
         </span>
-      )}
+      </div>
     </>
   );
 };
@@ -59,19 +70,19 @@ export default function CraftingModal({ recipeId, onClose }) {
         <p className="modal-desc">{recipe.description}</p>
         
         {viewMode === 'grid' ? (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', justifyContent: 'center' }}>
-            <div className="crafting-grid">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', justifyContent: 'center', background: '#c6c6c6', padding: '1rem 1.5rem', borderTop: '2px solid #ffffff', borderLeft: '2px solid #ffffff', borderBottom: '2px solid #555555', borderRight: '2px solid #555555', margin: '1rem auto', maxWidth: 'max-content' }}>
+            <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 36px)', gridTemplateRows: 'repeat(3, 36px)', gap: 0, padding: 0, background: 'transparent' }}>
               {recipe.grid.map((row, rIdx) => 
                 row.map((item, cIdx) => (
-                  <div className="crafting-slot" key={`${rIdx}-${cIdx}`}>
+                  <div className="crafting-slot" key={`${rIdx}-${cIdx}`} style={{ borderTop: '2px solid #373737', borderLeft: '2px solid #373737', borderBottom: '2px solid #ffffff', borderRight: '2px solid #ffffff', background: '#8b8b8b', width: '36px', height: '36px', padding: '2px', position: 'relative' }}>
                     <CraftingSlotItem item={item} />
                   </div>
                 ))
               )}
             </div>
-            {/* Adicionando a flecha e o output explicitamente (aparentemente faltava e gerou a confusão) */}
-            <div style={{ fontSize: '24px', color: 'rgba(255,255,255,0.5)' }}>➔</div>
-            <div className="crafting-slot" style={{ width: '56px', height: '56px' }}>
+            {/* Adicionando a flecha e o output explicitamente */}
+            <div style={{ fontSize: '32px', color: '#8b8b8b', fontWeight: 'bold' }}>➔</div>
+            <div className="crafting-slot" style={{ borderTop: '2px solid #373737', borderLeft: '2px solid #373737', borderBottom: '2px solid #ffffff', borderRight: '2px solid #ffffff', background: '#8b8b8b', width: '54px', height: '54px', padding: '4px', position: 'relative' }}>
                <CraftingSlotItem item={recipe.title} />
             </div>
           </div>
