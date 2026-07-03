@@ -56,7 +56,6 @@ const warlordTabs = [
 ];
 
 export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery, mobileMenuOpen }) {
-  const toggleTheme = useStore((state) => state.toggleTheme);
   const [openGroups, setOpenGroups] = useState({ tech: true, magic: true, utility: true });
   const [warlordOpen, setWarlordOpen] = useState(true);
   const [tocData, setTocData] = useState({});
@@ -331,13 +330,6 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
           </AnimatePresence>
         </div>
       )}
-
-      <div className="sidebar-footer" style={{ borderTop: '1px solid var(--border-color)', padding: '1rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: 'auto' }}>
-        <button className="theme-toggle" onClick={toggleTheme} style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '0.5rem' }}>
-          {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          <span>{theme === 'dark' ? 'Modo Claro' : 'Modo Escuro'}</span>
-        </button>
-      </div>
     </aside>
   );
 }
