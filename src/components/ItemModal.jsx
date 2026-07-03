@@ -47,6 +47,9 @@ export default function ItemModal({ item, onClose }) {
          else result = 'block_of_' + name;
       }
       else if (category === 'dyes') result = name + '_dye';
+      else if (category === 'tanks' || category === 'fluid_tanks') {
+         result = name.endsWith('s') ? name.slice(0, -1) : name;
+      }
       
       if (result.includes(':')) result = result.split(':')[1];
       return result;
@@ -72,7 +75,24 @@ export default function ItemModal({ item, onClose }) {
     if (Array.isArray(ing)) ing = ing[0]; // Just show the first valid tag option
     const slug = getSlugFromInternal(ing);
     if (!slug) return <div className="unknown-item">?</div>;
-    return <img src={getItemImage(slug)} alt={slug} title={slug} style={{ width: '100%', height: '100%', objectFit: 'contain', imageRendering: 'pixelated' }} />;
+    return (
+      <div style={{ position: 'relative', width: '100%', height: '100%' }} title={slug}>
+        <img 
+          src={getItemImage(slug)} 
+          alt={slug} 
+          style={{ width: '100%', height: '100%', objectFit: 'contain', imageRendering: 'pixelated' }} 
+          onError={(e) => {
+            e.target.style.display = 'none';
+            if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex';
+          }}
+        />
+        <div style={{ display: 'none', position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(255,255,255,0.05)', alignItems: 'center', justifyContent: 'center', borderRadius: '4px', overflow: 'hidden' }}>
+          <span style={{ fontSize: '7px', color: '#aaa', wordBreak: 'break-all', textAlign: 'center', lineHeight: '1', padding: '2px' }}>
+            {slug.substring(0, 10)}
+          </span>
+        </div>
+      </div>
+    );
   };
 
   const renderGrid = (recipe) => {
@@ -164,7 +184,6 @@ export default function ItemModal({ item, onClose }) {
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
                   {myRecipes.slice(0, 10).map((r, i) => (
                     <div key={i} style={{ background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                      <div style={{ fontSize: '0.8rem', color: '#888', marginBottom: '0.5rem', textTransform: 'uppercase' }}>{r.type.split(':')[1]}</div>
                       {renderGrid(r)}
                     </div>
                   ))}
