@@ -1,9 +1,14 @@
-import React from 'react';
-import { X, ArrowRight, Info, Hammer } from 'lucide-react';
+import React, { useMemo } from 'react';
+import { X, ArrowRight, Info, Hammer, Flame, Skull, Package, Box, ShieldAlert } from 'lucide-react';
 import { useRecipes } from '../hooks/useRecipes';
+import { BESTIARY_DATA } from '../data/bestiaryData';
+import { MOBS_DATA } from '../data/mobsData';
 
 export default function ItemModal({ item, onClose }) {
   const { recipesByResult, recipesByUsage, idMap, reverseMap, loading } = useRecipes();
+
+  // Combine both bestiary and mob data
+  const ALL_ENTITIES = useMemo(() => [...BESTIARY_DATA, ...MOBS_DATA], []);
 
   if (!item) return null;
 
@@ -72,13 +77,18 @@ export default function ItemModal({ item, onClose }) {
   const modId = internalId ? internalId.split(':')[0] : 'Desconhecido';
   const modName = modId.charAt(0).toUpperCase() + modId.slice(1);
 
-  // O(1) Instant lookups using pre-computed indexes
   const myRecipes = internalId ? (recipesByResult[internalId] || []) : [];
   const usageRecipes = internalId ? (recipesByUsage[internalId] || []) : [];
+  
+  const craftingRecipes = myRecipes.filter(r => r.type === 'minecraft:crafting_shaped' || r.type === 'minecraft:crafting_shapeless');
+  const smeltingRecipes = myRecipes.filter(r => r.type.includes('smelting') || r.type.includes('blasting') || r.type.includes('smoking') || r.type.includes('campfire'));
+  const otherRecipes = myRecipes.filter(r => !r.type.includes('crafting') && !r.type.includes('smelting') && !r.type.includes('blasting') && !r.type.includes('smoking') && !r.type.includes('campfire'));
+
+  const mobDroppers = ALL_ENTITIES.filter(m => m.drops && m.drops.some(d => d.name.toLowerCase().includes(item.name.toLowerCase())));
 
   const renderIngredient = (ing) => {
     if (!ing) return null;
-    if (Array.isArray(ing)) ing = ing[0]; // Just show the first valid tag option
+    if (Array.isArray(ing)) ing = ing[0];
     const slug = getSlugFromInternal(ing);
     if (!slug) return <div className="unknown-item">?</div>;
     return (
@@ -101,6 +111,19 @@ export default function ItemModal({ item, onClose }) {
     );
   };
 
+  const ResultSlot = ({ resultId, count }) => (
+    <div style={{ position: 'relative' }}>
+      <div className="crafting-slot" style={{ border: '2px solid rgba(88,166,255,0.4)', background: 'rgba(0,0,0,0.6)', width: '50px', height: '50px', padding: '6px', borderRadius: '4px', boxShadow: 'inset 0 0 10px rgba(88,166,255,0.1)' }}>
+        {renderIngredient({item: resultId})}
+      </div>
+      {count > 1 && (
+        <span style={{ position: 'absolute', bottom: '-8px', right: '-8px', background: 'var(--bg-secondary)', padding: '2px 6px', borderRadius: '12px', fontSize: '0.8rem', fontWeight: 'bold', border: '1px solid var(--border-color)', zIndex: 10 }}>
+          {count}
+        </span>
+      )}
+    </div>
+  );
+
   const renderGrid = (recipe) => {
     if (recipe.type === 'minecraft:crafting_shaped') {
       const grid = [
@@ -117,113 +140,183 @@ export default function ItemModal({ item, onClose }) {
         }
       });
       return (
-        <div className="crafting-grid" style={{ marginBottom: '1rem' }}>
-          {grid.map((row, r) => row.map((cell, c) => (
-            <div key={`cell-${r}-${c}`} className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px' }}>
-              {renderIngredient(cell)}
-            </div>
-          )))}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+          <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 40px)', gap: '4px', padding: '8px', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
+            {grid.map((row, r) => row.map((cell, c) => (
+              <div key={`cell-${r}-${c}`} className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px' }}>
+                {renderIngredient(cell)}
+              </div>
+            )))}
+          </div>
+          <ArrowRight size={28} color="rgba(255,255,255,0.3)" />
+          <ResultSlot resultId={recipe.result} count={recipe.count || 1} />
         </div>
       );
     }
     
     if (recipe.type === 'minecraft:crafting_shapeless') {
       return (
-        <div className="crafting-grid" style={{ marginBottom: '1rem', gridTemplateColumns: 'repeat(3, 40px)', gap: '4px' }}>
-          {recipe.ingredients.map((ing, idx) => (
-            <div key={`shapeless-${idx}`} className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px' }}>
-              {renderIngredient(ing)}
-            </div>
-          ))}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+          <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 40px)', gap: '4px', padding: '8px', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', alignContent: 'start' }}>
+            {recipe.ingredients.map((ing, idx) => (
+              <div key={`shapeless-${idx}`} className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px' }}>
+                {renderIngredient(ing)}
+              </div>
+            ))}
+          </div>
+          <ArrowRight size={28} color="rgba(255,255,255,0.3)" />
+          <ResultSlot resultId={recipe.result} count={recipe.count || 1} />
         </div>
       );
     }
 
-    if (recipe.type === 'minecraft:smelting' || recipe.type === 'minecraft:blasting') {
+    if (recipe.type.includes('smelting') || recipe.type.includes('blasting') || recipe.type.includes('smoking') || recipe.type.includes('campfire')) {
       return (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-          <div className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: 'rgba(0,0,0,0.3)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+          <div className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px' }}>
             {renderIngredient(recipe.ingredient)}
           </div>
-          <ArrowRight size={24} color="var(--accent-primary)" />
-          <div className="crafting-slot" style={{ border: '1px solid var(--accent-primary)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px' }}>
-            {renderIngredient({item: recipe.result})}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem' }}>
+            <Flame size={20} color="#e67e22" />
+            <ArrowRight size={20} color="rgba(255,255,255,0.3)" />
+            <span style={{ fontSize: '0.65rem', color: '#888', textTransform: 'uppercase' }}>{recipe.type.split(':')[1].replace('crafting_', '')}</span>
           </div>
+          <ResultSlot resultId={recipe.result} count={recipe.count || 1} />
         </div>
       );
     }
 
-    return <div style={{color: '#888'}}>Formato de receita não suportado ({recipe.type})</div>;
+    return <div style={{color: '#888'}}>Formato não suportado: {recipe.type}</div>;
   };
 
   return (
     <div className="modal-overlay" onClick={onClose} style={{ zIndex: 10000, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '600px', width: '90%', maxHeight: '85vh', overflowY: 'auto' }}>
-        <button className="close-btn" onClick={onClose}>
-          <X size={20} />
-        </button>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '800px', width: '95%', maxHeight: '90vh', overflowY: 'auto', padding: 0, background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '16px', boxShadow: '0 20px 50px rgba(0,0,0,0.8)' }}>
         
-        {/* Header */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginBottom: '2rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1.5rem' }}>
-          <div style={{ width: '80px', height: '80px', background: 'rgba(0,0,0,0.5)', borderRadius: '12px', padding: '10px', border: '1px solid var(--accent-primary)', boxShadow: '0 0 20px rgba(88, 166, 255, 0.2)' }}>
-            <img src={getItemImage(item.id)} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain', imageRendering: 'pixelated' }} />
-          </div>
-          <div>
-            <h2 style={{ margin: 0, fontSize: '1.8rem', color: 'var(--text-primary)' }}>{item.name}</h2>
-            <div style={{ color: 'var(--accent-blue)', fontSize: '0.9rem', marginTop: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Info size={16} /> Mod: {modName} <span style={{color: '#555'}}>({internalId})</span>
+        {/* CABEÇALHO PREMIUM */}
+        <div style={{ position: 'relative', background: 'linear-gradient(135deg, rgba(88,166,255,0.1) 0%, rgba(0,0,0,0) 100%)', padding: '2rem', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+          <button className="close-btn" onClick={onClose} style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'rgba(255,255,255,0.1)', padding: '6px', borderRadius: '50%', color: 'var(--text-secondary)' }}>
+            <X size={20} />
+          </button>
+          
+          <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+            <div style={{ width: '96px', height: '96px', background: 'rgba(0,0,0,0.6)', borderRadius: '16px', padding: '16px', border: '1px solid rgba(88,166,255,0.3)', boxShadow: '0 0 30px rgba(88, 166, 255, 0.15)', flexShrink: 0 }}>
+              <img src={getItemImage(item.id)} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain', imageRendering: 'pixelated' }} />
+            </div>
+            <div>
+              <h2 style={{ margin: 0, fontSize: '2.2rem', color: 'var(--text-primary)', fontWeight: 800, letterSpacing: '-0.5px' }}>{item.name}</h2>
+              <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', flexWrap: 'wrap' }}>
+                <span style={{ background: 'rgba(88,166,255,0.1)', color: 'var(--accent-blue)', padding: '4px 12px', borderRadius: '20px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px', border: '1px solid rgba(88,166,255,0.2)' }}>
+                  <Package size={14} /> {modName}
+                </span>
+                <span style={{ background: 'rgba(255,255,255,0.05)', color: 'var(--text-secondary)', padding: '4px 12px', borderRadius: '20px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                  <Box size={14} /> ID: {internalId || 'N/A'}
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
-        {loading ? (
-          <div style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-secondary)' }}>Carregando 17.000 receitas...</div>
-        ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            
-            {/* Como Craftar */}
-            <div>
-              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-primary)', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.5rem' }}>
-                <Hammer size={20} /> Como Fazer
-              </h3>
-              {myRecipes.length > 0 ? (
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
-                  {myRecipes.slice(0, 10).map((r, i) => (
-                    <div key={i} style={{ background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                      {renderGrid(r)}
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <p style={{ color: '#666', fontStyle: 'italic' }}>Nenhuma receita de crafting table/fornalha encontrada para este item.</p>
-              )}
+        {/* CORPO DO MODAL */}
+        <div style={{ padding: '2rem' }}>
+          {loading ? (
+            <div style={{ textAlign: 'center', padding: '4rem', color: 'var(--text-secondary)' }}>
+              <div className="spin-animation" style={{ margin: '0 auto 1rem', width: '32px', height: '32px', border: '3px solid var(--border-color)', borderTopColor: 'var(--accent-blue)', borderRadius: '50%' }}></div>
+              Sincronizando 17.000 dados...
             </div>
-
-            {/* Onde Usar */}
-            <div>
-              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-primary)', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.5rem' }}>
-                <ArrowRight size={20} /> Onde Usar (Ingrediente)
-              </h3>
-              {usageRecipes.length > 0 ? (
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-                  {usageRecipes.slice(0, 24).map((r, i) => {
-                    const slug = getSlugFromInternal(r.result);
-                    if (!slug) return null;
-                    return (
-                      <div key={i} title={r.result} style={{ width: '40px', height: '40px', background: 'rgba(0,0,0,0.5)', padding: '4px', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.1)' }}>
-                        <img src={getItemImage(slug)} style={{ width: '100%', height: '100%', objectFit: 'contain', imageRendering: 'pixelated' }} />
-                      </div>
-                    );
-                  })}
-                  {usageRecipes.length > 24 && <div style={{ alignSelf: 'center', color: '#888', fontSize: '0.9rem' }}>+ {usageRecipes.length - 24} receitas...</div>}
-                </div>
-              ) : (
-                <p style={{ color: '#666', fontStyle: 'italic' }}>Este item não é usado em nenhuma receita básica.</p>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+              
+              {/* SESSÃO: COMO FABRICAR */}
+              {(craftingRecipes.length > 0 || otherRecipes.length > 0) && (
+                <section>
+                  <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-primary)', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.75rem', fontSize: '1.3rem' }}>
+                    <Hammer size={24} color="var(--accent-blue)" /> Fabricação
+                  </h3>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
+                    {craftingRecipes.slice(0, 8).map((r, i) => (
+                      <div key={i}>{renderGrid(r)}</div>
+                    ))}
+                    {otherRecipes.slice(0, 4).map((r, i) => (
+                      <div key={'other'+i}>{renderGrid(r)}</div>
+                    ))}
+                  </div>
+                </section>
               )}
-            </div>
 
-          </div>
-        )}
+              {/* SESSÃO: FORNALHA */}
+              {smeltingRecipes.length > 0 && (
+                <section>
+                  <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-primary)', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.75rem', fontSize: '1.3rem' }}>
+                    <Flame size={24} color="#e67e22" /> Processos Térmicos
+                  </h3>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
+                    {smeltingRecipes.slice(0, 8).map((r, i) => (
+                      <div key={i}>{renderGrid(r)}</div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* SESSÃO: DROPS DE MOBS */}
+              {mobDroppers.length > 0 && (
+                <section>
+                  <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-primary)', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.75rem', fontSize: '1.3rem' }}>
+                    <Skull size={24} color="var(--danger)" /> Obtido ao Derrotar
+                  </h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1rem' }}>
+                    {mobDroppers.map((mob, idx) => {
+                      const IconComponent = mob.icon || ShieldAlert;
+                      return (
+                        <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '12px', transition: 'background 0.2s' }} className="hover-highlight">
+                          <div style={{ width: '56px', height: '56px', flexShrink: 0, background: 'rgba(0,0,0,0.5)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,255,255,0.1)' }}>
+                            {mob.image ? (
+                               <img src={mob.image} alt={mob.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                            ) : (
+                               <IconComponent size={28} color="var(--text-secondary)" />
+                            )}
+                          </div>
+                          <div>
+                            <h4 style={{ margin: '0 0 0.4rem 0', color: 'var(--text-primary)', fontSize: '1.05rem' }}>{mob.name}</h4>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+                              {mob.drops.filter(d => d.name.toLowerCase().includes(item.name.toLowerCase())).map((d, i) => (
+                                <span key={i} className={`drop-tag drop-${d.rarity}`} style={{ fontSize: '0.75rem', padding: '2px 8px', borderRadius: '10px' }}>
+                                  Drop: {d.rarity === 'guaranteed' ? 'Garantido' : d.rarity === 'legendary' ? 'Lendário' : d.rarity === 'rare' ? 'Raro' : 'Comum'}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
+              )}
+
+              {/* SESSÃO: ONDE USAR */}
+              {usageRecipes.length > 0 && (
+                <section>
+                  <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-primary)', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.75rem', fontSize: '1.3rem' }}>
+                    <Info size={24} color="var(--text-secondary)" /> Utilizado Em
+                  </h3>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+                    {usageRecipes.slice(0, 48).map((r, i) => {
+                      const slug = getSlugFromInternal(r.result);
+                      if (!slug) return null;
+                      return (
+                        <div key={i} title={r.result} style={{ width: '48px', height: '48px', background: 'rgba(0,0,0,0.5)', padding: '6px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', transition: 'transform 0.2s', cursor: 'pointer' }} className="hover-scale">
+                          <img src={getItemImage(slug)} style={{ width: '100%', height: '100%', objectFit: 'contain', imageRendering: 'pixelated' }} />
+                        </div>
+                      );
+                    })}
+                    {usageRecipes.length > 48 && <div style={{ alignSelf: 'center', color: '#888', fontSize: '0.9rem', paddingLeft: '1rem' }}>+ {usageRecipes.length - 48} usos...</div>}
+                  </div>
+                </section>
+              )}
+
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

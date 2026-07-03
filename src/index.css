@@ -626,3 +626,6 @@ body {
   border-radius: 3px;
 }
 
+
+.hover-highlight:hover { background: rgba(88, 166, 255, 0.05) !important; border-color: rgba(88, 166, 255, 0.3) !important; } 
+.hover-scale:hover { transform: scale(1.1); box-shadow: 0 0 15px rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3) !important; z-index: 10; }
