@@ -94,16 +94,15 @@ export default function App() {
         />
       )}
 
-      <div className={`sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-        <Sidebar 
-          activeTab={activeTab} 
-          setActiveTab={(t) => { setActiveTab(t); setMobileMenuOpen(false); }} 
-          theme={theme}
-          setTheme={setTheme}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-        />
-      </div>
+      <Sidebar 
+        activeTab={activeTab} 
+        setActiveTab={(t) => { setActiveTab(t); setMobileMenuOpen(false); }} 
+        theme={theme}
+        setTheme={setTheme}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        mobileMenuOpen={mobileMenuOpen}
+      />
       
       <main className="main-content" onScroll={handleScroll}>
         <ErrorBoundaryFallback>

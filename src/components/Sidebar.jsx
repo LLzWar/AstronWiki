@@ -55,7 +55,7 @@ const warlordTabs = [
   { id: 'late', icon: Crown, label: 'Fase 4: Imortalidade' }
 ];
 
-export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery }) {
+export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, searchQuery, setSearchQuery, mobileMenuOpen }) {
   const toggleTheme = useStore((state) => state.toggleTheme);
   const [openGroups, setOpenGroups] = useState({ tech: true, magic: true, utility: true });
   const [warlordOpen, setWarlordOpen] = useState(true);
@@ -119,7 +119,7 @@ export default function Sidebar({ activeTab, setActiveTab, theme, setTheme, sear
   };
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
         <div 
           style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }}
