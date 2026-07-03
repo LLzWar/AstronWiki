@@ -37,8 +37,8 @@ ultima_revisao: "2026-07-01"
 7. [Recursos mágicos e onde conseguir](#7-recursos-magicos-e-onde-conseguir)
 8. [Crafting stations: mesa, forge, anvil e cauldron](#8-crafting-stations-mesa-forge-anvil-e-cauldron)
 9. [Early Game - primeiro mago funcional](#9-early-game---primeiro-mago-funcional)
-10. [Mid Game - Scroll Forge, Nether e especialização](#10-mid-game---scroll-forge-nether-e-especializacao)
-11. [Late Game - Arcane Anvil, bosses e upgrades](#11-late-game---arcane-anvil-bosses-e-upgrades)
+10. [Mid Game - [item:Scroll] Forge, Nether e especialização](#10-mid-game---scroll-forge-nether-e-especializacao)
+11. [Late Game - [item:Arcane Anvil], bosses e upgrades](#11-late-game---arcane-anvil-bosses-e-upgrades)
 12. [End Game - builds completas e magia de servidor](#12-end-game---builds-completas-e-magia-de-servidor)
 13. [Escolas de magia](#13-escolas-de-magia)
 14. [Catálogo completo de spells por escola](#14-catalogo-completo-de-spells-por-escola)
@@ -72,7 +72,7 @@ ultima_revisao: "2026-07-01"
     <div class="mc-slot" title="Oak Planks"><img src="/assets/sprites/oak_planks.png" alt="Planks" onError="this.src='/assets/sprites/barrier.png'" /></div>
   </div>
   <div class="mc-arrow"></div>
-  <div class="mc-result" title="Inscription Table"><img src="/assets/sprites/inscription_table.png" alt="Inscription Table" onError="this.src='/assets/sprites/barrier.png'" /></div>
+  <div class="mc-result" title="[item:Inscription Table]"><img src="/assets/sprites/inscription_table.png" alt="Inscription Table" onError="this.src='/assets/sprites/barrier.png'" /></div>
 </div>
 
 # 1. O que é Iron's Spells no Astron City
@@ -128,7 +128,7 @@ Este guia cobre:
 - catálogo completo de spells por escola;
 - spellbooks, staves, armas, armaduras e curios;
 - estruturas mágicas e rotas de exploração;
-- boss progression: Catacombs, Dead King, Citadel e Echo of Tyros;
+- boss progression: Catacombs, Dead King *(Consulte o Bestiário para estatísticas completas)*, Citadel e Echo of Tyros;
 - builds práticas para survival multiplayer;
 - farms e soluções populares;
 - HOT TOPICS com spells/itens muito fortes;
@@ -180,7 +180,7 @@ A melhor forma de usar Iron's Spells no Astron City é pensar em **papéis de pe
 | Ink | Define raridade/nível mínimo do scroll craftado no Scroll Forge. |
 | Rune | Item de escola usado em armaduras, spellbooks e progressão. |
 | Imbuement | Spell colocada em arma/peça compatível. Normalmente há limite e decisão é importante. |
-| Upgrade Orb | Item usado para melhorar spellbooks/armaduras, normalmente ligado ao late game. |
+| [item:Upgrade Orb] | Item usado para melhorar spellbooks/armaduras, normalmente ligado ao late game. |
 
 ---
 
@@ -198,7 +198,7 @@ Sobrevivência inicial
   -> Arcane Essence, Ink, Runestones e Scrolls
   -> Nether resources
   -> Scroll Forge
-  -> Apprentice Spell Book / Enchanted Spell Book
+  -> Apprentice [item:Spell Book] / Enchanted Spell Book
   -> armadura Wandering Magician / Wizard armor
   -> Catacombs + Dead King
   -> Arcane Anvil
@@ -341,7 +341,7 @@ O mod divide spells em escolas. Cada escola tem tema, focus, gear e estilo.
 | Mithril | Gear e spellbooks avançados | Mineração profunda, abaixo de Y negativo conforme configs. |
 | Pyrium | Gear fire/endgame | Citadel vaults e loot avançado. |
 | Dragonskin | Spellbook Ender/Dragon theme | Ender Dragon. |
-| Eldritch Manuscript | Aprender Eldritch spells | Fragmentos + echo shard. |
+| [item:Eldritch Manuscript] | Aprender Eldritch spells | Fragmentos + echo shard. |
 
 ## 7.2. Focuses por escola
 
@@ -373,13 +373,13 @@ Runes são a ponte entre escolas e gear. No mid/late game, elas sustentam school
 
 | Rune | Escola | Uso comum |
 |---|---|---|
-| Fire Rune | Fire | Pyromancer/Infernal gear, scrolls e upgrades. |
-| Ice Rune | Ice | Cryomancer gear, Frostbranded Book e controle. |
+| Fire Rune | Fire | Pyromancer *(Consulte o Bestiário para estatísticas completas)*/Infernal gear, scrolls e upgrades. |
+| Ice Rune | Ice | Cryomancer *(Consulte o Bestiário para estatísticas completas)* gear, Frostbranded Book e controle. |
 | Lightning Rune | Lightning | Electromancer gear e burst. |
 | Holy Rune | Holy | Priest/Lightbringer/Villager Bible style. |
 | Ender Rune | Ender | Teleport, portal e spellbook ender. |
 | Blood Rune | Blood | Cultist gear, Vampiric/Necronomicon path. |
-| Evocation Rune | Evocation | Archevoker gear e summons/utility. |
+| Evocation Rune | Evocation | Archevoker *(Consulte o Bestiário para estatísticas completas)* gear e summons/utility. |
 | Nature Rune | Nature | Plagued/Alchemist style, poison/debuffs. |
 | Protective Rune | Defense | Itens defensivos, rings/armor. |
 
@@ -933,7 +933,7 @@ Pontos fracos:
 
 Melhor para:
 
-- necromancer build;
+- necromancer *(Consulte o Bestiário para estatísticas completas)* build;
 - solo survival;
 - sustain em combate prolongado;
 - jogadores que gostam de tema sombrio.
@@ -1447,7 +1447,7 @@ Fireward/Frostward/Poisonward conforme biome/dungeon
 
 | Dungeon | Localização | Acesso | Recomendação |
 |---|---|---|---|
-| The Catacombs | Underground Overworld | Wayward Compass | Enchanted diamond gear ou melhor; grupo recomendado. |
+| The Catacombs | Underground Overworld | [item:Wayward Compass] | Enchanted diamond gear ou melhor; grupo recomendado. |
 | The Citadel | Nether | Ancient Maps / exploração | Late game; Cinderous Soulcaller para boss. |
 
 ## 18.4. Rota de exploração recomendada

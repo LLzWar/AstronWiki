@@ -59,8 +59,8 @@ A regra central para o Wiki:
 ### 3.1. O gear ideal tem 5 camadas
 
 1. **Base do item:** Silent Gear, Cataclysm, Simply Swords, Draconic, Oritech, MI, vanilla etc.
-2. **Material / tier:** ferro, aco, netherite, Tyrian Steel, Dragonsteel, Draconic, Quantum, Ignitium, entre outros.
-3. **Qualidade / refinamento:** Silent Gear grading, Productive Metalworks casting, upgrades, modules, augments.
+2. **Material / tier:** ferro, aco, netherite, [item:Tyrian Steel Ingot], Dragonsteel, Draconic, Quantum, Ignitium, entre outros.
+3. **Qualidade / refinamento:** Silent Gear grading, Productive Metalworks casting, upgrades, modules, augments. Use o [item:Starlight Charger] para potencializar o grading.
 4. **Encantamentos:** Apotheosis/Apothic Enchanting, tomes, bibliotecas, XP farm.
 5. **Affixes, sockets e gems:** Apotheosis Adventure; e aqui que o item vira item de verdade.
 
@@ -97,8 +97,8 @@ Silent Gear substitui a ideia de "craftar uma espada de diamante" por "montar um
 
 - **Main Part:** parte principal; define grande parte do dano, mining level, protecao, durabilidade e atributos centrais.
 - **Rod / Handle:** influencia durabilidade, velocidade, eficiencia e alguns multiplicadores.
-- **Grip / Binding / Lining / Tip / Coating:** partes secundarias que ajustam traits, durabilidade, eficiencia, magia, armadura ou estilo.
-- **Blueprint / Template:** blueprint e reutilizavel; template geralmente e consumivel.
+- **[item:Grip] / Binding / Lining / Tip / [item:Coating]:** partes secundarias que ajustam traits, durabilidade, eficiencia, magia, armadura ou estilo.
+- **[item:Blueprint] / Template:** [item:blueprint] e reutilizavel; template geralmente e consumivel.
 - **Material:** qualquer material suportado pelo mod ou pelo pack pode mudar o item.
 - **Trait:** bonus especial do material/parte; e aqui que muitos itens ficam quebrados.
 
@@ -106,16 +106,16 @@ Silent Gear substitui a ideia de "craftar uma espada de diamante" por "montar um
 
 | Item | Prioridade | Uso |
 |---|---:|---|
-| **Crude Knife** | Alta | Primeiras fibras, strings, materiais e componentes iniciais. |
+| **[item:Crude Knife]** | Alta | Primeiras fibras, strings, materiais e componentes iniciais. |
 | **Template Board** | Alta | Fazer templates consumiveis. |
-| **Blueprint Paper** | Alta | Fazer blueprints reutilizaveis. |
+| **[item:Blueprint Paper]** | Alta | Fazer blueprints reutilizaveis. |
 | **Stone Anvil / Gear Anvil** | Alta | Montagem e reparo de gear. |
 | **Blueprint Book** | Media | Organizar blueprints. |
 | **Hammer / Paxel / Prospector Hammer** | Alta | Mineracao, 3x3, prospeccao e qualidade de vida. |
-| **Repair Kit** | Alta | Manter equipamentos sem refazer. |
-| **Material Grader** | Alta no midgame | Melhorar material antes de criar item final. |
-| **Alloy Forge** | Alta no midgame | Criar ligas proprias do Silent Gear. |
-| **Salvager** | Media | Recuperar partes/materiais de gear. |
+| **[item:Repair Kit]** | Alta | Manter equipamentos sem refazer. |
+| **[item:Material Grader]** | Alta no midgame | Melhorar material antes de criar item final. |
+| **[item:Alloy Forge]** | Alta no midgame | Criar ligas proprias do Silent Gear. |
+| **[item:Salvager]** | Media | Recuperar partes/materiais de gear. |
 
 ### 4.2. Primeiros crafts recomendados
 
@@ -124,7 +124,7 @@ Silent Gear substitui a ideia de "craftar uma espada de diamante" por "montar um
 1. Pegue madeira, pedra, comida e carvao.
 2. Faca **Crude Knife**.
 3. Faca **Template Boards**.
-4. Faca templates de **Pickaxe**, **Sword**, **Axe**, **Shovel** e **Tool Rod**.
+4. Faca templates de **Pickaxe**, **Sword**, **Axe**, **Shovel** e **[item:Tool Rod]**.
 5. Monte ferramentas basicas com pedra/ferro.
 6. Assim que possivel, troque templates consumiveis por **Blueprints**.
 7. Faça **Repair Kits** para evitar perder gear bom cedo.
@@ -227,7 +227,7 @@ Cada material pode afetar:
 | Early | Stone, flint, iron, copper, bronze, gold em partes secundarias | Barato, facil de reparar, bom para aprender. |
 | Early/Mid | Steel, obsidian, amethyst, quartz, diamond | Aumento real de poder sem depender de boss. |
 | Mid | Netherite, materiais de Nether, ligas Silent Gear | Inicio de gear serio. |
-| Late | Crimson Steel, Azure Electrum, Tyrian Steel, materiais de boss, gem materials | Base para equipamentos definitivos. |
+| Late | [item:Crimson Iron Ingot], [item:Azure Silver Ingot], Tyrian Steel, materiais de boss, gem materials | Base para equipamentos definitivos. |
 | Endgame | Dragonsteel, Ignitium, Draconic, Quantum, materiais raros do pack | Confirmar disponibilidade e compat no EMI. |
 
 ### 6.4. Grading e qualidade de material
@@ -630,7 +630,7 @@ Escolher World Tier adequado
 -> limpar dungeons/estruturas
 -> coletar affix gear e gems
 -> manter bases boas
--> salvager no resto
+-> [item:salvager] no resto
 -> usar materiais no Reforging Table
 -> cortar gems
 -> repetir em tier maior
@@ -1173,7 +1173,7 @@ Backpack e parte do loadout.
 4. Automatize input/output de metal.
 5. Produza steel/netherite/ligas em lote.
 6. Crie partes Silent Gear por casting.
-7. Monte Material Grader/Alloy Forge.
+7. Monte [item:Material Grader]/Alloy Forge.
 8. Compare materiais antes de craftar final.
 9. Faça gear por role: minerador, boss hunter, mage, tank.
 10. Monte setup Apothic Enchanting medio.

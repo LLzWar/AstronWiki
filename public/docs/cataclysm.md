@@ -104,11 +104,11 @@ Cataclysm não é uma linha totalmente linear em todos os packs. Algumas estrutu
 | Fase | Objetivo | Cataclysm recomendado |
 |---|---|---|
 | **Pré-Cataclysm** | Encantar gear, montar comida/poções, conseguir mobilidade e ranged. | Nenhum boss principal ainda. Explorar, marcar estruturas e preparar. |
-| **Entrada no End / Pós-Dragon** | Abrir End, melhorar gear e resistências. | Soul Forge / Netherite Monstrosity ou Ruined Citadel, dependendo do grupo. |
-| **Primeira onda de bosses** | Aprender lutas com arenas grandes. | Netherite Monstrosity, Ender Golem, Ender Guardian. |
-| **Midgame de aventura** | Bosses com mecânicas mais complexas e loot de arma forte. | Ancient Factory / Harbinger, Cursed Pyramid / Ancient Remnant. |
+| **Entrada no End / Pós-Dragon** | Abrir End, melhorar gear e resistências. | Soul Forge / Netherite Monstrosity *(Consulte o Bestiário para estatísticas completas)* ou Ruined Citadel, dependendo do grupo. |
+| **Primeira onda de bosses** | Aprender lutas com arenas grandes. | Netherite Monstrosity, Ender Golem, Ender Guardian *(Consulte o Bestiário para estatísticas completas)*. |
+| **Midgame de aventura** | Bosses com mecânicas mais complexas e loot de arma forte. | Ancient Factory / Harbinger, Cursed Pyramid / Ancient Remnant *(Consulte o Bestiário para estatísticas completas)*. |
 | **Exploração especializada** | Biomas específicos, preparação aquática, gelo, tempestade. | Sunken City, Acropolis, Frosted Prison. |
-| **Late game de combate** | Resistência ao fogo, dano alto, controle de arena e grupo organizado. | Burning Arena / Ignis. |
+| **Late game de combate** | Resistência ao fogo, dano alto, controle de arena e grupo organizado. | Burning Arena / Ignis *(Consulte o Bestiário para estatísticas completas)*. |
 | **Endgame de loot** | Fusão de equipamentos e upgrades lendários. | Mechanical Fusion Anvil e equipamentos fundidos. |
 
 ### 4.2. Ordem prática recomendada para Astron City
@@ -121,11 +121,11 @@ A ordem abaixo é uma sugestão de Wiki/Quest, não uma limitação técnica:
 4. **Ruined Citadel:** Ender Golem e Ender Guardian.
 5. **Ancient Factory:** Prowler e Harbinger.
 6. **Cursed Pyramid:** Wadjet, Kobolediator e Ancient Remnant.
-7. **Sunken City:** Amethyst Crab, Abyssal Sacrifice e Leviathan.
+7. **Sunken City:** Amethyst Crab, [item:Abyssal Sacrifice] e Leviathan.
 8. **Acropolis:** Scylla e loot de tempestade/oceano.
 9. **Frosted Prison:** Aptrgangr e Maledictus.
 10. **Burning Arena:** Ignited Revenants, Altar of Fire e Ignis.
-11. **Mechanical Fusion Anvil:** itens fundidos e upgrades de endgame.
+11. **[item:Mechanical Fusion Anvil]:** itens fundidos e upgrades de endgame.
 
 ---
 
@@ -196,9 +196,9 @@ O Cataclysm usa itens do tipo **Eye** para localizar estruturas. Eles funcionam 
 |---|---|---|---|
 | **Eye of Monstrous** | Soul Forge | Nether | Netherite Monstrosity |
 | **Eye of Void** | Ruined Citadel | End | Ender Guardian |
-| **Eye of Mech** | Ancient Factory | Overworld subterrâneo | The Harbinger |
+| **Eye of Mech** | Ancient Factory | Overworld subterrâneo | The Harbinger *(Consulte o Bestiário para estatísticas completas)* |
 | **Eye of Desert** | Cursed Pyramid | Overworld árido/desértico | Ancient Remnant |
-| **Eye of Abyss** | Sunken City | Deep Ocean | The Leviathan |
+| **Eye of Abyss** | Sunken City | Deep Ocean | The Leviathan *(Consulte o Bestiário para estatísticas completas)* |
 | **Eye of Storm** | Acropolis | Warm Ocean | Scylla |
 | **Eye of Curse** | Frosted Prison | Snowy Plains / região fria | Maledictus |
 | **Eye of Flame** | Burning Arena | Nether | Ignis |
@@ -233,6 +233,8 @@ Leve:
 
 O **Netherite Monstrosity** é um boss massivo do Nether. Ele usa golpes físicos, ataques de lava, dano em área e pode se beneficiar de lava durante a luta. O grupo deve controlar posicionamento e evitar transformar a arena em um caos de fogo.
 
+> *(Consulte o Bestiário para estatísticas completas do Netherite Monstrosity)*
+
 ### Estratégia
 
 1. Limpe mobs ao redor antes de ativar o boss.
@@ -247,16 +249,16 @@ O **Netherite Monstrosity** é um boss massivo do Nether. Ele usa golpes físico
 
 Itens importantes associados:
 
-- **Infernal Forge**.
-- **Monstrous Horn**.
-- **Monstrous Helm**.
-- **Netherite Effigy** / pet ou item temático, se disponível na versão/config.
+- **[item:Infernal Forge]**.
+- **[item:Monstrous Horn]**.
+- **[item:Monstrous Helm]**.
+- **[item:Netherite Effigy]** / pet ou item temático, se disponível na versão/config.
 - Music Disc da estrutura.
 - Materiais decorativos e blocos da Soul Forge.
 
 ### O que fazer depois
 
-- Guardar Monstrous Horn e drops únicos.
+- Guardar [item:Monstrous Horn] e drops únicos.
 - Criar uma exibição/troféu da Soul Forge.
 - Usar loot para preparar Ruined Citadel ou Burning Arena.
 
@@ -291,6 +293,8 @@ O **Ender Golem** é um inimigo forte da estrutura. Ele é uma prévia do ritmo 
 
 O **Ender Guardian** é o boss central da Ruined Citadel. Ele tem muita vida, alta defesa e ataques capazes de punir aproximações ruins. Na metade da vida, a luta pode ficar mais agressiva.
 
+> *(Consulte o Bestiário para estatísticas completas do Ender Guardian)*
+
 ### Estratégia
 
 1. Limpe caminho até a arena.
@@ -304,15 +308,15 @@ O **Ender Guardian** é o boss central da Ruined Citadel. Ele tem muita vida, al
 
 Itens importantes associados:
 
-- **Void Core**.
-- **Gauntlet of Guard**.
-- **Void Scatter Arrows**.
+- **[item:Void Core]**.
+- **[item:Gauntlet of Guard]**.
+- **[item:Void Scatter Arrows]**.
 - Blocos Void para decoração.
 - Music Disc da estrutura.
 
 ### O que fazer depois
 
-- Usar Void Core e itens relacionados para upgrades.
+- Usar [item:Void Core] e itens relacionados para upgrades.
 - Guardar materiais para Mechanical Fusion Anvil.
 - Preparar Ancient Factory ou Cursed Pyramid.
 
@@ -349,6 +353,8 @@ O **Prowler** é um inimigo mecânico perigoso. Ele prepara o jogador para o est
 
 O **Harbinger** é um dos bosses mais marcantes do Cataclysm. Ele pode alternar ataques, usar lasers, mísseis e mecânicas de máquina. Em algumas fases, pode exigir adaptação de ranged/melee e cuidado com ataques de área.
 
+> *(Consulte o Bestiário para estatísticas completas do The Harbinger)*
+
 ### Estratégia
 
 1. Limpe a dungeon antes de ativar o boss.
@@ -362,10 +368,10 @@ O **Harbinger** é um dos bosses mais marcantes do Cataclysm. Ele pode alternar 
 
 Itens importantes associados:
 
-- **Witherite Ingots**.
-- **Meat Shredder**.
-- **Wither Assault Weapon**.
-- **Laser Gatling**.
+- **[item:Witherite Ingot]**.
+- **[item:Meat Shredder]**.
+- **[item:Wither Assault Shoulder Weapon]**.
+- **[item:Laser Gatling]**.
 - Blocos tecnológicos da Ancient Factory.
 - Music Disc da estrutura.
 
@@ -410,6 +416,8 @@ Eles não devem ser ignorados, porque podem acumular dano antes do boss.
 
 O **Ancient Remnant** é o boss principal da estrutura. A luta exige atenção a ataques pesados, posicionamento e janelas de dano.
 
+> *(Consulte o Bestiário para estatísticas completas do Ancient Remnant)*
+
 ### Estratégia
 
 1. Limpe salas laterais antes da arena.
@@ -423,12 +431,12 @@ O **Ancient Remnant** é o boss principal da estrutura. A luta exige atenção a
 
 Itens importantes associados:
 
-- **Sticky Gloves**.
-- **Necklace of the Desert**.
-- **Ancient Metal**.
-- **Ancient Spear**.
-- **Bone Reptile Armor**.
-- **Modern Remnant** / pet ou item temático, se disponível.
+- **[item:Sticky Gloves]**.
+- **[item:Necklace of the Desert]**.
+- **[item:Ancient Metal]**.
+- **[item:Ancient Spear]**.
+- **[item:Bone Reptile Armor]**.
+- **[item:Modern Remnant]** / pet ou item temático, se disponível.
 - Music Disc da estrutura.
 
 ### O que fazer depois
@@ -472,6 +480,8 @@ O **Amethyst Crab** está ligado à progressão da Sunken City. Ele pode fornece
 
 O **Leviathan** é um boss aquático de grande escala. A luta deve ser tratada como uma expedição própria, não como uma parada rápida.
 
+> *(Consulte o Bestiário para estatísticas completas do The Leviathan)*
+
 ### Estratégia
 
 1. Monte uma base segura fora da estrutura.
@@ -485,10 +495,10 @@ O **Leviathan** é um boss aquático de grande escala. A luta deve ser tratada c
 
 Itens importantes associados:
 
-- **Athame**.
-- **Abyssal Sacrifice**.
-- **Tidal Claws**.
-- **Baby Leviathan** / pet ou item temático.
+- **[item:Athame]**.
+- **[item:Abyssal Sacrifice]**.
+- **[item:Tidal Claws]**.
+- **[item:Baby Leviathan]** / pet ou item temático.
 - Armas e blocos aquáticos, como linhas de coral/abyss.
 - Music Disc da estrutura.
 
@@ -596,14 +606,14 @@ O **Maledictus** é um boss de late game. Ele deve ser enfrentado com grupo prep
 
 Itens importantes associados:
 
-- **Black Steel Ingots**.
-- **Black Steel Targe**.
-- **Strange Key**.
-- **Cursium Ingots**.
-- **Annihilator**.
-- **Cursed Bow**.
-- **Soul Render**.
-- **Cursium Armor**.
+- **[item:Black Steel Ingot]**.
+- **[item:Black Steel Targe]**.
+- **[item:Strange Key]**.
+- **[item:Cursium Ingot]**.
+- **[item:Annihilator]**.
+- **[item:Cursed Bow]**.
+- **[item:Soul Render]**.
+- **[item:Cursium Armor]**.
 - Music Disc da estrutura.
 
 ### O que fazer depois
@@ -648,7 +658,7 @@ Use os drops de Ignited Revenants e itens relacionados para preparar a ativaçã
     <div class="mc-slot" title="Burning Ashes"><img src="/assets/sprites/burning_ashes.png" alt="Burning Ashes" /></div>
     <div class="mc-slot" title="Nether Bricks"><img src="/assets/sprites/nether_brick.png" alt="Nether Bricks" /></div>
     <div class="mc-slot" title="Burning Ashes"><img src="/assets/sprites/burning_ashes.png" alt="Burning Ashes" /></div>
-    <div class="mc-slot" title="Ignitium Ingot"><img src="/assets/sprites/ignitium_ingot.png" alt="Ignitium Ingot" /></div>
+    <div class="mc-slot" title="[item:Ignitium Ingot]"><img src="/assets/sprites/ignitium_ingot.png" alt="Ignitium Ingot" /></div>
     <div class="mc-slot" title="Burning Ashes"><img src="/assets/sprites/burning_ashes.png" alt="Burning Ashes" /></div>
     <div class="mc-slot" title="Nether Bricks"><img src="/assets/sprites/nether_brick.png" alt="Nether Bricks" /></div>
     <div class="mc-slot" title="Burning Ashes"><img src="/assets/sprites/burning_ashes.png" alt="Burning Ashes" /></div>
@@ -666,6 +676,8 @@ Use os drops de Ignited Revenants e itens relacionados para preparar a ativaçã
 
 **Ignis** é um dos bosses mais difíceis e recompensadores do Cataclysm. Ele tem ataques de fogo, golpes pesados, pressão constante e pode punir armadura/defesa do jogador.
 
+> *(Consulte o Bestiário para estatísticas completas de Ignis)*
+
 ### Estratégia
 
 1. Fire Resistance deve estar ativa antes da luta.
@@ -680,16 +692,16 @@ Use os drops de Ignited Revenants e itens relacionados para preparar a ativaçã
 
 Itens importantes associados:
 
-- **Ignitium Ingots**.
-- **The Incinerator**.
-- **Blazing Grips**.
-- **Bulwark of the Flame**.
-- **Ignitium Armor**.
+- **[item:Ignitium Ingot]**.
+- **[item:The Incinerator]**.
+- **[item:Blazing Grips]**.
+- **[item:Bulwark of the Flame]**.
+- **[item:Ignitium Armor]**.
 - Music Disc da estrutura.
 
 ### O que fazer depois
 
-- Criar Ignitium Armor ou upgrades.
+- Criar [item:Ignitium Armor] ou upgrades.
 - Preparar Mechanical Fusion Anvil.
 - Usar Incinerator/Bulwark como símbolos de endgame de combate.
 
@@ -710,10 +722,10 @@ Essa é a melhor forma de fazer o Cataclysm conversar com o conceito de Astron C
 | **Gauntlet of Bulwark** | Versão avançada/defensiva ligada a gauntlet + bulwark. |
 | **Gauntlet of Maelstrom** | Upgrade de gauntlet com tema de tempestade/mobilidade/dano. |
 | **Wrath of the Desert** | Upgrade ligado à linha desértica. |
-| **Void Forge** | Upgrade poderoso ligado à linha Void/End. |
-| **Ignitium Elytra Chestplate** | Um dos itens mais fortes para survival: armadura + mobilidade. |
-| **Void Assault Shoulder Weapon** | Arma/shoulder weapon avançada da linha Void. |
-| **Immolator** | Upgrade ofensivo ligado à linha Ignitium/Annihilator. |
+| **[item:Void Forge]** | Upgrade poderoso ligado à linha Void/End. |
+| **[item:Ignitium Elytra Chestplate]** | Um dos itens mais fortes para survival: armadura + mobilidade. |
+| **[item:Void Assault Shoulder Weapon]** | Arma/shoulder weapon avançada da linha Void. |
+| **[item:Immolator]** | Upgrade ofensivo ligado à linha Ignitium/Annihilator. |
 
 ### Como usar no Wiki
 
@@ -733,8 +745,8 @@ No Wiki, crie uma página/tabela chamada **Fusões do Cataclysm** com:
 
 | Estrutura | Dimensão / região | Localizador | Boss / encontro | Valor principal |
 |---|---|---|---|---|
-| **Soul Forge** | Nether | Eye of Monstrous | Netherite Monstrosity | Infernal Forge, Monstrous Horn, Monstrous Helm. |
-| **Ruined Citadel** | End | Eye of Void | Ender Golem, Ender Guardian | Void Core, Gauntlet of Guard, Void gear. |
+| **Soul Forge** | Nether | Eye of Monstrous | Netherite Monstrosity | [item:Infernal Forge], Monstrous Horn, Monstrous Helm. |
+| **Ruined Citadel** | End | Eye of Void | Ender Golem, Ender Guardian | Void Core, [item:Gauntlet of Guard], Void gear. |
 | **Ancient Factory** | Overworld subterrâneo | Eye of Mech | Prowler, Harbinger | Witherite, Laser Gatling, Wither Assault Weapon. |
 | **Cursed Pyramid** | Overworld árido | Eye of Desert | Wadjet, Kobolediator, Ancient Remnant | Ancient Metal, Ancient Spear, desert curios. |
 | **Sunken City** | Deep Ocean | Eye of Abyss | Amethyst Crab, Leviathan | Tidal Claws, Abyssal items, Baby Leviathan. |
@@ -777,7 +789,7 @@ No Wiki, crie uma página/tabela chamada **Fusões do Cataclysm** com:
 | **Void Core** | Ruined Citadel / Ender Guardian | Gauntlets, Void gear e upgrades. |
 | **Ancient Metal** | Cursed Pyramid / Ancient Remnant | Ancient Spear e crafts da linha desértica. |
 | **Black Steel Ingot** | Frosted Prison / Aptrgangr | Black Steel gear e Black Steel Targe. |
-| **Cursium Ingot** | Frosted Prison / Maledictus | Cursium Armor, armas cursed e upgrades. |
+| **[item:Cursium Ingot]** | Frosted Prison / Maledictus | Cursium Armor, armas cursed e upgrades. |
 | **Ignitium Ingot** | Burning Arena / Ignis | Ignitium Armor, Incinerator, Bulwark, upgrades. |
 | **Abyssal / Amethyst materials** | Sunken City | Leviathan line, Tidal Claws e itens aquáticos. |
 | **Ashes / Fire ritual items** | Ignited Revenant | Ativação/ritual do Ignis e Burning Arena. |
@@ -811,7 +823,7 @@ Nunca descarte sem checar EMI:
 | **Tidal Claws** | Leviathan | Mobilidade e combate, excelente para survival. |
 | **Soul Render** | Cursium | Arma avançada ligada ao Maledictus. |
 | **Annihilator** | Cursium | Arma pesada de late game e base para fusão. |
-| **The Incinerator** | Ignis | Uma das armas mais fortes e icônicas do mod. |
+| **[item:The Incinerator]** | Ignis | Uma das armas mais fortes e icônicas do mod. |
 | **Immolator** | Fusion | Upgrade endgame ofensivo. |
 | **Coral Spear / Coral Bardiche** | Abyss/Ocean | Armas temáticas de oceano, validar versão no EMI. |
 | **Athame** | Abyss | Item/arma ligada à progressão do Leviathan. |
@@ -835,7 +847,7 @@ Nunca descarte sem checar EMI:
 | **Gauntlet of Guard** | Void | Defesa/controle, muito útil em survival. |
 | **Gauntlet of Bulwark** | Fusion | Upgrade defensivo de endgame. |
 | **Gauntlet of Maelstrom** | Fusion/Storm | Item avançado de controle/mobilidade/dano. |
-| **Void Forge** | Fusion/Void | Ferramenta/arma avançada da linha Void. |
+| **[item:Void Forge]** | Fusion/Void | Ferramenta/arma avançada da linha Void. |
 
 ## 11.4. Armaduras
 

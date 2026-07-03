@@ -169,11 +169,11 @@ export default function App() {
                     <Route path="/mobs" element={<PageWrapper><WikiMobs /></PageWrapper>} />
                     <Route path="/dimensions" element={<PageWrapper><WikiDimensions onOpenRecipe={openRecipe} /></PageWrapper>} />
                     <Route path="/create" element={<PageWrapper><MarkdownViewer fileUrl="/docs/create.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
-                    <Route path="/apotheosis" element={<PageWrapper><WikiApotheosis onOpenRecipe={openRecipe} /></PageWrapper>} />
+                    <Route path="/apotheosis" element={<PageWrapper><WikiApotheosis onOpenRecipe={openRecipe} onOpenWebJEI={setActiveItem} /></PageWrapper>} />
                     <Route path="/irons_spells" element={<PageWrapper><MarkdownViewer fileUrl="/docs/irons_spells.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
-                    <Route path="/powah" element={<PageWrapper><WikiPowah onOpenRecipe={openRecipe} /></PageWrapper>} />
-                    <Route path="/silentgear" element={<PageWrapper><WikiSilentGear onOpenRecipe={openRecipe} /></PageWrapper>} />
-                    <Route path="/backpacks" element={<PageWrapper><WikiBackpacks onOpenRecipe={openRecipe} /></PageWrapper>} />
+                    <Route path="/powah" element={<PageWrapper><WikiPowah onOpenRecipe={openRecipe} onOpenWebJEI={setActiveItem} /></PageWrapper>} />
+                    <Route path="/silentgear" element={<PageWrapper><WikiSilentGear onOpenRecipe={openRecipe} onOpenWebJEI={setActiveItem} /></PageWrapper>} />
+                    <Route path="/backpacks" element={<PageWrapper><WikiBackpacks onOpenRecipe={openRecipe} onOpenWebJEI={setActiveItem} /></PageWrapper>} />
                     <Route path="/ae2" element={<PageWrapper><MarkdownViewer fileUrl="/docs/ae2.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
                     <Route path="/cataclysm" element={<PageWrapper><MarkdownViewer fileUrl="/docs/cataclysm.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />
                     <Route path="/mi" element={<PageWrapper><MarkdownViewer fileUrl="/docs/mi.md" onOpenWebJEI={setActiveItem} /></PageWrapper>} />

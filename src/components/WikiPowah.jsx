@@ -1,7 +1,13 @@
 import React from 'react';
 import { BatteryCharging, Zap, Thermometer, Radio, Crown } from 'lucide-react';
 
-export default function WikiPowah({ onOpenRecipe }) {
+export default function WikiPowah({ onOpenRecipe, onOpenWebJEI }) {
+  const JEI = ({ name, id }) => (
+    <button className="craft-btn" style={{ padding: '2px 8px', fontSize: '0.85rem', backgroundColor: 'rgba(88,166,255,0.1)', border: '1px solid rgba(88,166,255,0.3)', color: 'var(--accent-blue)' }}
+      onClick={(e) => { e.stopPropagation(); onOpenWebJEI?.({ id: id || name.toLowerCase().replace(/ /g, '_'), name }); }}>
+      ✨ {name}
+    </button>
+  );
   return (
     <div className="doc-layout">
       <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
@@ -20,8 +26,8 @@ export default function WikiPowah({ onOpenRecipe }) {
           Tudo começa no Tier "Starter" (Pedra) e sobe até o absurdo tier "Nitro". Cada vez que você forja um tier superior, a capacidade e a eficiência pulam de forma absurda.
         </p>
         <ul className="doc-list">
-          <li><strong>Energizing Orb:</strong> Esta é a "forja elétrica". Você bota itens nela, aponta lasers para o Orb e ele condensa eletricidade no item, forjando os minerais raros do Powah!.</li>
-          <li><strong>Dielectric Paste:</strong> Você gastará dezenas de milhares deste material. A massa base (feita derretendo carvão no barro). Sempre mantenha a produção ativa.</li>
+          <li><strong>Energizing Orb:</strong> Esta é a "forja elétrica". Você bota itens nela, aponta lasers para a <JEI name="Energizing Orb" /> e ele condensa eletricidade no item, forjando os minerais raros do Powah!.</li>
+          <li><strong>Dielectric Paste:</strong> Você gastará dezenas de milhares de <JEI name="Dielectric Paste" />. A massa base (feita derretendo carvão no barro). Sempre mantenha a produção ativa.</li>
         </ul>
       </section>
 
@@ -37,7 +43,7 @@ export default function WikiPowah({ onOpenRecipe }) {
             Ele requer um bloco quente LOGO ABAIXO dele (Magma, Blazing Crystal Block, etc) e a entrada contínua de fluidos (Água) para resfriar a placa. Em Tiers médios para cima, apenas 4 deles ligados lado a lado e bem nutridos de calor e água alimentam uma base inteira sem consumir absolutamente nada do seu inventário de minérios.
           </li>
           <li>
-            <strong>Reactor:</strong> O Multi-Bloco supremo do jogo. A maravilha que consome o minério verde chamado <strong>Uraninite</strong>. Gera quantidades imensas de poder, mas se você esquecer de fornecer Gelo/Água constante, ele vai gerar problemas gravíssimos.
+            <strong>Reactor:</strong> O Multi-Bloco supremo do jogo. A maravilha que consome o minério verde chamado <JEI name="Uraninite" />. Gera quantidades imensas de poder, mas se você esquecer de fornecer Gelo/Água constante, ele vai gerar problemas gravíssimos.
           </li>
         </ul>
       </section>
@@ -56,7 +62,7 @@ export default function WikiPowah({ onOpenRecipe }) {
           </li>
           <li>
             <strong>Wireless Interdimensional (Ender Gates):</strong> 
-            Cabos de energia são péssimos a longa distância, causam lag no servidor. O Warlord constrói pares de <em>Ender Gates</em> (ou Ender Cells) configurados no mesmo canal criptografado. Um fica na parede da sua Sala de Reatores base, o outro você carrega na mochila e joga no chão ao lado de uma <em>Quarry</em> (Escavadeira) lá na dimensão de mineração, e ela sugará a energia infinita instantaneamente, cortando as barreiras físicas do mapa!
+            Cabos de energia são péssimos a longa distância, causam lag no servidor. O Warlord constrói pares de <JEI name="Ender Gate" /> (ou <JEI name="Ender Cell" />) configurados no mesmo canal criptografado. Um fica na parede da sua Sala de Reatores base, o outro você carrega na mochila e joga no chão ao lado de uma <em>Quarry</em> (Escavadeira) lá na dimensão de mineração, e ela sugará a energia infinita instantaneamente, cortando as barreiras físicas do mapa!
           </li>
         </ul>
       </section>

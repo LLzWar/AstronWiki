@@ -1,7 +1,13 @@
 import React from 'react';
 import { Backpack, Heart, Crown } from 'lucide-react';
 
-export default function WikiBackpacks({ onOpenRecipe }) {
+export default function WikiBackpacks({ onOpenRecipe, onOpenWebJEI }) {
+  const JEI = ({ name, id }) => (
+    <button className="craft-btn" style={{ padding: '2px 8px', fontSize: '0.85rem', backgroundColor: 'rgba(88,166,255,0.1)', border: '1px solid rgba(88,166,255,0.3)', color: 'var(--accent-blue)' }}
+      onClick={(e) => { e.stopPropagation(); onOpenWebJEI?.({ id: id || name.toLowerCase().replace(/ /g, '_'), name }); }}>
+      ✨ {name}
+    </button>
+  );
   return (
     <div className="doc-layout">
       <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
@@ -32,17 +38,18 @@ export default function WikiBackpacks({ onOpenRecipe }) {
         <ul className="doc-list">
           <li>
             <strong style={{color: 'var(--accent-blue)'}}>1. The Magnet:</strong> 
-            Você deve investir rapidamente num 
-            <button className="craft-btn" onClick={() => onOpenRecipe('magnet_upgrade')}>Magnet Upgrade</button>. 
+          <li>
+            <strong style={{color: 'var(--accent-blue)'}}>1. The Magnet:</strong> 
+            Você deve investir rapidamente num <JEI name="Magnet Upgrade" />. 
             Ele anula a necessidade de encostar em itens, sugando todo o loot num raio gigante da arena para dentro da mochila enquanto você está matando.
           </li>
           <li>
             <strong style={{color: '#da3633'}}>2. The Void (Destruidor):</strong> 
-            A pior coisa que pode acontecer ao usar ímãs em masmorras é a mochila entupir com Carne Podre, Terra e Ossos. A solução é o <em>Void Upgrade</em>: abra o filtro dele, insira os blocos que você considera "Lixo". Assim que entrarem, o Void destruirá o item instantaneamente da matriz, sem ocupar espaço da mochila.
+            A pior coisa que pode acontecer ao usar ímãs em masmorras é a mochila entupir com Carne Podre, Terra e Ossos. A solução é o <JEI name="Void Upgrade" />: abra o filtro dele, insira os blocos que você considera "Lixo". Assim que entrarem, o Void destruirá o item instantaneamente da matriz, sem ocupar espaço da mochila.
           </li>
           <li>
             <strong style={{color: '#2ea043'}}>3. Auto-Feeding Upgrade:</strong> 
-            Não aperte o número 9 para comer uma Maçã Dourada encantada enquanto foge de ataques elétricos. Configure este upgrade para a sua comida suprema ou poções de cura instantânea. A mochila alimentará você invisivelmente assim que o seu HP atingir a zona perigosa. Foco total em DPM (Dano por minuto).
+            Não aperte o número 9 para comer uma Maçã Dourada encantada enquanto foge de ataques elétricos. Configure o <JEI name="Feeding Upgrade" /> para a sua comida suprema ou poções de cura instantânea. A mochila alimentará você invisivelmente assim que o seu HP atingir a zona perigosa. Foco total em DPM (Dano por minuto).
           </li>
         </ul>
       </section>

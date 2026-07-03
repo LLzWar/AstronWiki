@@ -1,7 +1,13 @@
 import React from 'react';
 import { Sparkles, Skull, BookOpen, Gem, Crown } from 'lucide-react';
 
-export default function WikiApotheosis({ onOpenRecipe }) {
+export default function WikiApotheosis({ onOpenRecipe, onOpenWebJEI }) {
+  const JEI = ({ name, id }) => (
+    <button className="craft-btn" style={{ padding: '2px 8px', fontSize: '0.85rem', backgroundColor: 'rgba(88,166,255,0.1)', border: '1px solid rgba(88,166,255,0.3)', color: 'var(--accent-blue)' }}
+      onClick={(e) => { e.stopPropagation(); onOpenWebJEI?.({ id: id || name.toLowerCase().replace(/ /g, '_'), name }); }}>
+      ✨ {name}
+    </button>
+  );
   return (
     <div className="doc-layout">
       <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
@@ -44,8 +50,8 @@ export default function WikiApotheosis({ onOpenRecipe }) {
           Ao vagar pelo mundo, você verá mobs gigantes chamados "Affix Bosses". Eles têm barras de vida especiais e dropam loot classificado por raridade (Comum, Épico, Mítico).
         </p>
         <ul className="doc-list">
-          <li><strong>Salvaging Table:</strong> Equipamentos velhos e coloridos que você não quer devem ser jogados na Salvaging Table para virarem pó místico.</li>
-          <li><strong>Sockets & Gems:</strong> Algumas armas vêm com "furos" (sockets). Você pode acoplar gemas místicas dropadas de chefes para ganhar Velocidade de Ataque, Dano Percentual ou Roubo de Vida gigantesco.</li>
+          <li><strong>Salvaging Table:</strong> Equipamentos velhos e coloridos que você não quer devem ser jogados na <JEI name="Salvaging Table" /> para virarem pó místico.</li>
+          <li><strong>Sockets & Gems:</strong> Algumas armas vêm com "furos" (sockets). Você pode acoplar gemas místicas dropadas de chefes na <JEI name="Gem Cutting Table" /> para ganhar Velocidade de Ataque, Dano Percentual ou Roubo de Vida gigantesco.</li>
         </ul>
       </section>
 

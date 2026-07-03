@@ -39,7 +39,7 @@ ultima_revisao: "2026-07-01"
 7. [Early Game - meteoritos, Certus, Fluix e presses](#7-early-game---meteoritos-certus-fluix-e-presses)
 8. [Primeira rede ME - storage pesquisavel](#8-primeira-rede-me---storage-pesquisavel)
 9. [Storage - cells, bytes, types, prioridades e particionamento](#9-storage---cells-bytes-types-prioridades-e-particionamento)
-10. [Cabos, channels e ME Controller](#10-cabos-channels-e-me-controller)
+10. [Cabos, channels e [item:ME Controller]](#10-cabos-channels-e-me-controller)
 11. [Energia da rede ME](#11-energia-da-rede-me)
 12. [Import, Export, Storage Bus e Interface](#12-import-export-storage-bus-e-interface)
 13. [Autocrafting basico](#13-autocrafting-basico)
@@ -91,13 +91,13 @@ AE2 nao e so um mod de bau digital. Ele e uma linguagem de infraestrutura. Um jo
 | Applied Energistics 2 | 19.2.17 | Core: rede ME, cells, drives, terminals, channels, autocrafting, P2P, Quantum Bridge, storage, buses e machines. |
 | Advanced AE | 1.6.11-1.21.1 | Automacao avancada: Advanced Pattern Providers, Quantum Computer, Quantum Crafter, Quantum Armor, Reaction Chamber, IO Buses e monitores. |
 | ExtendedAE | 1.21-2.2.33-neoforge | Expansao de storage/crafting: 36-slot providers/interfaces, infinity cells, buses rapidos, pattern modifier, tag/mod buses, Assembler Matrix e mais. |
-| AE2 Things | 1.4.2-beta | Qualidade de vida: DISK cells sem limite de types, Advanced Inscriber e Crystal Growth Chamber. |
+| AE2 Things | 1.4.2-beta | Qualidade de vida: DISK cells sem limite de types, Advanced [item:Inscriber] e Crystal Growth Chamber. |
 | AEInfinityBooster | 1.21.1-1.0.0.54 | Acesso remoto: Infinity Range Card e Dimension Card. |
-| AE2 Draconic Fusion Autocrafter | 0.1.4 | Automacao nativa de Fusion Crafting do Draconic Evolution com Draconic Pattern Provider. |
+| AE2 Draconic Fusion Autocrafter | 0.1.4 | Automacao nativa de Fusion Crafting do Draconic Evolution com Draconic [item:Pattern Provider]. |
 | AppliedFlux | 1.21-2.1.5-neoforge | Armazenamento de FE dentro da rede ME e interacao com energia por terminal. |
 | MEGA Cells | 4.11.0 | Cells enormes 1M-256M, bulk item storage, MEGA Pattern Provider, crafting CPUs grandes e energia extra. |
 | ME Requester | 1.21.1-1.4.3 | Stockkeeping: mantem itens/fluidos em estoque automaticamente. |
-| Polymorphic Energistics | 0.4.1 | Resolve receitas conflitantes no Crafting Terminal e Pattern Encoding Terminal com suporte ao Polymorph. |
+| Polymorphic Energistics | 0.4.1 | Resolve receitas conflitantes no [item:Crafting Terminal] e Pattern Encoding Terminal com suporte ao Polymorph. |
 | Applied Create | 1.1.5 | Ponte AE2 + Create: pattern providers para Mechanical Crafters, stress P2P, ME Gearbox e energia/stress. |
 | GuideME | 21.1.16 | Framework/guia in-game usado por mods; util para documentacao e descoberta dentro do jogo. |
 
@@ -134,7 +134,7 @@ Siga a progressao em ordem:
 
 1. Encontre meteoritos.
 2. Colete Certus, Budding Certus e Presses.
-3. Faca Charger, Inscriber e primeiros processors.
+3. Faca [item:Charger], [item:Inscriber] e primeiros processors.
 4. Monte uma rede ME pequena.
 5. Aprenda bytes/types antes de encher tudo de lixo.
 6. Depois entre em channels, controller e autocrafting.
@@ -178,7 +178,7 @@ Use as tabelas e checklists como base para paginas menores:
 | Crafting Pattern | Padrao para crafting table, smithing ou stonecutting. |
 | Processing Pattern | Padrao que envia itens/fluidos para maquinas externas e espera resultado. |
 | Pattern Provider | Bloco que executa patterns e envia ingredientes para machines/assemblers. |
-| Molecular Assembler | Maquina que executa crafting patterns automaticamente. |
+| [item:Molecular Assembler] | Maquina que executa crafting patterns automaticamente. |
 | Crafting CPU | Multibloco que calcula e gerencia pedidos de autocrafting. |
 | Co-Processor | Acelera envio de tarefas de crafting para providers/assemblers. |
 | Import Bus | Puxa itens de inventario externo para a rede. |
@@ -204,8 +204,8 @@ Sobrevivencia vanilla / early tech
   -> Meteorite Compass
   -> Meteoritos, Certus, Budding Certus, Mysterious Cube
   -> Inscriber Presses
-  -> Charger, Fluix, Inscriber, Processors
-  -> Energy Acceptor, ME Drive, Storage Cells, Crafting Terminal
+  -> [item:Charger], Fluix, Inscriber, Processors
+  -> Energy Acceptor, [item:ME Drive], Storage Cells, Crafting Terminal
   -> Primeira rede ME pesquisavel
   -> Certus farm e processor automation
   -> ME Controller, Smart/Dense Cable, channels organizados
@@ -260,7 +260,7 @@ Prioridade alta:
 
 Prioridade media:
 
-- Fluix Crystal.
+- [item:Fluix Crystal].
 - Fluix Dust.
 - Sky Stone.
 - Ender Pearl.
@@ -294,7 +294,7 @@ Para uma primeira rede pequena, um **Energy Acceptor** resolve. Para rede maior,
 A sala inicial deve ter:
 
 - Parede de terminais.
-- ME Drive visivel.
+- [item:ME Drive] visivel.
 - Energy Acceptor/Energy Cell acessivel.
 - 1 a 2 linhas de cabos Smart para diagnostico.
 - Um canto para Inscriber/Advanced Inscriber.
@@ -345,7 +345,7 @@ Recomendacao de servidor: mantenha um set de presses em local publico/seguro e, 
 
 ## 7.3. Certus Quartz e Budding Certus
 
-Budding Certus funciona de forma parecida com amethyst: cresce buds em faces livres. Quando o cluster esta completo, gera Certus Quartz Crystal. O bloco pode degradar em tiers quando cresce, exceto o Flawless Budding Certus, que e o mais importante.
+Budding Certus funciona de forma parecida com amethyst: cresce buds em faces livres. Quando o cluster esta completo, gera [item:Certus Quartz Crystal]. O bloco pode degradar em tiers quando cresce, exceto o Flawless Budding Certus, que e o mais importante.
 
 Tiers comuns:
 
@@ -360,7 +360,7 @@ Boas praticas:
 - Nao quebre Flawless Budding Certus por impulso.
 - Monte a farm onde ele foi encontrado, ou mova apenas se o pack permitir por Spatial Storage ou outro metodo seguro.
 - Deixe faces livres para crescer.
-- Use Growth Accelerators cedo.
+- Use [item:Growth Accelerator]s cedo.
 - Automatize colheita somente depois de entender Annihilation Plane ou alternativas seguras.
 
 ## 7.4. Step-by-step: primeira farm manual de Certus
@@ -375,7 +375,7 @@ Boas praticas:
 
 ## 7.5. Charged Certus e Charger
 
-O **Charger** transforma Certus Quartz Crystal em Charged Certus Quartz Crystal. Charged Certus e essencial para Fluix e para reparar/criar Budding Certus dependendo da receita/mecanica.
+O **Charger** transforma [item:Certus Quartz Crystal] em Charged Certus Quartz Crystal. Charged Certus e essencial para Fluix e para reparar/criar Budding Certus dependendo da receita/mecanica.
 
 Fluxo basico:
 
@@ -385,7 +385,7 @@ Certus Quartz Crystal
   -> Charged Certus Quartz Crystal
 ```
 
-## 7.6. Fluix Crystal
+## 7.6. [item:Fluix Crystal]
 
 Fluix e um recurso central de AE2. O metodo classico e jogar em agua:
 
@@ -432,8 +432,8 @@ A primeira rede ME nao precisa de controller, P2P nem autocrafting. Ela precisa 
 
 - 1x Energy Acceptor.
 - 1x ME Drive.
-- 1x ME Terminal ou, preferencialmente, ME Crafting Terminal.
-- Algumas Storage Cells, idealmente 1k/4k no comeco.
+- 1x [item:ME Terminal] ou, preferencialmente, [item:ME Crafting Terminal].
+- Algumas [item:Storage Cell]s, idealmente 1k/4k no comeco.
 - Cabos: Glass Cable, Covered Cable ou Smart Cable.
 - Fonte de energia FE.
 
@@ -535,7 +535,7 @@ No Astron City, fluidos de MI podem crescer muito. Para bulk massivo, avalie MEG
 
 ## 9.5. Portable cells
 
-Portable Item/Fluid Cells funcionam como mini ME Chest portatil. Sao uteis para:
+Portable Item/Fluid Cells funcionam como mini [item:ME Chest] portatil. Sao uteis para:
 
 - Mineracao.
 - Construcoes grandes.
@@ -644,7 +644,7 @@ Dispositivos comuns que usam channel:
     <div class="mc-slot" title="Pure Fluix Crystal"><img src="/assets/sprites/fluix_crystal.png" alt="Fluix" /></div>
     <div class="mc-slot" title="Sky Stone Block"><img src="/assets/sprites/sky_stone_block.png" alt="Sky Stone Block" /></div>
     <div class="mc-slot" title="Pure Fluix Crystal"><img src="/assets/sprites/fluix_crystal.png" alt="Fluix" /></div>
-    <div class="mc-slot" title="Engineering Processor"><img src="/assets/sprites/engineering_processor.png" alt="Engineering Processor" /></div>
+    <div class="mc-slot" title="[item:Engineering Processor]"><img src="/assets/sprites/engineering_processor.png" alt="Engineering Processor" /></div>
     <div class="mc-slot" title="Pure Fluix Crystal"><img src="/assets/sprites/fluix_crystal.png" alt="Fluix" /></div>
     <div class="mc-slot" title="Sky Stone Block"><img src="/assets/sprites/sky_stone_block.png" alt="Sky Stone Block" /></div>
     <div class="mc-slot" title="Pure Fluix Crystal"><img src="/assets/sprites/fluix_crystal.png" alt="Fluix" /></div>
@@ -656,7 +656,7 @@ Dispositivos comuns que usam channel:
   </div>
 </div>
 
-Faca ME Controller quando:
+Faca [item:ME Controller] quando:
 
 - Sua rede esta chegando a 8 dispositivos.
 - Voce quer varios terminais, drives e buses.
@@ -811,7 +811,7 @@ Usos fortes:
 
 Cuidado: Storage Bus nao “importa” itens para cells. Ele deixa o inventario externo acessivel pela rede. Isso e excelente para bulk, mas precisa de prioridades bem configuradas.
 
-## 12.4. ME Interface
+## 12.4. [item:ME Interface]
 
 Interface puxa e empurra itens para network storage e e essencial em subnets. Ela pode atuar como:
 
@@ -852,8 +852,8 @@ Voce precisa de tres coisas:
 
 1. Faca **Pattern Encoding Terminal**.
 2. Faca **Blank Patterns**.
-3. Faca 1 **Pattern Provider**.
-4. Faca 1 **Molecular Assembler**.
+3. Faca 1 **[item:Pattern Provider]**.
+4. Faca 1 **[item:Molecular Assembler]**.
 5. Faca 1 **Crafting CPU** simples com Crafting Storage.
 6. Encoste o Molecular Assembler no Pattern Provider.
 7. Encode uma receita simples, como chest, crafting table, cable ou componente basico.
@@ -896,14 +896,14 @@ O provider distribui recipes para assemblers adjacentes. Co-processors ajudam a 
 Priorize patterns de:
 
 - Blank Pattern.
-- ME Glass Cable.
+- [item:ME Glass Cable].
 - Fluix Cable.
 - Quartz Fiber.
 - Formation Core.
 - Annihilation Core.
-- Logic Processor.
-- Calculation Processor.
-- Engineering Processor.
+- [item:Logic Processor].
+- [item:Calculation Processor].
+- [item:Engineering Processor].
 - Printed Silicon.
 - Printed Logic/Calculation/Engineering.
 - Import Bus.
@@ -1291,11 +1291,11 @@ Toda Quantum Bridge deve ter:
 
 # 20. Spatial Storage - uso avancado
 
-Spatial Storage permite capturar e mover volumes do mundo usando Spatial IO. E um sistema avancado, caro e que pode interagir de forma sensivel com entidades, blocos e modded content.
+Spatial Storage permite capturar e mover volumes do mundo usando [item:Spatial IO Port]. E um sistema avancado, caro e que pode interagir de forma sensivel com entidades, blocos e modded content.
 
 ## 20.1. Componentes
 
-- Spatial IO Port.
+- [item:Spatial IO] Port.
 - Spatial Pylons.
 - Spatial Cells.
 - Energia alta.
@@ -1555,8 +1555,8 @@ Este catalogo cobre os itens principais do AE2 core que o jogador deve reconhece
 | Inscriber Calculation Press | Produzir Printed Calculation Circuit. |
 | Inscriber Engineering Press | Produzir Printed Engineering Circuit. |
 | Printed Silicon | Base de processors. |
-| Printed Logic Circuit | Parte do Logic Processor. |
-| Printed Calculation Circuit | Parte do Calculation Processor. |
+| Printed Logic Circuit | Parte do [item:Logic Processor]. |
+| Printed Calculation Circuit | Parte do [item:Calculation Processor]. |
 | Printed Engineering Circuit | Parte do Engineering Processor. |
 | Logic Processor | Terminals, drives, buses e componentes basicos. |
 | Calculation Processor | Crafting, storage e componentes intermediarios. |
@@ -1602,7 +1602,7 @@ Este catalogo cobre os itens principais do AE2 core que o jogador deve reconhece
 
 | Item | Uso principal |
 |---|---|
-| Certus Quartz Wrench | Rotacionar, configurar e remover partes AE2. |
+| [item:Certus [item:Quartz Wrench]] | Rotacionar, configurar e remover partes AE2. |
 | Nether Quartz Wrench | Alternativa de wrench. |
 | Network Tool | Diagnosticar rede, canais, energia e conexoes. |
 | Memory Card | Copiar configuracoes e parear P2P. |
@@ -1625,7 +1625,7 @@ Este catalogo cobre os itens principais do AE2 core que o jogador deve reconhece
 |---|---|
 | ![Controller](/assets/sprites/me_controller.png) ME Controller | Coração da rede. Fornece 32 channels por face (total de 192 por bloco, menos as conexões internas). Limite de 7x7x7, sem "buracos" internos complexos, regras estritas de formato. |
 | ME Drive | Armazena cells. |
-| ME Chest | Acesso direto a uma cell. Util, mas limitado. |
+| [item:ME Chest] | Acesso direto a uma cell. Util, mas limitado. |
 | Energy Acceptor | Entrada de energia FE para AE. |
 | Energy Cell | Buffer de energia da rede. |
 | Dense Energy Cell | Buffer grande de energia. |
@@ -1660,7 +1660,7 @@ Este catalogo cobre os itens principais do AE2 core que o jogador deve reconhece
 | ME Import Bus | Puxa itens/fluidos para a rede. |
 | ME Export Bus | Envia itens/fluidos da rede para inventario externo. |
 | ME Storage Bus | Usa inventario externo como storage da rede. |
-| ME Interface | Buffer/interacao bidirecional; chave para subnets. |
+| [item:ME Interface] | Buffer/interacao bidirecional; chave para subnets. |
 | ME Level Emitter | Emite redstone baseado em quantidade/estado da rede. |
 | Annihilation Plane | Quebra/coleta blocos ou itens para a rede/subnet. |
 | Formation Plane | Coloca/dropa itens/blocos no mundo. |
@@ -1671,7 +1671,7 @@ Este catalogo cobre os itens principais do AE2 core que o jogador deve reconhece
 |---|---|
 | Charger | Carrega Certus e itens suportados. |
 | Inscriber | Produz printed circuits/processors e outros componentes. |
-| Growth Accelerator | Acelera crescimento de Certus buds. |
+| [item:Growth Accelerator] | Acelera crescimento de Certus buds. |
 | Molecular Assembler | Executa crafting patterns. |
 | Cell Workbench | Configura/particiona cells e upgrades. |
 | ME IO Port | Move conteudo entre cells e rede. |

@@ -84,7 +84,7 @@ ultima_revisao: "2026-07-01"
     <div class="mc-slot"></div>
     <div class="mc-slot" title="Electron Tube"><img src="/assets/sprites/electron_tube.png" alt="Electron Tube" onError="this.src='/assets/sprites/barrier.png'" /></div>
     <div class="mc-slot"></div>
-    <div class="mc-slot" title="Brass Casing"><img src="/assets/sprites/brass_casing.png" alt="Brass Casing" onError="this.src='/assets/sprites/barrier.png'" /></div>
+    <div class="mc-slot" title="[item:Brass Casing]"><img src="/assets/sprites/brass_casing.png" alt="Brass Casing" onError="this.src='/assets/sprites/barrier.png'" /></div>
     <div class="mc-slot" title="Crafting Table"><img src="/assets/sprites/crafting_table.png" alt="Crafting Table" onError="this.src='/assets/sprites/barrier.png'" /></div>
     <div class="mc-slot"></div>
     <div class="mc-slot"></div>
@@ -164,10 +164,10 @@ Create não deve ser tratado como “o mod de começo que depois fica obsoleto�
 Siga em ordem:
 
 1. Faça uma base pequena e colete andesite, iron, copper, zinc, redstone e logs.
-2. Faça shafts, cogwheels e andesite alloy.
-3. Monte um gerador de rotação simples com water wheel.
-4. Faça Mechanical Press, Mechanical Mixer, Millstone e Mechanical Saw.
-5. Comece com belts, depots, funnels e chutes.
+2. Faça [item:Shaft]s, [item:Cogwheel]s e [item:Andesite Alloy].
+3. Monte um gerador de rotação simples com [item:Water Wheel].
+4. Faça [item:Mechanical Press], [item:Mechanical Mixer], [item:Millstone] e [item:Mechanical Saw].
+5. Comece com [item:Belt]s, depots, [item:Funnel]s e chutes.
 6. Monte uma primeira linha de crushing/washing/smelting.
 7. Produza brass e entre na fase de filtros inteligentes.
 8. Faça Mechanical Crafter e Precision Mechanism.
@@ -179,7 +179,7 @@ Use os capítulos de trens, infraestrutura pública, logística, performance e f
 
 - oficina pública de Create;
 - estação central com rotas por distrito;
-- fábrica pública de andesite alloy, shafts, belts e casings;
+- fábrica pública de [item:andesite alloy], shafts, belts e casings;
 - farms visuais e desligáveis;
 - refino TFMG em área industrial;
 - ponte FE/stress com Crafts & Additions ou New Age;
@@ -212,33 +212,33 @@ Quebre este guia em páginas menores:
 | Stress Capacity | Quanto stress a rede gera. |
 | Stress Impact | Quanto uma máquina consome. |
 | Overstressed | Rede sobrecarregada. Tudo para até aumentar geração, reduzir carga ou velocidade. |
-| Shaft | Eixo básico de transmissão. |
-| Cogwheel | Engrenagem para transmissão e mudança de direção. |
+| [item:Shaft] | Eixo básico de transmissão. |
+| [item:Cogwheel] | Engrenagem para transmissão e mudança de direção. |
 | Large Cogwheel | Engrenagem grande, útil para mudanças de velocidade. |
 | Gearbox | Muda direção da rotação. |
 | Encased Chain Drive | Transmite rotação em linha e mantém velocidade/direção. |
 | Clutch | Liga/desliga uma linha com redstone. |
 | Gearshift | Inverte direção com redstone. |
 | Sequenced Gearshift | Controla movimentos por sequência, essencial para máquinas automáticas. |
-| Belt | Correia transportadora. |
+| [item:Belt] | Correia transportadora. |
 | Depot | Ponto de processamento simples para itens. |
-| Basin | Recipiente de crafting/fluidos usado por Mixer, Press e Spout. |
-| Funnel | Entrada/saída de inventários em belts/depots. |
+| [item:Basin] | Recipiente de crafting/fluidos usado por Mixer, Press e [item:Spout]. |
+| [item:Funnel] | Entrada/saída de inventários em belts/depots. |
 | Tunnel | Divide/une fluxo de itens em belts. |
 | Filter | Define quais itens uma máquina/logística aceita. |
-| Mechanical Press | Prensa itens, plates e receitas com basin/depot/belt. |
-| Mechanical Mixer | Mistura itens/fluidos em basin. |
+| [item:Mechanical Press] | Prensa itens, plates e receitas com [item:basin]/depot/belt. |
+| [item:Mechanical Mixer] | Mistura itens/fluidos em basin. |
 | Millstone | Processamento inicial de grãos/minérios simples. |
-| Crushing Wheel | Processamento forte de minério/blocos. |
+| [item:Crushing Wheel] | Processamento forte de minério/blocos. |
 | Encased Fan | Sopro para washing, smelting, smoking e haunting. |
-| Deployer | Simula interação de jogador com item na mão. |
+| [item:Deployer] | Simula interação de jogador com item na mão. |
 | Mechanical Arm | Move itens entre depots, belts, basins e inventários. |
 | Mechanical Crafter | Crafting multibloco para receitas grandes. |
 | Contraption | Estrutura móvel com bearings, pistons, gantry, rope pulley, trains ou aeronaves. |
 | Portable Storage Interface | Transfere itens/fluidos entre contraption e mundo fixo. |
 | Train Station | Bloco central para criar e gerenciar trens Create. |
 | Schedule | Roteiro automático para trens. |
-| Stock Keeper | Sistema de gerenciamento de estoque/logística do Create 6. |
+| [item:Stock Keeper] | Sistema de gerenciamento de estoque/logística do Create 6. |
 
 ---
 
@@ -248,7 +248,7 @@ Quebre este guia em páginas menores:
 Sobrevivência vanilla
   -> recursos: andesite, iron, copper, zinc, redstone, slime, blaze, quartz
   -> shafts + cogwheels + andesite alloy
-  -> water wheel / large water wheel
+  -> [item:water wheel] / large water wheel
   -> mechanical press + mixer + millstone + saw
   -> belts + depots + funnels + chutes
   -> encased fan: washing/smelting/smoking/haunting
@@ -256,7 +256,7 @@ Sobrevivência vanilla
   -> brass: acesso a filtros inteligentes e logística avançada
   -> deployers + mechanical arms + sequenced assembly
   -> precision mechanism + mechanical crafter
-  -> steam engine + boiler + blaze burner
+  -> steam engine + boiler + [item:blaze burner]
   -> trains + estação central + rotas de recursos
   -> contraptions grandes: tree farm, crop farm, quarry, elevadores, fábricas móveis
   -> Create 6 logistics: stock keeper, package/stock systems se habilitados
@@ -299,7 +299,7 @@ Sobrevivência vanilla
 | Gold | 1 stack | Precision mechanisms e componentes. |
 | Quartz | 1 stack | Redstone/precision e algumas receitas. |
 | Slime | 1 stack | Super glue, contraptions e farms. |
-| Blaze Burner | 1+ | Heated/superheated recipes e boiler. |
+| [item:Blaze Burner] | 1+ | Heated/superheated recipes e boiler. |
 | Brass | variável | Logística avançada. |
 
 ## 6.2. Base inicial recomendada
@@ -308,7 +308,7 @@ Faça uma oficina com quatro zonas:
 
 | Zona | Função |
 |---|---|
-| Geração cinética | Water wheels/windmill/steam separados das máquinas. |
+| Geração cinética | Water wheels/[item:windmill]/steam separados das máquinas. |
 | Linha de máquinas | Press, Mixer, Saw, Millstone, Crushing, Fan. |
 | Logística | Belts, depots, funnels, vaults e filtros. |
 | Expansão | Espaço livre para Mechanical Crafter, boiler e trens. |
@@ -343,7 +343,7 @@ Create funciona com **energia cinética rotacional**, não com FE por padrão. U
 | Hand Crank | Tutorial | Testes rápidos, não fábrica real. |
 | Water Wheel | Early | Primeira fonte estável. |
 | Large Water Wheel | Early+ | Melhor para oficina inicial. |
-| Windmill Bearing | Early/Mid | Energia renovável visual, ótima para cidades. |
+| [item:Windmill Bearing] | Early/Mid | Energia renovável visual, ótima para cidades. |
 | Furnace Engine/Steam Engine/Boiler | Mid/Late | Alta potência; ideal para fábricas centrais. |
 | Electric Motor (Crafts & Additions) | Mid/Late | Converte FE em rotação. |
 | Motors (New Age) | Mid/Late | Ponte eletricidade -> rotação. |
@@ -530,7 +530,7 @@ Brass deve ser usado primeiro em infraestrutura que economiza tempo:
 |---|---:|
 | Brass Funnel | Alta |
 | Brass Tunnel | Alta |
-| Smart Chute | Alta |
+| [item:Smart Chute] | Alta |
 | Mechanical Arm | Alta |
 | Content Observer | Média |
 | Stockpile Switch | Média |
@@ -555,7 +555,7 @@ Fluxo conceitual:
 
 ```text
 Base item
-  -> Deployer aplica item A
+  -> [item:Deployer] aplica item A
   -> Deployer aplica item B
   -> Press/Saw/Deployer aplica etapa C
   -> chance de sucesso
@@ -599,7 +599,7 @@ Create tem um sistema excelente de fluidos. Ele é útil em farms, food, refino,
 | Mechanical Pump | Move fluido pela rede. |
 | Fluid Tank | Buffer e armazenamento. |
 | Hose Pulley | Coleta/deposita grandes volumes; pode tratar reservatórios como infinitos conforme tamanho/config. |
-| Spout | Insere fluido em itens passando por baixo. |
+| [item:Spout] | Insere fluido em itens passando por baixo. |
 | Item Drain | Remove fluido de itens ou recebe fluido de recipientes. |
 | Portable Fluid Interface | Transfere fluido entre contraption e mundo fixo. |
 | Smart Fluid Pipe | Filtro/controle avançado, se disponível na versão. |
@@ -1221,8 +1221,8 @@ Estrutura ideal:
 
 | Casing | Uso |
 |---|---|
-| Andesite Casing | Máquinas early/mid. |
-| Brass Casing | Logística avançada, braços, precision, filtros. |
+| [item:Andesite Casing] | Máquinas early/mid. |
+| [item:Brass Casing] | Logística avançada, braços, precision, filtros. |
 | Copper Casing | Fluidos, pipes e steam-related. |
 | Railway Casing se disponível | Trens/addons. |
 | Addon casings | TFMG/New Age/others conforme EMI. |
@@ -1250,7 +1250,7 @@ Estrutura ideal:
 - Andesite Tunnel.
 - Brass Tunnel.
 - Chute.
-- Smart Chute.
+- [item:Smart Chute].
 - Depot.
 - Weighted Ejector.
 - Mechanical Arm.
@@ -1666,7 +1666,7 @@ Exemplos:
 | Iron Plate | Mechanical Press. |
 | Crushed Ore | Crushing Wheels. |
 | Precision Mechanism | Sequenced Assembly. |
-| Crushing Wheel | Mechanical Crafter. |
+| [item:Crushing Wheel] | Mechanical Crafter. |
 | Food | Central Kitchen/Slice & Dice. |
 | Enchanted Books | Enchantment Industry. |
 
@@ -1785,7 +1785,7 @@ Use Create para processar recursos renováveis:
 | Cogwheel | 256 |
 | Large Cogwheel | 128 |
 | Belt Connector | 512 |
-| Andesite Casing | 256 |
+| [item:Andesite Casing] | 256 |
 | Brass Casing | 128 |
 | Copper Casing | 128 |
 | Iron Sheet | 512 |

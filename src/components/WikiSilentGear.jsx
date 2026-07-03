@@ -1,7 +1,13 @@
 import React from 'react';
 import { Hammer, Wrench, Shield, Pickaxe, Crown } from 'lucide-react';
 
-export default function WikiSilentGear({ onOpenRecipe }) {
+export default function WikiSilentGear({ onOpenRecipe, onOpenWebJEI }) {
+  const JEI = ({ name, id }) => (
+    <button className="craft-btn" style={{ padding: '2px 8px', fontSize: '0.85rem', backgroundColor: 'rgba(88,166,255,0.1)', border: '1px solid rgba(88,166,255,0.3)', color: 'var(--accent-blue)' }}
+      onClick={(e) => { e.stopPropagation(); onOpenWebJEI?.({ id: id || name.toLowerCase().replace(/ /g, '_'), name }); }}>
+      ✨ {name}
+    </button>
+  );
   return (
     <div className="doc-layout">
       <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
@@ -24,9 +30,9 @@ export default function WikiSilentGear({ onOpenRecipe }) {
           <li><strong>Carregamento Noturno:</strong> 
             Você pode fabricar a 
             <button className="craft-btn" onClick={() => onOpenRecipe('starlight_charger')}>Starlight Charger</button>. 
-            Deixando minérios cruciais banhados pela energia das estrelas, no teto da sua base (a céu aberto) durante a noite, você cria as ligas mais apelativas da magia (Crimson Steel e Azure Electrum).
+            Deixando minérios cruciais banhados pela energia das estrelas, no teto da sua base (a céu aberto) durante a noite, você cria as ligas mais apelativas da magia (<JEI name="Crimson Steel" /> e <JEI name="Azure Electrum" />).
           </li>
-          <li><strong>Repair Kits Rápidos:</strong> Esqueça as Bigornas. Faça um <em>Crimson Steel Repair Kit</em>, abra seu inventário 2x2 sem nenhuma bancada e combine o kit com sua picareta quebrada e alguns pedaços de minério. Reparada na hora, gratuitamente.</li>
+          <li><strong>Repair Kits Rápidos:</strong> Esqueça as Bigornas. Faça um <JEI name="Crimson Steel Repair Kit" />, abra seu inventário 2x2 sem nenhuma bancada e combine o kit com sua picareta quebrada e alguns pedaços de minério. Reparada na hora, gratuitamente.</li>
         </ul>
       </section>
 
@@ -53,8 +59,8 @@ export default function WikiSilentGear({ onOpenRecipe }) {
           Quando bater em deuses com milhões de HP, atributos numéricos de dano bruto não importam tanto quanto os *Traits* (Traços utilitários):
         </p>
         <ul className="doc-list">
-          <li><strong>Não sacrifique Lâminas (Tyrian Steel MAX Grade):</strong> Sua Haste deve ser pura para Dano ou Durabilidade Extrema (Tyrian Steel MAX). Para atributos engraçadinhos ou convenientes como <em>Indestructible</em> ou <em>Magnetic</em> (que puxa os drops automaticamente de longe), NÃO USE ELES NA LÂMINA PRINCIPAL! Ao invés disso, misture os materiais utilitários nas cordas e adornos secundários do cabo (Tip / Coating). Isso aplica a propriedade mágica sem abaixar a eficiência cortante.</li>
-          <li><strong>O Coating (Banho Mágico):</strong> As espadas podem receber um Coating final, um "banho" de material raro de outra dimensão, misturando as defesas. Espadas com Coating de minérios celestiais infligem punições passivas absurdas a chefões.</li>
+          <li><strong>Não sacrifique Lâminas (Tyrian Steel MAX Grade):</strong> Sua Haste deve ser pura para Dano ou Durabilidade Extrema (<JEI name="Tyrian Steel Ingot" /> MAX). Para atributos engraçadinhos ou convenientes como <em>Indestructible</em> ou <em>Magnetic</em> (que puxa os drops automaticamente de longe), NÃO USE ELES NA LÂMINA PRINCIPAL! Ao invés disso, misture os materiais utilitários nas cordas e adornos secundários do cabo (Tip / Coating). Isso aplica a propriedade mágica sem abaixar a eficiência cortante.</li>
+          <li><strong>O Coating (Banho Mágico):</strong> As espadas podem receber um <JEI name="Coating" /> final, um "banho" de material raro de outra dimensão, misturando as defesas. Espadas com Coating de minérios celestiais infligem punições passivas absurdas a chefões.</li>
         </ul>
       </section>
     </div>

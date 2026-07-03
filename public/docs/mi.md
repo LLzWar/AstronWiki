@@ -163,17 +163,17 @@ Sobrevivência vanilla
   -> Bronze Boiler + máquinas de bronze
   -> Coke Oven + creosote + fire clay
   -> Steel + Steam Blast Furnace
-  -> Steam Quarry e automação inicial
-  -> Steam Turbine + primeira rede EU
+  -> Steam [item:Quarry] e automação inicial
+  -> Steam [item:Turbine] + primeira rede EU
   -> Máquinas elétricas LV
-  -> Assembler, Wiremill, Chemical Reactor, Electrolyzer, Centrifuge
-  -> Electric Blast Furnace
+  -> Assembler, Wiremill, [item:Chemical Reactor], [item:Electrolyzer], Centrifuge
+  -> [item:Electric Blast Furnace]
   -> Stainless Steel
-  -> Oil Drilling Rig + Distillation Tower
+  -> [item:Oil Drilling Rig] + [item:Distillation Tower]
   -> Diesel Power
   -> Vacuum Freezer + Pressurizer + Implosion Compressor
-  -> Large Steam Boiler / HP Steam / Large Turbine / Heat Exchanger
-  -> Nuclear Reactor
+  -> Large [item:Steam Boiler] / HP Steam / Large Turbine / Heat Exchanger
+  -> [item:Nuclear Reactor]
   -> Quantum gear/storage
   -> Fusion Reactor + Plasma Turbine
   -> AE2 autocrafting completo
@@ -259,8 +259,8 @@ Ao terminar esta fase, você deve ter:
 
 - Bronze Boiler funcionando sem parar.
 - Produção de bronze estável.
-- Bronze Compressor.
-- Bronze Mixer.
+- [item:Bronze Compressor].
+- [item:Bronze Mixer].
 - Bronze Macerator.
 - Bronze Cutting Machine.
 - Primeiros pipes/tanks.
@@ -288,7 +288,7 @@ Priorize itens que reduzem crafting manual:
 | Item | Por que é importante |
 |---|---|
 | Forge Hammer | Permite plates/peças iniciais antes do Compressor. |
-| Wrench | Configuração e rotação de máquinas/pipes. |
+| [item:Wrench] | Configuração e rotação de máquinas/pipes. |
 | Cutter/File/Saw, se presentes | Componentes, rods, wires, plates especiais. |
 | Buckets/Tanks | Água, steam e fluidos iniciais. |
 
@@ -314,7 +314,7 @@ A ordem sugerida:
 2. **Bronze Mixer** - faz misturas como bronze e materiais de transição.
 3. **Bronze Macerator** - processa ores/dusts e melhora rendimento.
 4. **Bronze Cutting Machine** - corta materiais e ajuda em componentes.
-5. **Bronze Furnace** - smelting industrial inicial.
+5. **[item:Bronze Furnace]** - smelting industrial inicial.
 
 ### Step 5 - Faça buffers de entrada e saída
 
@@ -327,7 +327,7 @@ Mesmo no começo, use buffers:
 Com Modern Dynamics:
 
 ```text
-[Baú] -> [Item Pipe + filtro] -> [Máquina] -> [Item Pipe] -> [Baú de saída]
+[Baú] -> [Item [item:Pipe] + filtro] -> [Máquina] -> [Item Pipe] -> [Baú de saída]
 ```
 
 Nunca jogue tudo direto em uma máquina sem filtro quando a linha tiver mais de um item.
@@ -338,7 +338,7 @@ Toda base MI depende de água. Faça um sistema que você não precise abastecer
 
 Boas soluções:
 
-- pump do MI, se disponível no seu tier;
+- [item:pump] do MI, se disponível no seu tier;
 - Create hose pulley/pump, se configurado no pack;
 - tanques intermediários;
 - Modern Dynamics Fluid Pipes;
@@ -697,7 +697,7 @@ No midgame, MI vira indústria de verdade. Você começa a criar multiblocos gra
 - Large Tank.
 - Oil Drilling Rig.
 - Distillation Tower.
-- Large Diesel Generator.
+- Large [item:Diesel Generator].
 - Vacuum Freezer.
 - Pressurizer.
 - Linha de circuitos avançada.
