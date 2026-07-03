@@ -143,11 +143,11 @@ export default function ItemModal({ item, onClose, onNavigate, onOpenWebJEI }) {
 
   const ResultSlot = ({ resultId, count }) => (
     <div style={{ position: 'relative' }}>
-      <div className="crafting-slot" style={{ border: '2px solid rgba(88,166,255,0.4)', background: 'rgba(0,0,0,0.6)', width: '50px', height: '50px', padding: '6px', borderRadius: '4px', boxShadow: 'inset 0 0 10px rgba(88,166,255,0.1)' }}>
+      <div className="crafting-slot" style={{ borderTop: '2px solid #373737', borderLeft: '2px solid #373737', borderBottom: '2px solid #ffffff', borderRight: '2px solid #ffffff', background: '#8b8b8b', width: '54px', height: '54px', padding: '4px' }}>
         {renderIngredient({item: resultId})}
       </div>
       {count > 1 && (
-        <span style={{ position: 'absolute', bottom: '-8px', right: '-8px', background: 'var(--bg-secondary)', padding: '2px 6px', borderRadius: '12px', fontSize: '0.8rem', fontWeight: 'bold', border: '1px solid var(--border-color)', zIndex: 10 }}>
+        <span style={{ position: 'absolute', bottom: '0px', right: '0px', color: '#ffffff', textShadow: '2px 2px 0 #3f3f3f', fontSize: '1rem', fontWeight: 'bold', zIndex: 10 }}>
           {count}
         </span>
       )}
@@ -170,15 +170,15 @@ export default function ItemModal({ item, onClose, onNavigate, onOpenWebJEI }) {
         }
       });
       return (
-        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 40px)', gap: '4px', padding: '8px', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '2rem', background: '#c6c6c6', padding: '1rem 1.5rem', borderTop: '2px solid #ffffff', borderLeft: '2px solid #ffffff', borderBottom: '2px solid #555555', borderRight: '2px solid #555555' }}>
+          <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 36px)', gap: 0, padding: 0, background: 'transparent' }}>
             {grid.map((row, r) => row.map((cell, c) => (
-              <div key={`cell-${r}-${c}`} className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px' }}>
+              <div key={`cell-${r}-${c}`} className="crafting-slot" style={{ borderTop: '2px solid #373737', borderLeft: '2px solid #373737', borderBottom: '2px solid #ffffff', borderRight: '2px solid #ffffff', background: '#8b8b8b', width: '36px', height: '36px', padding: '2px' }}>
                 {renderIngredient(cell)}
               </div>
             )))}
           </div>
-          <ArrowRight size={28} color="rgba(255,255,255,0.3)" />
+          <ArrowRight size={32} color="#8b8b8b" strokeWidth={3} />
           <ResultSlot resultId={recipe.result} count={recipe.count || 1} />
         </div>
       );
@@ -186,15 +186,15 @@ export default function ItemModal({ item, onClose, onNavigate, onOpenWebJEI }) {
     
     if (recipe.type === 'minecraft:crafting_shapeless') {
       return (
-        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 40px)', gap: '4px', padding: '8px', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', alignContent: 'start' }}>
+        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '2rem', background: '#c6c6c6', padding: '1rem 1.5rem', borderTop: '2px solid #ffffff', borderLeft: '2px solid #ffffff', borderBottom: '2px solid #555555', borderRight: '2px solid #555555' }}>
+          <div className="crafting-grid" style={{ gridTemplateColumns: 'repeat(3, 36px)', gap: 0, padding: 0, background: 'transparent', alignContent: 'start' }}>
             {recipe.ingredients.map((ing, idx) => (
-              <div key={`shapeless-${idx}`} className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px' }}>
+              <div key={`shapeless-${idx}`} className="crafting-slot" style={{ borderTop: '2px solid #373737', borderLeft: '2px solid #373737', borderBottom: '2px solid #ffffff', borderRight: '2px solid #ffffff', background: '#8b8b8b', width: '36px', height: '36px', padding: '2px' }}>
                 {renderIngredient(ing)}
               </div>
             ))}
           </div>
-          <ArrowRight size={28} color="rgba(255,255,255,0.3)" />
+          <ArrowRight size={32} color="#8b8b8b" strokeWidth={3} />
           <ResultSlot resultId={recipe.result} count={recipe.count || 1} />
         </div>
       );
@@ -202,14 +202,14 @@ export default function ItemModal({ item, onClose, onNavigate, onOpenWebJEI }) {
 
     if (recipe.type.includes('smelting') || recipe.type.includes('blasting') || recipe.type.includes('smoking') || recipe.type.includes('campfire')) {
       return (
-        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem', background: 'rgba(0,0,0,0.3)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <div className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '2rem', background: '#c6c6c6', padding: '1rem 1.5rem', borderTop: '2px solid #ffffff', borderLeft: '2px solid #ffffff', borderBottom: '2px solid #555555', borderRight: '2px solid #555555' }}>
+          <div className="crafting-slot" style={{ borderTop: '2px solid #373737', borderLeft: '2px solid #373737', borderBottom: '2px solid #ffffff', borderRight: '2px solid #ffffff', background: '#8b8b8b', width: '36px', height: '36px', padding: '2px' }}>
             {renderIngredient(recipe.ingredient)}
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem' }}>
-            <Flame size={20} color="#e67e22" />
-            <ArrowRight size={20} color="rgba(255,255,255,0.3)" />
-            <span style={{ fontSize: '0.65rem', color: '#888', textTransform: 'uppercase' }}>{recipe.type.split(':')[1].replace('crafting_', '')}</span>
+            <Flame size={24} color="#555555" />
+            <ArrowRight size={32} color="#8b8b8b" strokeWidth={3} />
+            <span style={{ fontSize: '0.65rem', color: '#555555', textTransform: 'uppercase', fontWeight: 'bold' }}>{recipe.type.split(':')[1].replace('crafting_', '')}</span>
           </div>
           <ResultSlot resultId={recipe.result} count={recipe.count || 1} />
         </div>
@@ -218,24 +218,24 @@ export default function ItemModal({ item, onClose, onNavigate, onOpenWebJEI }) {
 
     if (recipe.type === 'minecraft:smithing_transform') {
       return (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <div className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px', position: 'relative' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: '#c6c6c6', padding: '1rem 1.5rem', borderTop: '2px solid #ffffff', borderLeft: '2px solid #ffffff', borderBottom: '2px solid #555555', borderRight: '2px solid #555555' }}>
+          <div className="crafting-slot" style={{ borderTop: '2px solid #373737', borderLeft: '2px solid #373737', borderBottom: '2px solid #ffffff', borderRight: '2px solid #ffffff', background: '#8b8b8b', width: '36px', height: '36px', padding: '2px', position: 'relative' }}>
             {renderIngredient(recipe.template)}
-            <span style={{position:'absolute', bottom: -20, left: 0, right: 0, textAlign: 'center', fontSize: '0.6rem', color: '#888'}}>Template</span>
+            <span style={{position:'absolute', bottom: -18, left: 0, right: 0, textAlign: 'center', fontSize: '0.6rem', color: '#333333', fontWeight: 'bold'}}>Molde</span>
           </div>
-          <span style={{color: '#888'}}>+</span>
-          <div className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px', position: 'relative' }}>
+          <span style={{color: '#555555', fontWeight: 'bold'}}>+</span>
+          <div className="crafting-slot" style={{ borderTop: '2px solid #373737', borderLeft: '2px solid #373737', borderBottom: '2px solid #ffffff', borderRight: '2px solid #ffffff', background: '#8b8b8b', width: '36px', height: '36px', padding: '2px', position: 'relative' }}>
             {renderIngredient(recipe.base)}
-            <span style={{position:'absolute', bottom: -20, left: 0, right: 0, textAlign: 'center', fontSize: '0.6rem', color: '#888'}}>Base</span>
+            <span style={{position:'absolute', bottom: -18, left: 0, right: 0, textAlign: 'center', fontSize: '0.6rem', color: '#333333', fontWeight: 'bold'}}>Base</span>
           </div>
-          <span style={{color: '#888'}}>+</span>
-          <div className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px', position: 'relative' }}>
+          <span style={{color: '#555555', fontWeight: 'bold'}}>+</span>
+          <div className="crafting-slot" style={{ borderTop: '2px solid #373737', borderLeft: '2px solid #373737', borderBottom: '2px solid #ffffff', borderRight: '2px solid #ffffff', background: '#8b8b8b', width: '36px', height: '36px', padding: '2px', position: 'relative' }}>
             {renderIngredient(recipe.addition)}
-            <span style={{position:'absolute', bottom: -20, left: 0, right: 0, textAlign: 'center', fontSize: '0.6rem', color: '#888'}}>Material</span>
+            <span style={{position:'absolute', bottom: -18, left: 0, right: 0, textAlign: 'center', fontSize: '0.6rem', color: '#333333', fontWeight: 'bold'}}>Mat.</span>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
-            <Hammer size={20} color="var(--accent-blue)" />
-            <ArrowRight size={20} color="rgba(255,255,255,0.3)" />
+            <Hammer size={24} color="#555555" />
+            <ArrowRight size={32} color="#8b8b8b" strokeWidth={3} />
           </div>
           <ResultSlot resultId={recipe.result} count={recipe.count || 1} />
         </div>
