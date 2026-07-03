@@ -345,8 +345,16 @@ export default function App() {
               <WarlordPath phase={activeTab} onOpenRecipe={openRecipe} setActiveTab={setActiveTab} />
             </div>
           )}
+
+          {isNotFound && (
+            <div style={{gridColumn: '1 / -1'}}>
+              <NotFound />
+            </div>
+          )}
+
           </Suspense>
         </div>
+        </ErrorBoundaryFallback>
       </main>
 
       <JEISidebar setSearchQuery={setSearchQuery} onOpenItem={setActiveItem} />
