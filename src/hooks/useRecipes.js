@@ -6,14 +6,20 @@ let fetchPromise = null;
 const startPreload = () => {
   if (fetchPromise) return fetchPromise;
 
-  fetchPromise = Promise.all([
-    fetch('/data/allRecipes.json').then(res => res.json()),
-    fetch('/data/idMap.json').then(res => res.json())
-  ]).then(([recipesData, mapData]) => {
-    const revMap = {};
-    Object.entries(mapData).forEach(([k, v]) => {
-      revMap[v] = k;
-    });
+    fetchPromise = Promise.all([
+      fetch('/data/allRecipes.json').then(res => res.json()),
+      fetch('/data/idMap.json').then(res => res.json()),
+      fetch('/data/translatedMap.json').then(res => res.json()).catch(() => ({}))
+    ]).then(([recipesData, mapData, translatedMap]) => {
+      const revMap = {};
+      Object.entries(mapData).forEach(([k, v]) => {
+        revMap[v] = k;
+      });
+      // Merge translated manual entries
+      Object.entries(translatedMap).forEach(([internal, ptSlug]) => {
+        revMap[ptSlug] = internal;
+      });
+
 
     const byResult = {};
     const byUsage = {};

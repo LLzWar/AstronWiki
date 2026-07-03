@@ -186,6 +186,32 @@ export default function ItemModal({ item, onClose }) {
       );
     }
 
+    if (recipe.type === 'minecraft:smithing_transform') {
+      return (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+          <div className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px', position: 'relative' }}>
+            {renderIngredient(recipe.template)}
+            <span style={{position:'absolute', bottom: -20, left: 0, right: 0, textAlign: 'center', fontSize: '0.6rem', color: '#888'}}>Template</span>
+          </div>
+          <span style={{color: '#888'}}>+</span>
+          <div className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px', position: 'relative' }}>
+            {renderIngredient(recipe.base)}
+            <span style={{position:'absolute', bottom: -20, left: 0, right: 0, textAlign: 'center', fontSize: '0.6rem', color: '#888'}}>Base</span>
+          </div>
+          <span style={{color: '#888'}}>+</span>
+          <div className="crafting-slot" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.4)', width: '40px', height: '40px', padding: '4px', borderRadius: '2px', position: 'relative' }}>
+            {renderIngredient(recipe.addition)}
+            <span style={{position:'absolute', bottom: -20, left: 0, right: 0, textAlign: 'center', fontSize: '0.6rem', color: '#888'}}>Material</span>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
+            <Hammer size={20} color="var(--accent-blue)" />
+            <ArrowRight size={20} color="rgba(255,255,255,0.3)" />
+          </div>
+          <ResultSlot resultId={recipe.result} count={recipe.count || 1} />
+        </div>
+      );
+    }
+
     return <div style={{color: '#888'}}>Formato não suportado: {recipe.type}</div>;
   };
 
