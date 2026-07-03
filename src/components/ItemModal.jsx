@@ -50,16 +50,22 @@ export default function ItemModal({ item, onClose }) {
       else if (category === 'tanks' || category === 'fluid_tanks') {
          result = name.endsWith('s') ? name.slice(0, -1) : name;
       }
+      else if (['honeycombs', 'hives', 'campfires', 'chests', 'beds', 'fences', 'fence_gates', 'saplings', 'leaves', 'shears'].includes(name)) {
+         if (name === 'hives') result = 'beehive';
+         else if (name === 'leaves') result = 'oak_leaves';
+         else if (name === 'shears') result = 'shears';
+         else result = name.endsWith('s') ? name.slice(0, -1) : name;
+      }
       
-      if (result.includes(':')) result = result.split(':')[1];
+      if (result && typeof result === 'string' && result.includes(':')) result = result.split(':')[1];
       return result;
     }
     if (typeof internalId === 'object' && internalId.item) {
       const itm = idMap[internalId.item] || internalId.item;
-      return itm.includes(':') ? itm.split(':')[1] : itm;
+      return (itm && typeof itm === 'string' && itm.includes(':')) ? itm.split(':')[1] : itm;
     }
     const mapped = idMap[internalId] || internalId;
-    return mapped.includes(':') ? mapped.split(':')[1] : mapped;
+    return (mapped && typeof mapped === 'string' && mapped.includes(':')) ? mapped.split(':')[1] : mapped;
   };
 
   const internalId = getInternalId(item.id);
