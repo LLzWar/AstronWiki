@@ -127,6 +127,169 @@ export const BESTIARY_DATA = [
       { name: 'Gauntlet of Guard', rarity: 'legendary', desc: 'Manopla que permite bloquear e refletir projéteis e invocar escudos de vazio.' }
     ]
   },
+  {
+    id: 'mignis',
+    name: 'Mignis',
+    mod: 'cataclysm',
+    modName: "L'Ender's Cataclysm",
+    icon: Flame,
+    image: null,
+    lore: 'Pequenas feras de fogo formadas das cinzas de Ignis, protegem as forjas infernais no Nether.',
+    stats: { hp: '40 HP', type: 'Fogo / Exploração' },
+    mechanics: 'Voam rapidamente e atacam com rajadas de fogo. Imunes a lava e fogo.',
+    drops: [
+      { name: 'Magma Cream', rarity: 'common' },
+      { name: 'Blaze Powder', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'coralssus',
+    name: 'Coralssus',
+    mod: 'cataclysm',
+    modName: "L'Ender's Cataclysm",
+    icon: Shield,
+    image: null,
+    lore: 'Golens abissais de coral que vagam pelas profundezas e ruínas de Sunken City.',
+    stats: { hp: '120 HP', type: 'Guardião Aquático' },
+    mechanics: 'Lentos mas letais. Eles dão golpes sísmicos na água e causam repulsão extrema.',
+    drops: [
+      { name: 'Coral', rarity: 'common' },
+      { name: 'Abyssal Chitin', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'wadjet',
+    name: 'Wadjet',
+    mod: 'cataclysm',
+    modName: "L'Ender's Cataclysm",
+    icon: Skull,
+    image: null,
+    lore: 'Serpentes mumificadas que emboscam viajantes nas ruínas de Cursed Pyramids.',
+    stats: { hp: '60 HP', type: 'Veneno / Subterrâneo' },
+    mechanics: 'Rastejam rapidamente e envenenam o jogador. Seu veneno é difícil de curar.',
+    drops: [
+      { name: 'Desert Core Fragment', rarity: 'common' },
+      { name: 'Wadjet Scale', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'deepling',
+    name: 'Deepling',
+    mod: 'cataclysm',
+    modName: "L'Ender's Cataclysm",
+    icon: Droplet,
+    image: null,
+    lore: 'Seres abissais comuns que habitam Sunken City. Trabalhadores das profundezas.',
+    stats: { hp: '30 HP', type: 'Aquático / Comum' },
+    mechanics: 'Atacam em grupo usando tridentes desgastados.',
+    drops: [
+      { name: 'Raw Fish', rarity: 'common' },
+      { name: 'Trident (Danificado)', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'deepling_brute',
+    name: 'Deepling Brute',
+    mod: 'cataclysm',
+    modName: "L'Ender's Cataclysm",
+    icon: Sword,
+    image: null,
+    lore: 'A elite guerreira dos Deeplings, protegem a cidade submersa.',
+    stats: { hp: '80 HP', type: 'Aquático / Melee' },
+    mechanics: 'Lutam com armas pesadas e dão investidas rápidas na água.',
+    drops: [
+      { name: 'Abyssal Chitin', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'deepling_priest',
+    name: 'Deepling Priest',
+    mod: 'cataclysm',
+    modName: "L'Ender's Cataclysm",
+    icon: Sparkles,
+    image: null,
+    lore: 'Xamãs que conjuram magia das profundezas.',
+    stats: { hp: '50 HP', type: 'Aquático / Mágico' },
+    mechanics: 'Atiram feixes mágicos de água que ignoram algumas armaduras e curam os brutos.',
+    drops: [
+      { name: 'Amethyst Shard', rarity: 'common' },
+      { name: 'Abyssal Pearl', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'deepling_angler',
+    name: 'Deepling Angler',
+    mod: 'cataclysm',
+    modName: "L'Ender's Cataclysm",
+    icon: Crosshair,
+    image: null,
+    lore: 'Predadores que se camuflam no escuro do abismo usando suas iscas luminosas.',
+    stats: { hp: '40 HP', type: 'Aquático / Emboscada' },
+    mechanics: 'Te puxam para o escuro com uma fisgada letal. A isca cega temporariamente.',
+    drops: [
+      { name: 'Glowstone Dust', rarity: 'common' },
+      { name: 'Angler Tooth', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'lionfish',
+    name: 'Lionfish',
+    mod: 'cataclysm',
+    modName: "L'Ender's Cataclysm",
+    icon: Droplet,
+    image: null,
+    lore: 'Peixes venenosos enormes das profundezas.',
+    stats: { hp: '20 HP', type: 'Aquático / Veneno' },
+    mechanics: 'Injetam veneno paralisante se você encostar neles.',
+    drops: [
+      { name: 'Lionfish Spike', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'amethyst_crab',
+    name: 'Amethyst Crab',
+    mod: 'cataclysm',
+    modName: "L'Ender's Cataclysm",
+    icon: Shield,
+    image: null,
+    lore: 'Caranguejos colossais com cascos de ametista pura.',
+    stats: { hp: '50 HP', type: 'Aquático / Defensivo' },
+    mechanics: 'Eles bloqueiam grande parte do dano frontal e batem forte com a garra direita.',
+    drops: [
+      { name: 'Amethyst Shard', rarity: 'common' },
+      { name: 'Crab Meat', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'kobolediador',
+    name: 'Kobolediador',
+    mod: 'cataclysm',
+    modName: "L'Ender's Cataclysm",
+    icon: Sword,
+    image: null,
+    lore: 'Guerreiros rústicos das planícies.',
+    stats: { hp: '45 HP', type: 'Terrestre / Melee' },
+    mechanics: 'Atacam em bandos furiosos. Quando a vida baixa, eles correm mais rápido.',
+    drops: [
+      { name: 'Iron Ingot', rarity: 'common' },
+      { name: 'Kobold Leather', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'ignis_revenant',
+    name: 'Ignis Revenant',
+    mod: 'cataclysm',
+    modName: "L'Ender's Cataclysm",
+    icon: Flame,
+    image: null,
+    lore: 'Espectros carbonizados que assombram a Burning Arena.',
+    stats: { hp: '70 HP', type: 'Fogo / Morto-Vivo' },
+    mechanics: 'Eles revigoram Ignis e disparam projéteis de fogo que incendeiam o terreno.',
+    drops: [
+      { name: 'Coal', rarity: 'common' },
+      { name: 'Blaze Rod', rarity: 'rare' }
+    ]
+  },
 
   // ==============================
   // ICE AND FIRE: DRAGONS
@@ -226,6 +389,168 @@ export const BESTIARY_DATA = [
       { name: 'Leather', rarity: 'common' }
     ]
   },
+  {
+    id: 'hydra',
+    name: 'Hydra',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Skull,
+    image: null,
+    lore: 'Serpente multicéfala que se esconde em pântanos venenosos.',
+    stats: { hp: '250 HP', type: 'Chefe / Regeneração' },
+    mechanics: 'Se você cortar uma cabeça sem usar fogo, duas nascerão no lugar. Ela regenera vida absurdamente rápido. A única fraqueza é dano contínuo de Fogo para cauterizar os pescoços decepados.',
+    drops: [
+      { name: 'Hydra Fang', rarity: 'rare' },
+      { name: 'Hydra Heart', rarity: 'legendary', desc: 'Concede regeneração passiva permanente ao segurar.' }
+    ]
+  },
+  {
+    id: 'siren',
+    name: 'Siren',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Droplet,
+    image: null,
+    lore: 'Ninfas amaldiçoadas em ilhas rochosas no oceano.',
+    stats: { hp: '50 HP', type: 'Aquático / Hipnose' },
+    mechanics: 'Seu canto hipnotiza os jogadores, forçando-os a andar em direção à morte, a menos que usem tampões de ouvido (Earplugs).',
+    drops: [
+      { name: 'Siren Tear', rarity: 'rare' },
+      { name: 'Siren Flute', rarity: 'legendary' }
+    ]
+  },
+  {
+    id: 'death_worm',
+    name: 'Death Worm',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Shield,
+    image: null,
+    lore: 'Vermes gigantes que viajam pelo subsolo de desertos.',
+    stats: { hp: '40 - 150 HP', type: 'Terrestre / Emboscada' },
+    mechanics: 'Eles saltam da areia engolindo tudo. Podem ser domados se filhotes.',
+    drops: [
+      { name: 'Death Worm Chitin', rarity: 'common' },
+      { name: 'Death Worm Egg', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'cockatrice',
+    name: 'Cockatrice',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Target,
+    image: null,
+    lore: 'Aves monstruosas de savanas com um olhar fulminante.',
+    stats: { hp: '40 HP', type: 'Mitológico / Wither' },
+    mechanics: 'Encarar um Cockatrice aplica Wither (decomposição). Lute de olhos vendados ou com abóboras.',
+    drops: [
+      { name: 'Wither Bone', rarity: 'common' },
+      { name: 'Rotten Egg', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'stymphalian_bird',
+    name: 'Stymphalian Bird',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Wind,
+    image: null,
+    lore: 'Aves de bronze letais que mergulham dos céus do pântano.',
+    stats: { hp: '24 HP', type: 'Voador / Projéteis' },
+    mechanics: 'Lançam penas metálicas extremamente afiadas. Em bando, dilaceram jogadores desavisados.',
+    drops: [
+      { name: 'Bronze Ingot', rarity: 'common' },
+      { name: 'Stymphalian Bird Feather', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'troll',
+    name: 'Troll',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Shield,
+    image: null,
+    lore: 'Gigantes estúpidos e brutais de florestas, montanhas e picos de gelo.',
+    stats: { hp: '50 HP', type: 'Mitológico / Fotofobia' },
+    mechanics: 'Extremamente fortes em combate corpo-a-corpo, mas viram estátuas de pedra se expostos à luz do Sol.',
+    drops: [
+      { name: 'Troll Leather', rarity: 'common' },
+      { name: 'Troll Tusk', rarity: 'rare' },
+      { name: 'Troll Weapon', rarity: 'legendary' }
+    ]
+  },
+  {
+    id: 'myrmex',
+    name: 'Myrmex',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Sword,
+    image: null,
+    lore: 'Formigas gigantescas em sociedades de colmeia em selvas e desertos.',
+    stats: { hp: '20 - 120 HP', type: 'Inseto / Colmeia' },
+    mechanics: 'Elas atacam em enxame. Invadir a colônia garante morte certa se você não for respeitado. Podem ser aliadas se você negociar resina.',
+    drops: [
+      { name: 'Myrmex Chitin', rarity: 'common' },
+      { name: 'Myrmex Stinger', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'amphithere',
+    name: 'Amphithere',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Wind,
+    image: null,
+    lore: 'Serpentes aladas cobertas de penas, majestosas e perigosas das selvas.',
+    stats: { hp: '50 HP', type: 'Voador / Montaria' },
+    mechanics: 'Dão rasantes mordendo. Se você for rápido, pode montar nelas no ar e tentar domá-las quebrando sua resistência.',
+    drops: [
+      { name: 'Amphithere Feather', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'hippogryph',
+    name: 'Hippogryph',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Wind,
+    image: null,
+    lore: 'Criaturas híbridas (águia e cavalo) encontradas em montanhas.',
+    stats: { hp: '40 HP', type: 'Voador / Neutro' },
+    mechanics: 'São predadores rápidos, mas podem ser domados se você oferecer patas de coelho suficientes.',
+    drops: [
+      { name: 'Hippogryph Talon', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'pixie',
+    name: 'Pixie',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Sparkles,
+    image: null,
+    lore: 'Pequenas fadas de florestas mágicas. Cuidado com seus itens.',
+    stats: { hp: '10 HP', type: 'Fada / Ladrão' },
+    mechanics: 'Vão se aproximar amigavelmente e então roubar itens aleatórios do seu inventário e fugir voando.',
+    drops: [
+      { name: 'Pixie Dust', rarity: 'rare' }
+    ]
+  },
+  {
+    id: 'ghost',
+    name: 'Ghost',
+    mod: 'ice_and_fire',
+    modName: 'Ice and Fire: Dragons',
+    icon: Skull,
+    image: null,
+    lore: 'Almas penadas de aldeões e guerreiros caídos na escuridão.',
+    stats: { hp: '30 HP', type: 'Morto-Vivo / Espectral' },
+    mechanics: 'Ficam invisíveis e flutuam pelas paredes. Extremamente chatos em masmorras assombradas.',
+    drops: [
+      { name: 'Ectoplasm', rarity: 'common' }
+    ]
+  },
 
   // ==============================
   // MOWZIE'S MOBS
@@ -275,6 +600,49 @@ export const BESTIARY_DATA = [
   },
 
 
+  {
+    id: 'naga',
+    name: 'Naga',
+    mod: 'mowzies',
+    modName: "Mowzie's Mobs",
+    icon: Droplet,
+    image: null,
+    lore: 'Serpentes voadoras que habitam litorais e penhascos.',
+    stats: { hp: '30 HP', type: 'Voador / Veneno' },
+    mechanics: 'Elas cospem ácido corrosivo e são imunes a projéteis quando estão voando rápido. Espere elas mergulharem para dar um golpe corpo a corpo.',
+    drops: [
+      { name: 'Naga Fang', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'foliaath',
+    name: 'Foliaath',
+    mod: 'mowzies',
+    modName: "Mowzie's Mobs",
+    icon: Flame,
+    image: null,
+    lore: 'Plantas monstruosas camufladas nas selvas densas.',
+    stats: { hp: '10 HP', type: 'Planta / Emboscada' },
+    mechanics: 'Elas não tomam dano a menos que abram a boca para te atacar. Fique fora do alcance da mordida.',
+    drops: [
+      { name: 'Foliaath Seed', rarity: 'rare', desc: 'Plante para criar um bebê Foliaath.' }
+    ]
+  },
+  {
+    id: 'grottol',
+    name: 'Grottol',
+    mod: 'mowzies',
+    modName: "Mowzie's Mobs",
+    icon: Sparkles,
+    image: null,
+    lore: 'Cristais vivos que correm por cavernas.',
+    stats: { hp: '20 HP', type: 'Minério / Fuga' },
+    mechanics: 'Correm muito rápido de jogadores. Só tomam dano de Picaretas, espadas são inúteis contra sua carapaça.',
+    drops: [
+      { name: 'Diamond', rarity: 'guaranteed' }
+    ]
+  },
+
   // ==============================
   // APOTHEOSIS & OUTROS
   // ==============================
@@ -307,6 +675,80 @@ export const BESTIARY_DATA = [
     drops: [
       { name: 'Blood Staff / Arcanomancer Robes', rarity: 'legendary', desc: 'Melhores multiplicadores mágicos do mid-game.' },
       { name: 'Spellbooks Lendários', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'archevoker',
+    name: 'Archevoker',
+    mod: 'irons',
+    modName: "Iron's Spells and Spellbooks",
+    icon: BookOpen,
+    image: null,
+    lore: 'Feiticeiro de elite que lança magias avançadas de evocação.',
+    stats: { hp: '60 HP', type: 'Mago / Evocação' },
+    mechanics: 'Cria escudos arcanos, clona a si mesmo e lança presas mortais no chão.',
+    drops: [
+      { name: 'Evocation Spell Book', rarity: 'rare' },
+      { name: 'Arcane Essence', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'cryomancer',
+    name: 'Cryomancer',
+    mod: 'irons',
+    modName: "Iron's Spells and Spellbooks",
+    icon: Wind,
+    image: null,
+    lore: 'Habitam torres geladas em picos nevados.',
+    stats: { hp: '40 HP', type: 'Mago / Gelo' },
+    mechanics: 'Lançam Cone of Cold e Ice Blocks, paralisando alvos rapidamente.',
+    drops: [
+      { name: 'Ice Spell Book', rarity: 'rare' },
+      { name: 'Frozen Bone', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'pyromancer',
+    name: 'Pyromancer',
+    mod: 'irons',
+    modName: "Iron's Spells and Spellbooks",
+    icon: Flame,
+    image: null,
+    lore: 'Fanáticos do fogo encontrados em torres e vulcões.',
+    stats: { hp: '40 HP', type: 'Mago / Fogo' },
+    mechanics: 'Bombardeiam com Fireballs e Wall of Fire. Extrema área de dano.',
+    drops: [
+      { name: 'Fire Spell Book', rarity: 'rare' },
+      { name: 'Blaze Powder', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'necromancer',
+    name: 'Necromancer',
+    mod: 'irons',
+    modName: "Iron's Spells and Spellbooks",
+    icon: Skull,
+    image: null,
+    lore: 'Magos obscuros escondidos em cemitérios.',
+    stats: { hp: '40 HP', type: 'Mago / Sangue e Morte' },
+    mechanics: 'Invocam hordas de mortos-vivos (Raise Dead) e roubam vida (Blood Slash).',
+    drops: [
+      { name: 'Blood Spell Book', rarity: 'rare' },
+      { name: 'Blood Vial', rarity: 'common' }
+    ]
+  },
+  {
+    id: 'priest',
+    name: 'Priest',
+    mod: 'irons',
+    modName: "Iron's Spells and Spellbooks",
+    icon: Sparkles,
+    image: null,
+    lore: 'Clérigos que curam os feridos em vilas e monastérios.',
+    stats: { hp: '30 HP', type: 'Mago / Sagrado' },
+    mechanics: 'Curam aldeões e a si mesmos. Pacíficos, mas se você atacá-los, usarão Wisp e Smite contra você.',
+    drops: [
+      { name: 'Holy Spell Book', rarity: 'rare' }
     ]
   }
 ];
