@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { X, GitMerge } from 'lucide-react';
 import { itemImages, recipes } from '../data/recipes';
 import RecipeFlow from './RecipeFlow';
+import { useRecipes } from '../hooks/useRecipes';
 
 const CraftingSlotItem = ({ item }) => {
+  const { reverseMap, loading } = useRecipes();
   const [imageError, setImageError] = useState(false);
   
   if (!item || item.trim() === '') return null;
@@ -14,8 +16,18 @@ const CraftingSlotItem = ({ item }) => {
     return (words[0][0] + (words[1] ? words[1][0] : '')).toUpperCase();
   };
 
-  const fileName = item.replace(/\(.*?\)/g, '').trim().replace(/['\s-]+/g, '_').toLowerCase();
-  const imgSrc = `/assets/items/${fileName}.png`;
+  const cleanName = item.replace(/\(.*?\)/g, '').trim().replace(/['\s-]+/g, '_').toLowerCase();
+  
+  // Reverse lookup: converts 'eye_of_ender' to 'minecraft:ender_eye' -> 'ender_eye'
+  let internalId = cleanName;
+  if (!loading) {
+    const mapped = reverseMap[cleanName] || reverseMap[item.toLowerCase()];
+    if (mapped) {
+      internalId = mapped.split(':')[1] || mapped;
+    }
+  }
+
+  const imgSrc = `/assets/items/${internalId}.png`;
 
   return (
     <>
@@ -27,10 +39,10 @@ const CraftingSlotItem = ({ item }) => {
         onError={(e) => {
           if (!e.target.dataset.fallbackTried) {
              e.target.dataset.fallbackTried = "true";
-             e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/item/${fileName}.png`;
+             e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/item/${internalId}.png`;
           } else if (e.target.dataset.fallbackTried === "true") {
              e.target.dataset.fallbackTried = "block";
-             e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/block/${fileName}.png`;
+             e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/block/${internalId}.png`;
           } else {
              e.target.style.display = 'none';
              if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex';

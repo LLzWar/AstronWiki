@@ -2,10 +2,21 @@ import React, { useMemo, useState } from 'react';
 import { ReactFlow, Controls, Background } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { itemImages } from '../data/recipes';
+import { useRecipes } from '../hooks/useRecipes';
 
 const FlowImage = ({ item, defaultSrc }) => {
-  const fileName = item.replace(/\(.*?\)/g, '').trim().replace(/['\s-]+/g, '_').toLowerCase();
-  const imgSrc = defaultSrc || `/assets/items/${fileName}.png`;
+  const { reverseMap, loading } = useRecipes();
+  const cleanName = item.replace(/\(.*?\)/g, '').trim().replace(/['\s-]+/g, '_').toLowerCase();
+  
+  let internalId = cleanName;
+  if (!loading) {
+    const mapped = reverseMap[cleanName] || reverseMap[item.toLowerCase()];
+    if (mapped) {
+      internalId = mapped.split(':')[1] || mapped;
+    }
+  }
+
+  const imgSrc = defaultSrc || `/assets/items/${internalId}.png`;
 
   return (
     <img 
@@ -15,10 +26,10 @@ const FlowImage = ({ item, defaultSrc }) => {
       onError={(e) => {
         if (!e.target.dataset.fallbackTried) {
            e.target.dataset.fallbackTried = "true";
-           e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/item/${fileName}.png`;
+           e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/item/${internalId}.png`;
         } else if (e.target.dataset.fallbackTried === "true") {
            e.target.dataset.fallbackTried = "block";
-           e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/block/${fileName}.png`;
+           e.target.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.20.4/assets/minecraft/textures/block/${internalId}.png`;
         } else {
            e.target.style.display = 'none';
         }
